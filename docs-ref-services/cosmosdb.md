@@ -1,0 +1,74 @@
+---
+title: "Bibliothèques Azure Cosmos DB pour Java"
+description: "Consulter la documentation sur les bibliothèques de client Java pour Azure Cosmos DB"
+keywords: "Azure, Java, SDK, API, SQL, base de données, MongoDB, Cosmos DB, NoSQL, DocumentDB"
+author: rloutlaw
+ms.author: routlaw
+manager: douge
+ms.date: 07/10/2017
+ms.topic: reference
+ms.prod: azure
+ms.technology: azure
+ms.devlang: java
+ms.service: cosmosdb
+ms.openlocfilehash: 249907528c24395b0da5d64e4dc06e3422894cfe
+ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/28/2017
+---
+# <a name="azure-cosmos-db-libraries-for-java"></a>Bibliothèques Azure Cosmos DB pour Java
+
+## <a name="overview"></a>Vue d'ensemble
+
+Stockez et interrogez une clé-valeur, un document JSON, un graphique et des données en colonne au sein d’une base de données globalement distribuée avec [Cosmos DB](/azure/cosmos-db/introduction).
+
+Pour découvrir Cosmos DB, consultez [Azure Cosmos DB : créer une application API avec Java et le portail Azure](/azure/cosmos-db/create-documentdb-java).
+
+## <a name="client-library"></a>Bibliothèque cliente
+
+Connectez-vous à Cosmos DB avec la bibliothèque cliente [DocumentDB](/azure/cosmos-db/documentdb-introduction) pour utiliser les données JSON avec [une syntaxe de requête SQL](/azure/cosmos-db/documentdb-sql-query).
+
+[Ajouter une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser la bibliothèque cliente Cosmos DB dans votre projet.
+
+```XML
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-documentdb</artifactId>
+    <version>1.12.0</version>
+</dependency>
+```
+
+### <a name="example"></a>Exemple
+
+Sélectionnez les documents JSON correspondants dans Cosmos DB à l’aide de la syntaxe de requête SQL.
+
+```java
+DocumentClient client = new DocumentClient(new DocumentClient("https://contoso.documents.azure.com:443",
+                "contosoCosmosDBKey", 
+                new ConnectionPolicy(),
+                ConsistencyLevel.Session);
+
+List<Document> results = client.queryDocuments("dbs/" + DATABASE_ID + "/colls/" + COLLECTION_ID,
+        "SELECT * FROM myCollection WHERE myCollection.email = 'allen [at] contoso.com'",
+        null)
+    .getQueryIterable()
+    .toList();
+
+```
+
+> [!div class="nextstepaction"]
+> [Explorer les API clientes](/java/api/overview/azure/cosmosdb/clientlibrary)
+
+
+## <a name="samples"></a>Exemples
+
+[Développer une application Java en utilisant l’API MongoDB d’Azure Cosmos DB][2]   
+[Développer une application Java en utilisant l’API Graph d’Azure Cosmos DB][3]   
+[Développer une application Java en utilisant l’API DocumentDB d’Azure Cosmos DB][4]        
+
+Explorez davantage d’[exemples de code Java pour Azure Cosmos DB](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos) à utiliser avec vos applications.
+
+[2]: https://github.com/Azure-Samples/azure-cosmos-db-mongodb-java-getting-started
+[3]: https://github.com/Azure-Samples/azure-cosmos-db-graph-java-getting-started
+[4]: https://github.com/Azure-Samples/azure-cosmos-db-documentdb-java-getting-started

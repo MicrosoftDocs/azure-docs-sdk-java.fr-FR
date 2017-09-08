@@ -1,0 +1,1 @@
+Pour plus d’informations sur la création et le déploiement d’applications Java sur Azure, visitez le [centre de développement Java](https://docs.microsoft.com/java/api).
