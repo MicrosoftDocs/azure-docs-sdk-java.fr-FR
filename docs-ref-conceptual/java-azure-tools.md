@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 01fe31f2c59810f972875331d49ce5130755c8f2
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: ce0b003cc7c48c8690f4236547ddec36e6ea9d53
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-tools-for-java-developers"></a>Outils Azure pour développeurs Java
 
@@ -26,7 +26,7 @@ Connectez-vous aux services et gérez les ressources Azure depuis vos applicatio
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -34,7 +34,7 @@ Affichez la [liste complète des bibliothèques](java-sdk-azure-install.md) et [
 
 ## <a name="eclipse-and-intellij-plugins"></a>Plug-ins Eclipse et IntelliJ
 
-Gérez les ressources Azure et déployez des applications à partir de votre environnement IDE avec le kit de ressources Azure pour [Eclipse](https://docs.microsoft.com/azure/azure-toolkit-for-eclipse) et [IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij).   
+Gérez les ressources Azure et déployez des applications à partir de votre environnement IDE avec le kit de ressources Azure pour [Eclipse](eclipse/azure-toolkit-for-eclipse.md) et [IntelliJ](intellij/azure-toolkit-for-intellij.md).   
 
 ![Kit de ressources IntelliJ affichant l’Explorateur Azure](media/intelliJ-azure-explorer.png)
 
