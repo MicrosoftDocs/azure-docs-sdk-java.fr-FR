@@ -26,7 +26,7 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
 > [!NOTE]
 >
-> Vous pouvez trouver plus d’informations sur Docker sur le [site web de Docker].
+> Vous pouvez trouver plus d’informations sur Docker sur le [Site web de Docker].
 >
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
@@ -182,7 +182,7 @@ Pour plus d’informations sur la création d’artefacts dans IntelliJ, consult
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web officiel de Docker].
+Pour obtenir des ressources supplémentaires pour Docker, consultez le [Site web de Docker].
 
 [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
 

@@ -94,7 +94,7 @@ Pour plus d’informations sur les caches Redis Azure, la configuration des para
 * [Cache Redis Azure]
 * [Documentation du Cache Redis]
 * [Tarification du Cache Redis]
-* [Configuration du Cache Redis Azure]
+* [Configuration de Cache Redis Azure]
 
 [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
 

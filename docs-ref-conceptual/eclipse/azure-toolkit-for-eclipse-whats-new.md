@@ -34,7 +34,7 @@ Cet article contient des informations sur les différentes versions et les derni
 La version d’avril 2017 du kit de ressources Azure pour Eclipse inclut les améliorations suivantes :
 
 * **Expérience de connexion Azure améliorée** : le kit de ressources Azure pour Eclipse prend désormais en charge deux méthodes de connexion à votre compte Azure : *interactive* et *automatisée*. Pour plus d’informations, voir [Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse].
-* **Publication à l’aide de conteneurs Docker** : à présent, vous pouvez publier vos applications web en tant que conteneurs Docker à l’aide du kit de ressources Azure pour Eclipse. Pour plus d’informations, voir [How to publish a Web App as a Docker Container using the Azure Toolkit for Eclipse (Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse)].
+* **Publication à l’aide de conteneurs Docker** : à présent, vous pouvez publier vos applications web en tant que conteneurs Docker à l’aide du kit de ressources Azure pour Eclipse. Pour plus d’informations, voir [Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse].
 * **Gestion des comptes de stockage** : le kit de ressources Azure pour Eclipse prend désormais en charge la gestion de vos comptes de stockage à partir de la vue de l’Explorateur Azure. Pour plus d’informations, voir [Gestion des comptes de stockage avec l’Explorateur Azure pour Eclipse].
 * **Gestion des machines virtuelles** : le kit de ressources Azure pour Eclipse prend désormais en charge la gestion de vos machines virtuelles à partir de la vue de l’Explorateur Azure. Pour plus d’informations, voir [Gestion des machines virtuelles avec l’Explorateur Azure pour Eclipse].
 * **Suppression de la prise en charge du débogage distant**. Le débogage distant des applications web Java dans Azure App Service a été supprimé du kit de ressources Azure pour Eclipse ; cette action était nécessaire pour résoudre certains problèmes rencontrés par les utilisateurs lors de l’utilisation du kit de ressources.
@@ -343,7 +343,7 @@ Publication de la version préliminaire CTP de décembre 2011 du plug-in Azure
 [Affinité de session]: http://go.microsoft.com/fwlink/?LinkID=699548
 [Déchargement SSL]: http://go.microsoft.com/fwlink/?LinkID=699549
 [Pour créer un compte de stockage]: http://go.microsoft.com/fwlink/?LinkID=699528#create_new
-[Tailles de machines virtuelles et services cloud pour Microsoft Azure]: http://go.microsoft.com/fwlink/?LinkId=466520
+[Tailles de machine virtuelle et de service cloud pour Azure]: http://go.microsoft.com/fwlink/?LinkId=466520
 
 <!-- IMG List -->
 

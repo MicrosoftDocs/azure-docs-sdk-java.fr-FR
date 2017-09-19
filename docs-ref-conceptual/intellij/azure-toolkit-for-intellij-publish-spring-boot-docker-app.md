@@ -229,7 +229,7 @@ Pour en savoir plus sur les autres méthodes permettant de créer des applicatio
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Framework]: https://spring.io/
+[infrastructure Spring]: https://spring.io/
 
 <!-- IMG List -->
 
