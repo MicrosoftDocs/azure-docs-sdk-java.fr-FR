@@ -113,12 +113,12 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 
 <!-- URL List -->
 
-[Instructions de connexion pour le Kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
-[Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
+[Instructions de connexion pour le kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Introduction à Microsoft Azure Storage]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
-[Réplication du stockage Azure]: /azure/storage/storage-redundancy
+[Réplication de Stockage Azure]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets
-[Affectation de noms et références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
+[Affectation de noms et de références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
