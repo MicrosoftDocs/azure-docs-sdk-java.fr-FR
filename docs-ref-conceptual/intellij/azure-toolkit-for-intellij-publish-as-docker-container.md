@@ -103,9 +103,9 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
       * **New log in credentials** (Nouvelles informations d’identification de connexion) : créez un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit :
 
-        a. Sous l’onglet **Informations d’identification de la machine virtuelle**, renseignez les informations suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : * **Nom d’utilisateur** : entrez le nom d’utilisateur pour les informations d’identification de connexion de votre machine virtuelle.
+        a. Sous l’onglet **Informations d’identification de la machine virtuelle**, renseignez les informations suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker: * **Nom d’utilisateur**: entrez le nom d’utilisateur pour les informations d’identification de connexion de votre machine virtuelle.
              * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
-             * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner une des options suivantes : * **Aucun** : spécifie que votre machine virtuelle n’autorise pas les connexions SSH.
+             * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner une des options suivantes: * **Aucun**: spécifie que votre machine virtuelle n’autorise pas les connexions SSH.
                 * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaires pour la connexion via SSH.
                 * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
                 
@@ -189,7 +189,7 @@ Pour obtenir des ressources supplémentaires pour Docker, consultez le [Site web
 <!-- URL List -->
 
 [Site web de Docker]: https://www.docker.com/
-[Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 

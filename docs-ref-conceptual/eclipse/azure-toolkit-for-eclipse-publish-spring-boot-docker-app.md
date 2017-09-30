@@ -213,7 +213,7 @@ Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: azure-toolkit-for-eclipse-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Framework]: https://spring.io/
+[infrastructure Spring]: https://spring.io/
 
 <!-- IMG List -->
 
