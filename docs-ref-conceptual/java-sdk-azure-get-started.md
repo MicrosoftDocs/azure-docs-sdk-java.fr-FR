@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: c9b654ea927563e8255f5d189ddc84733a1202e2
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: a01a1908f549cbab7ede2292a77f5a86da689ef7
+ms.sourcegitcommit: 68bd7b19a6d9b7ec00440d24a17d90235930b459
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="get-started-with-the-azure-libraries-for-java"></a>Prise en main des bibliothèques Azure pour Java
 
@@ -25,7 +25,7 @@ Ce guide vous aide à configurer un environnement de développement avec un prin
 ## <a name="prerequisites"></a>Composants requis
 
 - Un compte Azure. Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/)
-- [Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) ou [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
+- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
 - [Java 8](https://www.azul.com/downloads/zulu/) (inclus dans Azure Cloud Shell)
 - [Maven 3](http://maven.apache.org/download.cgi) (inclus dans Azure Cloud Shell)
 
@@ -97,7 +97,7 @@ Cette opération crée un projet de base Maven sous le dossier `testAzureApp`. A
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 <dependency>
     <groupId>com.microsoft.azure</groupId>
