@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 6226cf0f94b6403ac81ff344eba022420f5e20ea
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 081b8455a6cd8f26ce714328d10ce25ea6a07e3b
+ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Bibliothèques Azure Active Directory pour Java
 
@@ -57,7 +57,7 @@ System.out.println("ID Token - " + result.getIdToken());
 
 ## <a name="management-api"></a>API de gestion
 
-Configurez le [contrôle d’accès en fonction du rôle](/azure/active-directory/role-based-access-control-what-is) et attribuez des identités (utilisateurs et [principaux de service](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects), par exemple) à ces rôles avec l’API de gestion. 
+Configurez le [contrôle d’accès en fonction du rôle](/azure/active-directory/role-based-access-control-what-is) et attribuez des identités (utilisateurs et [principaux de service](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects), par exemple) à ces rôles avec l’API de gestion. 
 
 [Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.
 
