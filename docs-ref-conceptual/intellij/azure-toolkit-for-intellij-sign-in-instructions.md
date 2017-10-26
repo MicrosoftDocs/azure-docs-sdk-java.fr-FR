@@ -12,132 +12,132 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 85fa5eb979e4d28d49db215ee1653b4c064a87c5
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 2daef282b5f0cfd0bd592e8dc1872012bddd1c65
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a><span data-ttu-id="f26bb-103">Instructions de connexion pour le Kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="f26bb-103">Sign-in instructions for the Azure Toolkit for IntelliJ</span></span>
+# <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a><span data-ttu-id="cb0bb-103">Instructions de connexion pour le Kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="cb0bb-103">Sign-in instructions for the Azure Toolkit for IntelliJ</span></span>
 
-<span data-ttu-id="f26bb-104">Le Kit de ressources Azure pour IntelliJ vous permet de vous connecter à votre compte Azure à l’aide de deux méthodes :</span><span class="sxs-lookup"><span data-stu-id="f26bb-104">The Azure Toolkit for IntelliJ provides two methods for signing in to your Azure account:</span></span>
+<span data-ttu-id="cb0bb-104">Le Kit de ressources Azure pour IntelliJ vous permet de vous connecter à votre compte Azure à l’aide de deux méthodes :</span><span class="sxs-lookup"><span data-stu-id="cb0bb-104">The Azure Toolkit for IntelliJ provides two methods for signing in to your Azure account:</span></span>
 
-  * <span data-ttu-id="f26bb-105">**Automatisée** : vous créez un fichier d’informations d’identification que vous pouvez utiliser pour vous connecter automatiquement à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="f26bb-105">**Automated**: You create a credentials file that you can use to automatically sign in to your Azure account.</span></span>
-  * <span data-ttu-id="f26bb-106">**Interactive**: vous entrez vos informations d’identification Azure chaque fois que vous vous connectez à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="f26bb-106">**Interactive**: You enter your Azure credentials each time you sign in to your Azure account.</span></span>
+  * <span data-ttu-id="cb0bb-105">**Automatisée** : vous créez un fichier d’informations d’identification que vous pouvez utiliser pour vous connecter automatiquement à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-105">**Automated**: You create a credentials file that you can use to automatically sign in to your Azure account.</span></span>
+  * <span data-ttu-id="cb0bb-106">**Interactive**: vous entrez vos informations d’identification Azure chaque fois que vous vous connectez à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-106">**Interactive**: You enter your Azure credentials each time you sign in to your Azure account.</span></span>
 
-<span data-ttu-id="f26bb-107">Les sections suivantes décrivent comment utiliser chaque méthode.</span><span class="sxs-lookup"><span data-stu-id="f26bb-107">The following sections describe how to use each method.</span></span>
+<span data-ttu-id="cb0bb-107">Les sections suivantes décrivent comment utiliser chaque méthode.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-107">The following sections describe how to use each method.</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
-## <a name="sign-in-to-your-azure-account-automatically"></a><span data-ttu-id="f26bb-108">Connexion automatique à votre compte Azure</span><span class="sxs-lookup"><span data-stu-id="f26bb-108">Sign in to your Azure account automatically</span></span>
+## <a name="sign-in-to-your-azure-account-automatically"></a><span data-ttu-id="cb0bb-108">Connexion automatique à votre compte Azure</span><span class="sxs-lookup"><span data-stu-id="cb0bb-108">Sign in to your Azure account automatically</span></span>
 
-<span data-ttu-id="f26bb-109">Cette section vous guide dans la création d’un fichier d’informations d’identification contenant les données de votre principal de service.</span><span class="sxs-lookup"><span data-stu-id="f26bb-109">This section walks you through creating a credentials file that contains your service principal data.</span></span> <span data-ttu-id="f26bb-110">Une fois ce processus terminé, Eclipse utilise le fichier d’informations d’identification pour vous connecter automatiquement à Azure chaque fois que vous ouvrez votre projet.</span><span class="sxs-lookup"><span data-stu-id="f26bb-110">After you have completed this process, Eclipse uses the credentials file to automatically sign you in to Azure each time you open your project.</span></span>
+<span data-ttu-id="cb0bb-109">Cette section vous guide dans la création d’un fichier d’informations d’identification contenant les données de votre principal de service.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-109">This section walks you through creating a credentials file that contains your service principal data.</span></span> <span data-ttu-id="cb0bb-110">Une fois ce processus terminé, Eclipse utilise le fichier d’informations d’identification pour vous connecter automatiquement à Azure chaque fois que vous ouvrez votre projet.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-110">After you have completed this process, Eclipse uses the credentials file to automatically sign you in to Azure each time you open your project.</span></span>
 
-1. <span data-ttu-id="f26bb-111">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="f26bb-111">Open your project with IntelliJ IDEA.</span></span>
+1. <span data-ttu-id="cb0bb-111">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-111">Open your project with IntelliJ IDEA.</span></span>
 
-1. <span data-ttu-id="f26bb-112">Dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-112">On the **Tools** menu, point to **Azure**, and then click **Azure Sign In**.</span></span>
+1. <span data-ttu-id="cb0bb-112">Dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-112">On the **Tools** menu, point to **Azure**, and then click **Azure Sign In**.</span></span>
 
    ![Commande IntelliJ de connexion à Azure][A01]
 
-1. <span data-ttu-id="f26bb-114">Dans la fenêtre **Connexion à Microsoft Azure**, sélectionnez **Automatisée**, puis cliquez sur **Nouveau**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-114">In the **Azure Sign In** window, select **Automated**, and then click **New**.</span></span>
+1. <span data-ttu-id="cb0bb-114">Dans la fenêtre **Connexion à Microsoft Azure**, sélectionnez **Automatisée**, puis cliquez sur **Nouveau**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-114">In the **Azure Sign In** window, select **Automated**, and then click **New**.</span></span>
 
    ![Fenêtre Connexion à Microsoft Azure avec l’option Automatique activée][A02]
 
-1. <span data-ttu-id="f26bb-116">Dans la boîte de dialogue **Connexion à Azure** qui s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-116">In the **Azure Login Dialog** window, enter your Azure credentials, and then click **Sign in**.</span></span>
+1. <span data-ttu-id="cb0bb-116">Dans la boîte de dialogue **Connexion à Azure** qui s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-116">In the **Azure Login Dialog** window, enter your Azure credentials, and then click **Sign in**.</span></span>
 
    ![Boîte de dialogue Connexion à Azure][A03]
 
-1. <span data-ttu-id="f26bb-118">Dans la fenêtre **Créer les fichiers d’authentification**, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-118">In the **Create Authentication Files** window, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+1. <span data-ttu-id="cb0bb-118">Dans la fenêtre **Créer les fichiers d’authentification**, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-118">In the **Create Authentication Files** window, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
 
    ![Fenêtre Créer les fichiers d’authentification][A04]
 
-1. <span data-ttu-id="f26bb-120">Dans la boîte de dialogue **État de création du principal de service** qui s’affiche, une fois vos fichiers créés, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-120">In the **Service Principal Creation Status** dialog box, after your files have been created successfully, click **OK**.</span></span>
+1. <span data-ttu-id="cb0bb-120">Dans la boîte de dialogue **État de création du principal de service** qui s’affiche, une fois vos fichiers créés, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-120">In the **Service Principal Creation Status** dialog box, after your files have been created successfully, click **OK**.</span></span>
 
    ![Boîte de dialogue État de création du principal de service][A05]
 
-1. <span data-ttu-id="f26bb-122">Dans la fenêtre **Connexion à Microsoft Azure**, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-122">In the **Azure Sign In** window, click **Sign in**.</span></span>
+1. <span data-ttu-id="cb0bb-122">Dans la fenêtre **Connexion à Microsoft Azure**, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-122">In the **Azure Sign In** window, click **Sign in**.</span></span>
 
    ![Boîte de dialogue Connexion à Azure][A06]
 
-1. <span data-ttu-id="f26bb-124">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-124">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="cb0bb-124">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-124">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![Boîte de dialogue Sélectionner des abonnements][A07]
 
-## <a name="sign-out-of-your-azure-account-after-you-have-signed-in-automatically"></a><span data-ttu-id="f26bb-126">Déconnexion de votre compte Azure après vous être connecté automatiquement</span><span class="sxs-lookup"><span data-stu-id="f26bb-126">Sign out of your Azure account after you have signed in automatically</span></span>
+## <a name="sign-out-of-your-azure-account-after-you-have-signed-in-automatically"></a><span data-ttu-id="cb0bb-126">Déconnexion de votre compte Azure après vous être connecté automatiquement</span><span class="sxs-lookup"><span data-stu-id="cb0bb-126">Sign out of your Azure account after you have signed in automatically</span></span>
 
-<span data-ttu-id="f26bb-127">Après que vous avez configuré votre compte en suivant la procédure précédente, le Kit de ressources Azure vous connecte automatiquement à votre compte Azure chaque fois que vous redémarrez IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="f26bb-127">After you have configured your account by using the preceding steps, the Azure Toolkit automatically signs you in to your Azure account each time you restart IntelliJ IDEA.</span></span> <span data-ttu-id="f26bb-128">Toutefois, pour vous déconnecter de votre compte Azure et empêcher le Kit de ressources Azure de vous connecter automatiquement, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="f26bb-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, do the following:</span></span>
+<span data-ttu-id="cb0bb-127">Après que vous avez configuré votre compte en suivant la procédure précédente, le Kit de ressources Azure vous connecte automatiquement à votre compte Azure chaque fois que vous redémarrez IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-127">After you have configured your account by using the preceding steps, the Azure Toolkit automatically signs you in to your Azure account each time you restart IntelliJ IDEA.</span></span> <span data-ttu-id="cb0bb-128">Toutefois, pour vous déconnecter de votre compte Azure et empêcher le Kit de ressources Azure de vous connecter automatiquement, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="cb0bb-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, do the following:</span></span>
 
-1. <span data-ttu-id="f26bb-129">Dans IntelliJ IDEA, dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Déconnexion de Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-129">In IntelliJ IDEA, on the **Tools** menu, point to **Azure**, and then click **Azure Sign Out**.</span></span>
+1. <span data-ttu-id="cb0bb-129">Dans IntelliJ IDEA, dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Déconnexion de Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-129">In IntelliJ IDEA, on the **Tools** menu, point to **Azure**, and then click **Azure Sign Out**.</span></span>
 
    ![Commande IntelliJ de déconnexion d’Azure][L01]
 
-1. <span data-ttu-id="f26bb-131">Dans la fenêtre de confirmation **e déconnecter de Microsoft Azure**, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-131">In the **Azure Sign Out** confirmation window, click **Yes**.</span></span>
+1. <span data-ttu-id="cb0bb-131">Dans la fenêtre de confirmation **e déconnecter de Microsoft Azure**, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-131">In the **Azure Sign Out** confirmation window, click **Yes**.</span></span>
 
    ![Fenêtre de confirmation de déconnexion d’Azure][L03]
 
-## <a name="sign-in-to-your-azure-account-automatically-by-using-an-existing-credentials-file"></a><span data-ttu-id="f26bb-133">Connexion automatique à votre compte Azure à l’aide d’un fichier d’informations d’identification existant</span><span class="sxs-lookup"><span data-stu-id="f26bb-133">Sign in to your Azure account automatically by using an existing credentials file</span></span>
+## <a name="sign-in-to-your-azure-account-automatically-by-using-an-existing-credentials-file"></a><span data-ttu-id="cb0bb-133">Connexion automatique à votre compte Azure à l’aide d’un fichier d’informations d’identification existant</span><span class="sxs-lookup"><span data-stu-id="cb0bb-133">Sign in to your Azure account automatically by using an existing credentials file</span></span>
 
-<span data-ttu-id="f26bb-134">Si vous vous déconnectez de votre compte Azure alors que vous utilisez IntelliJ IDEA, vous devez utiliser un fichier d’informations d’identification existant pour vous reconnecter automatiquement au compte.</span><span class="sxs-lookup"><span data-stu-id="f26bb-134">If you sign out of your Azure account when you are using IntelliJ IDEA, you must use an existing credentials file to automatically sign back in to the account.</span></span> <span data-ttu-id="f26bb-135">Pour configurer le Kit de ressources Azure pour Eclipse afin d’utiliser un fichier d’informations d’identification existant, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="f26bb-135">To configure the Azure Toolkit for Eclipse to use an existing credentials file, do the following:</span></span>
+<span data-ttu-id="cb0bb-134">Si vous vous déconnectez de votre compte Azure alors que vous utilisez IntelliJ IDEA, vous devez utiliser un fichier d’informations d’identification existant pour vous reconnecter automatiquement au compte.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-134">If you sign out of your Azure account when you are using IntelliJ IDEA, you must use an existing credentials file to automatically sign back in to the account.</span></span> <span data-ttu-id="cb0bb-135">Pour configurer le Kit de ressources Azure pour Eclipse afin d’utiliser un fichier d’informations d’identification existant, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="cb0bb-135">To configure the Azure Toolkit for Eclipse to use an existing credentials file, do the following:</span></span>
 
-1. <span data-ttu-id="f26bb-136">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="f26bb-136">Open your project with IntelliJ IDEA.</span></span>
+1. <span data-ttu-id="cb0bb-136">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-136">Open your project with IntelliJ IDEA.</span></span>
 
-1. <span data-ttu-id="f26bb-137">Dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-137">On the **Tools** menu, point to **Azure**, and then click **Azure Sign In**.</span></span>
+1. <span data-ttu-id="cb0bb-137">Dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-137">On the **Tools** menu, point to **Azure**, and then click **Azure Sign In**.</span></span>
 
    ![Commande IntelliJ de connexion à Azure][A01]
 
-1. <span data-ttu-id="f26bb-139">Dans la fenêtre **Connexion à Microsoft Azure**, sélectionnez **Automatisée**, puis cliquez sur **Parcourir**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-139">In the **Azure Sign In** window, select **Automated**, and then click **Browse**.</span></span>
+1. <span data-ttu-id="cb0bb-139">Dans la fenêtre **Connexion à Microsoft Azure**, sélectionnez **Automatisée**, puis cliquez sur **Parcourir**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-139">In the **Azure Sign In** window, select **Automated**, and then click **Browse**.</span></span>
 
    ![Fenêtre Connexion à Microsoft Azure avec l’option Automatique activée][A02]
 
-1. <span data-ttu-id="f26bb-141">Dans la boîte de dialogue **Sélectionner le fichier d’authentification**, choisissez un fichier d’informations d’identification créé précédemment, puis cliquez sur **Sélectionner**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-141">In the **Select Authentication File** dialog box, select a previously created credentials file, and then click **Select**.</span></span>
+1. <span data-ttu-id="cb0bb-141">Dans la boîte de dialogue **Sélectionner le fichier d’authentification**, choisissez un fichier d’informations d’identification créé précédemment, puis cliquez sur **Sélectionner**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-141">In the **Select Authentication File** dialog box, select a previously created credentials file, and then click **Select**.</span></span>
 
    ![Boîte de dialogue Sélectionner le fichier d’authentification][A08]
 
-1. <span data-ttu-id="f26bb-143">Dans la fenêtre **Connexion à Microsoft Azure**, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-143">In the **Azure Sign In** window, click **Sign in**.</span></span>
+1. <span data-ttu-id="cb0bb-143">Dans la fenêtre **Connexion à Microsoft Azure**, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-143">In the **Azure Sign In** window, click **Sign in**.</span></span>
 
    ![Fenêtre Connexion à Microsoft Azure avec l’option Automatique activée][A06]
 
-1. <span data-ttu-id="f26bb-145">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-145">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="cb0bb-145">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-145">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![Boîte de dialogue Sélectionner des abonnements][A07]
 
-## <a name="sign-in-to-your-azure-account-interactively"></a><span data-ttu-id="f26bb-147">Connexion à votre compte Azure de façon interactive</span><span class="sxs-lookup"><span data-stu-id="f26bb-147">Sign in to your Azure account interactively</span></span>
+## <a name="sign-in-to-your-azure-account-interactively"></a><span data-ttu-id="cb0bb-147">Connexion à votre compte Azure de façon interactive</span><span class="sxs-lookup"><span data-stu-id="cb0bb-147">Sign in to your Azure account interactively</span></span>
 
-<span data-ttu-id="f26bb-148">Pour vous connecter à Azure en entrant manuellement vos informations d’identification, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="f26bb-148">To sign in to Azure by manually entering your Azure credentials, do the following:</span></span>
+<span data-ttu-id="cb0bb-148">Pour vous connecter à Azure en entrant manuellement vos informations d’identification, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="cb0bb-148">To sign in to Azure by manually entering your Azure credentials, do the following:</span></span>
 
-1. <span data-ttu-id="f26bb-149">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="f26bb-149">Open your project with IntelliJ IDEA.</span></span>
+1. <span data-ttu-id="cb0bb-149">Ouvrez votre projet avec IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-149">Open your project with IntelliJ IDEA.</span></span>
 
-1. <span data-ttu-id="f26bb-150">Cliquez sur **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-150">Click **Tools**, point to **Azure**, and then click **Azure Sign In**.</span></span>
+1. <span data-ttu-id="cb0bb-150">Cliquez sur **Outils**, pointez sur **Azure**, puis cliquez sur **Connexion à Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-150">Click **Tools**, point to **Azure**, and then click **Azure Sign In**.</span></span>
 
    ![Commande IntelliJ de connexion à Azure][I01]
 
-1. <span data-ttu-id="f26bb-152">Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Interactive**, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-152">In the **Azure Sign In** window, select **Interactive**, and then click **Sign in**.</span></span>
+1. <span data-ttu-id="cb0bb-152">Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Interactive**, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-152">In the **Azure Sign In** window, select **Interactive**, and then click **Sign in**.</span></span>
 
    ![Fenêtre Connexion à Azure avec l’option Interactive activée][I02]
 
-1. <span data-ttu-id="f26bb-154">Dans la boîte de dialogue **Connexion à Azure** qui s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-154">In the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign in**.</span></span>
+1. <span data-ttu-id="cb0bb-154">Dans la boîte de dialogue **Connexion à Azure** qui s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-154">In the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign in**.</span></span>
 
    ![Boîte de dialogue Connexion à Azure][I03]
 
-1. <span data-ttu-id="f26bb-156">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-156">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="cb0bb-156">Lorsque la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-156">In the **Select Subscriptions** dialog box, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![Boîte de dialogue Sélectionner des abonnements][I04]
 
-## <a name="sign-out-of-your-azure-account-after-you-have-signed-in-interactively"></a><span data-ttu-id="f26bb-158">Déconnexion de votre compte Azure après vous être connecté de manière interactive</span><span class="sxs-lookup"><span data-stu-id="f26bb-158">Sign out of your Azure account after you have signed in interactively</span></span>
+## <a name="sign-out-of-your-azure-account-after-you-have-signed-in-interactively"></a><span data-ttu-id="cb0bb-158">Déconnexion de votre compte Azure après vous être connecté de manière interactive</span><span class="sxs-lookup"><span data-stu-id="cb0bb-158">Sign out of your Azure account after you have signed in interactively</span></span>
 
-<span data-ttu-id="f26bb-159">Après que vous avez configuré votre compte en procédant de la manière décrite les étapes précédentes, vous êtes automatiquement déconnecté de votre compte Azure à chaque redémarrage d’IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="f26bb-159">After you have configured your account by using the preceding steps, you will be automatically signed out of your Azure account each time you restart IntelliJ IDEA.</span></span> <span data-ttu-id="f26bb-160">En revanche, si vous souhaitez vous déconnecter de votre compte Azure *sans* redémarrer IntelliJ IDEA, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="f26bb-160">However, if you want to sign out of your Azure account *without* restarting IntelliJ IDEA, do the following.</span></span>
+<span data-ttu-id="cb0bb-159">Après que vous avez configuré votre compte en procédant de la manière décrite les étapes précédentes, vous êtes automatiquement déconnecté de votre compte Azure à chaque redémarrage d’IntelliJ IDEA.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-159">After you have configured your account by using the preceding steps, you will be automatically signed out of your Azure account each time you restart IntelliJ IDEA.</span></span> <span data-ttu-id="cb0bb-160">En revanche, si vous souhaitez vous déconnecter de votre compte Azure *sans* redémarrer IntelliJ IDEA, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-160">However, if you want to sign out of your Azure account *without* restarting IntelliJ IDEA, do the following.</span></span>
 
-1. <span data-ttu-id="f26bb-161">Dans IntelliJ IDEA, dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Déconnexion de Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-161">In IntelliJ IDEA, on the **Tools** menu, point to **Azure**, and then click **Azure Sign Out**.</span></span>
+1. <span data-ttu-id="cb0bb-161">Dans IntelliJ IDEA, dans le menu **Outils**, pointez sur **Azure**, puis cliquez sur **Déconnexion de Microsoft Azure**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-161">In IntelliJ IDEA, on the **Tools** menu, point to **Azure**, and then click **Azure Sign Out**.</span></span>
 
    ![Commande IntelliJ de déconnexion d’Azure][L01]
 
-1. <span data-ttu-id="f26bb-163">Dans la fenêtre de confirmation **e déconnecter de Microsoft Azure**, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="f26bb-163">In the **Azure Sign Out** confirmation window, click **Yes**.</span></span>
+1. <span data-ttu-id="cb0bb-163">Dans la fenêtre de confirmation **e déconnecter de Microsoft Azure**, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="cb0bb-163">In the **Azure Sign Out** confirmation window, click **Yes**.</span></span>
 
    ![Fenêtre de confirmation de déconnexion d’Azure][L02]
 
-## <a name="next-steps"></a><span data-ttu-id="f26bb-165">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="f26bb-165">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="cb0bb-165">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="cb0bb-165">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
 

@@ -24,4 +24,4 @@
             - name: Cache Redis Azure
               href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
     - name: Notes de publication
-      href: azure-toolkit-for-eclipse-whats-new.md
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
