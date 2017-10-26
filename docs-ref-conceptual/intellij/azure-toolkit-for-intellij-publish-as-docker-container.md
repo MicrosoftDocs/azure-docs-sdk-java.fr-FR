@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 2d94dfa4467bc79d6155321a9966358b79e9e960
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 1da5cc058038830ca09710a1dc8eede71bb67387
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -26,7 +26,7 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
 > [!NOTE]
 >
-> Vous pouvez trouver plus d’informations sur Docker sur le [Site web de Docker].
+> Vous pouvez trouver plus d’informations sur Docker sur le [site web de Docker].
 >
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
@@ -103,9 +103,9 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
       * **New log in credentials** (Nouvelles informations d’identification de connexion) : créez un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit :
 
-        a. Sous l’onglet **Informations d’identification de la machine virtuelle**, renseignez les informations suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker: * **Nom d’utilisateur**: entrez le nom d’utilisateur pour les informations d’identification de connexion de votre machine virtuelle.
+        a. Sous l’onglet **Informations d’identification de la machine virtuelle**, renseignez les informations suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : * **Nom d’utilisateur** : entrez le nom d’utilisateur pour les informations d’identification de connexion de votre machine virtuelle.
              * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
-             * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner une des options suivantes: * **Aucun**: spécifie que votre machine virtuelle n’autorise pas les connexions SSH.
+             * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner une des options suivantes : * **Aucun** : spécifie que votre machine virtuelle n’autorise pas les connexions SSH.
                 * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaires pour la connexion via SSH.
                 * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
                 
@@ -182,13 +182,13 @@ Pour plus d’informations sur la création d’artefacts dans IntelliJ, consult
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir des ressources supplémentaires pour Docker, consultez le [Site web de Docker].
+Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker].
 
 [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
 
 <!-- URL List -->
 
-[Site web de Docker]: https://www.docker.com/
+[site web de Docker]: https://www.docker.com/
 [Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
