@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 61cf858f2f118650c34c299634fc0c47c22fd6a5
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: dc93b0b490eb61baa2b7cf86c7df7ac13925305f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>Kit de ressources Azure pour IntelliJ
 Le kit de ressources Azure pour IntelliJ contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) IntelliJ. Il s’agit d’un projet open source, dont le code source est disponible sous [licence MIT du site du projet](https://github.com/microsoft/azure-tools-for-java).
@@ -31,13 +31,11 @@ Le kit de ressources Azure pour IntelliJ contient des modèles et fonctionnalit�
 ## <a name="get-started-with-the-azure-toolkit-for-intellij"></a>Commencer avec le kit de ressources Azure pour IntelliJ
 Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour IntelliJ :
 
-* [Nouveautés du Kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-whats-new.md)
-
 * [Installation du kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-installation.md)
 
 * [Instructions de connexion pour le Kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-sign-in-instructions.md)
 
-* [Créer une application web Hello World pour Azure dans IntelliJ](/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app)
+* [Créer une application web Hello World pour Azure dans IntelliJ](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-intellij-with-your-java-projects"></a>Utilisez le kit de ressources Azure pour IntelliJ avec vos projets Java
 Les articles suivants expliquent comment utiliser la Boîte à outils Azure pour IntelliJ afin d’ajouter la fonctionnalité Azure à vos projets Java :
@@ -60,6 +58,12 @@ Les articles suivants expliquent comment utiliser le kit de ressources Azure pou
 * [Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur le kit de ressources Azure pour IntelliJ, voir les pages suivantes :
+
+* [Notes de publication du kit de ressources Azure](https://github.com/Microsoft/azure-tools-for-java/releases)
+
+* [Kit de ressources Azure pour IntelliJ dans le référentiel des plug-ins JetBrains](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
 Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez le [Centre de développement Java pour Azure](https://azure.microsoft.com/develop/java/) et les [Outils Java pour Visual Studio Team Services](https://java.visualstudio.com/).
 

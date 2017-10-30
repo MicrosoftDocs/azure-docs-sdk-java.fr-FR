@@ -14,16 +14,21 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 09/11/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 31af7e6494f978f341e1f99a30117c57ef30a05b
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Nouveautés du kit de ressources Azure pour Eclipse
 
 ## <a name="azure-toolkit-for-eclipse-releases"></a>Versions du kit de ressources Azure pour Eclipse
 Cet article contient des informations sur les différentes versions et les dernières mises à jour du kit de ressources Azure pour Eclipse.
+
+> [!NOTE]
+> Pour consulter les dernières informations, voir les pages suivantes :
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > Il existe également une boîte à outils Azure pour l’environnement de développement IntelliJ. Pour plus d’informations, consultez [Kit de ressources Azure pour IntelliJ].
@@ -34,7 +39,7 @@ Cet article contient des informations sur les différentes versions et les derni
 La version d’avril 2017 du kit de ressources Azure pour Eclipse inclut les améliorations suivantes :
 
 * **Expérience de connexion Azure améliorée** : le kit de ressources Azure pour Eclipse prend désormais en charge deux méthodes de connexion à votre compte Azure : *interactive* et *automatisée*. Pour plus d’informations, voir [Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse].
-* **Publication à l’aide de conteneurs Docker** : à présent, vous pouvez publier vos applications web en tant que conteneurs Docker à l’aide du kit de ressources Azure pour Eclipse. Pour plus d’informations, voir [Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse].
+* **Publication à l’aide de conteneurs Docker** : à présent, vous pouvez publier vos applications web en tant que conteneurs Docker à l’aide du kit de ressources Azure pour Eclipse. Pour plus d’informations, voir [How to publish a Web App as a Docker Container using the Azure Toolkit for Eclipse (Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse)].
 * **Gestion des comptes de stockage** : le kit de ressources Azure pour Eclipse prend désormais en charge la gestion de vos comptes de stockage à partir de la vue de l’Explorateur Azure. Pour plus d’informations, voir [Gestion des comptes de stockage avec l’Explorateur Azure pour Eclipse].
 * **Gestion des machines virtuelles** : le kit de ressources Azure pour Eclipse prend désormais en charge la gestion de vos machines virtuelles à partir de la vue de l’Explorateur Azure. Pour plus d’informations, voir [Gestion des machines virtuelles avec l’Explorateur Azure pour Eclipse].
 * **Suppression de la prise en charge du débogage distant**. Le débogage distant des applications web Java dans Azure App Service a été supprimé du kit de ressources Azure pour Eclipse ; cette action était nécessaire pour résoudre certains problèmes rencontrés par les utilisateurs lors de l’utilisation du kit de ressources.
@@ -280,12 +285,12 @@ Publication de la version préliminaire CTP (Community Technology Preview) de j
 * **Page des propriétés de rôle de configuration de serveur** : vous permet de basculer facilement entre les JDK, les serveurs d’applications Java et les applications associés à votre déploiement après avoir créé le projet. Pour plus d’informations, consultez la section [Propriétés de configuration de serveur].
 * **Assistant &quot;Publication sur le cloud&quot; :** permet de déployer facilement votre projet sur Azure directement à partir d’Eclipse, en automatisant la récupération des informations d’identification auparavant manuelle, la connexion au portail de gestion Azure, le chargement d’un package, etc. Pour obtenir un exemple de déploiement direct de votre projet sur Azure, consultez le didacticiel [Création d’une application Hello World pour Azure dans Eclipse].
 * **Barre d’outils Azure** : une barre d’outils Azure est désormais disponible dans Eclipse. Elle contient des boutons qui appellent les fonctionnalités suivantes :
-  * ![][ic710879] **Exécuter dans l’émulateur Azure**: exécute votre projet dans l’émulateur.
-  * ![][ic710880] **Réinitialiser l’émulateur Azure**: réinitialise l’émulateur.
-  * ![][ic710881] **Générer un package cloud pour Azure**: compile votre package pour le déploiement.
-  * ![][ic710876] **Nouveau projet de déploiement Azure**: crée un projet de déploiement Azure.
-  * ![][ic710882] **Publier dans le cloud Azure**: publie votre projet sur Azure.
-  * ![][ic710883] **Annuler la publication**: supprime votre déploiement.
+  * ![][ic710879]**Exécuter dans l’émulateur Azure**: exécute votre projet dans l’émulateur.
+  * ![][ic710880]**Réinitialiser l’émulateur Azure**: réinitialise l’émulateur.
+  * ![][ic710881]**Générer un package cloud pour Azure**: compile votre package pour le déploiement.
+  * ![][ic710876]**Nouveau projet de déploiement Azure**: crée un projet de déploiement Azure.
+  * ![][ic710882]**Publier dans le cloud Azure**: publie votre projet sur Azure.
+  * ![][ic710883]**Annuler la publication**: supprime votre déploiement.
   * Nombre de ces boutons de la barre d’outils Azure sont utilisés dans le didacticiel [Création d’une application Hello World pour Azure dans Eclipse].
 * **Bibliothèques Azure pour Java** : désormais disponibles dans la bibliothèque Package des bibliothèques Azure pour Java dans Eclipse, elles accompagnent l’installation du plug-in et contiennent également toutes les dépendances nécessaires. Il vous suffit d’ajouter une référence à la bibliothèque de votre projet Java. Vous n’avez pas besoin de télécharger quoi que ce soit séparément. Pour plus d’informations, consultez [Installation du kit de ressources Azure pour Eclipse].
 * **Microsoft JDBC Driver 4.0 pour SQL Server disponible pendant l’installation du plug-in** : pendant l’installation du nouveau plug-in, la dernière version de Microsoft JDBC Driver pour SQL Server peut être installée.
@@ -298,7 +303,7 @@ Publication de la version préliminaire CTP (Community Technology Preview) de j
 ### <a name="december-10-2011"></a>10 décembre 2011
 Publication de la version préliminaire CTP de décembre 2011 du plug-in Azure pour Eclipse. Nouvelles fonctionnalités :
 
-* **Prise en charge de l’affinité de session (&quot;sessions rémanentes&quot;)** : permet d’activer des applications Java en cluster avec état à l’aide d’une seule case à cocher. Pour plus d’informations, voir l’article [Affinité de session].
+* **Prise en charge de l’affinité de session (&quot;sessions rémanentes&quot;):** permet d’activer des applications Java en cluster avec état à l’aide d’une seule case à cocher. Pour plus d’informations, voir l’article [Affinité de session].
 * **Exemples de script de démarrage préconçus** : pour les principaux serveurs Java (Tomcat, Jetty, JBoss et GlassFish), que vous pouvez simplement copier/coller à partir du répertoire d’exemples de votre projet dans votre script de démarrage.
 * **Sortie de démarrage d’émulateur en temps réel** : vous pouvez désormais visionner l’exécution de toutes les étapes de votre script de démarrage dans une fenêtre de console dédiée, qui vous indique la progression et les échecs de votre script lorsqu’il est exécuté par Azure.
 * **Surveillance de java.exe automatique et légère** : force un recyclage des rôles quand java.exe cesse de s’exécuter, en utilisant un script léger, préconçu inclus automatiquement dans votre déploiement.
@@ -319,7 +324,7 @@ Publication de la version préliminaire CTP de décembre 2011 du plug-in Azure
 [Installation du kit de ressources Azure pour Eclipse]: azure-toolkit-for-eclipse-installation.md
 
 [Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse]: azure-toolkit-for-eclipse-sign-in-instructions.md
-[Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse]: ./azure-toolkit-for-eclipse-publish-as-docker-container.md
+[How to publish a Web App as a Docker Container using the Azure Toolkit for Eclipse (Comment publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse)]: ./azure-toolkit-for-eclipse-publish-as-docker-container.md
 [Gestion des comptes de stockage avec l’Explorateur Azure pour Eclipse]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
 [Gestion des machines virtuelles avec l’Explorateur Azure pour Eclipse]: ./azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
 
@@ -328,7 +333,7 @@ Publication de la version préliminaire CTP de décembre 2011 du plug-in Azure
 [page web d’Azul Systems correspondant à Zulu OpenJDK]: http://go.microsoft.com/fwlink/?LinkId=402457
 [Points de terminaison de service Azure]: http://go.microsoft.com/fwlink/?LinkID=699526
 [Liste des comptes de stockage Azure]: http://go.microsoft.com/fwlink/?LinkID=699528
-[Propriétés des composants]: http://go.microsoft.com/fwlink/?LinkID=699525#components_properties
+[propriétés des composants]: http://go.microsoft.com/fwlink/?LinkID=699525#components_properties
 [Création d’une application Hello World pour Azure dans Eclipse]: http://go.microsoft.com/fwlink/?LinkID=699533
 [Débogage des applications Azure dans Eclipse]: http://go.microsoft.com/fwlink/?LinkID=699535
 [Réalisation de déploiements volumineux]: http://go.microsoft.com/fwlink/?LinkID=699536

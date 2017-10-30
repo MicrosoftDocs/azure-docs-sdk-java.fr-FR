@@ -1,5 +1,5 @@
 ## <a name="prerequisites"></a>Composants requis
-Le Kit de ressources Azure pour Eclipse requiert les composants logiciels suivants :
+Pour réaliser les étapes présentes dans cet article, vous devez installer le it de ressources Azure pour Eclipse, ce qui nécessite les composants logiciels suivants :
 
 * IDE (environnement de développement intégré) Eclipse pour développeurs Java EE, Mars ou version ultérieure. Vous pouvez le télécharger à partir du [site web Eclipse](http://www.eclipse.org/downloads/).
 
