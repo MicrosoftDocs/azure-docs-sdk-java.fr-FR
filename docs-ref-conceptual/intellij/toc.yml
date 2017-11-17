@@ -1,0 +1,30 @@
+- name: Kit de ressources Azure pour IntelliJ
+  href: azure-toolkit-for-intellij.md
+  items:
+    - name: Installer
+      href: azure-toolkit-for-intellij-installation.md
+    - name: Prise en main
+      href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+      maintainContext: true
+    - name: Didacticiels
+      items:
+        - name: Déployer une application web Hello World dans un conteneur Linux
+          href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
+        - name: Déployer des conteneurs sur des machines virtuelles
+          href: azure-toolkit-for-intellij-publish-as-docker-container.md
+        - name: Déployer une application web dans Azure App Service
+          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
+    - name: Procédure
+      items:
+        - name: Configurer l’authentification
+          href: azure-toolkit-for-intellij-sign-in-instructions.md
+        - name: Gérer des ressources Azure
+          items:
+            - name: Machines virtuelles
+              href: azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
+            - name: Comptes de stockage
+              href: azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
+            - name: Cache Redis Azure
+              href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
+    - name: Notes de publication
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
