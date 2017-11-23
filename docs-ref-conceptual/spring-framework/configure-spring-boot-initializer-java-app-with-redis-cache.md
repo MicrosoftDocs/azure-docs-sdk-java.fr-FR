@@ -13,13 +13,13 @@ ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: ce8202b48c6759a80560616492eab018434e9307
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Guide pratique pour configurer une application Spring Boot Initializer pour utiliser le Cache Redis
 
@@ -118,10 +118,19 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    ![Modification du fichier application.properties][RE02]
 
-   > [!NOTE]
-   >
-   > Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez le port 6380 dans votre fichier *application.properties*. Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java].
-   >
+   > [!NOTE] 
+   > 
+   > Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez le port 6380 dans votre fichier *application.properties*. Par exemple :
+   > 
+   > ```yaml
+   > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > spring.redis.ssl=true
+   > spring.redis.port=6380
+   > ```
+   > 
+   > Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java]. 
+   > 
 
 1. Enregistrez et fermez le fichier *application.properties*.
 
