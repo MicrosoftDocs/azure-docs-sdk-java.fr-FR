@@ -18,47 +18,29 @@ metadata:
 sections:
   - items:
       - type: markdown
-        text: "L’[infrastructure Spring](http://spring.io/) est une solution open source qui aide les développeurs Java à créer des applications d’entreprise. L’un des projets les plus connus basés sur cette plateforme est [Spring\_Boot](https://projects.spring.io/spring-boot/), qui fournit une approche simplifiée pour la création d’applications\_Java autonomes. Les développeurs peuvent combiner ces technologies avec Microsoft Azure pour créer de puissantes applications basées sur le cloud.\nPour aider les développeurs à bien démarrer avec Spring Boot, plusieurs exemples de packages Spring Boot sont disponibles à l’adresse <https://github.com/spring-guides/>. En plus de choisir dans la liste des projets Spring Boot de base, **Spring Initializr** aide les développeurs à commencer à créer des applications Spring Boot personnalisées.\n"
+        text: '[Spring Framework](http://spring.io/) est une solution open source qui permet aux développeurs Java de créer des applications d’entreprise. Un des projets les plus populaires s’appuyant sur cette plateforme est [Spring Boot](https://projects.spring.io/spring-boot/), qui offre une approche simplifiée pour la création d’applications Java autonomes. En se servant des informations disponibles sur ce site web, les développeurs peuvent combiner ces technologies avec Microsoft Azure pour créer de puissantes applications basées sur le cloud.'
   - title: Prise en main
     items:
-      - type: paragraph
+      - type: markdown
         text: Prenez en main le développement d’application avec Spring Framework avec Microsoft Azure à l’aide des ressources suivantes.
       - type: list
-        style: cards
-        className: cardsM
-        columns: 2
+        style: unordered
         items:
-          - href: deploy-spring-boot-java-web-app-on-azure.md
-            html: <p>Déployer une application Spring Boot sur Azure App Service</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: Déployer une application Spring Boot sur Azure App Service
-          - href: 'https://spring.io/'
-            html: <p>Spring Framework</p>
-            image:
-              src: 'https://docs.microsoft.com/java/azure/spring-framework/media/index/i_spring_logo.png'
-            title: Spring Framework
+          - html: <a href="/java/azure/spring-framework/deploy-spring-boot-java-web-app-on-azure">Déployer une application Spring Boot sur Azure App Service</a>
+          - html: <a href="/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin">Utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure</a>
   - title: Documentation officielle sur Spring
     items:
       - type: list
-        style: cards
-        className: cardsM
-        columns: 2
+        style: unordered
         items:
-          - href: 'https://spring.io/docs'
-            html: <p>En savoir plus sur Spring</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
-            title: En savoir plus sur Spring
-          - href: 'https://spring.io/docs/reference'
-            html: <p>Documentation de référence</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: Documentation de référence
+          - html: '<a href="https://spring.io/">infrastructure Spring</a>'
+          - html: '<a href="https://spring.io/docs">En savoir plus sur Spring</a>'
+          - html: '<a href="https://spring.io/docs/reference">Documentation de référence</a>'
   - title: Exemples
     items:
       - type: list
         style: unordered
         items:
+          - html: '<a href="https://start.spring.io/">Spring Initializr</a>'
           - html: '<a href="https://github.com/spring-guides/">Guides Spring </a>'
           - html: '<a href="https://github.com/Microsoft/azure-spring-boot/">Pour débuter avec Spring Boot pour Azure</a>'
