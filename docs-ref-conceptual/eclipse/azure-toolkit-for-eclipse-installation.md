@@ -12,17 +12,24 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 59a8bfb6ab4db8ea8c6c9025ca3ced8a13192628
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installing-the-azure-toolkit-for-eclipse"></a>Installation du kit de ressources Azure pour Eclipse
 
-Le kit de ressources Azure pour Eclipse contient des modèles et des fonctionnalités qui vous permettent de créer, de développer, de tester et de déployer des applications Azure avec l’environnement de développement Eclipse. Le kit de ressources Azure pour Eclipse est un projet Open Source. Le code source est disponible sous la licence du MIT à partir de <https://github.com/microsoft/azure-tools-for-java>.
+Le kit de ressources Azure pour Eclipse contient des modèles et des fonctionnalités qui vous permettent de créer, de développer, de tester et de déployer des applications Azure avec l’environnement de développement Eclipse.
+
+> [!NOTE] 
+> 
+> Le kit de ressources Azure pour Eclipse est un projet Open Source, dont le code source est disponible sous licence MIT sur le site du projet sur GitHub à l’adresse suivante : 
+> 
+> <https://github.com/microsoft/azure-tools-for-java> 
+> 
 
 Les étapes suivantes vous montrent comment installer le kit de ressources Azure pour Eclipse.
 
@@ -42,17 +49,17 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
    
    ![Installation du kit de ressources Azure pour Eclipse][02]
 
-1. Si vous développez le **Kit de ressources Azure pour Eclipse**, la liste d’objets suivante apparaît :
-   
-   * **Application Insights Plugin for Java**: ce composant vous permet d'utiliser les services de journalisation et d'analyse de télémétrie d'Azure pour vos applications et instances de serveur.
-   * **Azure Access Control Services Filter**: ce composant prend en charge l’authentification des utilisateurs de l’application avec Azure ACS, permettant les scénarios d’authentification unique et l’externalisation de la logique d’identité hors de l’application.
-   * **Azure Common Plugin**: ce composant fournit les fonctionnalités communes nécessaires aux autres composants du kit de ressources.
-   * **Azure Explorer for Eclipse**: ce composant fournit les fonctionnalités communes nécessaires aux autres composants du kit de ressources.
-   * **Azure Plugin for Eclipse with Java**: ce composant prend en charge le développement de projets qui aident à générer, tester et déployer des applications Java pour le cloud Microsoft Azure dans Eclipse et par le biais de la ligne de commande.
-   * **Azure Web Apps Plugin with Java**: ce composant prend en charge le déploiement d’applications web Java sur des conteneurs d’application web Microsoft Azure.
-   * **Microsoft JDBC Driver 4.2 for SQL Server**: ce composant fournit l’API JDBC pour SQL Server et Microsoft Azure SQL Database pour Java Platform Enterprise Edition 8.
-   * **Package for Apache Qpid Client Libraries for JMS**: ce composant fournit le composant client JMS du projet Apache Qpid pour permettre à votre application d’utiliser la messagerie AMQP dans Microsoft Azure.
-   * **Package for Microsoft Azure Libraries for Java**: ce composant fournit des API pour accéder aux services Microsoft Azure, tels que Storage, Service Bus, le runtime de service, etc.
+1. En développant **Kit de ressources Azure pour Eclipse**, vous verrez une liste des composants qui seront installés. Par exemple :
+
+   | Fonctionnalité | Description | 
+   |---|---| 
+   | **Plug-in Application Insights pour Java** | Permet d’utiliser les services de journalisation et d’analyse de télémétrie d’Azure pour vos applications et instances de serveur. | 
+   | **Plug-in Azure Common** | Fournit les fonctionnalités communes dont les autres composants du kit de ressources ont besoin. | 
+   | **Outils Azure Container pour Eclipse** | Permet de créer et déployer un fichier WAR en tant que conteneur Docker à une machine docker. | 
+   | **Conteneurs Azure pour Eclipse** | Permet de déployer un fichier WAR ou JAR en tant que conteneur Docker sur une machine virtuelle Azure. | 
+   | **Azure Explorer pour Eclipse** | Fournit une interface de style Explorateur pour gérer vos ressources Azure. | 
+   | **Microsoft JDBC Driver 6.1 pour SQL Server** | Fournit l’API JDBC pour SQL Server et Microsoft Azure SQL Database pour Java Platform Enterprise Edition 8. | 
+   | **Package pour les bibliothèques Microsoft Azure pour Java** | Fournit des API pour accéder aux services Microsoft Azure, tels que Storage, Service Bus, le runtime de service, etc. | 
 
 1. Cliquez sur **Suivant**. (Si vous rencontrez des délais d'attente inhabituels lors de l'installation du kit de ressources, assurez-vous que l'option **Contact all update sites during install to find required software** est désactivée.)
 
@@ -74,7 +81,7 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 

@@ -5,7 +5,7 @@
       items:
         - name: Déployer une application Spring Boot sur Azure App Service
           href: deploy-spring-boot-java-web-app-on-azure.md
-        - name: Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure
+        - name: Utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure
           href: deploy-spring-boot-java-app-with-maven-plugin.md
     - name: Didacticiels
       items:
@@ -17,11 +17,11 @@
           href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
     - name: Procédure
       items:
-        - name: Guide pratique pour configurer une application Spring Boot Initializer pour utiliser le Cache Redis
+        - name: Configurer une application d’initialisation de Spring Boot avec le Cache Redis Azure
           href: configure-spring-boot-initializer-java-app-with-redis-cache.md
-        - name: Comment utiliser Spring Boot Starter avec une API Azure Cosmos DB DocumentDB
+        - name: Utiliser Spring Boot Starter avec une Azure Cosmos DB
           href: configure-spring-boot-starter-java-app-with-cosmos-db.md
-        - name: Découvrez comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot en conteneur dans Azure
+        - name: Utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot conteneurisée dans Azure
           href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
-        - name: Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service
+        - name: Utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service
           href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md
