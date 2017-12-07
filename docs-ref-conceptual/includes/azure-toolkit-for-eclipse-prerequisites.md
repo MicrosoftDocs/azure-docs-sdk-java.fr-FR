@@ -2,9 +2,7 @@
 Pour réaliser les étapes présentes dans cet article, vous devez installer le it de ressources Azure pour Eclipse, ce qui nécessite les composants logiciels suivants :
 
 * IDE (environnement de développement intégré) Eclipse pour développeurs Java EE, Mars ou version ultérieure. Vous pouvez le télécharger à partir du [site web Eclipse](http://www.eclipse.org/downloads/).
-
 * Kit de développeur Java (JDK) version 1.8 ou ultérieure.
-
 * Système d’exploitation. Le Kit de ressources Azure pour Eclipse a été testé sur les systèmes d’exploitation suivants :
   
   * Windows 10, Windows 8.1, Windows 8 et Windows 7

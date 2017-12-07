@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 128995cfd9122bbd6e32f2a31c35f206b5108ad6
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 666401b88c937909dc01d74fe204bb0099ebf55c
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Nouveautés du kit de ressources Azure pour Eclipse
 
@@ -328,7 +328,7 @@ Publication de la version préliminaire CTP de décembre 2011 du plug-in Azure
 [Gestion des comptes de stockage avec l’Explorateur Azure pour Eclipse]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
 [Gestion des machines virtuelles avec l’Explorateur Azure pour Eclipse]: ./azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 
 [page web d’Azul Systems correspondant à Zulu OpenJDK]: http://go.microsoft.com/fwlink/?LinkId=402457
 [Points de terminaison de service Azure]: http://go.microsoft.com/fwlink/?LinkID=699526
