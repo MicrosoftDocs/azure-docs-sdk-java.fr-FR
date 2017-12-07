@@ -4,7 +4,7 @@
     - name: Installer
       href: azure-toolkit-for-eclipse-installation.md
     - name: Prise en main
-      href: /azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app
+      href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
     - name: Didacticiels
       items:
         - name: Déployer des conteneurs sur des machines virtuelles
