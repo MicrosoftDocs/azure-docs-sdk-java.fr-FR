@@ -8,6 +8,6 @@ Pour plus d’informations sur le kit de ressources Azure pour Eclipse, consulte
 
 Pour plus d’informations sur l’utilisation de Java avec Azure, consultez les liens suivants : 
 
-* [Centre de développement Java pour Azure](https://azure.microsoft.com/develop/java/) 
+* [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) 
 * [Outils Java pour Visual Studio Team Services](https://java.visualstudio.com/) 
 <!-- TODO: Add URLs for Java in VSCode here --> 

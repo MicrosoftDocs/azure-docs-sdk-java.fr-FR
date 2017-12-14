@@ -1,6 +1,6 @@
 ---
-title: "Concepts et modèles d’utilisation des bibliothèques de gestion Azure pour Java"
-description: 
+title: "Guide des développeurs Java des bibliothèques de gestion Azure"
+description: "Modèles et concepts d’utilisation des bibliothèques de gestion Java pour la gestion par Java de vos ressources cloud dans Azure."
 keywords: Azure, Java, SDK, API, Maven, Gradle, authentification, Active Directory, principal du service
 author: rloutlaw
 ms.author: routlaw
@@ -12,13 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 052c4de1e8f9ff0ece5f36d1c3514bad8c04cfec
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
+ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="azure-management-library-concepts"></a>Concepts de la bibliothèque de gestion Azure
+# <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Modèles et meilleures pratiques pour le développement avec les bibliothèques Azure pour Java 
+
+Cet article répertorie une série de modèles et de meilleures pratiques relatifs à l’utilisation des bibliothèques Azure pour Java dans vos projets. Appuyez-vous sur ces modèles et meilleures pratiques lors de votre développement afin de réduire la quantité de code à gérer et de faciliter l’ajout ou la configuration des ressources supplémentaires dans le cadre des mises à jour futures de vos bibliothèques de gestion.
 
 ## <a name="build-resources-through-a-fluent-interface"></a>Créer des ressources via une interface Fluent
 
