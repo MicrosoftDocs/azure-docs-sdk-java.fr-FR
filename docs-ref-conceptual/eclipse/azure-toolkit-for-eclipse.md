@@ -1,6 +1,6 @@
 ---
 title: "Kit de ressources Azure pour Eclipse"
-description: En savoir plus sur le kit de ressources Azure pour Eclipse.
+description: "Découvrez comment le plug-in Kit de ressources Azure pour Eclipse permet de créer et de déployer des applications cloud sur Azure."
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,14 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Kit de ressources Azure pour Eclipse
-Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) Eclipse.
+
+Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications cloud sur Azure depuis l’environnement de développement intégré (IDE) Eclipse.
 
 > [!NOTE]
 > 
@@ -31,7 +32,7 @@ Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalité
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Commencer avec le kit de ressources Azure pour Eclipse
 Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour Eclipse :
 
-* [Installation du kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-installation.md)
+* [Installation de la Boîte à outils Azure pour Eclipse](azure-toolkit-for-eclipse-installation.md)
 
 * [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-sign-in-instructions.md)
 
@@ -57,7 +58,7 @@ Les articles suivants expliquent comment utiliser le kit de ressources Azure pou
 
 * [Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur le kit de ressources Azure pour Eclipse, voir les pages suivantes :
 

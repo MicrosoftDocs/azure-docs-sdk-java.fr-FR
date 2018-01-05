@@ -1,6 +1,6 @@
 ---
-title: "Exécuter une application web Hello World dans un conteneur Linux à l’aide du kit de ressources Azure pour IntelliJ"
-description: "Découvrez comment créer une application web Hello World basique dans un conteneur Linux, puis comment la publier sur Azure à l’aide du kit de ressources Azure pour IntelliJ."
+title: "Déployer une application web Hello World s’exécutant dans un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ"
+description: "Exécutez une application web Hello World de base dans un conteneur Linux et déployez-la dans le cloud à l’aide du kit de ressources Azure pour IntelliJ."
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 421241b12d8bd9027d4bef8564e1c1ab5a01993a
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: fdf41d6e8b23a6b7d6217ec626480e6c72e13969
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="run-a-hello-world-web-app-in-a-linux-container-by-using-the-azure-toolkit-for-intellij"></a>Exécuter une application web Hello World dans un conteneur Linux à l’aide du kit de ressources Azure pour IntelliJ
+# <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Déployer une application web Hello World sur un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ
 
 Les conteneurs [client Docker] constituent une méthode largement utilisée pour déployer des applications web. En utilisant des conteneurs Docker, les développeurs peuvent regrouper tous les fichiers et dépendances de leur projet en un même package pour un déploiement sur un serveur. Le kit de ressources Azure pour IntelliJ simplifie ce processus pour les développeurs Java en ajoutant des fonctionnalités permettant de déployer des conteneurs sur Microsoft Azure.
 
@@ -131,7 +131,7 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
    ![Boîte de dialogue Edit configuration][edit-configuration-dialog]
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker][client Docker] officiel.
 

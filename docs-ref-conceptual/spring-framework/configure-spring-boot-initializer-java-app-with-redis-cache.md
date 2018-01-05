@@ -1,6 +1,6 @@
 ---
-title: Guide pratique pour configurer une application Spring Boot Initializer pour utiliser le Cache Redis
-description: "Découvrez comment configurer une application Spring Boot créée avec Spring Boot Initializr pour utiliser le Cache Redis Azure."
+title: Configurer une application Spring Boot Initializer pour utiliser le Cache Redis Microsoft Azure
+description: "Configurez une application Spring Boot créée avec Spring Initializr pour utiliser le cache Redis dans le cloud avec le Cache Redis Microsoft Azure."
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
@@ -14,19 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Guide pratique pour configurer une application Spring Boot Initializer pour utiliser le Cache Redis
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurer une application Spring Boot Initializer pour utiliser le cache Redis dans le cloud avec le Cache Redis Microsoft Azure
 
-## <a name="overview"></a>Vue d'ensemble
+Cet article explique comment créer un cache Redis dans le cloud par le biais du portail Azure, utiliser **[Spring Initializr]** pour créer une application personnalisée, puis créer une application web Java qui stocke et récupère des données à l’aide de votre cache Redis.
 
-Cet article explique comment créer un cache Redis par le biais du portail Azure, utiliser **[Spring Initializr]** pour créer une application personnalisée, puis créer une application web Java qui stocke et récupère des données à l’aide de votre cache Redis.
-
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
@@ -115,7 +113,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    > [!NOTE] 
    > 
-   > Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez le port 6380 dans votre fichier *application.properties*. Par exemple :
+   > Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez le port 6380 dans votre fichier *application.properties*. Par exemple : 
    > 
    > ```yaml
    > spring.redis.host=myspringbootcache.redis.cache.windows.net
@@ -193,7 +191,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    Le message « Hello World! » de votre exemple de contrôleur doit s’afficher. Il est extrait de manière dynamique à partir de votre cache Redis.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 

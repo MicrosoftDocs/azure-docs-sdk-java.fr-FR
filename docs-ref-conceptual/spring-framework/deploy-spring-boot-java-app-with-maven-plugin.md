@@ -1,6 +1,6 @@
 ---
-title: "Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure"
-description: "Découvrez comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure."
+title: "Déployer une application Spring Boot sur le cloud avec Maven et Azure"
+description: "Découvrez comment déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure Web Apps."
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 8e5ad501f5c00ee1265878a643793f6e9754bb68
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 656e4dcc5b2510bb14fd79ed5da8a3dfd7fc08da
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-to-azure"></a>Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure
+# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a>Déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure Web Apps
 
 Cet article présente l’utilisation du plug-in Maven pour Azure Web Apps afin de déployer un exemple d’application Spring Boot sur Azure App Services.
 

@@ -1,6 +1,6 @@
 ---
-title: Installation du kit de ressources Azure pour Eclipse
-description: "Apprenez à installer le Kit de ressources Azure pour Eclipse."
+title: Installer le Kit de ressources Azure pour Eclipse
+description: "Découvrez comment installer le plug-in Kit de ressources Azure pour Eclipse pour créer et déployer des applications cloud sur Azure."
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,15 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 54f636f1291832702bfed2b49888b531d358cb73
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="installing-the-azure-toolkit-for-eclipse"></a>Installation du kit de ressources Azure pour Eclipse
+# <a name="install-the-azure-toolkit-for-eclipse"></a>Installer le Kit de ressources Azure pour Eclipse
 
-Le kit de ressources Azure pour Eclipse contient des modèles et des fonctionnalités qui vous permettent de créer, de développer, de tester et de déployer des applications Azure avec l’environnement de développement Eclipse.
+Le kit de ressources Azure pour Eclipse contient des modèles et des fonctionnalités qui vous permettent de créer, de développer, de tester et de déployer des applications cloud Azure depuis l’environnement de développement Eclipse.
 
 > [!NOTE] 
 > 
@@ -51,7 +51,7 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
 
 1. En développant **Kit de ressources Azure pour Eclipse**, vous verrez une liste des composants qui seront installés. Par exemple :
 
-   | Fonctionnalité | Description | 
+   | Fonctionnalité | DESCRIPTION | 
    |---|---| 
    | **Plug-in Application Insights pour Java** | Permet d’utiliser les services de journalisation et d’analyse de télémétrie d’Azure pour vos applications et instances de serveur. | 
    | **Plug-in Azure Common** | Fournit les fonctionnalités communes dont les autres composants du kit de ressources ont besoin. | 
@@ -79,7 +79,7 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
    
    ![Invite de redémarrage][06]
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

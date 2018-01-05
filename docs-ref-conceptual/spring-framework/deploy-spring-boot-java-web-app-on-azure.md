@@ -1,6 +1,6 @@
 ---
-title: "Déployer une application Spring Boot sur Azure App Service"
-description: "Ce didacticiel guide les développeurs à travers les étapes de déploiement de l’application web Spring Boot Getting Started sur Azure App Service."
+title: "Déployer une application Spring Boot sur le cloud avec Azure App Service"
+description: "Ce didacticiel guide les développeurs à travers les étapes de déploiement de l’application web Spring Boot Getting Started sur le cloud à l’aide d’Azure App Service."
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,17 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Déployer une application Spring Boot sur Azure App Service
+# <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Déployer une application Spring Boot sur le cloud avec Azure App Service
 
 Ce didacticiel vous montre comment créer l’exemple d’application web [Spring Boot] Getting Started et la déployer sur [Azure App Service].
 
-### <a name="prerequisites"></a>Composants requis
+### <a name="prerequisites"></a>configuration requise
 
 Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
@@ -119,7 +119,7 @@ La procédure suivante vous guide à travers les étapes pour créer une applica
 
    d. Choisissez **Tomcat 8.5 la plus récente** pour le conteneur web. (Ce conteneur ne sera en fait pas utilisé. Azure utilisera le conteneur de votre application Spring Boot.)
 
-   e. Cliquez sur **Save**.
+   e. Cliquez sur **Enregistrer**.
 
    ![Paramètres de l’application][AZ07]
 
@@ -129,7 +129,7 @@ La procédure suivante vous guide à travers les étapes pour créer une applica
 
    b. Spécifiez votre nom d’utilisateur et votre mot de passe.
 
-   c. Cliquez sur **Save**.
+   c. Cliquez sur **Enregistrer**.
 
    ![Spécifier les informations d’identification de déploiement][AZ08]
 
@@ -160,7 +160,7 @@ La procédure suivante vous guide à travers les étapes pour déployer votre ap
    </configuration>
    ```
 
-1. Après avoir enregistré le fichier *web.config* sur votre système de fichiers, connectez-vous à votre application web via FTP en utilisant l’URL, le nom d’utilisateur et le mot de passe de la section précédente de ce didacticiel. Par exemple :
+1. Après avoir enregistré le fichier *web.config* sur votre système de fichiers, connectez-vous à votre application web via FTP en utilisant l’URL, le nom d’utilisateur et le mot de passe de la section précédente de ce didacticiel. Par exemple : 
    ```
    ftp
    open waws-prod-sn0-000.ftp.azurewebsites.windows.net
@@ -168,7 +168,7 @@ La procédure suivante vous guide à travers les étapes pour déployer votre ap
    pass ********
    ```
 
-1. Passez du répertoire distant au dossier racine de votre application web, (qui se trouve dans */site/wwwroot*), puis copiez le fichier JAR de votre application Spring Boot et le *web.config* créé précédemment. Par exemple :
+1. Passez du répertoire distant au dossier racine de votre application web, (qui se trouve dans */site/wwwroot*), puis copiez le fichier JAR de votre application Spring Boot et le *web.config* créé précédemment. Par exemple : 
    ```
    cd site/wwwroot
    put gs-spring-boot-0.1.0.jar
@@ -188,7 +188,7 @@ La procédure suivante vous guide à travers les étapes pour déployer votre ap
 
    ![Parcourir l’exemple d’application][SB02]
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 
