@@ -1,6 +1,6 @@
 ---
 title: "Kit de ressources Azure pour Eclipse"
-description: En savoir plus sur le kit de ressources Azure pour Eclipse.
+description: "Découvrez comment le plug-in Kit de ressources Azure pour Eclipse permet de créer et de déployer des applications cloud sur Azure."
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,64 +14,65 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="8b47e-103">Kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-103">Azure Toolkit for Eclipse</span></span>
-<span data-ttu-id="8b47e-104">Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) Eclipse.</span><span class="sxs-lookup"><span data-stu-id="8b47e-104">The Azure Toolkit for Eclipse provides templates and functionality that you can use to easily create, develop, test, and deploy Azure applications by using the Eclipse integrated development environment (IDE).</span></span>
+# <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="7061f-103">Kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-103">Azure Toolkit for Eclipse</span></span>
+
+<span data-ttu-id="7061f-104">Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications cloud sur Azure depuis l’environnement de développement intégré (IDE) Eclipse.</span><span class="sxs-lookup"><span data-stu-id="7061f-104">The Azure Toolkit for Eclipse provides templates and functionality that you can use to easily create, develop, test, and deploy cloud  applications to Azure from inside the Eclipse integrated development environment (IDE).</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="8b47e-105">Il existe également une boîte à outils Azure pour l’environnement de développement IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="8b47e-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="8b47e-106">Pour plus d’informations, consultez [Kit de ressources Azure pour IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span><span class="sxs-lookup"><span data-stu-id="8b47e-106">For more information, see [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span></span>
+> <span data-ttu-id="7061f-105">Il existe également une boîte à outils Azure pour l’environnement de développement IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="7061f-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="7061f-106">Pour plus d’informations, consultez [Kit de ressources Azure pour IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span><span class="sxs-lookup"><span data-stu-id="7061f-106">For more information, see [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span></span>
 > 
 
-## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="8b47e-107">Commencer avec le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-107">Get started with the Azure Toolkit for Eclipse</span></span>
-<span data-ttu-id="8b47e-108">Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour Eclipse :</span><span class="sxs-lookup"><span data-stu-id="8b47e-108">The following articles will help you start using the Azure Toolkit for Eclipse:</span></span>
+## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="7061f-107">Commencer avec le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-107">Get started with the Azure Toolkit for Eclipse</span></span>
+<span data-ttu-id="7061f-108">Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour Eclipse :</span><span class="sxs-lookup"><span data-stu-id="7061f-108">The following articles will help you start using the Azure Toolkit for Eclipse:</span></span>
 
-* [<span data-ttu-id="8b47e-109">Installation du kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-109">Installing the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-installation.md)
+* [<span data-ttu-id="7061f-109">Installation de la Boîte à outils Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-109">Installing the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-installation.md)
 
-* [<span data-ttu-id="8b47e-110">Instructions de connexion pour le Kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-110">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-sign-in-instructions.md)
+* [<span data-ttu-id="7061f-110">Instructions de connexion pour le Kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-110">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-sign-in-instructions.md)
 
-* [<span data-ttu-id="8b47e-111">Créer une application web Hello World pour Azure dans Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-111">Create a Hello World web app for Azure in Eclipse</span></span>](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
+* [<span data-ttu-id="7061f-111">Créer une application web Hello World pour Azure dans Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-111">Create a Hello World web app for Azure in Eclipse</span></span>](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
-## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a><span data-ttu-id="8b47e-112">Utilisez le kit de ressources Azure pour Eclipse avec vos projets Java</span><span class="sxs-lookup"><span data-stu-id="8b47e-112">Use the Azure Toolkit for Eclipse with your Java Projects</span></span>
-<span data-ttu-id="8b47e-113">Les articles suivants expliquent comment utiliser la Boîte à outils Azure pour Eclipse afin d’ajouter la fonctionnalité Azure à vos projets Azure :</span><span class="sxs-lookup"><span data-stu-id="8b47e-113">The following articles demonstrate using the Azure Toolkit for Eclipse to add Azure functionality to your Java projects:</span></span>
+## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a><span data-ttu-id="7061f-112">Utilisez le kit de ressources Azure pour Eclipse avec vos projets Java</span><span class="sxs-lookup"><span data-stu-id="7061f-112">Use the Azure Toolkit for Eclipse with your Java Projects</span></span>
+<span data-ttu-id="7061f-113">Les articles suivants expliquent comment utiliser la Boîte à outils Azure pour Eclipse afin d’ajouter la fonctionnalité Azure à vos projets Azure :</span><span class="sxs-lookup"><span data-stu-id="7061f-113">The following articles demonstrate using the Azure Toolkit for Eclipse to add Azure functionality to your Java projects:</span></span>
 
-* [<span data-ttu-id="8b47e-114">Publier une application Spring Boot en tant que conteneur Docker avec le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-114">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
+* [<span data-ttu-id="7061f-114">Publier une application Spring Boot en tant que conteneur Docker avec le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-114">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
 
-* [<span data-ttu-id="8b47e-115">Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-115">Publish a web app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-as-docker-container.md)
+* [<span data-ttu-id="7061f-115">Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-115">Publish a web app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-as-docker-container.md)
 
-* [<span data-ttu-id="8b47e-116">Utiliser le plug-in HDInsight Tools pour Eclipse afin de créer des applications Spark pour un cluster Linux HDInsight Spark</span><span class="sxs-lookup"><span data-stu-id="8b47e-116">Use HDInsight Tools Plugin for Eclipse to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
+* [<span data-ttu-id="7061f-116">Utiliser le plug-in HDInsight Tools pour Eclipse afin de créer des applications Spark pour un cluster Linux HDInsight Spark</span><span class="sxs-lookup"><span data-stu-id="7061f-116">Use HDInsight Tools Plugin for Eclipse to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
 
-* [<span data-ttu-id="8b47e-117">Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java</span><span class="sxs-lookup"><span data-stu-id="8b47e-117">Displaying Javadoc content in Eclipse for the Package for Azure Libraries for Java</span></span>](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
+* [<span data-ttu-id="7061f-117">Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java</span><span class="sxs-lookup"><span data-stu-id="7061f-117">Displaying Javadoc content in Eclipse for the Package for Azure Libraries for Java</span></span>](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
 
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="8b47e-118">Gérer des ressources Azure à l’aide du kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-118">Manage Azure resources using the Azure Toolkit for Eclipse</span></span>
-<span data-ttu-id="8b47e-119">Les articles suivants expliquent comment utiliser le kit de ressources Azure pour Eclipse afin de gérer vos ressources Azure :</span><span class="sxs-lookup"><span data-stu-id="8b47e-119">The following articles demonstrate using the Azure Toolkit for Eclipse to manage your Azure resources:</span></span>
+## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="7061f-118">Gérer des ressources Azure à l’aide du kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-118">Manage Azure resources using the Azure Toolkit for Eclipse</span></span>
+<span data-ttu-id="7061f-119">Les articles suivants expliquent comment utiliser le kit de ressources Azure pour Eclipse afin de gérer vos ressources Azure :</span><span class="sxs-lookup"><span data-stu-id="7061f-119">The following articles demonstrate using the Azure Toolkit for Eclipse to manage your Azure resources:</span></span>
 
-* [<span data-ttu-id="8b47e-120">Gérer des caches Redis à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-120">Manage redis caches by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
+* [<span data-ttu-id="7061f-120">Gérer des caches Redis à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-120">Manage redis caches by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
 
-* [<span data-ttu-id="8b47e-121">Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-121">Manage storage accounts by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+* [<span data-ttu-id="7061f-121">Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-121">Manage storage accounts by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
-* [<span data-ttu-id="8b47e-122">Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="8b47e-122">Manage virtual machines by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+* [<span data-ttu-id="7061f-122">Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="7061f-122">Manage virtual machines by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a><span data-ttu-id="8b47e-123">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="8b47e-123">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7061f-123">étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="7061f-123">Next steps</span></span>
 
-<span data-ttu-id="8b47e-124">Pour plus d’informations sur le kit de ressources Azure pour Eclipse, voir les pages suivantes :</span><span class="sxs-lookup"><span data-stu-id="8b47e-124">For more information about the Azure Toolkit for Eclipse, see the following pages:</span></span>
+<span data-ttu-id="7061f-124">Pour plus d’informations sur le kit de ressources Azure pour Eclipse, voir les pages suivantes :</span><span class="sxs-lookup"><span data-stu-id="7061f-124">For more information about the Azure Toolkit for Eclipse, see the following pages:</span></span>
 
-* [<span data-ttu-id="8b47e-125">Notes de publication du kit de ressources Azure</span><span class="sxs-lookup"><span data-stu-id="8b47e-125">Azure Toolkit Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases)
+* [<span data-ttu-id="7061f-125">Notes de publication du kit de ressources Azure</span><span class="sxs-lookup"><span data-stu-id="7061f-125">Azure Toolkit Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases)
 
-* [<span data-ttu-id="8b47e-126">Kit de ressources Azure pour Eclipse sur la Place de marché</span><span class="sxs-lookup"><span data-stu-id="8b47e-126">Azure Toolkit for Eclipse in the Eclipse Marketplace</span></span>](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
+* [<span data-ttu-id="7061f-126">Kit de ressources Azure pour Eclipse sur la Place de marché</span><span class="sxs-lookup"><span data-stu-id="7061f-126">Azure Toolkit for Eclipse in the Eclipse Marketplace</span></span>](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
 
-<span data-ttu-id="8b47e-127">Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) et [Outils Java pour Visual Studio Team Services](https://java.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="8b47e-127">For more information about using Java with Azure, see the [Azure for Java Developers](https://docs.microsoft.com/java/azure/) and the [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/).</span></span>
+<span data-ttu-id="7061f-127">Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) et [Outils Java pour Visual Studio Team Services](https://java.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="7061f-127">For more information about using Java with Azure, see the [Azure for Java Developers](https://docs.microsoft.com/java/azure/) and the [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/).</span></span>
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
 > [!NOTE]
 > 
-> <span data-ttu-id="8b47e-128">Le kit de ressources Azure pour Eclipse est un projet Open Source, dont le code source est disponible sous [licence MIT sur le site du projet](https://github.com/microsoft/azure-tools-for-java).</span><span class="sxs-lookup"><span data-stu-id="8b47e-128">The Azure Toolkit for Eclipse is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
+> <span data-ttu-id="7061f-128">Le kit de ressources Azure pour Eclipse est un projet Open Source, dont le code source est disponible sous [licence MIT sur le site du projet](https://github.com/microsoft/azure-tools-for-java).</span><span class="sxs-lookup"><span data-stu-id="7061f-128">The Azure Toolkit for Eclipse is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
 > 
 
 <!-- URL List -->
