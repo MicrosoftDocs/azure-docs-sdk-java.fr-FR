@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 3db8bf06892ca6c53cf93ee4ce151549044806d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -114,16 +114,16 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
             
         b. Sous l’onglet **Docker Daemon Access** (Accès au démon Docker), fournissez les informations suivantes :
 
-          ![Créer un hôte Docker][PUB06]
+         ![Créer un hôte Docker][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+           * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker.
+           * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes :
+                * **None** (Aucun) : spécifie que votre machine virtuelle n’autorise pas les connexions TLS.
+                * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS.
+                * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Le répertoire doit contenir les six fichiers suivants : 
+                   * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS.
+                   * *cert.pem* et *key.pem* : contiennent le certificat client et la clé publique qui seront utilisés pour l’authentification TLS.
+                   * *server.pem* et *server-key.pem* : contiennent le certificat client et la clé publique qui sont utilisés pour l’authentification TLS.
 
 7. Après avoir entré les informations nécessaires, cliquez sur **Finish** (Terminer).  
     L’Assistant **Deploy Docker Container on Azure** (Déploiement d’un conteneur Docker sur Azure) réapparaît.
@@ -166,7 +166,7 @@ Pour créer un artefact prêt pour le déploiement, procédez comme suit :
 
 1. Ouvrez votre projet d’application web dans IntelliJ.
 
-2. Cliquez sur **Fichier**, puis sur **Structure de projet**.
+2. Cliquez sur **File (Fichier)**, puis sur **Project Structure (Structure de projet)**.
 
    ![La commande Structure de projet][ART01]
 
@@ -180,7 +180,7 @@ Pour créer un artefact prêt pour le déploiement, procédez comme suit :
 
 Pour plus d’informations sur la création d’artefacts dans IntelliJ, consultez [Configuring artifacts] sur le site web de JetBrains.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker].
 
