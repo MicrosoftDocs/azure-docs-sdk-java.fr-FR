@@ -14,11 +14,11 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 8b35a972a00c995730dfa59b1b6a47fab7716b76
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Comment utiliser Spring Boot Starter pour Azure Key Vault
 
@@ -42,7 +42,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    ![Spécifiez les noms de groupes et d’artefacts.][secrets-01]
 
-1. Faites défilez jusqu’à la section **Azure**, puis cochez la case **Azure Key Vault**.
+1. Faites défiler jusqu’à la section **Azure**, puis cochez la case **Azure Key Vault**.
 
    ![Sélectionnez l’application de démarrage Azure Key Vault.][secrets-02]
 
@@ -85,8 +85,9 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Spécifiez le GUID du compte que vous souhaitez utiliser avec Azure, par exemple :
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -127,7 +128,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    |---|---|
    | `id` | Spécifie l’identificateur unique associé à votre inscription d’application antérieure. |
 
-   L’interface de ligne de commande Azure renvoie un message d’état JSON comportant les éléments *appId* et *password*, que vous utiliserez plus tard en tant que l’ID et le mot de passe client, par exemple :
+   L’interface de ligne de commande Azure renvoie un message d’état JSON comportant les éléments *appId* et *password*, que vous utiliserez plus tard en tant qu’ID et mot de passe client, par exemple :
 
    ```json
    {
