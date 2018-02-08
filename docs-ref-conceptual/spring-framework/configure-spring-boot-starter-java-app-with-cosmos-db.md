@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: cosmos-db
-ms.workload: data-services
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;yungez;kevinzha
-ms.openlocfilehash: 06553920aebb5f27e4d02279e7024d6766e0be94
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: cosmos-db
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: data-services
+ms.openlocfilehash: 8190a7c45443ead9855d5a62194e02d7e9a919ee
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-azure-cosmos-db-documentdb-api"></a>Comment utiliser Spring Boot Starter avec une API Azure Cosmos DB DocumentDB
 
@@ -28,7 +28,7 @@ Azure Cosmos DB est un service de base de données distribué à l’échelle gl
 
 Cet article illustre la création d’une base de données Azure Cosmos DB à l’aide du portail Azure, puis l’utilisation de **[Spring Initializr]** pour créer une application java personnalisée et ajouter la fonctionnalité Spring Boot Starter à votre application personnalisée afin de pouvoir stocker et récupérer des données dans votre base de données Azure Cosmos DB à l’aide de l’API DocumentDB.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
@@ -289,7 +289,7 @@ Dans cette section, vous allez créer deux classes Java pour le stockage des do
 
    ![Utilisation de l’Explorateur de documents pour afficher vos données][JV03]
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’Azure Cosmos DB et de Java, voir les ressources suivantes :
 

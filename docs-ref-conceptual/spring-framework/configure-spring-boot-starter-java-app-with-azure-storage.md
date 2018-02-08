@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: storage
-ms.workload: storage
-ms.tgt_pltfrm: na
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yungez;robmcm
-ms.openlocfilehash: 0979c810711a01464c0b2c6e12a582a3f5eefef1
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.workload: storage
+ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Comment utiliser Spring Boot Starter pour Azure Storage
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 Cet article vous présente la création d’une application personnalisée à l’aide de la solution **Spring Initializr**, puis vous explique comment utiliser cette application pour accéder à Azure Storage.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
@@ -132,7 +132,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    Où :
-   | Paramètre | Description |
+   | Paramètre | DESCRIPTION |
    |---|---|
    | `name` | Spécifie un nom unique pour votre compte de stockage. |
    | `resource-group` | Spécifie le nom du groupe de ressources créé à l’étape précédente. |
@@ -161,7 +161,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    Où :
-   | Paramètre | Description |
+   | Paramètre | DESCRIPTION |
    | ---|---|
    | `name` | Spécifie un nom unique pour le compte de stockage créé lors des étapes précédentes. |
    | `resource-group` | Spécifie le nom du groupe de ressources créé lors des étapes précédentes. |
@@ -310,7 +310,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    > ```
    > 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur les instances Spring Boot Starters supplémentaires disponibles pour Microsoft Azure, consultez la section [Pour débuter avec Spring Boot pour Azure](spring-boot-starters-for-azure.md).
 

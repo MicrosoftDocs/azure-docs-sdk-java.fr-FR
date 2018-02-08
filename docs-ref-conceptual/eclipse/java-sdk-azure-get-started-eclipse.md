@@ -2,26 +2,29 @@
 title: "Prise en main d’Azure pour Java à l’aide d’Eclipse"
 description: "Prise en main des fonctions de base des bibliothèques Azure pour Java avec votre propre abonnement Azure."
 keywords: "Azure, Java, SDK, API, s’authentifier, prise en main"
+services: 
+documentationcenter: java
 author: roygara
-ms.author: v-rogara
 manager: timlt
-ms.date: 10/30/2017
-ms.topic: get-started-article
+editor: 
+ms.author: v-rogara
+ms.date: 02/01/2018
+ms.devlang: java
 ms.prod: azure
 ms.technology: azure
-ms.devlang: java
+ms.topic: get-started-article
 ms.service: multiple
-ms.openlocfilehash: 1c1ef7b8646824c5c8bfcbbf5e0507c95ac1ee79
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.openlocfilehash: 7903b84f013fea07feee04419b1773f38494d4d0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-eclipse"></a>Prise en main des blibliothèques Azure à l’aide d’Eclipse
 
 Ce guide vous présente la configuration d’un environnement de développement et l’utilisation des bibliothèques Azure pour Java. Vous créez un principal de service afin de vous authentifier auprès d’Azure et exécutez un exemple de code qui génère et utilise les ressources Azure dans votre abonnement. L’utilisation d’Eclipse pour le développement Java avec Azure est facultative. Tout environnement de développement intégré affichant une intégration Maven est adapté. Sinon, vous pouvez exécuter votre code à partir de la ligne de commande à l’aide de Maven, si vous préférez n’utiliser aucun environnement de développement intégré.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 - Un compte Azure. Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).

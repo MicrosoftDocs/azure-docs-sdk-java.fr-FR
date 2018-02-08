@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a6127a43509766101e22ac4c21e66344fd231138
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 7b493097e94580df42efcfb8c56736e1f179b280
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour Eclipse
 
@@ -96,11 +96,11 @@ Pour supprimer un compte de stockage à l’aide de l’Explorateur Azure, proc�
 
    ![Fenêtre de confirmation de la suppression d’un compte de stockage][DS02]
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et leurs tarifications, consultez les liens suivants :
 
-* [Introduction à Microsoft Azure Storage]
+* [Introduction à Stockage Microsoft Azure]
 * [À propos des comptes de stockage Azure]
 * Tailles des comptes de stockage Azure
   * [Tailles des machines virtuelles Windows dans Azure]
@@ -113,7 +113,7 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 
 <!-- URL List -->
 
-[Introduction à Microsoft Azure Storage]: /azure/storage/storage-introduction
+[Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
 [Réplication de Stockage Azure]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets

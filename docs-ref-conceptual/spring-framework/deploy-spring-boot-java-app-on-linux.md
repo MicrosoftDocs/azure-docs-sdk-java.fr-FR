@@ -7,25 +7,25 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: container-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: container-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 65e127e43c457b0ff92478f002065bb9d928f270
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Déployer une application Spring Boot sur Linux dans Azure Container Service
 
 Ce didacticiel vous guide dans l’utilisation de [client Docker] pour développer et déployer une application [Spring Boot] sur un hôte Linux dans [Azure Container Service (AKS)].
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
@@ -142,7 +142,7 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
    </properties>
    ```
 
-1. Mettez à jour la collection `<plugins>` dans le fichier *pom.xml* de façon à ce que le `<plugin>` contienne l’adresse du serveur de connexion et le nom de registre de votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :
+1. Mettez à jour la collection `<plugins>` dans le fichier *pom.xml* de façon à ce que le `<plugin>` contienne l’adresse du serveur de connexion et le nom de registre de votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple : 
 
    ```xml
    <plugin>
@@ -234,7 +234,7 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 >
 > 5. Dans la section **Paramètres de l’application**, ajoutez une nouvelle variable d’environnement nommée **PORT** et entrez comme valeur votre numéro de port personnalisé. (Élément 4 de l’image ci-dessous.)
 >
-> 6. Cliquez sur **Save**. (Élément 5 de l’image ci-dessous.)
+> 6. Cliquez sur **Enregistrer**. (Élément 5 de l’image ci-dessous.)
 >
 > ![Enregistrement d’un numéro de port personnalisé dans le portail Azure][LX03]
 >
@@ -260,7 +260,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 
