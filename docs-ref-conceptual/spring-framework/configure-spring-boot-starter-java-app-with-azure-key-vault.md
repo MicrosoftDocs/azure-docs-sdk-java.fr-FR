@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: key-vault
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: key-vault
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Comment utiliser Spring Boot Starter pour Azure Key Vault
 
@@ -26,9 +26,9 @@ ms.lasthandoff: 02/01/2018
 
 Cet article vous explique comment créer une application avec l’instance **[Spring Initializr]**, qui utilise la solution Spring Boot Starter pour Azure Key Vault pour récupérer une chaîne de connexion stockée comme secrète dans un coffre de clés.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
-Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
+Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * Le [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 ou ultérieure.
@@ -85,9 +85,8 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
        }
      }
    ]
-   ```
 
-1. Spécifiez le GUID du compte que vous souhaitez utiliser avec Azure, par exemple :
+1. Specify the GUID for the account you want to use with Azure; for example:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -124,11 +123,12 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
-   | Paramètre | Description |
+   Où :
+   | Paramètre | DESCRIPTION |
    |---|---|
-   | `id` | Spécifie l’identificateur unique associé à votre inscription d’application antérieure. |
+   | `name` | Spécifie le nom de votre principal de service Azure. |
 
-   L’interface de ligne de commande Azure renvoie un message d’état JSON comportant les éléments *appId* et *password*, que vous utiliserez plus tard en tant qu’ID et mot de passe client, par exemple :
+   L’interface de ligne de commande Azure renvoie un message d’état JSON comportant les éléments *appId* et *password*, que vous utiliserez plus tard en tant que l’ID et le mot de passe client, par exemple :
 
    ```json
    {
@@ -170,7 +170,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    |---|---|
    | `name` | Spécifie le nom du coffre de clés créé précédemment. |
    | `secret-permission` | Spécifie les [stratégies de sécurité](https://docs.microsoft.com/en-us/cli/azure/keyvault) de votre coffre de clés. |
-   | `object-id` | Spécifie l’identificateur unique de votre inscription d’application antérieure. |
+   | `spn` | Spécifie l’identificateur unique de votre inscription d’application antérieure. |
 
    L’interface de ligne de commande Azure affiche les résultats de votre création de stratégie de sécurité, par exemple :  
 
