@@ -4,26 +4,27 @@ title: Spring sur Azure
 metadata:
   document_id: 
   title: Spring sur Azure
-  description: "Prise en main de Spring pour développer des applications sur Azure."
+  description: Prise en main de Spring pour développer des applications sur Azure.
   keywords: Azure, Java, Maven, Spring, Boot
   author: rmcmurray
   ms.author: robmcm
   manager: routlaw
   ms.date: 02/01/2018
-  ms.topic: article
+  ms.topic: landing-page
   ms.prod: azure
   ms.technology: azure
   ms.devlang: java
   ms.service: multiple
-  ms.openlocfilehash: 60889d150a6ac3c73441aacb053e1f33ccc3fb88
-  ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+  ms.openlocfilehash: b949afbe05c2e79d5a1eff952e34c52f7a663b91
+  ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/03/2018
+  ms.lasthandoff: 03/22/2018
 sections:
 - items:
   - type: markdown
-    text: "[Spring](http://spring.io/) est une infrastructure d’application open source développée par [Pivotal](https://pivotal.io) qui fournit une approche simplifiée, modulaire à la création d’applications Java.  Les démarrages rapides et les didacticiels de ce site web vous montreront comment développer et déployer des applications Spring sur le cloud.\n"
+    text: >
+      [Spring](http://spring.io/) est une infrastructure d’application open source développée par [Pivotal](https://pivotal.io) qui fournit une approche simplifiée, modulaire à la création d’applications Java.  Les démarrages rapides et les didacticiels de ce site web vous montreront comment développer et déployer des applications Spring sur le cloud.
 - title: Guides de prise en main
   items:
   - type: list
@@ -31,7 +32,7 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-      text: "Pour débuter avec Spring Boot pour Azure"
+      text: Pour débuter avec Spring Boot pour Azure
       href: spring-boot-starters-for-azure.md
     - image:
         src: https://docs.microsoft.com/en-us/azure/media/index/storage.svg
@@ -43,39 +44,39 @@ sections:
       href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
     - image:
         src: https://docs.microsoft.com/en-us/azure/media/index/KeyVault.svg
-      text: "Azure Key Vault"
+      text: Azure Key Vault
       href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
-- title: "Didacticiels pas à pas"
+- title: Didacticiels pas à pas
   items:
   - type: markdown
-    text: "Découvrez comment intégrer les applications SPring Boot avec les services Azure."
+    text: Découvrez comment intégrer les applications SPring Boot avec les services Azure.
   - type: list
     style: unordered
     className: spaced noBullet
     items:
     - html: <a href="configure-spring-boot-initializer-java-app-with-redis-cache.md">Guide pratique pour configurer une application Spring Boot Initializer pour utiliser le Cache Redis</a>
     - html: <a href="configure-spring-boot-starter-java-app-with-cosmos-db.md">Comment utiliser Spring Boot Starter avec une API Azure Cosmos DB DocumentDB</a>
-    - html: "<a href=\"deploy-spring-boot-java-app-with-maven-plugin.md\">Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure</a>"
-    - html: "<a href=\"deploy-spring-boot-java-app-on-kubernetes.md\">Déployer une application Spring Boot sur Kubernetes dans Azure Container Service</a>"
-    - html: "<a href=\"deploy-spring-boot-java-app-on-linux.md\">Déployer une application web Spring Boot sur Linux dans Azure Container Service</a>"
-    - html: "<a href=\"deploy-spring-boot-java-app-using-fabric8-maven-plugin.md\">Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven</a>"
-    - html: "<a href=\"deploy-containerized-spring-boot-java-app-with-maven-plugin.md\">Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot conteneurisée dans Azure</a>"
-    - html: "<a href=\"deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md\">Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service</a>"
+    - html: <a href="deploy-spring-boot-java-app-with-maven-plugin.md">Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot sur Azure</a>
+    - html: <a href="deploy-spring-boot-java-app-on-kubernetes.md">Déployer une application Spring Boot sur Kubernetes dans Azure Container Service</a>
+    - html: <a href="deploy-spring-boot-java-app-on-linux.md">Déployer une application web Spring Boot sur Linux dans Azure Container Service</a>
+    - html: <a href="deploy-spring-boot-java-app-using-fabric8-maven-plugin.md">Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven</a>
+    - html: <a href="deploy-containerized-spring-boot-java-app-with-maven-plugin.md">Comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot conteneurisée dans Azure</a>
+    - html: <a href="deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md">Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service</a>
 - title: Exemples
   items:
   - type: list
     style: unordered
     className: spaced noBullet
     items:
-    - html: "<a href=\"https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples\">Pour débuter avec Spring Boot pour Azure</a>"
+    - html: <a href="https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples">Pour débuter avec Spring Boot pour Azure</a>
     - html: <a href="https://github.com/spring-guides/">Guides Spring </a>
-- title: "Informations de référence"
+- title: Informations de référence
   items:
   - type: list
     style: cards
     className: cardsD
     items:
     - title: Spring Framework
-      html: "<p><a href=\"https://spring.io/\">Spring Framework</a></p><p><a href=\"https://spring.io/docs\">En savoir plus sur Spring</a></p><p><a href=\"https://spring.io/docs/reference\">Documentation de référence</a></p>"
+      html: <p><a href="https://spring.io/">Spring Framework</a></p><p><a href="https://spring.io/docs">En savoir plus sur Spring</a></p><p><a href="https://spring.io/docs/reference">Documentation de référence</a></p>
     - title: Spring Boot
       html: <p><a href="https://projects.spring.io/spring-boot/">Spring Boot</a></p><p><a href="http://start.spring.io/">Spring Initializr</a></p>

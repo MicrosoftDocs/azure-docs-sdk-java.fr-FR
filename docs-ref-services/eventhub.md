@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Azure Event Hub pour Java"
-description: "Consulter la documentation sur les bibliothèques Event Hub Java"
-keywords: "Azure, Java, SDK, API, concentrateur d’événements, IoT, traitement de flux"
+title: Bibliothèques Azure Event Hub pour Java
+description: Consulter la documentation sur les bibliothèques Event Hub Java
+keywords: Azure, Java, SDK, API, concentrateur d’événements, IoT, traitement de flux
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: 8e5b032624862ffbef18c718abf4fa29359b3e67
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 076906ff3cafcb4eba97b0a022e5214d7834517c
+ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Bibliothèques Azure Event Hub pour Java
 
@@ -40,7 +40,7 @@ Envoyez des événements dans un concentrateur d’événements, utilisez-les pu
 </dependency>
 ```   
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Envoyez un événement à un concentrateur d’événements.
 
@@ -54,7 +54,7 @@ ehClient.sendSync(sendEvent);
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/eventhub/clientlibrary)
+> [Explorer les API clientes](/java/api/overview/azure/eventhub/client)
 
 
 ## <a name="samples"></a>Exemples
