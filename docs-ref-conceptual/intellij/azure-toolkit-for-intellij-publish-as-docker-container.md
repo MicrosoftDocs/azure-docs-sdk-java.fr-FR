@@ -1,12 +1,12 @@
 ---
 title: Publier un conteneur Docker avec le kit de ressources Azure pour IntelliJ
-description: "Découvrez comment publier une application web sur Microsoft Azure en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ."
-services: 
+description: Découvrez comment publier une application web sur Microsoft Azure en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
-ms.sourcegitcommit: 381a865f2849be8e3044d24cd4b3b54e9bbb7abc
+ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
+ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -103,27 +103,43 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
       * **New log in credentials** (Nouvelles informations d’identification de connexion) : créez un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit :
 
-        a. Sous l’onglet **Informations d’identification de la machine virtuelle**, renseignez les informations suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : * **Nom d’utilisateur** : entrez le nom d’utilisateur pour les informations d’identification de connexion de votre machine virtuelle.
-             * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
-             * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner une des options suivantes : * **Aucun** : spécifie que votre machine virtuelle n’autorise pas les connexions SSH.
-                * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaires pour la connexion via SSH.
-                * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
-                
-                  * *id_rsa*: Contains the RSA identification for a user.
-                  * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
-            
-        b. Sous l’onglet **Docker Daemon Access** (Accès au démon Docker), fournissez les informations suivantes :
+    a. Sous l’onglet **VM Credentials** (Informations d’identification de machine virtuelle), indiquez les informations d’identification de connexion de la machine virtuelle de votre hôte Docker :
 
-          ![Créer un hôte Docker][PUB06]
+    * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle.
+
+    * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
+
+    * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner l’une des options suivantes :
+
+        * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH.
+
+        * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH.
+
+        * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
+
+            * *id_rsa* : contient l’identification RSA d’un utilisateur.
+
+            * *id_rsa.pub* : contient la clé publique RSA qui est utilisée pour l’authentification.
+
+    b. Sous l’onglet **Docker Daemon Access** (Accès au démon Docker), fournissez les informations suivantes :
+
+    ![Créer un hôte Docker][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+    * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker.
+    
+    * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes :
+    
+        * **None** (Aucun) : spécifie que votre machine virtuelle n’autorise pas les connexions TLS.
+        
+        * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS.
+        
+        * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Le répertoire doit contenir les six fichiers suivants :
+        
+            * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS.
+            
+            * *cert.pem* et *key.pem* : contiennent le certificat client et la clé publique qui seront utilisés pour l’authentification TLS.
+            
+            * *server.pem* et *server-key.pem* : contiennent le certificat client et la clé publique qui sont utilisés pour l’authentification TLS.
 
 7. Après avoir entré les informations nécessaires, cliquez sur **Finish** (Terminer).  
     L’Assistant **Deploy Docker Container on Azure** (Déploiement d’un conteneur Docker sur Azure) réapparaît.
@@ -180,7 +196,7 @@ Pour créer un artefact prêt pour le déploiement, procédez comme suit :
 
 Pour plus d’informations sur la création d’artefacts dans IntelliJ, consultez [Configuring artifacts] sur le site web de JetBrains.
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker].
 
