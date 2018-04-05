@@ -1,7 +1,7 @@
 ---
-title: "Azure pour développeurs Java | Microsoft Docs"
-description: "Kit de développement logiciel (SDK) Java et référence d’API pour Azure"
-keywords: "Azure Java, référence d’API Azure Java, bibliothèque de classes Azure Java, SDK Azure"
+title: Azure pour développeurs Java | Microsoft Docs
+description: Kit de développement logiciel (SDK) Java et référence d’API pour Azure
+keywords: Azure Java, référence d’API Azure Java, bibliothèque de classes Azure Java, SDK Azure
 author: routlaw
 manager: douge
 ms.assetid: 7b92e776-959b-4632-8b1d-047ce1417616
@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 570f820e1349e1dfd01a6c7f323b5312c14c40c6
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 5c8bb4b81080461285551573eefc0d76b47b2d3d
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="azure-libraries-for-java"></a>Bibliothèques Azure pour Java
 
@@ -22,7 +22,7 @@ Les bibliothèques Azure facilitent l’utilisation des services Azure dans vos 
 
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
-| [Azure Storage](#azure-storage) | [Base de données SQL](#sql-database)  | [Cache Redis](#redis-cache)   | [Base de données de documents](#documentdb) |
+| [Stockage Azure](#azure-storage) | [Base de données SQL](#sql-database)  | [Cache Redis](#redis-cache)   | [Azure Cosmos DB](#cosmos-db) |
 | [Service Bus](#servicebus)  | [Azure Active Directory](#azuread) | [Key Vault](#keyvault)  | [Concentrateur d’événements](#eventhub)
 | [IoT Service](#iotservice) | [Appareil IoT](#iotdevice) | [Data Lake](#datalake)  | [AppInsights](#appinsights) | 
 | [Batch](#batch) | [Manage Azure resources (Gérer des ressources Azure)](#management) |
@@ -49,7 +49,7 @@ Intégrez les services Azure pour ajouter des fonctionnalités à vos applicatio
 
 <a name="azure-storage"></a>
 
-### <a name="azure-storageazurestoragestorage-introduction"></a>[Azure Storage](/azure/storage/storage-introduction)  
+### <a name="azure-storageazurestoragestorage-introduction"></a>[Stockage Azure](/azure/storage/storage-introduction)  
 
 Stockage des données et service de messagerie pour vos applications.
 
@@ -97,9 +97,9 @@ Stockage clé-valeur performant et à faible latence.
 
 [Exemples](/azure/redis-cache/cache-java-get-started) | [Référence](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [Notes de publication](https://github.com/xetorthio/jedis/releases)  
 
-<a name="documentdb"></a>
+<a name="cosmos-db"></a>
 
-### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[Cosmos DB](/azure/documentdb/documentdb-introduction)
+### <a name="azure-cosmos-dbazurecosmos-dbintroduction"></a>[Azure Cosmos DB](/azure/cosmos-db/introduction)
 
 Base de données NoSQL évolutive avec documents JSON et une syntaxe de requête SQL ou JavaScript.   
 
@@ -111,7 +111,7 @@ Base de données NoSQL évolutive avec documents JSON et une syntaxe de requête
 </dependency>
 ```
 
-[Exemples](/azure/documentdb/documentdb-java-application) | [Référence](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Notes de publication](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
+[Exemples](/azure/cosmos-db/sql-api-java-application) | [Référence](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Notes de publication](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
 
 <a name="servicebus"></a>
  
