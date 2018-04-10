@@ -1,6 +1,6 @@
 ---
-title: "S’authentifier avec les bibliothèques de gestion Azure pour Java"
-description: "S’authentifier avec un principal de service dans les bibliothèques de gestion Azure pour Java"
+title: S’authentifier avec les bibliothèques de gestion Azure pour Java
+description: S’authentifier avec un principal de service dans les bibliothèques de gestion Azure pour Java
 keywords: Azure, Java, SDK, API, Maven, Gradle, authentification, Active Directory, principal du service
 author: rloutlaw
 ms.author: routlaw
@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: dd1273d5fc79f513e8dae5420eb6a6988d327d58
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>S’authentifier avec les bibliothèques Azure pour Java 
 
@@ -42,7 +42,7 @@ final String storageConnection = "DefaultEndpointsProtocol=https;"
         + ";EndpointSuffix=core.windows.net";
 ```
 
-Les chaînes de connexion de service sont utilisées pour s’authentifier auprès d’autres services Azure tels que [DocumentDB](https://docs.microsoft.com/azure/documentdb/documentdb-java-application#a-iduseserviceastep-4-using-the-documentdb-service-in-a-java-application), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) et [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Vous pouvez obtenir les chaînes de connexion à l’aide du portail Azure ou Azure CLI.  Vous pouvez aussi utiliser les bibliothèques de gestion Azure pour Java pour interroger des ressources et générer des chaînes de connexion dans votre code. 
+Les chaînes de connexion de service sont utilisées pour s’authentifier auprès d’autres services Azure tels que [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) et [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Vous pouvez obtenir les chaînes de connexion à l’aide du portail Azure ou Azure CLI.  Vous pouvez aussi utiliser les bibliothèques de gestion Azure pour Java pour interroger des ressources et générer des chaînes de connexion dans votre code. 
 
 Par exemple, ce code utilise les bibliothèques de gestion pour créer une chaîne de connexion de compte de stockage :
 
