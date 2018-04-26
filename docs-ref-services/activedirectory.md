@@ -1,6 +1,6 @@
 ---
-title: "Bibliothèques Azure Active Directory pour Java"
-description: "Consulter la documentation sur les bibliothèques clientes et de gestion Java pour les bases de données pour Azure Active Directory"
+title: Bibliothèques Azure Active Directory pour Java
+description: Consulter la documentation sur les bibliothèques clientes et de gestion Java pour les bases de données pour Azure Active Directory
 keywords: Azure, Java, SDK, API, SQL, authentification, AAD, Active Directory, Graph, OAuth 2.0
 author: rloutlaw
 ms.author: routlaw
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 081b8455a6cd8f26ce714328d10ce25ea6a07e3b
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Bibliothèques Azure Active Directory pour Java
 
@@ -39,7 +39,7 @@ Configurez l’authentification avec OAuth2, OpenID Connect ou Active Directory 
 </dependency>
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Récupérez un JSON Web Token (JWT) pour un utilisateur dans votre client Active Directory à l’aide de l’[API Graph](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api) d’Azure Active Directory. Ce jeton peut ensuite servir à authentifier l’utilisateur avec une application ou une API.
 
@@ -69,7 +69,7 @@ Configurez le [contrôle d’accès en fonction du rôle](/azure/active-director
 </dependency>
 ```
 
-### <a name="example"></a>Exemple 
+### <a name="example"></a>Exemples 
 
 Créez un principal de service et attribuez-lui le rôle de Contributeur.
 
@@ -86,7 +86,7 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/activedirectory/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/activedirectory/management)
 
 
 ## <a name="samples"></a>Exemples

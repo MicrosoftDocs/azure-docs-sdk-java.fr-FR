@@ -1,6 +1,6 @@
 ---
-title: "Bibliothèques Azure Data Lake Store pour Java"
-description: "Documentation de référence pour les bibliothèques Java Data Lake Store"
+title: Bibliothèques Azure Data Lake Store pour Java
+description: Documentation de référence pour les bibliothèques Java Data Lake Store
 keywords: Azure, Java, SDK, API, big data, data lake
 author: rloutlaw
 ms.author: routlaw
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 66ff566e74203d3b5a8e9bcc170f4c21cf310645
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: bcd1fd17759f7d171006d7b2126019d00d06d1db
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-store-libraries-for-java"></a>Bibliothèques Azure Data Lake Store pour Java
 
@@ -40,7 +40,7 @@ Lisez et écrivez des fichiers, définissez les autorisations et les métadonné
 </dependency>
 ```   
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Créez un client Data Lake à partir d’un nom de domaine complet et d’un jeton d’accès OAuth2. Créez ensuite un fichier dans Data Lake pour écrire dedans.
 
@@ -63,7 +63,7 @@ out.close();
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/datalakestore/clientlibrary)
+> [Explorer les API clientes](/java/api/overview/azure/datalakestore/client)
 
 
 ## <a name="management-api"></a>API de gestion
@@ -82,7 +82,7 @@ Utilisez l’API de gestion pour gérer les comptes Data Lake Store, les règles
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/datalakestore/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/datalakestore/management)
 
 ## <a name="samples"></a>Exemples
 

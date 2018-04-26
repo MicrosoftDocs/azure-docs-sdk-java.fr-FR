@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Azure CDN pour Java"
-description: "Documentation de référence pour les bibliothèques de gestion Java CDN"
-keywords: "Azure, Java, SDK, API, contenu, distribution, réseau, CDN"
+title: Bibliothèques Azure CDN pour Java
+description: Documentation de référence pour les bibliothèques de gestion Java CDN
+keywords: Azure, Java, SDK, API, contenu, distribution, réseau, CDN
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: 91df958d2d78fb4fd959c228b28c6ae003716be6
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Bibliothèques Azure CDN pour Java
 
@@ -39,7 +39,7 @@ Créez des profils CDN, définissez des points de terminaison et ajoutez du cont
 </dependency>
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Créez un profil CDN, assignez des points de terminaison et chargez du contenu dans votre réseau de distribution de contenu.
 
@@ -62,7 +62,7 @@ for (CdnEndpoint endpoint : profile.endpoints().values()) {
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/cdn/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/cdn/management)
 
 ## <a name="samples"></a>Exemples
 

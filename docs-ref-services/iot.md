@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Azure IoT Hub pour Java"
-description: "Consulter la documentation sur les bibliothèques Azure IoT Hub Java"
-keywords: "Azure, Java, SDK, API, événement, IoT, flux, appareils, IoT Hub"
+title: Bibliothèques Azure IoT Hub pour Java
+description: Consulter la documentation sur les bibliothèques Azure IoT Hub Java
+keywords: Azure, Java, SDK, API, événement, IoT, flux, appareils, IoT Hub
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 5e6a102b062b2fff6b297c7e3dda423d1448bcb0
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-iot-libraries-for-java"></a>Bibliothèques Azure IoT pour Java
 
@@ -52,9 +52,9 @@ Envoyez des messages sur le cloud et recevez des messages sur des appareils avec
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/iot/clientlibrary)   
+> [Explorer les API clientes](/java/api/overview/azure/iot/client)   
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Envoyez un message depuis Azure IoT Hub vers un appareil.
 

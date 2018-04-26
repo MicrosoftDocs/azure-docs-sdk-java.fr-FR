@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques réseau Azure pour Java"
-description: "Consulter la documentation sur les bibliothèques de gestion de réseau Java"
-keywords: "Azure, Java, SDK, API, mise en réseau, équilibrage de charge, réseau virtuel, sous-réseau"
+title: Bibliothèques réseau Azure pour Java
+description: Consulter la documentation sur les bibliothèques de gestion de réseau Java
+keywords: Azure, Java, SDK, API, mise en réseau, équilibrage de charge, réseau virtuel, sous-réseau
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: 6eed6f45ee239db1286e94f210341febb189378d
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-network-libraries-for-java"></a>Bibliothèques réseau Azure pour Java
 
@@ -39,7 +39,7 @@ Créez et gérez des [réseaux virtuels](/azure/virtual-network/virtual-networks
 </dependency>
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Créez un réseau virtuel avec un sous-réseau unique.
 
@@ -55,7 +55,7 @@ Network virtualNetwork1 = azure.networks().define(vnetName1)
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/networking/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/networking/management)
 
 ## <a name="samples"></a>Exemples
 

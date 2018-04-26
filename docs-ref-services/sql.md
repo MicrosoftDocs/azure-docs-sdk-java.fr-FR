@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Azure SQL Database pour Java"
-description: "Connectez-vous à Azure SQL Database à l’aide du pilote JDBC ou des instances de base de données de gestion Azure SQL avec l’API de gestion."
-keywords: "Azure, Java, SDK, API, SQL, base de données, JDBC"
+title: Bibliothèques Azure SQL Database pour Java
+description: Connectez-vous à Azure SQL Database à l’aide du pilote JDBC ou des instances de base de données de gestion Azure SQL avec l’API de gestion.
+keywords: Azure, Java, SDK, API, SQL, base de données, JDBC
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>Bibliothèques Azure SQL Database pour Java
 
@@ -40,7 +40,7 @@ Connectez-vous à Azure SQL Database à partir de vos applications à l’aide d
 </dependency>
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Connectez-vous à la base de données SQL et sélectionnez tous les enregistrements dans une table à l’aide de JDBC.
 
@@ -69,9 +69,9 @@ Créez et gérez des ressources Azure SQL Database dans votre abonnement avec l�
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/sql/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/sql/management)
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Créez une ressource de base de données SQL et restreignez l’accès à une plage d’adresses IP à l’aide d’une règle de pare-feu.
 

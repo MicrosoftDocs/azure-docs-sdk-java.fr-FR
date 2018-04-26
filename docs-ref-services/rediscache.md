@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Cache Redis pour Java"
-description: "Documentation de référence pour les bibliothèques clientes et de gestion Java pour les bases de données pour Cache Redis"
-keywords: "Azure, Java, SDK, API, cache, Redis, cache web, clé-valeur, en mémoire"
+title: Bibliothèques Cache Redis pour Java
+description: Documentation de référence pour les bibliothèques clientes et de gestion Java pour les bases de données pour Cache Redis
+keywords: Azure, Java, SDK, API, cache, Redis, cache web, clé-valeur, en mémoire
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: 6d436c49124fd0a406486e0c7bac4d1605de5d32
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="redis-cache-libraries-for-java"></a>Bibliothèques Cache Redis pour Java
 
@@ -40,7 +40,7 @@ Connectez-vous à Cache Redis Azure et au magasin, et récupérez des valeurs à
 </dependency>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Connectez-vous à Azure Redis et insérez une chaîne dans le cache.
 
@@ -63,7 +63,7 @@ Créez, mettez à l’échelle les ressources Azure Redis et gérez les clés d�
 </dependency>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Créez un Cache Redis Azure dans le [niveau standard à deux nœuds](https://azure.microsoft.com/services/cache/). 
 
@@ -75,7 +75,7 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/rediscache/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/rediscache/management)
 
 ## <a name="samples"></a>Exemples
 

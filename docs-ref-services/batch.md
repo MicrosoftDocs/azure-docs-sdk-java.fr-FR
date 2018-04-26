@@ -1,7 +1,7 @@
 ---
-title: "Bibliothèques Azure Batch pour Java"
-description: "Documentation de référence pour les bibliothèques Java Batch"
-keywords: "Azure, Java, SDK, API, Batch, traitement, planification, longue durée"
+title: Bibliothèques Azure Batch pour Java
+description: Documentation de référence pour les bibliothèques Java Batch
+keywords: Azure, Java, SDK, API, Batch, traitement, planification, longue durée
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: batch
-ms.openlocfilehash: 2c9fab2834ea6d9c906d9483aed839a0411aaa40
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 67381d68d23f98579a472aefbebaa929af622b8d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-batch-libraries-for-java"></a>Bibliothèques Azure Batch pour Java
 
@@ -39,7 +39,7 @@ Les bibliothèques de client Azure Batch vous permettent de configurer des nœud
 </dependency>
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Configurez un pool de nœuds de calcul Linux dans un compte Batch :
 
@@ -54,7 +54,7 @@ client.poolOperations().createPool(poolId, poolVMSize, configuration, poolVMCoun
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/batch/clientlibrary)
+> [Explorer les API clientes](/java/api/overview/azure/batch/client)
 
 
 ## <a name="management-api"></a>API de gestion
@@ -71,7 +71,7 @@ Utilisez les bibliothèques de gestion Azure Batch pour créer et supprimer des 
 </dependency>
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>Exemples
 
 Créez un compte Azure Batch, puis configurez pour ce compte une nouvelle application et un compte de stockage Azure.
 
@@ -89,7 +89,7 @@ BatchAccount batchAccount = azure.batchAccounts().define("newBatchAcct")
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/batch/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/batch/management)
 
 
 ## <a name="samples"></a>Exemples

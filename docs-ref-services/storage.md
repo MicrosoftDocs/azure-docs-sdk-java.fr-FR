@@ -1,6 +1,6 @@
 ---
-title: "Bibliothèques de stockage Azure pour Java"
-description: 
+title: Bibliothèques de stockage Azure pour Java
+description: ''
 keywords: Azure, Java, SDK, API, stockage
 author: douge
 ms.author: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: 3c7a3a1fcf2e97202e7f38f8df5acb6637fb4b47
-ms.sourcegitcommit: 2ae0d99c02f4ad7efa9e3d3fbd1db7e9de20c6e7
+ms.openlocfilehash: ec06e79374176b5a4795d27c5fbbb2260e65cd8c
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-storage-libraries-for-java"></a>Bibliothèques de stockage Azure pour Java
 
@@ -39,7 +39,7 @@ Utilisez [des chaînes de connexion](/azure/storage/storage-create-storage-accou
 </dependency>
 ```   
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Écrivez un fichier image du système de fichiers local dans un nouvel objet blob dans un conteneur de stockage d’objets blob Azure.
 
@@ -59,7 +59,7 @@ blob.uploadFromFile("/Users/raisa/fabrikam.png");
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/storage/clientlibrary)
+> [Explorer les API clientes](/java/api/overview/azure/storage/client)
 
 ## <a name="management-api"></a>API de gestion
 
@@ -75,7 +75,7 @@ Créez et gérez les comptes de stockage Azure et les clés de connexion avec l�
 </dependency
 ```   
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Créez un compte de stockage Azure dans votre abonnement et récupérez sa clé d’accès.
 
@@ -93,7 +93,7 @@ for(StorageAccountKey key : storageAccountKeys)    {
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/storage/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/storage/management)
 
 
 ## <a name="samples"></a>Exemples

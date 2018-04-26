@@ -1,6 +1,6 @@
 ---
-title: "Bibliothèques Azure Data Lake Analytics pour Java"
-description: "Documentation de référence pour les bibliothèques Java Data Lake Analytics"
+title: Bibliothèques Azure Data Lake Analytics pour Java
+description: Documentation de référence pour les bibliothèques Java Data Lake Analytics
 keywords: Azure, Java, SDK, API, big data, data lake
 author: rloutlaw
 ms.author: routlaw
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 70cfe1417d460172df0cb753d2b719a635978ca8
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Bibliothèques Azure Data Lake Analytics pour Java
 
@@ -40,7 +40,7 @@ Utilisez l’API de gestion pour gérer les comptes, les travaux, les stratégie
 </dependency>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Envoyez un nouveau travail U-SQL à Data Lake Analytics.
 
@@ -65,7 +65,7 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API clientes](/java/api/overview/azure/datalakeanalytics/managementapi)
+> [Explorer les API de gestion](/java/api/overview/azure/datalakeanalytics/management)
 
 ## <a name="samples"></a>Exemples
 
