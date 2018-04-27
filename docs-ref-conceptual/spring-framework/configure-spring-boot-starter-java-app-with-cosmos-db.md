@@ -14,11 +14,11 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 85494fc310e2bb31cfe8636b5e866bb3f4856cd4
-ms.sourcegitcommit: 3a746e8ae9ef0e6e82fccf9aca54eae8c9c1cdca
+ms.openlocfilehash: 6cf999f3db397760709476dae1f5c0fd83503725
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Comment utiliser Spring Boot Starter avec une API SQL Azure Cosmos DB
 
@@ -298,9 +298,11 @@ Pour plus d’informations sur l’utilisation d’Azure Cosmos DB et de Java, v
 
 * [Azure Cosmos DB : créer une base de données de documents à l’aide de Java et du Portail Azure][Build a SQL API app with Java]
 
+* [Spring Data pour l’API SQL Azure Cosmos DB]
+
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 
-* [Spring Boot DocumenDB Starter pour Azure](https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample)
+* [Spring Boot DocumenDB Starter pour Azure]
 
 * [Déployer une application Spring Boot sur Azure App Service](deploy-spring-boot-java-web-app-on-azure.md)
 
@@ -315,6 +317,8 @@ Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez le
 [Documentation Azure Cosmos DB]: /azure/cosmos-db/
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
 [Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
+[Spring Data pour l’API SQL Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
+[Spring Boot DocumenDB Starter pour Azure]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
