@@ -1,11 +1,11 @@
 ---
 title: Installer le Kit de ressources Azure pour Eclipse
-description: "Découvrez comment installer le plug-in Kit de ressources Azure pour Eclipse pour créer et déployer des applications cloud sur Azure."
-services: 
+description: Découvrez comment installer le plug-in Kit de ressources Azure pour Eclipse pour créer et déployer des applications cloud sur Azure.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Installer le Kit de ressources Azure pour Eclipse
 
@@ -45,13 +45,13 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
 
 1. Dans la boîte de dialogue **Available Software** (Logiciels disponibles), dans la zone de texte **Work with** (Fonctionnement avec), tapez `http://dl.microsoft.com/eclipse/`, puis appuyez sur la touche **Entrée**.
 
-1. Dans le volet **Name** (Nom), cochez **Azure Toolkit for Eclipse** (Kit de ressources Azure pour Eclipse) et décochez **Contact all update sites during install to find required software** (Contacter tous les sites de mise à jour durant l'installation pour trouver le logiciel requis). Votre écran doit se présenter comme suit :
+1. Dans le volet **Name** (Nom), cochez **Azure Toolkit for Java** (Kit de ressources Azure pour Java) et décochez **Contact all update sites during install to find required software** (Contacter tous les sites de mise à jour durant l’installation pour trouver le logiciel requis). Votre écran doit se présenter comme suit :
    
    ![Installation du kit de ressources Azure pour Eclipse][02]
 
 1. En développant **Kit de ressources Azure pour Eclipse**, vous verrez une liste des composants qui seront installés. Par exemple :
 
-   | Fonctionnalité | DESCRIPTION | 
+   | Fonctionnalité | Description | 
    |---|---| 
    | **Plug-in Application Insights pour Java** | Permet d’utiliser les services de journalisation et d’analyse de télémétrie d’Azure pour vos applications et instances de serveur. | 
    | **Plug-in Azure Common** | Fournit les fonctionnalités communes dont les autres composants du kit de ressources ont besoin. | 
@@ -79,7 +79,7 @@ Les étapes suivantes vous montrent comment installer le kit de ressources Azure
    
    ![Invite de redémarrage][06]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

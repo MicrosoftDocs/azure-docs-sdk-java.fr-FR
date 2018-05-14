@@ -1,11 +1,11 @@
 ---
-title: "Créer une application web Hello World pour Azure à l’aide d’Eclipse"
-description: "Ce didacticiel vous montre comment utiliser le Kit de ressources Azure pour Eclipse pour créer une application Web Hello World pour Azure."
+title: Créer une application web Hello World pour Azure à l’aide d’Eclipse
+description: Ce didacticiel vous montre comment utiliser le Kit de ressources Azure pour Eclipse pour créer une application Web Hello World pour Azure.
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: bec94e65951330c933e0173fd580c3578e759c18
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Créer une application web Hello World pour Azure à l’aide d’Eclipse
 
@@ -98,7 +98,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
    ![Déployer App Service][deploy-app-service]
 
-1. Le Kit de ressources affiche un le statut **Published** (Publié) dans **Azure Activity Log** lorsque le déploiement de votre application web a été effectué. Il s’agit d’un hyperlien pour l’URL de votre application web déployée.
+1. Le Kit de ressources affiche un le statut **Published** (Publié) sous l’onglet **Azure Activity Log** lorsque le déploiement de votre application web a été effectué. Il s’agit d’un hyperlien pour l’URL de votre application web déployée.
 
    ![État de publication][publish-status]
 
@@ -110,7 +110,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
    ![Gérer App Service][manage-app-service]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

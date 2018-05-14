@@ -1,12 +1,12 @@
 ---
-title: "Déployer une application web Hello World s’exécutant dans un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ"
-description: "Exécutez une application web Hello World de base dans un conteneur Linux et déployez-la dans le cloud à l’aide du kit de ressources Azure pour IntelliJ."
+title: Déployer une application web Hello World s’exécutant dans un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ
+description: Exécutez une application web Hello World de base dans un conteneur Linux et déployez-la dans le cloud à l’aide du kit de ressources Azure pour IntelliJ.
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c430581a9a67365430d87c1af925c1f4d27eca2b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Déployer une application web Hello World sur un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -38,9 +38,9 @@ Cet article décrit les étapes requises pour créer une application web Hello W
 
 ## <a name="create-a-new-web-app-project"></a>Créer un projet d’application web
 
-1. Démarrez IntelliJ et connectez-vous à votre compte Azure en suivant les étapes indiquées dans l’article [Instructions de connexion pour le kit de ressources Azure pour IntelliJ].
+1. Démarrez IntelliJ et connectez-vous à votre compte Azure en suivant les étapes indiquées dans l’article [Instructions de connexion pour le Kit de ressources Azure pour IntelliJ](https://docs.microsoft.com/java/azure/intellij/azure-toolkit-for-intellij-sign-in-instructions).
 
-1. Cliquez sur le menu **Fichier**, puis sur **Nouveau**, puis sur **Projet**.
+1. Cliquez sur le menu **File**, sur **New**, puis sur **Project**.
    
    ![Créer un projet][file-new-project]
 
@@ -131,7 +131,7 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
    ![Boîte de dialogue Edit configuration][edit-configuration-dialog]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker][client Docker] officiel.
 
