@@ -1,12 +1,12 @@
 ---
 title: Instructions de connexion pour le kit de ressources Azure pour Eclipse
-description: "Découvrez comment vous connecter à Microsoft Azure à l’aide du kit de ressources Azure pour Eclipse."
-services: 
+description: Découvrez comment vous connecter à Microsoft Azure à l’aide du kit de ressources Azure pour Eclipse.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 498a22c455e54b8038169cf4e9f6ac7d7287c0bb
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
+ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse
 
@@ -91,7 +91,7 @@ Si vous vous déconnectez d’Azure lorsque vous utilisez Eclipse, vous devez re
 
    ![Boîte de dialogue Se connecter][A02]
 
-1. Lorsque la boîte de dialogue **Select Authenticated File (Sélectionner un fichier authentifié)** s’affiche, sélectionnez un fichier d’informations d’identification que vous avez créé précédemment, puis cliquez sur **Sélectionner**.
+1. Lorsque la boîte de dialogue **Sélectionner un fichier authentifié** s’affiche, sélectionnez un fichier d’informations d’identification que vous avez créé précédemment, puis cliquez sur **Ouvrir**.
 
    ![Boîte de dialogue Se connecter][A08]
 
@@ -137,7 +137,7 @@ Après avoir configuré les étapes indiquées dans la section précédente, vou
 
    ![Boîte de dialogue Se déconnecter][L02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
