@@ -1,12 +1,12 @@
 ---
-title: "Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse"
-description: "Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour Eclipse."
-services: 
+title: Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse
+description: Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour Eclipse.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: a02f8d02f8c5c32091dd106e036b636b1d11cff0
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: ec67ed44ec570da7b826c12a9f8a24a5b0170e99
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse
 
@@ -32,7 +32,7 @@ L’Explorateur Azure, qui fait partie du Kit de ressources Azure pour Eclipse, 
 
 Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procédez comme suit :
 
-1. Connectez-vous à votre compte Azure en suivant les [Instructions de connexion pour le kit de ressources Azure pour Eclipse].
+1. Connectez-vous à votre compte Azure en suivant les [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions).
 
 1. Dans l’affichage **Explorateur Azure**, développez le nœud **Azure**, cliquez avec le bouton droit sur **Machines virtuelles**, puis cliquez sur **Créer une machine virtuelle**.
 
@@ -52,7 +52,7 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
    * **Offre** : spécifie la machine virtuelle et l’offre de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
 
-   * **Référence (SKU)** : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
+   * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
 
    * **N° de version** : spécifie la version de la référence (SKU) sélectionnée à utiliser.
 
@@ -140,7 +140,7 @@ Pour supprimer une machine virtuelle à l’aide de l’Explorateur Azure dans E
 
    ![La fenêtre de confirmation de suppression de machine virtuelle][DE02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les tailles et tarifications des machines virtuelles Azure, voir les ressources suivantes :
 
