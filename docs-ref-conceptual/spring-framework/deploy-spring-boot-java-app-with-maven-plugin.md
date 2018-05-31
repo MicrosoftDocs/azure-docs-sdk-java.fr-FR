@@ -1,12 +1,12 @@
 ---
-title: "Déployer une application Spring Boot sur le cloud avec Maven et Azure"
-description: "Découvrez comment déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure Web Apps."
+title: Déployer une application Spring Boot sur le cloud avec Maven et Azure
+description: Découvrez comment déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure Web Apps.
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 17c358317d1b96521de87f263a92fa2d7c0ff26c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 82cb0da3ce49fa77f888808af14455bf226d5cb0
+ms.sourcegitcommit: 024b3127daf396a17bd43d57642e3534ae87f120
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34462749"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a>Déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure Web Apps
 
@@ -31,19 +32,20 @@ Cet article présente l’utilisation du plug-in Maven pour Azure Web Apps afin 
 > Le plug-in Maven pour Azure Web Apps est actuellement disponible en version préliminaire. Pour l’instant, seule la publication FTP est prise en charge, mais des fonctionnalités supplémentaires sont envisagées pour le futur.
 > 
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
-Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
-* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
+Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
+
+* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [Avantages pour les abonnés MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
 * Un [Java Development Kit (JDK)] à jour, version 1.7 ou ultérieure.
 * L’outil de génération [Maven] (version 3) d’Apache.
-* Un [client Git].
+* Un [Git].
 
 ## <a name="clone-the-sample-spring-boot-web-app"></a>Cloner l’exemple d’application web Spring Boot
 
-Dans cette section, vous clonez une application Spring Boot terminée et vous la testez localement.
+Dans cette section, vous allez cloner une application Spring Boot terminée et la tester localement.
 
 1. Ouvrez une invite de commandes ou une fenêtre de terminal et créez un répertoire local pour y stocker votre application Spring Boot, puis accédez à ce répertoire. Par exemple :
    ```shell
@@ -85,7 +87,7 @@ Dans cette section, vous clonez une application Spring Boot terminée et vous la
 
 ## <a name="create-an-azure-service-principal"></a>Créer un principal du service Azure
 
-Dans cette section, vous créez un principal du service Azure utilisé par le plug-in Maven lors du déploiement de votre application web dans Azure.
+Dans cette section, vous allez créer un principal de service Azure utilisé par le plug-in Maven lors du déploiement de votre application web dans Azure.
 
 1. Ouvrez une invite de commandes.
 
@@ -120,9 +122,9 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
 
 ## <a name="configure-maven-to-use-your-azure-service-principal"></a>Configurer Maven pour utiliser votre principal du service Azure
 
-Dans cette section, vous utilisez les valeurs de votre principal du service Azure pour configurer l’authentification utilisée par Maven lors du déploiement de votre application web dans Azure.
+Dans cette section, vous allez utiliser les valeurs de votre principal de service Azure pour configurer l’authentification utilisée par Maven lors du déploiement de votre application web dans Azure.
 
-1. Ouvrez votre fichier `settings.xml` Maven dans un éditeur de texte ; ce fichier peut avoir un chemin d’accès similaire aux exemples suivants :
+1. Ouvrez votre fichier Maven `settings.xml` dans un éditeur de texte. Le chemin d’accès de ce fichier peut être semblable aux exemples suivants :
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
@@ -149,7 +151,7 @@ Dans cette section, vous utilisez les valeurs de votre principal du service Azur
    | `<client>` | Contient la valeur `appId` de votre principal du service. |
    | `<tenant>` | Contient la valeur `tenant` de votre principal du service. |
    | `<key>` | Contient la valeur `password` de votre principal du service. |
-   | `<environment>` | Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple. (Une liste complète des environnements est disponible dans la documentation [Maven Plugin for Azure Web Apps]) |
+   | `<environment>` | Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple. (Une liste complète des environnements est disponible dans la documentation [Plug-in Maven pour Azure Web Apps]) |
 
 1. Enregistrez et fermez le fichier *settings.xml*.
 
@@ -191,16 +193,16 @@ Ouvrez le fichier `pom.xml` de votre application Spring Boot dans un éditeur de
    </plugin>
    ```
 
-Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Maven Plugin for Azure Web Apps] (Plug-in Maven pour Azure Web Apps). Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :
+Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Plug-in Maven pour Azure Web Apps] (Plug-in Maven pour Azure Web Apps). Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :
 
 | Élément | Description |
 |---|---|
-| `<version>` | Spécifie la version du [Maven Plugin for Azure Web Apps]. Vous devez vérifier la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente. |
+| `<version>` | Spécifie la version du [plug-in Maven pour Azure Web Apps]. Vérifiez la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente. |
 | `<authentication>` | Spécifie les informations d’authentification pour Azure, qui dans cet exemple comportent un élément `<serverId>` contenant `azure-auth` ; Maven utilise cette valeur pour rechercher les valeurs du principal du service Azure dans votre fichier *settings.xml* Maven que vous avez défini dans une section précédente de cet article. |
 | `<resourceGroup>` | Spécifie le groupe de ressources cible, qui est `maven-plugin` dans cet exemple. Il est créé au cours du déploiement s’il n’existe pas. |
 | `<appName>` | Spécifie le nom cible de votre application web. Dans cet exemple, le nom cible est `maven-web-app-${maven.build.timestamp}`, où le suffixe `${maven.build.timestamp}` est ajouté dans cet exemple pour éviter tout conflit. (L’horodatage est facultatif ; vous pouvez spécifier n’importe quelle chaîne unique pour le nom de l’application.) |
-| `<region>` | Spécifie la région cible, qui dans cet exemple est `westus`. (Une liste complète est disponible dans la documentation [Maven Plugin for Azure Web Apps].) |
-| `<javaVersion>` | Spécifie la version du runtime Java de votre application web. (Une liste complète est disponible dans la documentation [Maven Plugin for Azure Web Apps].) |
+| `<region>` | Spécifie la région cible, qui dans cet exemple est `westus`. (Une liste complète est disponible dans la documentation [Plug-in Maven pour Azure Web Apps].) |
+| `<javaVersion>` | Spécifie la version du runtime Java de votre application web. (Une liste complète est disponible dans la documentation [Plug-in Maven pour Azure Web Apps].) |
 | `<deploymentType>` | Spécifie le type de déploiement de votre application web. Pour l’instant, seul `ftp` est pris en charge, bien que la prise en charge d’autres types de déploiement soit en cours de développement. |
 | `<resources>` | Spécifie les ressources et les destinations cible utilisées par Maven lors du déploiement de votre application web dans Azure. Dans cet exemple, deux éléments `<resource>` indiquent que Maven va déployer le fichier JAR de votre application web et le fichier *web.config* du projet Spring Boot. |
 
@@ -255,7 +257,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :
 
-* [Maven Plugin for Azure Web Apps]
+* [Plug-in Maven pour Azure Web Apps]
 
 * [Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure](/azure/xplat-cli-connect)
 
@@ -269,17 +271,17 @@ Pour plus d’informations sur les différentes technologies présentées dans c
 
 [Azure CLI]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[portail Azure]: https://portal.azure.com/
+[Portail Azure]: https://portal.azure.com/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
-[client Git]: https://github.com/
+[Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
-[avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Avantages pour les abonnés MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/microsoft/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Maven Plugin for Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+[Plug-in Maven pour Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 
 <!-- IMG List -->
 
