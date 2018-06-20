@@ -1,11 +1,11 @@
 ---
-title: "Kit de ressources Azure pour Eclipse"
-description: "Découvrez comment le plug-in Kit de ressources Azure pour Eclipse permet de créer et de déployer des applications cloud sur Azure."
-services: 
+title: Kit de ressources Azure pour Eclipse
+description: Découvrez comment le plug-in Kit de ressources Azure pour Eclipse permet de créer et de déployer des applications cloud sur Azure.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954210"
 ---
 # <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="60a86-103">Kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="60a86-103">Azure Toolkit for Eclipse</span></span>
 

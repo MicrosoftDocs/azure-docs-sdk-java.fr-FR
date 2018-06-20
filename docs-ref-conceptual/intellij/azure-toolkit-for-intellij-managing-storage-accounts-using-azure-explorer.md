@@ -1,12 +1,12 @@
 ---
-title: "Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ"
-description: "Découvrez comment gérer vos comptes de stockage Azure à l’aide de l’Explorateur Azure pour IntelliJ."
-services: 
+title: Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ
+description: Découvrez comment gérer vos comptes de stockage Azure à l’aide de l’Explorateur Azure pour IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954840"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="8ffb2-103">Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8ffb2-103">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>
 
@@ -114,16 +115,26 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Instructions de connexion pour le kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
+[Introduction to Microsoft Azure Storage]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
+[About Azure storage accounts]: /azure/storage/storage-create-storage-account
 [Réplication de Stockage Azure]: /azure/storage/storage-redundancy
+[Azure storage replication]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets
+[Azure storage scalability and Performance Targets]: /azure/storage/storage-scalability-targets
 [Affectation de noms et de références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
+[Naming and referencing containers, blobs, and metadata]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows storage accounts in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux storage accounts in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Tarification des comptes de stockage Windows]: /pricing/details/virtual-machines/windows/
+[Windows storage-account pricing]: /pricing/details/virtual-machines/windows/
 [Tarification des comptes de stockage Linux]: /pricing/details/virtual-machines/linux/
+[Linux storage-account pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

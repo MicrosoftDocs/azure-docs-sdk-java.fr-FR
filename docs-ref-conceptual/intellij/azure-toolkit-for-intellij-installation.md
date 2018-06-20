@@ -1,11 +1,11 @@
 ---
 title: Installation du kit de ressources Azure pour IntelliJ
-description: "Découvrez comment installer le plug-in Kit de ressources Azure pour IntelliJ pour créer et déployer des applications cloud sur Azure."
-services: 
+description: Découvrez comment installer le plug-in Kit de ressources Azure pour IntelliJ pour créer et déployer des applications cloud sur Azure.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954170"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a><span data-ttu-id="3f30a-103">Installation du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="3f30a-103">Installing the Azure Toolkit for IntelliJ</span></span>
 

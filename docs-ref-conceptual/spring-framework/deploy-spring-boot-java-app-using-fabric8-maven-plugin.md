@@ -1,12 +1,12 @@
 ---
-title: "Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven"
-description: "Ce didacticiel vous guide à travers les étapes pour déployer une application Spring Boot sur Microsoft Azure à l’aide du plug-in Fabric8 pour Apache Maven."
+title: Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven
+description: Ce didacticiel vous guide à travers les étapes pour déployer une application Spring Boot sur Microsoft Azure à l’aide du plug-in Fabric8 pour Apache Maven.
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yuwzho;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954890"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a><span data-ttu-id="62bc7-103">Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven</span><span class="sxs-lookup"><span data-stu-id="62bc7-103">Deploy a Spring Boot app using the Fabric8 Maven Plugin</span></span>
 
@@ -313,7 +314,7 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
 
-1. <span data-ttu-id="62bc7-165">Accédez au répertoire de projet terminé de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="62bc7-165">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="62bc7-165">Accédez au répertoire de projet terminé de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou «  */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="62bc7-165">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
 1. <span data-ttu-id="62bc7-166">Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion de votre registre de conteneurs Azure.</span><span class="sxs-lookup"><span data-stu-id="62bc7-166">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry.</span></span>
 
@@ -360,7 +361,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a><span data-ttu-id="62bc7-170">Configurer votre application Spring Boot pour utiliser le plug-in Fabric8 Maven</span><span class="sxs-lookup"><span data-stu-id="62bc7-170">Configure your Spring Boot app to use the Fabric8 Maven plugin</span></span>
 
-1. <span data-ttu-id="62bc7-171">Accédez au répertoire de projet terminé de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="62bc7-171">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="62bc7-171">Accédez au répertoire de projet terminé de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou «  */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="62bc7-171">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
 1. <span data-ttu-id="62bc7-172">Mettez à jour la collection `<plugins>` dans le fichier *pom.xml* pour ajouter le plug-in Fabric8 Maven :</span><span class="sxs-lookup"><span data-stu-id="62bc7-172">Update the `<plugins>` collection in the *pom.xml* file to add the Fabric8 Maven plugin:</span></span>
 
@@ -376,7 +377,7 @@ ms.lasthandoff: 02/03/2018
    </plugin>
    ```
 
-1. <span data-ttu-id="62bc7-173">Accédez au répertoire source principal de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete\src\main* » ou « */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main* ») et créez un dossier nommé « *fabric8* ».</span><span class="sxs-lookup"><span data-stu-id="62bc7-173">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
+1. <span data-ttu-id="62bc7-173">Accédez au répertoire source principal de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete\src\main* » ou «  */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main* ») et créez un dossier nommé « *fabric8* ».</span><span class="sxs-lookup"><span data-stu-id="62bc7-173">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
 
 1. <span data-ttu-id="62bc7-174">Créez trois fichiers fragmentés YAML dans le nouveau dossier *fabric8* :</span><span class="sxs-lookup"><span data-stu-id="62bc7-174">Create three YAML fragment files in the new *fabric8* folder:</span></span>
 
@@ -524,20 +525,29 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure CLI]: /cli/azure/overview
+[Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Comment utiliser une image Docker personnalisée pour Azure Web App sur Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Using a custom Docker image for Azure Web App on Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [client Docker]: https://www.docker.com/
+[Docker]: https://www.docker.com/
 [Fabric8]: https://fabric8.io/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [client Git]: https://github.com/
+[Git]: https://github.com/
 [JDK (Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
+[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34216023"
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="bf2dc-103">Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="bf2dc-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
 

@@ -1,12 +1,12 @@
 ---
-title: "Publier une application Spring Boot en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ"
-description: "Découvrez comment publier une application web sur Microsoft Azure en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ."
-services: 
+title: Publier une application Spring Boot en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
+description: Découvrez comment publier une application web sur Microsoft Azure en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954730"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="20499-103">Publier une application Spring Boot en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="20499-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -202,7 +203,7 @@ ms.lasthandoff: 02/03/2018
 
    <span data-ttu-id="20499-207">a.</span><span class="sxs-lookup"><span data-stu-id="20499-207">a.</span></span> <span data-ttu-id="20499-208">Vous pouvez spécifier un nom personnalisé pour le conteneur qui doit héberger votre conteneur Docker, ou accepter le nom par défaut.</span><span class="sxs-lookup"><span data-stu-id="20499-208">You can choose to specify a custom name for the container that will host your Docker container, or you can accept the default.</span></span>
 
-   <span data-ttu-id="20499-209">b.</span><span class="sxs-lookup"><span data-stu-id="20499-209">b.</span></span> <span data-ttu-id="20499-210">Entrez les ports TCP de votre hôte Docker en utilisant la syntaxe suivante : « *[port externe]*:*[port interne]*.</span><span class="sxs-lookup"><span data-stu-id="20499-210">Enter the TCP ports for your docker host by using the following syntax: *[external port]*:*[internal port]*.</span></span> <span data-ttu-id="20499-211">Par exemple, dans **80:8080**, 80 est un port externe et 8080 le port interne par défaut de Spring Boot.</span><span class="sxs-lookup"><span data-stu-id="20499-211">For example, **80:8080** specifies an external port of 80 and the default internal Spring Boot port of 8080.</span></span>
+   <span data-ttu-id="20499-209">b.</span><span class="sxs-lookup"><span data-stu-id="20499-209">b.</span></span> <span data-ttu-id="20499-210">Entrez les ports TCP de votre hôte Docker en utilisant la syntaxe suivante : «  *[port externe]*:*[port interne]*.</span><span class="sxs-lookup"><span data-stu-id="20499-210">Enter the TCP ports for your docker host by using the following syntax: *[external port]*:*[internal port]*.</span></span> <span data-ttu-id="20499-211">Par exemple, dans **80:8080**, 80 est un port externe et 8080 le port interne par défaut de Spring Boot.</span><span class="sxs-lookup"><span data-stu-id="20499-211">For example, **80:8080** specifies an external port of 80 and the default internal Spring Boot port of 8080.</span></span>
    
       <span data-ttu-id="20499-212">Si vous avez personnalisé le port interne (par exemple, en modifiant le fichier application.yml), vous devez spécifier le numéro de port pour que le routage dans Azure soit correct.</span><span class="sxs-lookup"><span data-stu-id="20499-212">If you have customized your internal port (for example, by editing the application.yml file), you need to specify the port number for the correct routing to occur in Azure.</span></span>
 
@@ -230,6 +231,7 @@ ms.lasthandoff: 02/03/2018
 [Publish Container with Azure Toolkit]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [infrastructure Spring]: https://spring.io/
+[Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
 

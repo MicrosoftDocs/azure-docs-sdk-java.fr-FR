@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823622"
 ---
 # <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="eb8aa-104">Bibliothèques Cache Redis pour Java</span><span class="sxs-lookup"><span data-stu-id="eb8aa-104">Redis Cache libraries for Java</span></span>
 

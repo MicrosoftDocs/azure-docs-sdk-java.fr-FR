@@ -1,12 +1,12 @@
 ---
 title: Comment utiliser Spring Boot Starter pour Azure Active Directory
-description: "Découvrez comment configurer une application d’initialisation Spring Boot avec l’application de démarrage Azure Active Directory."
+description: Découvrez comment configurer une application d’initialisation Spring Boot avec l’application de démarrage Azure Active Directory.
 services: active-directory
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954680"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a><span data-ttu-id="5af46-103">Comment utiliser Spring Boot Starter pour Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="5af46-103">How to use the Spring Boot Starter for Azure Active Directory</span></span>
 
@@ -252,12 +253,18 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Documentation Azure Active Directory]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
+[Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
 

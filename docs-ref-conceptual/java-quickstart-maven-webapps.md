@@ -1,11 +1,11 @@
 ---
-title: "Déployer une application web Java dans Azure en cinq minutes avec Maven | Microsoft Docs"
-description: "Créer et déployer une application Java générée avec Maven dans Azure"
+title: Déployer une application web Java dans Azure en cinq minutes avec Maven | Microsoft Docs
+description: Créer et déployer une application Java générée avec Maven dans Azure
 services: app-service\web
-documentationcenter: 
+documentationcenter: ''
 author: rloutlaw
 manager: douge
-editor: 
+editor: ''
 ms.service: app-service-web
 ms.workload: web
 ms.tgt_pltfrm: na
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/12/2017
+ms.locfileid: "22033631"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a><span data-ttu-id="8379f-103">Créer et déployer une application Java dans Azure avec Maven</span><span class="sxs-lookup"><span data-stu-id="8379f-103">Create and deploy a Java app to Azure with Maven</span></span>
 

@@ -1,13 +1,13 @@
 ---
-title: "Prise en main d’Azure pour Java à l’aide d’Intellij"
-description: "Prise en main des fonctions de base des bibliothèques Azure pour Java avec votre propre abonnement Azure."
-keywords: "Azure, Java, SDK, API, s’authentifier, prise en main"
-services: 
+title: Prise en main d’Azure pour Java à l’aide d’Intellij
+description: Prise en main des fonctions de base des bibliothèques Azure pour Java avec votre propre abonnement Azure.
+keywords: Azure, Java, SDK, API, s’authentifier, prise en main
+services: ''
 documentationcenter: java
 author: roygara
 manager: timlt
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: v-rogara
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065496"
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a><span data-ttu-id="2d2dc-104">Prise en main des blibliothèques Azure à l’aide d’Intellij</span><span class="sxs-lookup"><span data-stu-id="2d2dc-104">Get started with the Azure libraries using Intellij</span></span>
 

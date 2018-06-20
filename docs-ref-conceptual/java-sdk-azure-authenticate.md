@@ -17,6 +17,7 @@ ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34050726"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a><span data-ttu-id="3d613-104">S’authentifier avec les bibliothèques Azure pour Java</span><span class="sxs-lookup"><span data-stu-id="3d613-104">Authenticate with the Azure libraries for Java</span></span> 
 

@@ -1,12 +1,12 @@
 ---
-title: "Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ"
-description: "Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour IntelliJ."
-services: 
+title: Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ
+description: Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954870"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="fee52-103">Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="fee52-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 
       * <span data-ttu-id="fee52-118">**Offre** : spécifie la machine virtuelle et l’offre de l’éditeur sélectionné à utiliser (par exemple, *JDK*).</span><span class="sxs-lookup"><span data-stu-id="fee52-118">**Offer**: Specifies the virtual machine offering to use from the selected publisher (for example, *JDK*).</span></span>
 
-      * <span data-ttu-id="fee52-119">**Référence (SKU)** : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).</span><span class="sxs-lookup"><span data-stu-id="fee52-119">**Sku**: Specifies the stockkeeping unit (SKU) to use from the selected offering (for example, *JDK_8*).</span></span>
+      * <span data-ttu-id="fee52-119">**Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).</span><span class="sxs-lookup"><span data-stu-id="fee52-119">**Sku**: Specifies the stockkeeping unit (SKU) to use from the selected offering (for example, *JDK_8*).</span></span>
 
       * <span data-ttu-id="fee52-120">**N° de version** : spécifie la version de la référence (SKU) sélectionnée à utiliser.</span><span class="sxs-lookup"><span data-stu-id="fee52-120">**Version #**: Specifies which version of the selected SKU to use.</span></span>
 
@@ -156,10 +157,15 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Instructions de connexion pour le Kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows virtual machines in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux virtual machines in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Tarification des machines virtuelles Windows]: /pricing/details/virtual-machines/windows/
+[Windows virtual-machine pricing]: /pricing/details/virtual-machines/windows/
 [Tarification des machines virtuelles Linux]: /pricing/details/virtual-machines/linux/
+[Linux virtual-machine pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

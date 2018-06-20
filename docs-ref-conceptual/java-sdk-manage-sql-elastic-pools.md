@@ -1,6 +1,6 @@
 ---
-title: "Gérer des pools élastiques de base de données SQL avec Java | Microsoft Docs"
-description: "Exemple de code pour créer et configurer des bases de données SQL Azure à l’aide du Kit de développement logiciel (SDK) pour Java"
+title: Gérer des pools élastiques de base de données SQL avec Java | Microsoft Docs
+description: Exemple de code pour créer et configurer des bases de données SQL Azure à l’aide du Kit de développement logiciel (SDK) pour Java
 author: rloutlaw
 manager: douge
 ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931115"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a><span data-ttu-id="76b92-103">Gérer des bases de données SQL Azure dans les pools élastiques à partir de vos applications Java</span><span class="sxs-lookup"><span data-stu-id="76b92-103">Manage Azure SQL databases in elastic pools from your Java applications</span></span>
 
