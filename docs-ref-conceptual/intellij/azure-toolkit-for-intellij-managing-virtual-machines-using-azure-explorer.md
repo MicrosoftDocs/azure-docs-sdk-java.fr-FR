@@ -1,12 +1,12 @@
 ---
-title: "Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ"
-description: "Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour IntelliJ."
-services: 
+title: Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ
+description: Découvrez comment gérer vos machines virtuelles Azure à l’aide de l’Explorateur Azure pour IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954870"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -55,7 +56,7 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
       * **Offre** : spécifie la machine virtuelle et l’offre de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
 
-      * **Référence (SKU)** : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
+      * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
 
       * **N° de version** : spécifie la version de la référence (SKU) sélectionnée à utiliser.
 

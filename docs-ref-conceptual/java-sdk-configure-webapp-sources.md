@@ -1,6 +1,6 @@
 ---
-title: "Configurer des déploiements d’applications web avec Java | Microsoft Docs"
-description: "Exemple de code Java pour la configuration de déploiements Git ou FTP d’Azure App Service à l’aide du kit de développement logiciel (SDK) Azure pour Java"
+title: Configurer des déploiements d’applications web avec Java | Microsoft Docs
+description: Exemple de code Java pour la configuration de déploiements Git ou FTP d’Azure App Service à l’aide du kit de développement logiciel (SDK) Azure pour Java
 author: rloutlaw
 manager: douge
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931185"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Configurer des sources de déploiement d’Azure App Service depuis vos applications Java
 

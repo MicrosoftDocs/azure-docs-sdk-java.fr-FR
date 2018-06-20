@@ -1,6 +1,6 @@
 ---
-title: "Gérer les machines virtuelles Azure avec Java | Microsoft Docs"
-description: "Exemple de code pour gérer des machines virtuelles Azure avec le kit de développement logiciel (SDK) pour Java"
+title: Gérer les machines virtuelles Azure avec Java | Microsoft Docs
+description: Exemple de code pour gérer des machines virtuelles Azure avec le kit de développement logiciel (SDK) pour Java
 author: rloutlaw
 manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931165"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Gérer les machines virtuelles Azure à partir de vos applications Java
 

@@ -1,6 +1,6 @@
 ---
-title: "Exemples d’applications web de bibliothèques de gestion Azure pour Java"
-description: "Obtenez des exemples de code pour créer et mettre à jour des applications web Azure hébergées dans App Service à l’aide des bibliothèques de gestion Azure pour Java."
+title: Exemples d’applications web de bibliothèques de gestion Azure pour Java
+description: Obtenez des exemples de code pour créer et mettre à jour des applications web Azure hébergées dans App Service à l’aide des bibliothèques de gestion Azure pour Java.
 keywords: Azure, Java, SDK, API, Maven, Gradle, applications web, app service
 author: rloutlaw
 ms.author: routlaw
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930895"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Bibliothèques de gestion Azure pour des exemples Java pour applications web
 

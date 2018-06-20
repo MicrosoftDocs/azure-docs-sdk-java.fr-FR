@@ -1,6 +1,6 @@
 ---
-title: "Créer parallèlement des machines virtuelles dans plusieurs régions| Microsoft Docs"
-description: "Exemple de code pour créer parallèlement des machines virtuelles dans plusieurs régions Azure à l’aide du kit de développement logiciel (SDK) Azure pour Java"
+title: Créer parallèlement des machines virtuelles dans plusieurs régions| Microsoft Docs
+description: Exemple de code pour créer parallèlement des machines virtuelles dans plusieurs régions Azure à l’aide du kit de développement logiciel (SDK) Azure pour Java
 author: rloutlaw
 manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931195"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Créer des machines virtuelles dans plusieurs régions à partir de vos applications Java
 

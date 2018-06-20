@@ -1,6 +1,6 @@
 ---
-title: "Outils pour développeurs Azure Java | Microsoft Docs"
-description: "Intégrations d’IDE, émulateurs, explorateurs de ressources et interfaces de ligne de commande pour développeurs Azure Java."
+title: Outils pour développeurs Azure Java | Microsoft Docs
+description: Intégrations d’IDE, émulateurs, explorateurs de ressources et interfaces de ligne de commande pour développeurs Azure Java.
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26288307"
 ---
 # <a name="azure-tools-for-java-developers"></a>Outils Azure pour développeurs Java
 

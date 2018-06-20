@@ -1,6 +1,6 @@
 ---
-title: "Gérer des groupes de machines virtuelles identiques avec Java | Microsoft Docs"
-description: "Exemple de code pour gérer des groupes de machines virtuelles identiques Azure avec le kit de développement logiciel (SDK) pour Java"
+title: Gérer des groupes de machines virtuelles identiques avec Java | Microsoft Docs
+description: Exemple de code pour gérer des groupes de machines virtuelles identiques Azure avec le kit de développement logiciel (SDK) pour Java
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931155"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Gérer les groupes de machines virtuelles identiques Azure à partir de vos applications Java
 

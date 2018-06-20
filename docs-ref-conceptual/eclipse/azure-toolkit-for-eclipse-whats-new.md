@@ -1,11 +1,11 @@
 ---
-title: "Nouveautés du kit de ressources Azure pour Eclipse"
-description: "En savoir plus sur les dernières fonctionnalités du kit de ressources Azure pour Eclipse."
-services: 
+title: Nouveautés du kit de ressources Azure pour Eclipse
+description: En savoir plus sur les dernières fonctionnalités du kit de ressources Azure pour Eclipse.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954670"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Nouveautés du kit de ressources Azure pour Eclipse
 

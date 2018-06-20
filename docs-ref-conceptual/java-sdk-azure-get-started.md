@@ -1,7 +1,7 @@
 ---
-title: "Prise en main des bibliothèques Azure pour Java"
-description: "Découvrez comment créer des ressources cloud Azure et s’y connecter pour les utiliser dans vos applications Java."
-keywords: "Azure, Java, SDK, API, s’authentifier, prise en main"
+title: Prise en main des bibliothèques Azure pour Java
+description: Découvrez comment créer des ressources cloud Azure et s’y connecter pour les utiliser dans vos applications Java.
+keywords: Azure, Java, SDK, API, s’authentifier, prise en main
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065526"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Prise en main du développement cloud avec les bibliothèques Azure pour Java
 

@@ -1,7 +1,7 @@
 ---
-title: "Notes de publication des bibliothèques de gestion Azure pour Java | Microsoft Docs"
-description: "Découvrez les nouveautés et surveillez les dernières modifications dans les bibliothèques de gestion Azure pour Java"
-keywords: "Azure, Java, API, référence, notes, mises à jour, déconseiller"
+title: Notes de publication des bibliothèques de gestion Azure pour Java | Microsoft Docs
+description: Découvrez les nouveautés et surveillez les dernières modifications dans les bibliothèques de gestion Azure pour Java
+keywords: Azure, Java, API, référence, notes, mises à jour, déconseiller
 author: routlaw
 manager: douge
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
@@ -15,6 +15,7 @@ ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/03/2017
+ms.locfileid: "23982161"
 ---
 # <a name="release-notes"></a>Notes de publication 
 

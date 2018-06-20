@@ -1,11 +1,11 @@
 ---
-title: "Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java"
-description: "Comment afficher le contenu Javadoc pour les bibliothèques Azure dans Eclipse."
-services: 
+title: Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java
+description: Comment afficher le contenu Javadoc pour les bibliothèques Azure dans Eclipse.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954500"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java
 
