@@ -1,12 +1,12 @@
 ---
-title: "Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service"
-description: "Ce didacticiel vous guide à travers les étapes pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service à l’aide d’un plug-in Maven."
+title: Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service
+description: Ce didacticiel vous guide à travers les étapes pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service à l’aide d’un plug-in Maven.
 services: container-registry
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 8e8e1b5d599f77edf227d2c187225f6ac530b62b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090792"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service
 
@@ -31,16 +32,16 @@ Cet article explique comment déployer un exemple d’application [Spring Boot] 
 > Le plug-in Maven pour Azure Web Apps est actuellement disponible en version préliminaire. Pour l’instant, seule la publication FTP est prise en charge, mais des fonctionnalités supplémentaires sont envisagées pour le futur.
 > 
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
 Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
-* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
+* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [Avantages pour les abonnés MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
 * Un [Java Development Kit (JDK)] à jour, version 1.7 ou ultérieure.
 * L’outil de génération [Maven] (version 3) d’Apache.
-* Un [client Git].
-* Un [client Docker].
+* Un [Git].
+* Un [Docker].
 
 > [!NOTE]
 >
@@ -64,7 +65,7 @@ Dans cette section, vous clonez une application Spring Boot en conteneur et vous
 
 1. Clonez l’exemple de projet [Spring Boot on Docker Getting Started] dans le répertoire que vous venez de créer. Par exemple :
    ```shell
-   git clone -b private-registry https://github.com/Microsoft/gs-spring-boot-docker
+   git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
 1. Accédez au répertoire du projet terminé. Par exemple :
@@ -103,23 +104,25 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
 
 1. Ouvrez une invite de commandes.
 
-1. Connectez-vous à votre compte Azure à l’aide de l’interface de ligne de commande Azure :
+2. Connectez-vous à votre compte Azure à l’aide de l’interface de ligne de commande Azure :
    ```azurecli
    az login
    ```
    Suivez les instructions pour terminer le processus de connexion.
 
-1. Créez un principal du service Azure :
+3. Créez un principal du service Azure :
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
    Où :
-   | Paramètre | DESCRIPTION |
-   |---|---|
-   | `uuuuuuuu` | Spécifie le nom d’utilisateur pour le principal de service. |
-   | `pppppppp` | Spécifie le mot de passe pour le principal de service. |
 
-1. Azure répond avec un texte JSON similaire à l’exemple suivant :
+   | Paramètre  |                    Description                     |
+   |------------|----------------------------------------------------|
+   | `uuuuuuuu` | Spécifie le nom d’utilisateur pour le principal de service. |
+   | `pppppppp` | Spécifie le mot de passe pour le principal de service.  |
+
+
+4. Azure répond avec un texte JSON similaire à l’exemple suivant :
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -176,7 +179,7 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-1. Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :
+2. Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :
 
    ```xml
    <servers>
@@ -188,13 +191,15 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
    </servers>
    ```
    Où :
-   | Élément | DESCRIPTION |
-   |---|---|
-   | `<id>` | Contient le nom de votre registre de conteneurs Azure privé. |
-   | `<username>` | Contient le nom de votre registre de conteneurs Azure privé. |
+
+   |   Élément    |                                 Description                                  |
+   |--------------|------------------------------------------------------------------------------|
+   |    `<id>`    |         Contient le nom de votre registre de conteneurs Azure privé.          |
+   | `<username>` |         Contient le nom de votre registre de conteneurs Azure privé.          |
    | `<password>` | Contient le mot de passe que vous avez récupéré dans la section précédente de cet article. |
 
-1. Ajoutez vos paramètres du principal de service Azure d’une section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :
+
+3. Ajoutez vos paramètres du principal de service Azure d’une section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :
 
    ```xml
    <servers>
@@ -210,21 +215,23 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
    </servers>
    ```
    Où :
-   | Élément | Description |
-   |---|---|
-   | `<id>` | Spécifie un nom unique que Maven utilise pour rechercher vos paramètres de sécurité lorsque vous déployez votre application web dans Azure. |
-   | `<client>` | Contient la valeur `appId` de votre principal du service. |
-   | `<tenant>` | Contient la valeur `tenant` de votre principal du service. |
-   | `<key>` | Contient la valeur `password` de votre principal du service. |
-   | `<environment>` | Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple. (Une liste complète des environnements est disponible dans la documentation [Maven Plugin for Azure Web Apps]) |
 
-1. Enregistrez et fermez le fichier *settings.xml*.
+   |     Élément     |                                                                                   Description                                                                                   |
+   |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `<id>`      |                                Spécifie un nom unique que Maven utilise pour rechercher vos paramètres de sécurité lorsque vous déployez votre application web dans Azure.                                |
+   |   `<client>`    |                                                             Contient la valeur `appId` de votre principal du service.                                                             |
+   |   `<tenant>`    |                                                            Contient la valeur `tenant` de votre principal du service.                                                             |
+   |     `<key>`     |                                                           Contient la valeur `password` de votre principal du service.                                                            |
+   | `<environment>` | Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple. (Une liste complète des environnements est disponible dans la documentation [Plug-in Maven pour Azure Web Apps]) |
+
+
+4. Enregistrez et fermez le fichier *settings.xml*.
 
 ## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>Créer votre image conteneur Docker et la placer dans votre registre de conteneurs Azure
 
 1. Accédez au répertoire du projet terminé pour votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */users/robert/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.
 
-1. Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :
+2. Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :
 
    ```xml
    <properties>
@@ -235,12 +242,14 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
    </properties>
    ```
    Où :
-   | Élément | DESCRIPTION |
-   |---|---|
-   | `<azure.containerRegistry>` | Spécifie le nom de votre registre de conteneurs Azure privé. |
-   | `<docker.image.prefix>` | Spécifie l’URL de votre registre de conteneurs Azure privé qui est obtenue en ajoutant « .azurecr.io » au nom de votre registre de conteneurs privé. |
 
-1. Vérifiez que `<plugin>` pour le plug-in Docker dans votre fichier *pom.xml* contient les propriétés appropriées de connexion pour l’adresse du serveur et le nom du registre mentionnées à l’étape précédente de ce didacticiel. Par exemple : 
+   |           Élément           |                                                                       Description                                                                       |
+   |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+   | `<azure.containerRegistry>` |                                              Spécifie le nom de votre registre de conteneurs Azure privé.                                               |
+   |   `<docker.image.prefix>`   | Spécifie l’URL de votre registre de conteneurs Azure privé qui est obtenue en ajoutant « .azurecr.io » au nom de votre registre de conteneurs privé. |
+
+
+3. Vérifiez que `<plugin>` pour le plug-in Docker dans votre fichier *pom.xml* contient les propriétés appropriées de connexion pour l’adresse du serveur et le nom du registre mentionnées à l’étape précédente de ce didacticiel. Par exemple : 
 
    ```xml
    <plugin>
@@ -263,18 +272,20 @@ Dans cette section, vous créez un principal du service Azure utilisé par le pl
    </plugin>
    ```
    Où :
-   | Élément | DESCRIPTION |
-   |---|---|
-   | `<serverId>` | Spécifie la propriété contenant le nom de votre registre de conteneurs Azure privé. |
+
+   |     Élément     |                                       Description                                       |
+   |-----------------|-----------------------------------------------------------------------------------------|
+   |  `<serverId>`   |  Spécifie la propriété contenant le nom de votre registre de conteneurs Azure privé.   |
    | `<registryUrl>` | Spécifie la propriété contenant l’URL de votre registre de conteneurs Azure privé. |
 
-1. Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :
+
+4. Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :
 
    ```
    mvn package docker:build -DpushImage 
    ```
 
-1. FACULTATIF : accédez au [portail Azure] et vérifiez qu’il existe une image de conteneur Docker nommée **gs-spring-boot-docker** dans le registre de conteneurs.
+5. FACULTATIF : accédez au [portail Azure] et vérifiez qu’il existe une image de conteneur Docker nommée **gs-spring-boot-docker** dans le registre de conteneurs.
 
    ![Vérification du conteneur dans le portail Azure][CR01]
 
@@ -309,15 +320,15 @@ Ouvrez le fichier `pom.xml` de votre application Spring Boot dans un éditeur de
    </plugin>
    ```
 
-Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Maven Plugin for Azure Web Apps] (Plug-in Maven pour Azure Web Apps). Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :
+Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Plug-in Maven pour Azure Web Apps] (Plug-in Maven pour Azure Web Apps). Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :
 
 | Élément | Description |
 |---|---|
-| `<version>` | Spécifie la version du [Maven Plugin for Azure Web Apps]. Vous devez vérifier la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente. |
+| `<version>` | Spécifie la version du [plug-in Maven pour Azure Web Apps]. Vous devez vérifier la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente. |
 | `<authentication>` | Spécifie les informations d’authentification pour Azure, qui dans cet exemple comportent un élément `<serverId>` contenant `azure-auth` ; Maven utilise cette valeur pour rechercher les valeurs du principal du service Azure dans votre fichier *settings.xml* Maven que vous avez défini dans une section précédente de cet article. |
 | `<resourceGroup>` | Spécifie le groupe de ressources cible, qui est `wingtiptoysresources` dans cet exemple. Il sera créé au cours du déploiement s’il n’existe pas. |
 | `<appName>` | Spécifie le nom cible de votre application web. Dans cet exemple, le nom cible est `maven-linux-app-${maven.build.timestamp}`, où le suffixe `${maven.build.timestamp}` est ajouté dans cet exemple pour éviter tout conflit. (L’horodatage est facultatif ; vous pouvez spécifier n’importe quelle chaîne unique pour le nom de l’application.) |
-| `<region>` | Spécifie la région cible, qui dans cet exemple est `westus`. (Une liste complète est disponible dans la documentation [Maven Plugin for Azure Web Apps].) |
+| `<region>` | Spécifie la région cible, qui dans cet exemple est `westus`. (Une liste complète est disponible dans la documentation [Plug-in Maven pour Azure Web Apps].) |
 | `<containerSettings>` | Spécifie les propriétés qui contiennent le nom et l’URL de votre conteneur. |
 | `<appSettings>` | Spécifie des paramètres uniques que Maven utilisera lors du déploiement de votre application web dans Azure. Dans cet exemple, un élément `<property>` contient une paire nom/valeur d’éléments enfants qui spécifie le port pour votre application. |
 
@@ -372,7 +383,7 @@ Lorsque votre application web aura été déployée, vous serez en mesure de la 
 
 Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :
 
-* [Maven Plugin for Azure Web Apps]
+* [Plug-in Maven pour Azure Web Apps]
 
 * [Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure](/azure/xplat-cli-connect)
 
@@ -387,18 +398,18 @@ Pour plus d’informations sur les différentes technologies présentées dans c
 [Azure CLI]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[portail Azure]: https://portal.azure.com/
-[Maven Plugin for Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+[Portail Azure]: https://portal.azure.com/
+[Plug-in Maven pour Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Using a custom Docker image for Azure Web App on Linux]: /azure/app-service/containers/tutorial-custom-docker-image
-[client Docker]: https://www.docker.com/
+[Docker]: https://www.docker.com/
 [Plug-in Docker pour Maven]: https://github.com/spotify/docker-maven-plugin
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
-[client Git]: https://github.com/
+[Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
-[avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Avantages pour les abonnés MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/

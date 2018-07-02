@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
-ms.locfileid: "23982161"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090682"
 ---
 # <a name="release-notes"></a>Notes de publication 
 
@@ -35,12 +35,12 @@ Certaines API toujours en version bêta dans les versions précédentes sont dé
 - toutes les méthodes dans le réseau de distribution de contenu qui étaient présentes dans la version bêta
 - toutes les méthodes et interfaces dans Application Gateways qui étaient présentes dans la version bêta
 
- Certaines parties de la bibliothèque sont toujours en préversion. Consultez le tableau ci-dessous pour connaître l’état actuel des bibliothèques :
+  Certaines parties de la bibliothèque sont toujours en préversion. Consultez le tableau ci-dessous pour connaître l’état actuel des bibliothèques :
 
 Service ou fonctionnalité | Disponible en tant que GA | Disponible en préversion 
 ---------|---------|---------|-
 Calcul  | Les machines virtuelles et leurs extensions, les groupes de machines virtuelles identiques, les disques gérés   | Azure container service, Azure container registry 
-Storage   |  Comptes de stockage       |    Chiffrement     
+Stockage   |  Comptes de stockage       |    Chiffrement     
 Base de données SQL  | Bases de données, pare-feu, pools élastiques              
 Mise en réseau    |  Réseaux virtuels, interfaces réseau, adresses IP, tables de routage, groupes de sécurité réseau, DNS, Traffic Manager, Application Gateways  |    Équilibreurs de charge, homologation de réseaux, passerelle de réseau virtuel, observateurs de réseau 
 Plus de services    |  Gestionnaire des ressources, Key Vault, Redis, CDN, Batch       |  Applications Web, applications de fonction, Service Bus, Graphique RBAC, Cosmos DB, Recherche  

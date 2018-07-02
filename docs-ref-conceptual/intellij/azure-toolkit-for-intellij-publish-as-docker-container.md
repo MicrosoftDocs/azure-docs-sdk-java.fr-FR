@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
-ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
+ms.openlocfilehash: 05fb81466202547cb1bad34caae0f94f16a9d21b
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30223376"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090665"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -60,11 +60,11 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
    a. Dans la zone **Docker image name** (Nom de l’image Docker), entrez un nom unique pour votre hôte Docker. (L’Assistant crée automatiquement un nom, mais vous pouvez le modifier.) 
 
    b. La zone **Hosts** (Hôtes) affiche tous les hôtes Docker que vous avez déjà créés. Effectuez l’une des actions suivantes : 
-      * Si vous avez un hôte Docker existant, vous pouvez déployer votre application web sur celui-ci.
-      * Pour créer un hôte Docker, cliquez sur le signe plus de couleur verte (**+**).  
-       La boîte de dialogue **Create Docker Host** (Créer un hôte Docker) s’ouvre. 
+   * Si vous avez un hôte Docker existant, vous pouvez déployer votre application web sur celui-ci.
+   * Pour créer un hôte Docker, cliquez sur le signe plus de couleur verte (**+**).  
+     La boîte de dialogue **Create Docker Host** (Créer un hôte Docker) s’ouvre. 
 
-      ![Assistant Deploy Docker Container on Azure (Déploiement d’un conteneur Docker sur Azure)][PUB04a]
+     ![Assistant Deploy Docker Container on Azure (Déploiement d’un conteneur Docker sur Azure)][PUB04a]
 
 4. Dans la fenêtre **Configure the new virtual machine** (Configurer la nouvelle machine virtuelle), fournissez les informations suivantes sur votre hôte Docker. (L’Assistant génère automatiquement la plupart des informations pour vous, mais vous pouvez les modifier.) 
 
@@ -97,50 +97,50 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
 6. Sélectionnez l’une des options suivantes :
 
-      * **Import credentials from Azure Key Vault** (Importer des informations d’identification depuis Azure Key Vault) : spécifiez un ensemble d’informations d’identification précédemment enregistré et stocké dans votre abonnement Azure.
+   * **Import credentials from Azure Key Vault** (Importer des informations d’identification depuis Azure Key Vault) : spécifiez un ensemble d’informations d’identification précédemment enregistré et stocké dans votre abonnement Azure.
 
-          > [!NOTE]
-          > Un coffre de clés Azure créé avec un compte ou un principal de service spécifique n’est pas automatiquement accessible par un autre compte ou principal de service qui partage l’abonnement. Pour permettre à un autre compte ou principal de service d’utiliser le coffre de clés, vous devez utiliser le portail Azure pour ajouter le compte ou le principal de service.
+       > [!NOTE]
+       > Un coffre de clés Azure créé avec un compte ou un principal de service spécifique n’est pas automatiquement accessible par un autre compte ou principal de service qui partage l’abonnement. Pour permettre à un autre compte ou principal de service d’utiliser le coffre de clés, vous devez utiliser le portail Azure pour ajouter le compte ou le principal de service.
 
-      * **New log in credentials** (Nouvelles informations d’identification de connexion) : créez un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit :
+   * **New log in credentials** (Nouvelles informations d’identification de connexion) : créez un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit :
 
-    a. Sous l’onglet **VM Credentials** (Informations d’identification de machine virtuelle), indiquez les informations d’identification de connexion de la machine virtuelle de votre hôte Docker :
+     a. Sous l’onglet **VM Credentials** (Informations d’identification de machine virtuelle), indiquez les informations d’identification de connexion de la machine virtuelle de votre hôte Docker :
 
-    * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle.
+     * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle.
 
-    * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
+     * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle.
 
-    * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner l’une des options suivantes :
+     * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez sélectionner l’une des options suivantes :
 
-        * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH.
+     * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH.
 
-        * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH.
+     * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH.
 
-        * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
+     * **Import from directory** (Importer à partir du répertoire) : vous permet de spécifier un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants :
 
-            * *id_rsa* : contient l’identification RSA d’un utilisateur.
+         * *id_rsa* : contient l’identification RSA d’un utilisateur.
 
-            * *id_rsa.pub* : contient la clé publique RSA qui est utilisée pour l’authentification.
+         * *id_rsa.pub* : contient la clé publique RSA qui est utilisée pour l’authentification.
 
-    b. Sous l’onglet **Docker Daemon Access** (Accès au démon Docker), fournissez les informations suivantes :
+     b. Sous l’onglet **Docker Daemon Access** (Accès au démon Docker), fournissez les informations suivantes :
 
-    ![Créer un hôte Docker][PUB06]
+     ![Créer un hôte Docker][PUB06]
     
-    * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker.
+     * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker.
     
-    * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes :
+     * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes :
     
-        * **None** (Aucun) : spécifie que votre machine virtuelle n’autorise pas les connexions TLS.
+     * **None** (Aucun) : spécifie que votre machine virtuelle n’autorise pas les connexions TLS.
         
-        * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS.
+     * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS.
         
-        * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Le répertoire doit contenir les six fichiers suivants :
+     * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Le répertoire doit contenir les six fichiers suivants :
         
-            * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS.
+         * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS.
             
-            * *cert.pem* et *key.pem* : contiennent le certificat client et la clé publique qui seront utilisés pour l’authentification TLS.
+         * *cert.pem* et *key.pem* : contiennent le certificat client et la clé publique qui seront utilisés pour l’authentification TLS.
             
-            * *server.pem* et *server-key.pem* : contiennent le certificat client et la clé publique qui sont utilisés pour l’authentification TLS.
+         * *server.pem* et *server-key.pem* : contiennent le certificat client et la clé publique qui sont utilisés pour l’authentification TLS.
 
 7. Après avoir entré les informations nécessaires, cliquez sur **Finish** (Terminer).  
     L’Assistant **Deploy Docker Container on Azure** (Déploiement d’un conteneur Docker sur Azure) réapparaît.
@@ -199,14 +199,14 @@ Pour plus d’informations sur la création d’artefacts dans IntelliJ, consult
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker].
+Pour obtenir des ressources supplémentaires pour Docker, consultez le [Site web de Docker].
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
-[site web de Docker]: https://www.docker.com/
-[Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Site web de Docker]: https://www.docker.com/
+[Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 

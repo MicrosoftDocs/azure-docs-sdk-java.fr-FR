@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954780"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090782"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>Créer une application web Hello World pour Azure à l’aide de l’ancien kit de ressources pour IntelliJ
 
@@ -27,7 +27,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
 > [!NOTE]
 >
-> Pour obtenir une version de cet article qui utilise le [Kit de ressources Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
+> Pour obtenir une version de cet article qui utilise le [boîte à outils Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
 >
 
 > [!IMPORTANT]
@@ -161,14 +161,14 @@ Lorsque vous avez configuré vos paramètres de module, vous pouvez publier votr
 
    h. (Facultatif) Par défaut, une distribution récente de Java 8 sera déployée automatiquement par Azure sur votre conteneur d’application web en tant que machine virtuelle Java. Vous pouvez cependant sélectionner une version et une distribution de machine virtuelle Java différentes. Pour ce faire, procédez comme suit :
       
-      * Cliquez sur l’onglet **JDK** dans la boîte de dialogue **New Web App Container** (Nouveau conteneur d’application web).
-      * Vous pouvez choisir l’une des options suivantes :
+   * Cliquez sur l’onglet **JDK** dans la boîte de dialogue **New Web App Container** (Nouveau conteneur d’application web).
+   * Vous pouvez choisir l’une des options suivantes :
         
-         * Déployer le JDK proposé par défaut par Azure
-         * Déployer un JDK tiers à partir d’une liste déroulante de JDK supplémentaires disponibles sur Azure
-         * Déployer un JDK personnalisé, qui doit être empaqueté dans un fichier ZIP et accessible au public ou dans votre compte de stockage Azure
+      * Déployer le JDK proposé par défaut par Azure
+      * Déployer un JDK tiers à partir d’une liste déroulante de JDK supplémentaires disponibles sur Azure
+      * Déployer un JDK personnalisé, qui doit être empaqueté dans un fichier ZIP et accessible au public ou dans votre compte de stockage Azure
         
-      ![Onglet JDK du nouveau conteneur d’application][11b]
+     ![Onglet JDK du nouveau conteneur d’application][11b]
 
    i. Une fois effectuées toutes les étapes ci-dessus, la boîte de dialogue New Web App Container doit ressembler à ceci :
       
@@ -233,7 +233,7 @@ Quand l’**Explorateur Azure** s’affiche, effectuez les étapes suivantes pou
    
    ![Arrêter l’application Web][18]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
@@ -242,7 +242,7 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 <!-- URL List -->
 
 [Kit de ressources Azure pour IntelliJ]: azure-toolkit-for-intellij.md
-[Kit de ressources Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[boîte à outils Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: aec3682cc14204ca2b395d4b851db7bb68cb8728
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: be76733bffa36160d6e366c383672a15374a9996
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954770"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090842"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse
 
@@ -35,7 +35,7 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
 1. Ouvrez votre projet d’application web dans Eclipse.
 
-1. Pour démarrer l’Assistant **Publish as Docker Container** (Publication en tant que conteneur Docker), procédez comme suit :
+2. Pour démarrer l’Assistant **Publish as Docker Container** (Publication en tant que conteneur Docker), procédez comme suit :
 
    * Dans la vue **Navigator** (Navigateur), cliquez avec le bouton droit sur votre projet, cliquez sur **Azure** puis sur **Publish as Docker Container** (Publier en tant que conteneur Docker).
 
@@ -49,7 +49,7 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
    ![Assistant Deploy Docker Container on Azure (Déploiement d’un conteneur Docker sur Azure)][PUB03]
 
-1. Dans la fenêtre **Type an image name, select the artifact’s path and check a Docker host to be used** (Tapez un nom d’image, sélectionnez le chemin de l’artefact et indiquez un hôte Docker à utiliser), procédez comme suit :
+3. Dans la fenêtre **Type an image name, select the artifact’s path and check a Docker host to be used** (Tapez un nom d’image, sélectionnez le chemin de l’artefact et indiquez un hôte Docker à utiliser), procédez comme suit :
 
    a. Dans la zone **Docker image name** (Nom de l’image Docker), entrez un nom unique pour votre hôte Docker. (L’Assistant crée automatiquement un nom, mais vous pouvez le modifier.)
 
@@ -62,7 +62,7 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
    ![Assistant Deploy Docker Container on Azure (Déployer un conteneur Docker dans Azure)][PUB04a]
 
-1. Dans la fenêtre **Configure the new virtual machine** (Configurer la nouvelle machine virtuelle), spécifiez les options suivantes pour votre hôte Docker. (L’Assistant génère automatiquement la plupart des options pour vous, mais vous pouvez les modifier.)
+4. Dans la fenêtre **Configure the new virtual machine** (Configurer la nouvelle machine virtuelle), spécifiez les options suivantes pour votre hôte Docker. (L’Assistant génère automatiquement la plupart des options pour vous, mais vous pouvez les modifier.)
 
    a. **Name** (Nom) : entrez un nom unique pour l’hôte Docker. (Ce n’est pas le même que le nom de l’image Docker que vous avez spécifié précédemment.)
 
@@ -86,9 +86,9 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
    * **New storage account** (Nouveau compte de stockage) : créez un compte de stockage pour votre hôte.
    * **Existing storage account** (Compte de stockage existant) : entrez un compte de stockage existant dans votre compte Azure.
 
-1. Cliquez sur **Suivant**.
+5. Cliquez sur **Suivant**.
 
-1. Dans la fenêtre **Configure log in credentials and port settings** (Configurer les informations d’identification de connexion et les paramètres de port), sélectionnez une des options suivantes :
+6. Dans la fenêtre **Configure log in credentials and port settings** (Configurer les informations d’identification de connexion et les paramètres de port), sélectionnez une des options suivantes :
 
    * **Import credentials from Azure Key Vault** (Importer des informations d’identification depuis Azure Key Vault) : spécifie un ensemble d’informations d’identification précédemment enregistré et stocké dans votre abonnement Azure. 
 
@@ -98,73 +98,73 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
    * **New log in credentials** (Nouvelles informations d’identification de connexion) : crée un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit : 
     
-      * Sous l’onglet **VM Credentials** (Informations d’identification de la machine virtuelle), choisissez une des options suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : 
+     * Sous l’onglet **VM Credentials** (Informations d’identification de la machine virtuelle), choisissez une des options suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : 
 
-         * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle. 
-         * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle. 
-         * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
-            * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH. 
-            * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH. 
-            * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants : 
-               * *id_rsa* : contient l’identification RSA d’un utilisateur. 
-               * *id_rsa.pub* : contient la clé publique RSA qui est utilisée pour l’authentification. 
+       * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle. 
+       * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle. 
+       * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
+          * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH. 
+          * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH. 
+          * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants : 
+             * *id_rsa* : contient l’identification RSA d’un utilisateur. 
+             * *id_rsa.pub* : contient la clé publique RSA qui est utilisée pour l’authentification. 
         
          ![Créer un hôte Docker][PUB05]
 
-      * Sous l’onglet **Docker Daemon Credentials** (Informations d’identification du démon Docker), spécifiez les options suivantes : 
+     * Sous l’onglet **Docker Daemon Credentials** (Informations d’identification du démon Docker), spécifiez les options suivantes : 
 
-         * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker. 
-         * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
-            * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions TLS. 
-            * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS. 
-            * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Plus précisément, le répertoire doit contenir les six fichiers suivants : 
-               * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS. 
-               * *cert.pem* et *key.pem*: contiennent le certificat client et la clé publique qui est utilisée pour l’authentification TLS. 
-               * *server.pem* et *server-key.pem* : contiennent la clé publique et le certificat de serveur pour l’hôte. 
+       * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker. 
+       * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
+          * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions TLS. 
+          * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS. 
+          * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Plus précisément, le répertoire doit contenir les six fichiers suivants : 
+             * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS. 
+             * *cert.pem* et *key.pem*: contiennent le certificat client et la clé publique qui est utilisée pour l’authentification TLS. 
+             * *server.pem* et *server-key.pem* : contiennent la clé publique et le certificat de serveur pour l’hôte. 
 
          ![Créer un hôte Docker][PUB06]
 
-1. Après avoir entré toutes les informations précédentes, cliquez sur **Finish** (Terminer).
+7. Après avoir entré toutes les informations précédentes, cliquez sur **Finish** (Terminer).
 
-1. Dans l’Assistant **Deploy Docker Container on Azure** (Déploiement d’un conteneur Docker dans Azure), cliquez sur **Next** (Suivant).
+8. Dans l’Assistant **Deploy Docker Container on Azure** (Déploiement d’un conteneur Docker dans Azure), cliquez sur **Next** (Suivant).
 
    ![Assistant Deploy Docker Container on Azure (Déploiement d’un conteneur Docker sur Azure)][PUB07]
 
-1. Dans la fenêtre **Configure the Docker container to be created** (Configurer le conteneur Docker à créer), procédez comme suit :
+9. Dans la fenêtre **Configure the Docker container to be created** (Configurer le conteneur Docker à créer), procédez comme suit :
 
    a. Dans la zone **Docker container name** (Nom du conteneur Docker), entrez un nom unique pour votre conteneur Docker.
 
    b. Choisissez l’une des images Docker suivantes : 
 
-      * **Predefined Docker image** (Image Docker prédéfinie) : spécifie une image Docker préexistante dans Azure. 
+   * **Predefined Docker image** (Image Docker prédéfinie) : spécifie une image Docker préexistante dans Azure. 
 
-      >[!NOTE]
-      >La liste des images Docker dans cette zone est constituée de plusieurs images configurées pour application d’un correctif par le kit de ressources Azure afin que votre artefact soit déployé automatiquement.
-      >
+     >[!NOTE]
+     >La liste des images Docker dans cette zone est constituée de plusieurs images configurées pour application d’un correctif par le kit de ressources Azure afin que votre artefact soit déployé automatiquement.
+     >
 
-      * **Custom Dockerfile** (Fichier Dockerfile personnalisé) : spécifie un fichier Dockerfile précédemment enregistré sur votre ordinateur local.
+   * **Custom Dockerfile** (Fichier Dockerfile personnalisé) : spécifie un fichier Dockerfile précédemment enregistré sur votre ordinateur local.
 
-      >[!NOTE]
-      >Il s’agit d’une fonctionnalité plus avancée destinée aux développeurs qui souhaitent déployer leur propre fichier Dockerfile. Toutefois, les développeurs qui utilisent cette option doivent s’assurer que leur fichier Docker est construit correctement. Comme le kit de ressources Azure ne valide pas le contenu d’un fichier Dockerfile personnalisé, le déploiement peut échouer si le fichier Dockerfile présente des problèmes. En outre, comme le kit de ressources Azure attend que le fichier Dockerfile personnalisé contienne un artefact d’application web, il tente d’ouvrir une connexion HTTP. Si les développeurs publient un autre type d’artefact, ils peuvent recevoir des erreurs sans effet après le déploiement.
-      >
+     >[!NOTE]
+     >Il s’agit d’une fonctionnalité plus avancée destinée aux développeurs qui souhaitent déployer leur propre fichier Dockerfile. Toutefois, les développeurs qui utilisent cette option doivent s’assurer que leur fichier Docker est construit correctement. Comme le kit de ressources Azure ne valide pas le contenu d’un fichier Dockerfile personnalisé, le déploiement peut échouer si le fichier Dockerfile présente des problèmes. En outre, comme le kit de ressources Azure attend que le fichier Dockerfile personnalisé contienne un artefact d’application web, il tente d’ouvrir une connexion HTTP. Si les développeurs publient un autre type d’artefact, ils peuvent recevoir des erreurs sans effet après le déploiement.
+     >
 
    c. **Port settings** (Paramètres de port), entrez la liaison de port TCP unique pour votre conteneur Docker.
 
       ![La fenêtre Configure the Docker container to be created (Configurer le conteneur Docker à créer)][PUB08]
 
-1. Après avoir terminé toutes les étapes précédentes, cliquez sur **Finish** (Terminer).
+10. Après avoir terminé toutes les étapes précédentes, cliquez sur **Finish** (Terminer).
 
 Le kit de ressources Azure commence le déploiement de votre application web sur Azure dans un conteneur Docker. 
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker].
+Pour obtenir des ressources supplémentaires pour Docker, consultez le [Site web de Docker].
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
-[site web de Docker]: https://www.docker.com/
+[Site web de Docker]: https://www.docker.com/
 
 <!-- IMG List -->
 

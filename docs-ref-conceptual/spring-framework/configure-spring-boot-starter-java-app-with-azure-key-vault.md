@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883682"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090712"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Comment utiliser Spring Boot Starter pour Azure Key Vault
 
@@ -29,10 +29,9 @@ Cet article vous explique comment créer une application avec l’instance **[Sp
 
 ## <a name="prerequisites"></a>Prérequis
 
-
 Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
-* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
+* Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [Avantages pour les abonnés MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * Le [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 ou ultérieure.
 * [Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.
 
@@ -102,6 +101,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    az group create --name wingtiptoysresources --location westus
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie un nom unique pour votre groupe de ressources. |
@@ -122,11 +122,12 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    }
    ```
 
-1. Créez un principal de service Azure pour votre inscription d’application, par exemple :
+2. Créez un principal de service Azure pour votre inscription d’application, par exemple :
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie le nom de votre principal de service Azure. |
@@ -143,11 +144,12 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    }
    ```
 
-1. Créez un nouveau coffre de clé dans le groupe de ressources, par exemple :
+3. Créez un nouveau coffre de clé dans le groupe de ressources, par exemple :
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie un nom unique à associer au coffre de clés. |
@@ -164,11 +166,12 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    "https://wingtiptoyskeyvault.vault.azure.net"
    ```
 
-1. Définissez la stratégie d’accès du principal de service Azure créé précédemment, par exemple :
+4. Définissez la stratégie d’accès du principal de service Azure créé précédemment, par exemple :
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie le nom du coffre de clés créé précédemment. |
@@ -193,11 +196,12 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    }
    ```
 
-1. Stockez une instance secrète dans votre nouveau coffre de clés, par exemple :
+5. Stockez une instance secrète dans votre nouveau coffre de clés, par exemple :
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `vault-name` | Spécifie le nom du coffre de clés créé précédemment. |
@@ -231,24 +235,26 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
 1. Extrayez les fichiers des fichiers d’archive du projet Spring Boot que vous avez téléchargés précédemment dans un répertoire.
 
-1. Accédez au dossier *src/main/resources* de votre projet, puis ouvrez le fichier *application.properties* dans un éditeur de texte.
+2. Accédez au dossier *src/main/resources* de votre projet, puis ouvrez le fichier *application.properties* dans un éditeur de texte.
 
-1. Ajoutez les valeurs associées à votre coffre de clés à l’aide des données de la procédure exécutée plus tôt dans ce didacticiel, par exemple :
+3. Ajoutez les valeurs associées à votre coffre de clés à l’aide des données de la procédure exécutée plus tôt dans ce didacticiel, par exemple :
    ```yaml
    azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    Où :
-   | Paramètre | Description |
-   |---|---|
-   | `azure.keyvault.uri` | Spécifie l’URI de l’emplacement de création de votre coffre de clés. |
-   | `azure.keyvault.client-id` | Spécifie l’identificateur unique *appId* généré lors de la création de votre principal de service. |
+
+   |          Paramètre          |                                 Description                                 |
+   |-----------------------------|-----------------------------------------------------------------------------|
+   |    `azure.keyvault.uri`     |           Spécifie l’URI de l’emplacement de création de votre coffre de clés.           |
+   | `azure.keyvault.client-id`  |  Spécifie l’identificateur unique *appId* généré lors de la création de votre principal de service.   |
    | `azure.keyvault.client-key` | Spécifie l’identificateur unique *password* généré lors de la création de votre principal de service. |
 
-1. Accédez au fichier source principal de code de votre projet, par exemple : */src/main/java/com/wingtiptoys/secrets*.
 
-1. Ouvrez le fichier Java principal de l’application dans un fichier d’un éditeur de texte, par exemple : *SecretsApplication.java*, puis ajoutez les lignes suivantes au fichier :
+4. Accédez au fichier source principal de code de votre projet, par exemple : */src/main/java/com/wingtiptoys/secrets*.
+
+5. Ouvrez le fichier Java principal de l’application dans un fichier d’un éditeur de texte, par exemple : *SecretsApplication.java*, puis ajoutez les lignes suivantes au fichier :
 
    ```java
    package com.wingtiptoys.secrets;
@@ -275,7 +281,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    ```
    Cet exemple de code récupère la chaîne de connexion du coffre de clés et l’affiche dans une ligne de commande.
 
-1. Enregistrez et fermez le fichier Java.
+6. Enregistrez et fermez le fichier Java.
 
 ## <a name="build-and-test-your-app"></a>Générer et tester votre application
 
@@ -322,7 +328,7 @@ Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez le
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
-[avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Avantages pour les abonnés MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
