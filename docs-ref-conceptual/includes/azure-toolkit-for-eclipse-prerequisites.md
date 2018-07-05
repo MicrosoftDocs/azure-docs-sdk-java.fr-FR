@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 Pour réaliser les étapes présentes dans cet article, vous devez installer le it de ressources Azure pour Eclipse, ce qui nécessite les composants logiciels suivants :
 
 * IDE (environnement de développement intégré) Eclipse pour développeurs Java EE, Mars ou version ultérieure. Vous pouvez le télécharger à partir du [site web Eclipse](http://www.eclipse.org/downloads/).
@@ -10,16 +10,19 @@ Pour réaliser les étapes présentes dans cet article, vous devez installer le 
   * [Mac OS X](http://www.apple.com/osx) versions « Yosemite » et ultérieures
   * [Ubuntu Linux](http://www.ubuntu.com) versions 14, 15 et 16
 
-Pour plus d’informations, consultez la page du [Kit de ressources Azure pour Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) sur Eclipse Marketplace.
+> [!NOTE]
+> 
+> La page [Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) sur Eclipse Marketplace liste les versions compatibles avec le kit de ressources.
+> 
 
 <!--
 > [!IMPORTANT]
+> 
 > If you are using the Azure Toolkit for Eclipse on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
 > * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is required on Windows only.
-> 
 > 
 -->

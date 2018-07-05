@@ -14,11 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090692"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Comment utiliser Spring Boot Starter pour Azure Storage
 
@@ -27,7 +28,6 @@ ms.lasthandoff: 04/26/2018
 Cet article vous présente la création d’une application personnalisée à l’aide de la solution **Spring Initializr**, puis vous explique comment utiliser cette application pour accéder à Azure Storage.
 
 ## <a name="prerequisites"></a>Prérequis
-
 
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
@@ -109,6 +109,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    az group create --name wingtiptoysresources --location westus
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie un nom unique pour votre groupe de ressources. |
@@ -129,11 +130,12 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    }
    ```
 
-1. Créez un compte Azure Storage dans le groupe de ressources associé à votre application Spring Boot, par exemple :
+2. Créez un compte Azure Storage dans le groupe de ressources associé à votre application Spring Boot, par exemple :
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    Où :
+
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie un nom unique pour votre compte de stockage. |
@@ -142,7 +144,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    | `sku` | Spécifie l’une des valeurs suivantes : `Premium_LRS`, `Standard_GRS`, `Standard_LRS`, `Standard_RAGRS`, `Standard_ZRS`. |
 
    Azure renvoie une longue chaîne JSON comportant l’état d’approvisionnement, par exemple : |
-   
+
    ```json
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
@@ -158,11 +160,12 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    }
    ```
 
-1. Récupérez la chaîne de connexion associée à votre compte de stockage, par exemple :
+3. Récupérez la chaîne de connexion associée à votre compte de stockage, par exemple :
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    Où :
+
    | Paramètre | Description |
    | ---|---|
    | `name` | Spécifie un nom unique pour le compte de stockage créé lors des étapes précédentes. |
@@ -271,7 +274,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    ```shell
    mvn clean package spring-boot:run
    ```
-   
+
    L’application crée un conteneur et charge un fichier texte en tant qu’objet blob dans le conteneur, qui sera répertorié sous votre compte de stockage dans le [portail Azure](https://portal.azure.com).
 
    ![Répertorier les objets blob dans le portail Azure](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)

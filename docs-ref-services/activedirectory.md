@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 4a610e2f0d9fb2e219c42155e2b0cb76fc78b09a
+ms.sourcegitcommit: 5bfb3af5778167500a061157cbd0ad1cede8f90e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823782"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799697"
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Bibliothèques Azure Active Directory pour Java
 
@@ -87,14 +87,14 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/overview/azure/activedirectory/management)
+> [Explorer les API de gestion](/java/api/activedirectory/management)
 
 
 ## <a name="samples"></a>Exemples
 
-[Gérer des groupes, des utilisateurs et des rôles](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)    
+[Gérer des groupes, des utilisateurs et des rôles](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)    
 [Ouvrir/fermer des sessions dans une application web Java](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)    
 [Accéder à une API avec Azure AD à l’aide d’une application de ligne de commande](https://github.com/Azure-Samples/active-directory-java-native-headless)   
-[Appeler l’API Graph d’Azure AD à partir de votre application web Java](https://github.com/Azure-Samples/active-directory-java-graphapi-web/)  
+[Appeler l’API Graph d’Azure AD à partir de votre application web Java](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  
 
 Explorez davantage d’[exemples de code Java pour Azure AD](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java) à utiliser avec vos applications.
