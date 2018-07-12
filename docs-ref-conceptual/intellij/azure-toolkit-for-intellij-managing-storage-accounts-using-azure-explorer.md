@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954840"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075428"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -49,7 +49,7 @@ Pour créer un compte de stockage à l’aide de l’Explorateur Azure, procéde
 
    * **Performances** : spécifie l’offre de compte de stockage de l’éditeur sélectionné qu’il faut utiliser (par exemple « Premium »). Pour plus d’informations, voir [Objectifs de scalabilité et de performances de Stockage Azure]. 
 
-   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant dans une zone »). Pour plus d’informations, voir [Réplication de Stockage Azure]. 
+   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant dans une zone »). Pour plus d’informations, voir [Réplication du stockage Azure]. 
 
    * **Abonnement** : spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau compte de stockage.
 
@@ -69,7 +69,7 @@ Pour créer un conteneur de stockage à l’aide de l’Explorateur Azure, proc�
 
    ![Commande de création d’un conteneur d’objets blob][CC01]
 
-2. Dans la boîte de dialogue **Créer un conteneur d’objets blob**, spécifiez le nom de votre conteneur puis cliquez sur **OK**. Pour plus d’informations sur l’affectation de noms aux conteneurs de stockage, voir [Affectation de noms et de références aux conteneurs, objets blob et métadonnées].
+2. Dans la boîte de dialogue **Créer un conteneur d’objets blob**, spécifiez le nom de votre conteneur puis cliquez sur **OK**. Pour plus d’informations sur l’affectation de noms aux conteneurs de stockage, voir [Affectation de noms et références aux conteneurs, objets blob et métadonnées].
 
    ![Boîte de dialogue de création d’un conteneur d’objets blob][CC02]
 
@@ -97,7 +97,7 @@ Pour supprimer un compte de stockage à l’aide de l’Explorateur Azure, proc�
 
    ![Fenêtre de confirmation de la suppression d’un compte de stockage][DS02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et leurs tarifications, consultez les liens suivants :
 
@@ -117,9 +117,9 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 [Instructions de connexion pour le kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
-[Réplication de Stockage Azure]: /azure/storage/storage-redundancy
+[Réplication du stockage Azure]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets
-[Affectation de noms et de références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
+[Affectation de noms et références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes

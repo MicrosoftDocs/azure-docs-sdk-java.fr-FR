@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
-ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075408"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour Eclipse
 
@@ -57,7 +57,7 @@ Pour créer un compte de stockage à l’aide de l’Explorateur Azure, procéde
 
    * **Performances** : spécifie l’offre de compte de stockage de l’éditeur sélectionné qu’il faut utiliser (par exemple « Premium »). Pour plus d’informations, voir [Objectifs de scalabilité et de performances de Stockage Azure].
 
-   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant dans une zone »). Pour plus d’informations, consultez [Réplication de Stockage Azure].
+   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant dans une zone »). Pour plus d’informations, consultez [Réplication du stockage Azure].
 
 1. Après avoir spécifié toutes les options ci-dessus, cliquez sur **Créer**.
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 
 [Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
-[Réplication de Stockage Azure]: /azure/storage/storage-redundancy
+[Réplication du stockage Azure]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets
 [Affectation de noms et références aux conteneurs, objets blob et métadonnées]: http://go.microsoft.com/fwlink/?LinkId=255555
 

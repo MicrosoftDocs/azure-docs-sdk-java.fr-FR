@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 213efa7fc31705b0ffcba6f2fe40e7186a365fae
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38074529"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -141,7 +141,7 @@ Pour supprimer une machine virtuelle à l’aide de l’Explorateur Azure dans I
 
    ![Fenêtre de confirmation de suppression de machine virtuelle][DE02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les tailles et tarifications des machines virtuelles Azure, voir les ressources suivantes :
 

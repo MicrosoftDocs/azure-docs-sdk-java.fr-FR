@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075368"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Gestion des caches Redis avec l’Explorateur Azure pour IntelliJ
 
@@ -65,7 +65,7 @@ Une fois créé, votre cache Redis s’affiche dans l’Explorateur Azure.
 
 > [!NOTE]
 >
-> Pour plus d’informations sur la configuration des paramètres de votre cache Redis Azure, consultez [Configuration de Cache Redis Azure].
+> Pour plus d’informations sur la configuration des paramètres de votre cache Redis Azure, consultez [Configuration du Cache Redis Azure].
 >
 
 ## <a name="display-the-properties-for-your-redis-cache-in-intellij"></a>Afficher les propriétés de votre cache Redis dans IntelliJ
@@ -88,14 +88,14 @@ Une fois créé, votre cache Redis s’affiche dans l’Explorateur Azure.
 
    ![Invite de suppression d’un cache Redis][DE02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les caches Redis Azure, la configuration des paramètres et la tarification, consultez les liens suivants :
 
 * [Cache Redis Azure]
 * [Documentation du Cache Redis]
 * [Tarification du Cache Redis]
-* [Configuration de Cache Redis Azure]
+* [Configuration du Cache Redis Azure]
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
@@ -104,7 +104,7 @@ Pour plus d’informations sur les caches Redis Azure, la configuration des para
 [Tarification du Cache Redis]: https://azure.microsoft.com/pricing/details/cache/
 [Cache Redis Azure]: https://azure.microsoft.com/services/cache/
 [Documentation du Cache Redis]: /azure/redis-cache
-[Configuration de Cache Redis Azure]: /azure/redis-cache/cache-configure
+[Configuration du Cache Redis Azure]: /azure/redis-cache/cache-configure
 [Azure Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md (Instructions de connexion à Azure pour le kit de ressources Azure pour IntelliJ)
 
 <!-- IMG List -->

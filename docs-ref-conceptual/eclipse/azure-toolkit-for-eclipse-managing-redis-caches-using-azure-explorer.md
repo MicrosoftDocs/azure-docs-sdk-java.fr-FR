@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075418"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Gestion des caches Redis à l’aide de l’Explorateur Azure pour Eclipse
 
@@ -88,7 +88,7 @@ Une fois créé, votre cache Redis s’affiche dans l’Explorateur Azure.
 
    ![Invite de suppression d’un cache Redis][DE02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les caches Redis Azure, la configuration des paramètres et la tarification, consultez les liens suivants :
 
