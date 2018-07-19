@@ -2,7 +2,7 @@ Pour plus d’informations sur le kit de ressources Azure pour Eclipse, consulte
 
 * [boîte à outils Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse.md) 
 * [Notes de publication](https://github.com/Microsoft/azure-tools-for-java/releases) 
-* [Installation du kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse-installation.md) 
+* [Installation de la Boîte à outils Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse-installation.md) 
 * [Créer une application web Hello World pour Azure dans Eclipse](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
 * [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
 
