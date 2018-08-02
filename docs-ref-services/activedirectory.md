@@ -11,16 +11,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 4a610e2f0d9fb2e219c42155e2b0cb76fc78b09a
-ms.sourcegitcommit: 5bfb3af5778167500a061157cbd0ad1cede8f90e
+ms.openlocfilehash: e51334b4f13ffc457d4dec1785257dcff1b56b08
+ms.sourcegitcommit: c4238cffdf6c6f7ac8725673260a34a38c566f58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799697"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39418974"
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Bibliothèques Azure Active Directory pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Authentifiez des utilisateurs et contrôlez l’accès aux applications et aux API avec [Azure Active Directory](/azure/active-directory/active-directory-whatis).
 
@@ -87,7 +87,7 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [Explorer les API de gestion](/java/api/activedirectory/management)
+> [Explorer les API de gestion](/java/api/overview/azure/activedirectory/management)
 
 
 ## <a name="samples"></a>Exemples
