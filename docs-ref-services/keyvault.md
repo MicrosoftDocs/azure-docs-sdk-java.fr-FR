@@ -11,16 +11,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 396d02b8bba5878ffb24f5f8994ae29aef36cfdc
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 1fd03fb772b6411985f99b5e7cce3918e79496b1
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823822"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625015"
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Bibliothèques Azure Key Vault pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Protégez et gérez les clés de chiffrement et les secrets utilisés par les services et les applications cloud avec [Azure Key Vault](/azure/key-vault/).
 
@@ -88,9 +88,5 @@ vault1 = vault1.update()
 
 
 ## <a name="samples"></a>Exemples
-
-[Gérer les coffres de clés][1]   
-
-[1]: https://github.com/Azure-Samples/key-vault-java-manage-key-vaults
 
 Explorez d’autres [exemples de code Java pour Azure Key Vault](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault) que vous pouvez utiliser avec vos applications.
