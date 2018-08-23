@@ -7,20 +7,18 @@ ms.author: routlaw
 manager: douge
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: postgresql
-ms.openlocfilehash: d6fa2acb9a2f44b157ae52ba6e41f6777a43b574
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 0f93d26a07de9acf72a46792793b573dba878fba
+ms.sourcegitcommit: 1b22376e4ceb3d2f2734c8fc80823a44cc5fe8fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42703376"
 ---
 # <a name="azure-database-for-postgresql-libraries-for-java"></a>Base de données Azure pour des bibliothèques PostgreSQL pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 [La base de données Azure pour PostgreSQL](/azure/sql-database/sql-database-technical-overview) est un service de base de données relationnelle Azure conçu pour les développeurs basés sur la version de la communauté du moteur open source de base de données [PostgreSQL](https://www.postgresql.org/).
 
@@ -40,7 +38,7 @@ Connectez-vous à la base de données Azure pour PostgreSQL à partir de vos app
 </dependency>
 ```   
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 
 Connectez-vous à la base de données Azure pour PostgreSQL à l’aide du pilote JDBC PostgreSQL et sélectionnez tous les enregistrements dans le tableau des ventes. Il est possible d’obtenir la chaîne de connexion JDBC de la base de données à partir du portail Azure.
 
