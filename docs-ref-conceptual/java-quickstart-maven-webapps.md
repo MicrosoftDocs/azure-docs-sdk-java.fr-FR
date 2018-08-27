@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: 70b508118c50b75693e2d746dc1e2919c827cb29
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2017
-ms.locfileid: "22033631"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703542"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>Créer et déployer une application Java dans Azure avec Maven
 
@@ -53,7 +53,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-Ouvrez un navigateur web et accédez à l’adresse http://localhost:8080 pour prévisualiser l’application :
+Ouvrez un navigateur web et naviguez jusqu’à http://localhost:8080 pour prévisualiser l’application :
 
   ![Sortie de Hello World à partir de l’exemple d’application Java](media/maven-quickstart/java-app-hello-world-output.png)
 
@@ -147,7 +147,7 @@ az webapp config set \
 
 ## <a name="configure-maven"></a>Configurer Maven 
 
-L’exemple Maven `pom.xml` inclut la configuration pour convertir l’exemple en FTP dans Azure, mais vous devez le personnaliser pour pouvoir le déployer sur votre application web. Récupérez vos informations d’identification App Service avec la commande [az appservice web deployment list-publishing-profiles](/cli/azure/appservice/web/deployment#list-publishing-profiles) :
+L’exemple Maven `pom.xml` inclut la configuration pour convertir l’exemple en FTP dans Azure, mais vous devez le personnaliser pour pouvoir le déployer sur votre application web. Récupérez vos informations d’identification App Service avec la commande [az appservice web deployment list-publishing-profiles](/cli/azure/appservice/web/deployment#list-publishing-profiles) :
 
 ```azurecli
 az webapp deployment list-publishing-profiles  \
@@ -236,7 +236,7 @@ Actualisez votre navigateur après le redéploiement de l’application pour aff
 
 Accédez au portail Azure pour voir l’application web que vous venez de créer.
 
-Pour ce faire, connectez-vous au portail : [https://portal.azure.com](https://portal.azure.com).
+Pour ce faire, connectez-vous à [https://portal.azure.com](https://portal.azure.com).
 
 Dans le menu de gauche, cliquez sur **App Service**, puis cliquez sur le nom de votre application web Azure.
 
@@ -252,7 +252,7 @@ L’activité de la requête s’affiche dans la surveillance après quelques mi
 
  ![Surveillance dans le portail Azure](media/java-app-monitoring.png)
 
-## <a name="clean-up-resources"></a>Supprimer des ressources
+## <a name="clean-up-resources"></a>Supprimer les ressources
 
 Pour supprimer toutes les ressources créées dans ce guide, exécutez la commande suivante :
 
