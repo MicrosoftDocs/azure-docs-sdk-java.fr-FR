@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
-ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
+ms.openlocfilehash: ca788354d26964bd9f1e21a0d3a8005ff65ce4bc
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "42703337"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324345"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Déployer une application Spring Boot sur le cloud à l’aide du plug-in Maven pour Azure App Service
 
@@ -35,7 +35,7 @@ Avant d’utiliser le plugin Maven, consultez Maven Central et recherchez la der
 
 Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
-* Abonnement Azure ; si vous ne disposez pas d’un abonnement Azure, vous pouvez vous inscrire pour [compte Azure gratuit].
+* Abonnement Azure ; si vous ne disposez pas d’un abonnement Azure, vous pouvez vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
 * Un [Java Development Kit (JDK)] à jour, version 1.7 ou ultérieure.
 * L’outil de génération [Maven] (version 3) d’Apache.
@@ -129,6 +129,7 @@ Ouvrez maintenant la classe `Application`, de préférence après que votre IDE 
            return application.sources(Application.class);
        }
    ```
+1. Organisez vos imports pour garantir l’import de `SpringApplicationBuilder` et `SpringBootServletInitializer`.
 
 Votre application est maintenant prête à être déployée vers Tomcat et tout autre runtime Servlet (p. ex. Jetty).
 
