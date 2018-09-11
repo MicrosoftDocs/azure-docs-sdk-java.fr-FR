@@ -11,16 +11,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: batch
-ms.openlocfilehash: 67381d68d23f98579a472aefbebaa929af622b8d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: d8e7a6969bf35d98f03c5d3e335fbaf2f6b3a51d
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823592"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324356"
 ---
 # <a name="azure-batch-libraries-for-java"></a>Bibliothèques Azure Batch pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Exécutez efficacement des applications de calcul haute performance en parallèle et à grande échelle dans le cloud avec [Azure Batch](/azure/batch/batch-technical-overview).   
 
@@ -30,13 +30,13 @@ Pour découvrir Azure Batch, consultez [Créer un compte Batch avec le portail A
 
 Les bibliothèques de client Azure Batch vous permettent de configurer des nœuds et des pools de calcul, de définir des tâches et de les configurer pour s’exécuter dans les travaux. Vous pouvez configurer un gestionnaire de travaux pour contrôler et surveiller l’exécution du travail. [En savoir plus](/azure/batch/batch-api-basics) sur l’utilisation de ces objets pour exécuter des solutions de calcul parallèles à grande échelle.
 
-[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser la bibliothèque cliente dans votre projet.
+[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser la bibliothèque cliente dans votre projet. Le code source de la bibliothèque cliente se trouve dans [Github](https://github.com/Azure/azure-batch-sdk-for-java).
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-batch</artifactId>
-    <version>2.0.0</version>
+    <version>4.0.0</version>
 </dependency>
 ```   
 
