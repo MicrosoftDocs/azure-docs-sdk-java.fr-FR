@@ -14,16 +14,16 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090712"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639772"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Comment utiliser Spring Boot Starter pour Azure Key Vault
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Cet article vous explique comment créer une application avec l’instance **[Spring Initializr]**, qui utilise la solution Spring Boot Starter pour Azure Key Vault pour récupérer une chaîne de connexion stockée comme secrète dans un coffre de clés.
 
@@ -154,10 +154,10 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    |---|---|
    | `name` | Spécifie un nom unique à associer au coffre de clés. |
    | `location` | Spécifie la [Région Azure](https://azure.microsoft.com/regions/) dans laquelle sera hébergé votre groupe de ressources. |
-   | `enabled-for-deployment` | Spécifie l’[option de déploiement du coffre de clés](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `enabled-for-disk-encryption` | Spécifie l’[option de chiffrement du coffre de clés](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `enabled-for-template-deployment` | Spécifie l’[option de chiffrement du coffre de clés](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `sku` | Spécifie l’[option de référence SKU du coffre de clés](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
+   | `enabled-for-deployment` | Spécifie l’[option de déploiement du coffre de clés](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `enabled-for-disk-encryption` | Spécifie l’[option de chiffrement du coffre de clés](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `enabled-for-template-deployment` | Spécifie l’[option de chiffrement du coffre de clés](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `sku` | Spécifie l’[option de référence SKU du coffre de clés](https://docs.microsoft.com/cli/azure/keyvault). |
    | `query` | Spécifie une valeur à récupérer de la réponse, qui est l’URI du coffre de clés dont vous aurez besoin pour effectuer ce didacticiel. |
 
    L’interface de ligne de commande Azure affiche l’URI associé au coffre de clés, que vous utiliserez ultérieurement, par exemple :  
@@ -175,7 +175,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
    | Paramètre | Description |
    |---|---|
    | `name` | Spécifie le nom du coffre de clés créé précédemment. |
-   | `secret-permission` | Spécifie les [stratégies de sécurité](https://docs.microsoft.com/en-us/cli/azure/keyvault) de votre coffre de clés. |
+   | `secret-permission` | Spécifie les [stratégies de sécurité](https://docs.microsoft.com/cli/azure/keyvault) de votre coffre de clés. |
    | `spn` | Spécifie l’identificateur unique de votre inscription d’application antérieure. |
 
    L’interface de ligne de commande Azure affiche les résultats de votre création de stratégie de sécurité, par exemple :  
