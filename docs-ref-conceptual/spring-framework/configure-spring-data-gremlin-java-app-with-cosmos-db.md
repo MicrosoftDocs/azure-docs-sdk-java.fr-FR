@@ -13,12 +13,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 3e7ec1a2f6b15ec9444dc6ee8d8f2d0f779b1f10
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 561dba84b0c1662fa6575e1816ff3dd2f0c6093b
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047166"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Comment utiliser Spring Data Gremlin Starter avec l’API SQL Azure Cosmos DB
 
@@ -153,7 +153,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    ![Créez le fichier application.yml][RE01]
 
-1.  Ouvrez le fichier *application.yml* dans un éditeur de texte, ajoutez-y les lignes suivantes, puis remplacez les exemples de valeurs par les propriétés appropriées pour votre base de données :
+1. Ouvrez le fichier *application.yml* dans un éditeur de texte, ajoutez-y les lignes suivantes, puis remplacez les exemples de valeurs par les propriétés appropriées pour votre base de données :
 
    ```yaml
    gremlin:
