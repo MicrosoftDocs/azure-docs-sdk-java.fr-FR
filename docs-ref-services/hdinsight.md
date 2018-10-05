@@ -1,24 +1,21 @@
 ---
 title: Kit de développement logiciel (SDK) Java Azure HDInsight
-description: Référence pour le kit de développement logiciel (SDK) Java Azure HDInsight
-keywords: Azure, Java, Kit de développement logiciel (SDK), API, HDInsight
+description: Référence pour le kit de développement logiciel (SDK) Java Azure HDInsight. Le kit de développement logiciel (SDK) Java HDInsight fournit des classes et des méthodes qui vous permettent de gérer vos clusters HDInsight.
 author: tylerfox
 ms.author: tyfox
-manager: arindamc
-ms.date: 9/20/2018
-ms.topic: article
-ms.prod: azure
-ms.technology: azure
-ms.devlang: java
+ms.reviewer: jasonh
 ms.service: hdinsight
-ms.openlocfilehash: 4723613924d1a0c0b75cc8e4de28e3f59612ab19
-ms.sourcegitcommit: 7c6a15f574fb85ee22f6ccdb7864627b73a6c1f7
+ms.topic: reference
+ms.devlang: java
+ms.date: 9/20/2018
+ms.openlocfilehash: 5e3887341ddb2fdcab336f0a8a232e6e8bfbe0f2
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047156"
 ---
-# <a name="hdinsight-java-management-sdk-preview"></a>Préversion du kit de développement logiciel (SDK) de gestion Java HDInsight
+# <a name="hdinsight-java-management-sdk-preview"></a>Kit de développement logiciel (SDK) de gestion Java HDInsight (Préversion)
 
 ## <a name="overview"></a>Vue d’ensemble
 

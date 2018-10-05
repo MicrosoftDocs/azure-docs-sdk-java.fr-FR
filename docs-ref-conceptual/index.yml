@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: ec352a8db1d35e175fd53a2ea94bf793a87bcd93
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 7e86525ea7538b20ded93fb093e8ee7032876855
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047136"
 documentType: LandingData
 title: Azure pour les développeurs Java
 metadata:
@@ -37,11 +37,11 @@ sections:
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Prise en main
-    - href: https://azure.microsoft.com/resources/samples/?platform=java&view=azure-java
-      html: <p>Exemples de code Azure à l’aide de Java</p>
+    - href: https://docs.microsoft.com/java/azure/spring-framework/
+      html: <p>Services Azure avec Spring Boot</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: Exemples de code
+        src: https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg
+      title: Spring sur Azure
     - href: java-azure-tools.md
       html: <p>Outils &amp; plug-ins IDE</p>
       image:
@@ -51,7 +51,7 @@ sections:
       html: <p>Référence API</p>
       image:
         src: https://docs.microsoft.com/media/common/i_api-reference.svg
-      title: Bibliothèques Azure pour Java
+      title: Kits de développement logiciel (SDK) Azure pour Java
 - title: Guides de prise en main
   items:
   - type: paragraph
