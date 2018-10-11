@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
 ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823712"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893310"
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>Bibliothèques Azure SQL Database pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) est un service de base de données relationnelle reposant sur le moteur Microsoft SQL Server qui prend en charge les données de tables, JSON, spatiales et XML. 
 

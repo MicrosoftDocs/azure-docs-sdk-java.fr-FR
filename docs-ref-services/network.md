@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: networking
 ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823602"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893380"
 ---
 # <a name="azure-network-libraries-for-java"></a>Bibliothèques réseau Azure pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Connectez des ressources Azure, filtrez et équilibrez le trafic, et gérez le mappage avec [Azure Networking](/azure/networking/networking-overview).
 

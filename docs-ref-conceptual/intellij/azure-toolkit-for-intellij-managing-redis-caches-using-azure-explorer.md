@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075368"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892520"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Gestion des caches Redis avec l’Explorateur Azure pour IntelliJ
 
@@ -51,7 +51,7 @@ Les étapes suivantes vous indiquent comment créer un cache Redis avec l’Expl
       * **Créer** : spécifie que vous souhaitez créer un groupe de ressources. 
       * **Utiliser existant** : spécifie que vous allez choisir à partir d’une liste de groupes de ressources associés à votre compte Azure. 
 
-   d. **Emplacement** : spécifie l’emplacement où votre cache Redis est créé (par exemple *États-Unis de l’Ouest*).
+   d. **Emplacement** : spécifie l’emplacement où votre cache Redis est créé (par exemple *USA Ouest*).
 
    e. **Niveau tarifaire** : spécifie le niveau tarifaire utilisé par votre cache Redis ; ce paramètre détermine le nombre de connexions client. (Pour plus d’informations, consultez [Tarification du Cache Redis].)
 

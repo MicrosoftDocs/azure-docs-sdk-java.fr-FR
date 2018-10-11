@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
 ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887759"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892780"
 ---
 # <a name="service-bus-libraries-for-java"></a>Bibliothèques Service Bus pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Service Bus est une plateforme professionnelle de service de messagerie transactionnel qui fournit des files d’attentes extrêmement fiables et des rubriques de publication/abonnement avec des fonctionnalités complexes telles que la livraison chronologique des messages, les sessions, le partitionnement, la planification, les abonnements complexes, mais aussi la gestion des transactions et des flux de travail.
 

@@ -15,15 +15,15 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090802"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892560"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Créer une application web Hello World pour Azure à l’aide de l’ancien kit de ressources pour Eclipse
 
-Ce didacticiel explique comment créer une application Hello World de base et la déployer sur Azure en tant qu’application web à l’aide de la version 3.0.6 (ou ultérieure) du [boîte à outils Azure pour Eclipse].
+Ce didacticiel explique comment créer une application Hello World de base et la déployer sur Azure en tant qu’application web à l’aide de la version 3.0.6 (ou ultérieure) du [Kit de ressources Azure pour Eclipse].
 
 > [!NOTE]
 >
@@ -210,7 +210,7 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 
 <!-- URL List -->
 
-[boîte à outils Azure pour Eclipse]: azure-toolkit-for-eclipse.md
+[Kit de ressources Azure pour Eclipse]: azure-toolkit-for-eclipse.md
 [Kit de ressources Azure pour IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview

@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931185"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893140"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Configurer des sources de déploiement d’Azure App Service depuis vos applications Java
 
@@ -155,7 +155,7 @@ La troisième application n’est pas configurée pour Java et Tomcat. À la pla
 
 La quatrième application déploie le code dans la branche principale chaque fois que vous effectuez des modifications par push ou que vous fusionnez une demande de tirage (pull request) avec la branche principale du référentiel GitHub.
 
-| Classe utilisée dans l’exemple | Remarques
+| Classe utilisée dans l’exemple | Notes
 |-------|-------|
 | [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | Créé à partir de la chaîne Fluent `azure.webApps().define()....create()`. Crée une application web App Service et toutes les ressources dont elle a besoin. La plupart des méthodes interrogent l’objet pour obtenir des détails de configuration, mais les méthodes verbales comme `restart()` modifient l’état de l’application web.
 | [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | Classe avec des champs publics statiques utilisée en tant que paramètres de l’élément `withWebContainer()` lors de la définition d’une application web exécutant un conteneur web Java. Dispose de choix pour les versions Jetty et Tomcat.

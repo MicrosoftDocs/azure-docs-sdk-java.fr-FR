@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4e24dac285fa38bad4293f1cce2830242c2fe151
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954390"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893199"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a>Instructions de connexion pour le Kit de ressources Azure pour IntelliJ
 
@@ -138,7 +138,7 @@ Après que vous avez configuré votre compte en procédant de la manière décri
 
    ![Fenêtre de confirmation de déconnexion d’Azure][L02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 

@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 3d21cdd890912c1fc58fc65a79ba972b8327edeb
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931085"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892540"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Créer et gérer des réseaux virtuels Azure à partir de vos applications Java
 
@@ -175,7 +175,7 @@ La suppression d’un réseau virtuel supprime les sous-réseaux présents, mais
 
 Cet exemple crée un réseau virtuel avec deux sous-réseaux, sur lesquels se trouve une machine virtuelle. Le sous-réseau principal est coupé de l’Internet public. Le sous-réseau avant accepte le trafic HTTP entrant depuis Internet. Les deux machines virtuelles du réseau virtuel communiquent entre elles via les règles par défaut du groupe de sécurité.
 
-| Classe utilisée dans l’exemple | Remarques
+| Classe utilisée dans l’exemple | Notes
 |-------|-------|
 | [Réseau](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | Représentation locale sous forme d’objet d’un réseau virtuel créée à partir de `azure.networks().define()...create()`. Utilisez la chaîne Fluent `update()...apply()` pour mettre à jour un réseau virtuel existant.
 | [Sous-réseau](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | Créez des sous-réseaux sur le réseau virtuel lors de la définition ou de la mise à jour du réseau avec `withSubnet()`. Obtenez des représentations sous forme d’objet d’un sous-réseau à partir de `Network.subnets().get()` ou `Network.subnets().entrySet()`. Ces objets disposent de méthodes d’interrogation des propriétés de sous-réseau.

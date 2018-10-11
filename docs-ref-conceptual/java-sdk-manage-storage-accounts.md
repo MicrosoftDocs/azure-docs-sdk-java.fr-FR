@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 5945164b2b04e1fa9169590a71f6c5f9f45842d6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931055"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893060"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Gérer des comptes de stockage Azure à partir de vos applications Java
 
@@ -102,7 +102,7 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 - répertorie tous les comptes de stockage d’un groupe de ressources
 - supprime le compte de stockage 
 
-| Classe utilisée dans l’exemple | Remarques
+| Classe utilisée dans l’exemple | Notes
 |-------|-------|
 | [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Représentation d’un compte de stockage Azure. Utilisez les méthodes dans la classe pour obtenir des informations sur le compte de stockage.
 | [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | La classe `StorageAccount.getKeys()` retourne les clés du compte de stockage. Utilisez les méthodes `regenerateKey` dans `StorageAccount` pour mettre à jour les clés.

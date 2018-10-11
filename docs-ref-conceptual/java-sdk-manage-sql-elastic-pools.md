@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931115"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893570"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Gérer des bases de données SQL Azure dans les pools élastiques à partir de vos applications Java
 
@@ -125,7 +125,7 @@ L’exemple crée un serveur SQL avec deux bases de données gérées dans un po
 
 L’exemple supprime toutes les ressources qu'il a créées avant de quitter.
 
-| Classe utilisée dans l’exemple | Remarques |
+| Classe utilisée dans l’exemple | Notes |
 |-------|-------|
 | [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_server) | Serveur de base de données SQL dans Azure créé par la chaîne fluent `azure.sqlServers().define()...create()`. Fournit des méthodes pour créer et travailler avec des pools élastiques et des bases de données. 
 | [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) | Objet côté du client représentant une base de données SQL. Créé via `sqlServer().define()...create()`. 

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954440"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893500"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Pour débuter avec Spring Boot pour Azure
 
@@ -227,20 +227,20 @@ Lorsque vous ajoutez cette application de démarrage à un projet Spring Boot, l
    </dependencyManagement>
    ```
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation d’applications [Spring Boot] sur Azure, consultez [Spring Framework sur Azure].
+Pour plus d’informations sur l’utilisation d’applications [Spring Boot] sur Azure, consultez [Spring sur Azure].
 
 Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java] et [Outils Java pour Visual Studio Team Services].
 
-Pour de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.
+Pour obtenir de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.
 
 <!-- URL List -->
 
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Framework sur Azure]: https://docs.microsoft.com/java/azure/spring-framework/
+[Spring Boot]: http://projects.spring.io/spring-boot/
+[Spring sur Azure]: https://docs.microsoft.com/java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

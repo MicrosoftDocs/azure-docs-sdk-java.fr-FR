@@ -15,24 +15,24 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954522"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893160"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Déployer une application Spring Boot sur le cloud avec Azure App Service
 
-Ce didacticiel vous montre comment créer l’exemple d’application web [Spring Boot] Getting Started et la déployer sur [Azure App Service].
+Ce didacticiel vous montre comment créer l’exemple d’application web [Spring Boot] Getting Started et la déployer sur [Azure App Service].
 
-### <a name="prerequisites"></a>configuration requise
+### <a name="prerequisites"></a>Prérequis
 
 Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * Un [JDK (Java Developer Kit)] à jour.
 * L’outil de génération [Maven] (version 3) d’Apache.
-* Un [client Git].
+* Un client [Git].
 
 ## <a name="create-the-spring-boot-getting-started-web-app"></a>Créer l’application web Spring Boot Getting Started
 
@@ -189,7 +189,7 @@ La procédure suivante vous guide à travers les étapes pour déployer votre ap
 
    ![Parcourir l’exemple d’application][SB02]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 
@@ -203,7 +203,7 @@ Pour plus d’informations sur le déploiement d’applications web sur Azure av
 
 Pour plus d’informations sur l’exemple de projet Spring Boot, consultez [Spring Boot Getting Started].
 
-Pour de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.
+Pour obtenir de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.
 
 Pour plus d’informations sur la configuration de paramètres supplémentaires pour votre application web, consultez [Configurer des applications web dans Azure App Service].
 
@@ -212,16 +212,16 @@ Pour plus d’informations sur la configuration de paramètres supplémentaires 
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
 [Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
-[portail Azure]: https://portal.azure.com/
+[Portail Azure]: https://portal.azure.com/
 [Configurer des applications web dans Azure App Service]: /azure/app-service/web-sites-configure
 [Déployer votre application sur Azure App Service avec FTP/S]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
-[client Git]: https://github.com/
+[Git]: https://github.com/
 [JDK (Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
+[Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
 

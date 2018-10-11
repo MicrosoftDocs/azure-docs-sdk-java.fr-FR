@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: cdn
 ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823732"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893070"
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Bibliothèques Azure CDN pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Mettez en cache le contenu web statique à des emplacements stratégiques afin de fournir un débit maximal aux utilisateurs disposant d’un [réseau de distribution de contenu (CDN) Azure](/azure/cdn/cdn-overview).
 

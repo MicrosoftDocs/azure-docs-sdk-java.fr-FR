@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dd76cb3a0355e4e8471b7a32b6b33cb71bd3f16b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954790"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892790"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Kit de ressources Azure pour IntelliJ
 Le kit de ressources Azure pour IntelliJ contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) IntelliJ.
@@ -34,7 +34,7 @@ Les articles suivants vous aideront à commencer à utiliser le kit de ressource
 
 * [Installation du kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-installation.md)
 
-* [Instructions de connexion pour le Kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-sign-in-instructions.md)
+* [Instructions de connexion pour le kit de ressources Azure pour IntelliJ](azure-toolkit-for-intellij-sign-in-instructions.md)
 
 * [Créer une application web Hello World pour Azure dans IntelliJ](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
@@ -58,7 +58,7 @@ Les articles suivants expliquent comment utiliser le kit de ressources Azure pou
 
 * [Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur le kit de ressources Azure pour IntelliJ, voir les pages suivantes :
 

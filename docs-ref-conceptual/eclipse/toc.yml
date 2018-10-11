@@ -1,27 +1,34 @@
-- name: "Kit de ressources\_Azure pour\_Eclipse"
+items:
+- name: Kit de ressources Azure pour Eclipse
   href: azure-toolkit-for-eclipse.md
   items:
-    - name: Installer
-      href: azure-toolkit-for-eclipse-installation.md
-    - name: Prise en main
-      href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
-    - name: Didacticiels
+  - name: Installer
+    href: azure-toolkit-for-eclipse-installation.md
+  - name: Prise en main
+    href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
+  - name: Didacticiels
+    items:
+    - name: Déployer des conteneurs sur des machines virtuelles
+      href: azure-toolkit-for-eclipse-publish-as-docker-container.md
+    - name: Déployer une application web dans Azure App Service
+      href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
+  - name: Procédure
+    items:
+    - name: Configurer l’authentification
+      href: azure-toolkit-for-eclipse-sign-in-instructions.md
+    - name: Gérer des ressources Azure
       items:
-        - name: Déployer des conteneurs sur des machines virtuelles
-          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
-        - name: Déployer une application web dans Azure App Service
-          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
-    - name: Procédure
-      items:
-        - name: Configurer l’authentification
-          href: azure-toolkit-for-eclipse-sign-in-instructions.md
-        - name: Gérer des ressources Azure
-          items:
-            - name: Machines virtuelles
-              href: azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
-            - name: Comptes de stockage
-              href: azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
-            - name: Cache Redis Azure
-              href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
-    - name: Notes de publication
-      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+      - name: Machines virtuelles
+        href: azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
+      - name: Comptes de stockage
+        href: azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
+      - name: Cache Redis Azure
+        href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
+  - name: Notes de publication
+    href: https://github.com/Microsoft/azure-tools-for-java/releases
+ms.openlocfilehash: b55ad0badb7ce2e042b479032c450940d9de0df8
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892500"

@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e20feb555c3a360eceae60c1569af9a00a5cd027
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931195"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893210"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Créer des machines virtuelles dans plusieurs régions à partir de vos applications Java
 
@@ -186,7 +186,7 @@ L’exemple de code obtient ensuite les adresses IP pour toutes les machines vir
 
 Le bloc `finally` supprime les ressources présentes dans votre abonnement Azure, même en cas d’erreur.
 
-| Classe utilisée dans l’exemple | Remarques
+| Classe utilisée dans l’exemple | Notes
 |-------|-------|
 | [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | Interrogez des propriétés et gérez l’état des machines virtuelles. Récupéré sous forme de liste avec `azure.virtualMachines().list()` ou par nom ou ID avec `azure.virtualMachines().getByResourceGroup()`
 | [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | Valeurs statiques qui correspondent aux [options de taille d’une machine virtuelle](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) utilisées comme paramètre dans `withSize()` lors de la définition d’une machine virtuelle.

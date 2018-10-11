@@ -15,17 +15,17 @@ ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954580"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892910"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurer une application Spring Boot Initializer pour utiliser le cache Redis dans le cloud avec le Cache Redis Microsoft Azure
 
 Cet article explique comment créer un cache Redis dans le cloud par le biais du portail Azure, utiliser **[Spring Initializr]** pour créer une application personnalisée, puis créer une application web Java qui stocke et récupère des données à l’aide de votre cache Redis.
 
-## <a name="prerequisites"></a>configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
@@ -60,7 +60,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
 ## <a name="create-a-redis-cache-on-azure"></a>Créer un Cache Redis sur Azure
 
-1. Accédez au portail Azure à l’adresse <https://portal.azure.com/>, puis cliquez sur **+Nouveau**.
+1. Accédez au Portail Azure à l’adresse <https://portal.azure.com/> et cliquez sur **+Nouveau**.
 
    ![Portail Azure][AZ01]
 
@@ -181,7 +181,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
 1. Enregistrez et fermez le fichier *HelloController.java*.
 
-1. Générez votre application Spring Boot avec Maven et exécutez-la, par exemple :
+1. Générez votre application Spring Boot avec Maven, puis exécutez-la. Par exemple :
 
    ```shell
    mvn clean package
@@ -196,7 +196,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
    Le message « Hello World! » de votre exemple de contrôleur doit s’afficher. Il est extrait de manière dynamique à partir de votre cache Redis.
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :
 

@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931155"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893490"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Gérer les groupes de machines virtuelles identiques Azure à partir de vos applications Java
 
@@ -228,7 +228,7 @@ Mettez à l’échelle le nombre de machines virtuelles présentes dans le group
 
 [L’exemple de code](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java) crée d’abord un réseau virtuel pour permettre au groupe identique de communiquer et un équilibreur de charge pour répartir le trafic dans les machines virtuelles. La chaîne de méthode `azure.virtualMachineScaleSets().define()...create()` crée un groupe identique composé de trois instances Linux exécutant le serveur web Apache.    
    
-| Classe utilisée dans l’exemple | Remarques
+| Classe utilisée dans l’exemple | Notes
 |-------|-------|
 | [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | Pour interroger, démarrer, arrêter, mettre à jour et supprimer toutes les machines virtuelles du groupe identique.
 | [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | Récupérée à partir de `virtualMachineScaleSet.virtualMachines().get()` ou `list()`, elle vous permet d’interroger, de démarrer, d’arrêter, de configurer et de supprimer les machines virtuelles du groupe identique.

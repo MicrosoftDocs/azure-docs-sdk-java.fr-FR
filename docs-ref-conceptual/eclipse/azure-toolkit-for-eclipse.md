@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: d8ab3de791d1a4893efb77a51418c437f81c86ff
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954210"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893460"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Kit de ressources Azure pour Eclipse
 
@@ -33,7 +33,7 @@ Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalité
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Commencer avec le kit de ressources Azure pour Eclipse
 Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour Eclipse :
 
-* [Installation de la Boîte à outils Azure pour Eclipse](azure-toolkit-for-eclipse-installation.md)
+* [Installation du kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-installation.md)
 
 * [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-sign-in-instructions.md)
 
@@ -59,7 +59,7 @@ Les articles suivants expliquent comment utiliser le kit de ressources Azure pou
 
 * [Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur le kit de ressources Azure pour Eclipse, voir les pages suivantes :
 

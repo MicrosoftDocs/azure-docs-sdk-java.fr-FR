@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: compute
 ms.openlocfilehash: a54bc40e1d28ba6ee1d8b0638cb259adbb69d78d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823752"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893040"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Bibliothèques de machines virtuelle Azure
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Des ressources de calcul à la demande et évolutives s’exécutant sous Linux et Windows.
 

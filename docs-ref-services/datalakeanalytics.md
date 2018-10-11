@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
 ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
-ms.sourcegitcommit: 33c70f921f1524c8bdb69ad5a1a3c1b4b1de97ba
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37026771"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892740"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Bibliothèques Azure Data Lake Analytics pour Java
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Exécutez des travaux d’analyse Big Data mis à l’échelle de manière à obtenir des jeux de données conséquents avec [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).
 

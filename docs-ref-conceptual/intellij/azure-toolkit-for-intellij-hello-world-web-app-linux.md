@@ -15,24 +15,24 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887092"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892590"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Déployer une application web Hello World sur un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ
 
-Les conteneurs [client Docker] constituent une méthode largement utilisée pour déployer des applications web. En utilisant des conteneurs Docker, les développeurs peuvent regrouper tous les fichiers et dépendances de leur projet en un même package pour un déploiement sur un serveur. Le kit de ressources Azure pour IntelliJ simplifie ce processus pour les développeurs Java en ajoutant des fonctionnalités permettant de déployer des conteneurs sur Microsoft Azure.
+Les conteneurs [Docker] constituent une méthode largement utilisée pour déployer des applications web. En utilisant des conteneurs Docker, les développeurs peuvent regrouper tous les fichiers et dépendances de leur projet en un même package pour un déploiement sur un serveur. Le kit de ressources Azure pour IntelliJ simplifie ce processus pour les développeurs Java en ajoutant des fonctionnalités permettant de déployer des conteneurs sur Microsoft Azure.
 
 Cet article décrit les étapes requises pour créer une application web Hello World basique et la publier dans un conteneur Linux sur Azure à l’aide du kit de ressources Azure pour IntelliJ.
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
-* Un [client Docker].
+* Un [Docker].
 
 > [!NOTE]
 >
-> Pour effectuer les étapes de ce didacticiel, vous devez configurer [client Docker] pour exposer le démon sur le port 2375 sans TLS. Vous pouvez configurer ce paramètre lors de l’installation de Docker ou via le menu des paramètres Docker.
+> Pour effectuer les étapes de ce didacticiel, vous devez configurer [Docker] pour exposer le démon sur le port 2375 sans TLS. Vous pouvez configurer ce paramètre lors de l’installation de Docker ou via le menu des paramètres Docker.
 >
 > ![Menu des paramètres docker][docker-settings-menu]
 >
@@ -72,7 +72,7 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
 1. Accédez au [portail Azure] et connectez-vous.
 
-   Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créer un registre de conteneurs Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.
+   Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créez un registre de conteneur Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.
 
 1. Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Conteneurs** puis cliquez sur **Registre de conteneurs Azure**.
    
@@ -134,19 +134,19 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker][client Docker] officiel.
+Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web de Docker][Docker] officiel.
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
-[portail Azure]: https://portal.azure.com/
-[Créer un registre de conteneurs Docker privé à l’aide du portail Azure]: /azure/container-registry/container-registry-get-started-portal
+[Portail Azure]: https://portal.azure.com/
+[Créez un registre de conteneur Docker privé à l’aide du portail Azure]: /azure/container-registry/container-registry-get-started-portal
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Create Docker Registry using Azure CLI]: /azure/container-registry/container-registry-get-started-azure-cli
 
-[client Docker]: https://www.docker.com/
+[Docker]: https://www.docker.com/
 [Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->

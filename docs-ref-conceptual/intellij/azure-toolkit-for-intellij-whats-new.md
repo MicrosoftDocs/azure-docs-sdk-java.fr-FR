@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954400"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893420"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Nouveautés du Kit de ressources Azure pour IntelliJ
 
@@ -28,7 +28,7 @@ La page web suivante contient des informations sur les différentes versions et 
 <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> Il existe également une boîte à outils Azure pour l’environnement de développement Eclipse. Pour plus d’informations, consultez [Kit de ressources Azure pour Eclipse]. 
+> Il existe également une boîte à outils Azure pour l’environnement de développement Eclipse. Pour plus d’informations, consultez [boîte à outils Azure pour Eclipse]. 
 > 
 
 <!--
@@ -72,13 +72,13 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 
 -->
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
-[Kit de ressources Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[boîte à outils Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [Azure Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [How to publish a Web App as a Docker Container using the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Managing Storage Accounts using the Azure Explorer for IntelliJ]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md

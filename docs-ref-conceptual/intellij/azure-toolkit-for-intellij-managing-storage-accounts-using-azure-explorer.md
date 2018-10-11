@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075428"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899057"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -53,7 +53,7 @@ Pour créer un compte de stockage à l’aide de l’Explorateur Azure, procéde
 
    * **Abonnement** : spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau compte de stockage.
 
-   * **Emplacement** : spécifie l’emplacement où votre compte de stockage sera créé (par exemple « États-Unis de l’Ouest »).
+   * **Emplacement** : spécifie l’emplacement où votre compte de stockage sera créé (par exemple « USA Ouest »).
 
    * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
       * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
@@ -101,7 +101,7 @@ Pour supprimer un compte de stockage à l’aide de l’Explorateur Azure, proc�
 
 Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et leurs tarifications, consultez les liens suivants :
 
-* [Introduction à Stockage Microsoft Azure]
+* [Introduction à Microsoft Azure Storage]
 * [À propos des comptes de stockage Azure]
 * Tailles des comptes de stockage Azure
   * [Tailles des machines virtuelles Windows dans Azure]
@@ -115,7 +115,7 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 <!-- URL List -->
 
 [Instructions de connexion pour le kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
-[Introduction à Stockage Microsoft Azure]: /azure/storage/storage-introduction
+[Introduction à Microsoft Azure Storage]: /azure/storage/storage-introduction
 [À propos des comptes de stockage Azure]: /azure/storage/storage-create-storage-account
 [Réplication du stockage Azure]: /azure/storage/storage-redundancy
 [Objectifs de scalabilité et de performances de Stockage Azure]: /azure/storage/storage-scalability-targets
