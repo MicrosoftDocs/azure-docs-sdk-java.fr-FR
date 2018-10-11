@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: networking
 ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823602"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893380"
 ---
-# <a name="azure-network-libraries-for-java"></a><span data-ttu-id="e160e-104">Bibliothèques réseau Azure pour Java</span><span class="sxs-lookup"><span data-stu-id="e160e-104">Azure Network libraries for Java</span></span>
+# <a name="azure-network-libraries-for-java"></a><span data-ttu-id="33504-104">Bibliothèques réseau Azure pour Java</span><span class="sxs-lookup"><span data-stu-id="33504-104">Azure Network libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="e160e-105">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="e160e-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="33504-105">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="33504-105">Overview</span></span>
 
-<span data-ttu-id="e160e-106">Connectez des ressources Azure, filtrez et équilibrez le trafic, et gérez le mappage avec [Azure Networking](/azure/networking/networking-overview).</span><span class="sxs-lookup"><span data-stu-id="e160e-106">Connect Azure resources, filter and balance traffic, and manage routing with [Azure Networking](/azure/networking/networking-overview).</span></span>
+<span data-ttu-id="33504-106">Connectez des ressources Azure, filtrez et équilibrez le trafic, et gérez le mappage avec [Azure Networking](/azure/networking/networking-overview).</span><span class="sxs-lookup"><span data-stu-id="33504-106">Connect Azure resources, filter and balance traffic, and manage routing with [Azure Networking](/azure/networking/networking-overview).</span></span>
 
-<span data-ttu-id="e160e-107">Pour découvrir Azure Networking, consultez la section [Créer votre premier réseau virtuel](/azure/virtual-network/virtual-network-get-started-vnet-subnet).</span><span class="sxs-lookup"><span data-stu-id="e160e-107">To get started with Azure Networking, see [Create your first virtual network](/azure/virtual-network/virtual-network-get-started-vnet-subnet).</span></span>
+<span data-ttu-id="33504-107">Pour découvrir Azure Networking, consultez la section [Créer votre premier réseau virtuel](/azure/virtual-network/virtual-network-get-started-vnet-subnet).</span><span class="sxs-lookup"><span data-stu-id="33504-107">To get started with Azure Networking, see [Create your first virtual network](/azure/virtual-network/virtual-network-get-started-vnet-subnet).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="e160e-108">API de gestion</span><span class="sxs-lookup"><span data-stu-id="e160e-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="33504-108">API de gestion</span><span class="sxs-lookup"><span data-stu-id="33504-108">Management API</span></span>
 
-<span data-ttu-id="e160e-109">Créez et gérez des [réseaux virtuels](/azure/virtual-network/virtual-networks-overview) Azure, [ExpressRoutes](/azure/expressroute/), et [Application Gateway](/azure/application-gateway/) avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="e160e-109">Create and manage Azure [virtual networks](/azure/virtual-network/virtual-networks-overview) , [ExpressRoutes](/azure/expressroute/) , and [Application Gateways](/azure/application-gateway/) with the management API.</span></span>
+<span data-ttu-id="33504-109">Créez et gérez des [réseaux virtuels](/azure/virtual-network/virtual-networks-overview) Azure, [ExpressRoutes](/azure/expressroute/), et [Application Gateway](/azure/application-gateway/) avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="33504-109">Create and manage Azure [virtual networks](/azure/virtual-network/virtual-networks-overview) , [ExpressRoutes](/azure/expressroute/) , and [Application Gateways](/azure/application-gateway/) with the management API.</span></span>
 
-<span data-ttu-id="e160e-110">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="e160e-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="33504-110">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="33504-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.locfileid: "31823602"
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="e160e-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="e160e-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="33504-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="33504-111">Example</span></span>
 
-<span data-ttu-id="e160e-112">Créez un réseau virtuel avec un sous-réseau unique.</span><span class="sxs-lookup"><span data-stu-id="e160e-112">Create a new virtual network with a single subnet.</span></span>
+<span data-ttu-id="33504-112">Créez un réseau virtuel avec un sous-réseau unique.</span><span class="sxs-lookup"><span data-stu-id="33504-112">Create a new virtual network with a single subnet.</span></span>
 
 ```java
 Network virtualNetwork1 = azure.networks().define(vnetName1)
@@ -56,13 +56,13 @@ Network virtualNetwork1 = azure.networks().define(vnetName1)
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e160e-113">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="e160e-113">Explore the Management APIs</span></span>](/java/api/overview/azure/networking/management)
+> [<span data-ttu-id="33504-113">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="33504-113">Explore the Management APIs</span></span>](/java/api/overview/azure/networking/management)
 
-## <a name="samples"></a><span data-ttu-id="e160e-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="e160e-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="33504-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="33504-114">Samples</span></span>
 
-<span data-ttu-id="e160e-115">[Gérer des réseaux virtuels](https://github.com/Azure-Samples/network-java-manage-virtual-network) </span><span class="sxs-lookup"><span data-stu-id="e160e-115">[Manage virtual networks](https://github.com/Azure-Samples/network-java-manage-virtual-network) </span></span>  
-<span data-ttu-id="e160e-116">[Gérer des interfaces réseau](https://github.com/Azure-Samples/network-java-manage-network-interface) </span><span class="sxs-lookup"><span data-stu-id="e160e-116">[Manage network interfaces](https://github.com/Azure-Samples/network-java-manage-network-interface) </span></span>  
-<span data-ttu-id="e160e-117">[Gérer des passerelles Application Gateways](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways) </span><span class="sxs-lookup"><span data-stu-id="e160e-117">[Manage Application Gateways](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways) </span></span>  
-[<span data-ttu-id="e160e-118">Gérer des équilibreurs de charge accessible sur Internet</span><span class="sxs-lookup"><span data-stu-id="e160e-118">Manage internet facing load balancers</span></span>](https://github.com/Azure-Samples/network-java-manage-internet-facing-load-balancers)   
+<span data-ttu-id="33504-115">[Gérer des réseaux virtuels](https://github.com/Azure-Samples/network-java-manage-virtual-network) </span><span class="sxs-lookup"><span data-stu-id="33504-115">[Manage virtual networks](https://github.com/Azure-Samples/network-java-manage-virtual-network) </span></span>  
+<span data-ttu-id="33504-116">[Gérer des interfaces réseau](https://github.com/Azure-Samples/network-java-manage-network-interface) </span><span class="sxs-lookup"><span data-stu-id="33504-116">[Manage network interfaces](https://github.com/Azure-Samples/network-java-manage-network-interface) </span></span>  
+<span data-ttu-id="33504-117">[Gérer des passerelles Application Gateways](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways) </span><span class="sxs-lookup"><span data-stu-id="33504-117">[Manage Application Gateways](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways) </span></span>  
+[<span data-ttu-id="33504-118">Gérer des équilibreurs de charge accessible sur Internet</span><span class="sxs-lookup"><span data-stu-id="33504-118">Manage internet facing load balancers</span></span>](https://github.com/Azure-Samples/network-java-manage-internet-facing-load-balancers)   
 
-<span data-ttu-id="e160e-119">Explorez davantage d’[exemples de code Java pour Azure Networking](https://azure.microsoft.com/resources/samples/?platform=java&term=network) à utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="e160e-119">Explore more [sample Java code for Azure Networking](https://azure.microsoft.com/resources/samples/?platform=java&term=network) you can use in your apps.</span></span>
+<span data-ttu-id="33504-119">Explorez davantage d’[exemples de code Java pour Azure Networking](https://azure.microsoft.com/resources/samples/?platform=java&term=network) à utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="33504-119">Explore more [sample Java code for Azure Networking](https://azure.microsoft.com/resources/samples/?platform=java&term=network) you can use in your apps.</span></span>

@@ -15,114 +15,114 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090792"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892680"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a><span data-ttu-id="b904c-103">Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service</span><span class="sxs-lookup"><span data-stu-id="b904c-103">How to use the Maven Plugin for Azure Web Apps to deploy a Spring Boot app in Azure Container Registry to Azure App Service</span></span>
+# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a><span data-ttu-id="e1568-103">Comment utiliser le plug-in Maven pour Azure Web Apps pour déployer une application Spring Boot dans Azure Container Registry dans Azure App Service</span><span class="sxs-lookup"><span data-stu-id="e1568-103">How to use the Maven Plugin for Azure Web Apps to deploy a Spring Boot app in Azure Container Registry to Azure App Service</span></span>
 
-<span data-ttu-id="b904c-104">Cet article explique comment déployer un exemple d’application [Spring Boot] dans Azure Container Registry, puis utiliser le plug-in Maven pour Azure Web Apps pour déployer votre application dans Azure App Service.</span><span class="sxs-lookup"><span data-stu-id="b904c-104">This article demonstrates how to deploy a sample [Spring Boot] application to Azure Container Registry, and then use the Maven Plugin for Azure Web Apps to deploy your application to Azure App Service.</span></span>
+<span data-ttu-id="e1568-104">Cet article explique comment déployer un exemple d’application [Spring Boot] dans Azure Container Registry, puis utiliser le plug-in Maven pour Azure Web Apps pour déployer votre application dans Azure App Service.</span><span class="sxs-lookup"><span data-stu-id="e1568-104">This article demonstrates how to deploy a sample [Spring Boot] application to Azure Container Registry, and then use the Maven Plugin for Azure Web Apps to deploy your application to Azure App Service.</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="b904c-105">Le plug-in Maven pour Azure Web Apps pour [Apache Maven](http://maven.apache.org/) assure une intégration transparente d’Azure App Service dans les projets Maven et rationalise le processus pour permettre aux développeurs de déployer des applications web dans Azure App Services.</span><span class="sxs-lookup"><span data-stu-id="b904c-105">The Maven Plugin for Azure Web Apps for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service  into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
+> <span data-ttu-id="e1568-105">Le plug-in Maven pour Azure Web Apps pour [Apache Maven](http://maven.apache.org/) assure une intégration transparente d’Azure App Service dans les projets Maven et rationalise le processus pour permettre aux développeurs de déployer des applications web dans Azure App Services.</span><span class="sxs-lookup"><span data-stu-id="e1568-105">The Maven Plugin for Azure Web Apps for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service  into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
 > 
-> <span data-ttu-id="b904c-106">Le plug-in Maven pour Azure Web Apps est actuellement disponible en version préliminaire.</span><span class="sxs-lookup"><span data-stu-id="b904c-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="b904c-107">Pour l’instant, seule la publication FTP est prise en charge, mais des fonctionnalités supplémentaires sont envisagées pour le futur.</span><span class="sxs-lookup"><span data-stu-id="b904c-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
+> <span data-ttu-id="e1568-106">Le plug-in Maven pour Azure Web Apps est actuellement disponible en version préliminaire.</span><span class="sxs-lookup"><span data-stu-id="e1568-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="e1568-107">Pour l’instant, seule la publication FTP est prise en charge, mais des fonctionnalités supplémentaires sont envisagées pour le futur.</span><span class="sxs-lookup"><span data-stu-id="e1568-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
 > 
 
-## <a name="prerequisites"></a><span data-ttu-id="b904c-108">Prérequis</span><span class="sxs-lookup"><span data-stu-id="b904c-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="e1568-108">Prérequis</span><span class="sxs-lookup"><span data-stu-id="e1568-108">Prerequisites</span></span>
 
-<span data-ttu-id="b904c-109">Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="b904c-109">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
+<span data-ttu-id="e1568-109">Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="e1568-109">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
 
-* <span data-ttu-id="b904c-110">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [Avantages pour les abonnés MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="b904c-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="b904c-111">[Azure CLI].</span><span class="sxs-lookup"><span data-stu-id="b904c-111">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="b904c-112">Un [Java Development Kit (JDK)] à jour, version 1.7 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="b904c-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
-* <span data-ttu-id="b904c-113">L’outil de génération [Maven] (version 3) d’Apache.</span><span class="sxs-lookup"><span data-stu-id="b904c-113">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="b904c-114">Un [Git].</span><span class="sxs-lookup"><span data-stu-id="b904c-114">A [Git] client.</span></span>
-* <span data-ttu-id="b904c-115">Un [Docker].</span><span class="sxs-lookup"><span data-stu-id="b904c-115">A [Docker] client.</span></span>
+* <span data-ttu-id="e1568-110">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="e1568-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="e1568-111">[Azure CLI].</span><span class="sxs-lookup"><span data-stu-id="e1568-111">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="e1568-112">Un [Java Development Kit (JDK)] à jour, version 1.7 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="e1568-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
+* <span data-ttu-id="e1568-113">L’outil de génération [Maven] (version 3) d’Apache.</span><span class="sxs-lookup"><span data-stu-id="e1568-113">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="e1568-114">Un [Git].</span><span class="sxs-lookup"><span data-stu-id="e1568-114">A [Git] client.</span></span>
+* <span data-ttu-id="e1568-115">Un [Docker].</span><span class="sxs-lookup"><span data-stu-id="e1568-115">A [Docker] client.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="b904c-116">En raison des nécessités liées à la virtualisation de ce didacticiel, vous ne pouvez pas suivre les étapes de cet article sur une machine virtuelle : vous devez utiliser un ordinateur physique où les fonctionnalités de virtualisation sont activées.</span><span class="sxs-lookup"><span data-stu-id="b904c-116">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
+> <span data-ttu-id="e1568-116">En raison des nécessités liées à la virtualisation de ce didacticiel, vous ne pouvez pas suivre les étapes de cet article sur une machine virtuelle : vous devez utiliser un ordinateur physique où les fonctionnalités de virtualisation sont activées.</span><span class="sxs-lookup"><span data-stu-id="e1568-116">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
 >
 
-## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a><span data-ttu-id="b904c-117">Cloner l’exemple Spring Boot sur l’application web Docker</span><span class="sxs-lookup"><span data-stu-id="b904c-117">Clone the sample Spring Boot on Docker web app</span></span>
+## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a><span data-ttu-id="e1568-117">Cloner l’exemple Spring Boot sur l’application web Docker</span><span class="sxs-lookup"><span data-stu-id="e1568-117">Clone the sample Spring Boot on Docker web app</span></span>
 
-<span data-ttu-id="b904c-118">Dans cette section, vous clonez une application Spring Boot en conteneur et vous la testez localement.</span><span class="sxs-lookup"><span data-stu-id="b904c-118">In this section, you clone a containerized Spring Boot application and test it locally.</span></span>
+<span data-ttu-id="e1568-118">Dans cette section, vous clonez une application Spring Boot en conteneur et vous la testez localement.</span><span class="sxs-lookup"><span data-stu-id="e1568-118">In this section, you clone a containerized Spring Boot application and test it locally.</span></span>
 
-1. <span data-ttu-id="b904c-119">Ouvrez une invite de commandes ou une fenêtre de terminal et créez un répertoire local pour y stocker votre application Spring Boot, puis accédez à ce répertoire. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-119">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
+1. <span data-ttu-id="e1568-119">Ouvrez une invite de commandes ou une fenêtre de terminal et créez un répertoire local pour y stocker votre application Spring Boot, puis accédez à ce répertoire. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-119">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   <span data-ttu-id="b904c-120">- ou -</span><span class="sxs-lookup"><span data-stu-id="b904c-120">-- or --</span></span>
+   <span data-ttu-id="e1568-120">- ou -</span><span class="sxs-lookup"><span data-stu-id="e1568-120">-- or --</span></span>
    ```shell
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
-1. <span data-ttu-id="b904c-121">Clonez l’exemple de projet [Spring Boot on Docker Getting Started] dans le répertoire que vous venez de créer. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-121">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
+1. <span data-ttu-id="e1568-121">Clonez l’exemple de projet [Spring Boot on Docker Getting Started] dans le répertoire que vous venez de créer. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-121">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
    ```shell
    git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
-1. <span data-ttu-id="b904c-122">Accédez au répertoire du projet terminé. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-122">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="e1568-122">Accédez au répertoire du projet terminé. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-122">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot-docker/complete
    ```
 
-1. <span data-ttu-id="b904c-123">Générez le fichier JAR en utilisant Maven. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-123">Build the JAR file using Maven; for example:</span></span>
+1. <span data-ttu-id="e1568-123">Générez le fichier JAR en utilisant Maven. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-123">Build the JAR file using Maven; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="b904c-124">Lorsque l’application web a été créée, démarrez l’application web à l’aide de Maven ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-124">When the web app has been created, start the web app using Maven; for example:</span></span>
+1. <span data-ttu-id="e1568-124">Lorsque l’application web a été créée, démarrez l’application web à l’aide de Maven ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-124">When the web app has been created, start the web app using Maven; for example:</span></span>
    ```shell
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="b904c-125">Testez l’application web en y accédant localement via un navigateur web.</span><span class="sxs-lookup"><span data-stu-id="b904c-125">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="b904c-126">Par exemple, vous pouvez utiliser la commande suivante si curl est disponible :</span><span class="sxs-lookup"><span data-stu-id="b904c-126">For example, you could use the following command if you have curl available:</span></span>
+1. <span data-ttu-id="e1568-125">Testez l’application web en y accédant localement via un navigateur web.</span><span class="sxs-lookup"><span data-stu-id="e1568-125">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="e1568-126">Par exemple, vous pouvez utiliser la commande suivante si curl est disponible :</span><span class="sxs-lookup"><span data-stu-id="e1568-126">For example, you could use the following command if you have curl available:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-1. <span data-ttu-id="b904c-127">Vous devez normalement voir le message suivant : **Hello Docker World**</span><span class="sxs-lookup"><span data-stu-id="b904c-127">You should see the following message displayed: **Hello Docker World**</span></span>
+1. <span data-ttu-id="e1568-127">Vous devez normalement voir le message suivant : **Hello Docker World**</span><span class="sxs-lookup"><span data-stu-id="e1568-127">You should see the following message displayed: **Hello Docker World**</span></span>
 
    ![Parcourir l’exemple d’application en local][SB01]
 
 > [!NOTE]
 >
-> <span data-ttu-id="b904c-129">Lorsque vous utilisez Docker en local, vous pouvez rencontrer une erreur indiquant que la connexion à l’hôte local sur le port 2375 est impossible.</span><span class="sxs-lookup"><span data-stu-id="b904c-129">When you are using Docker locally, you may see an error which states that you cannot connect to localhost on port 2375.</span></span> <span data-ttu-id="b904c-130">Si cela se produit, autorisez l’utilisation de Docker en local sans TLS.</span><span class="sxs-lookup"><span data-stu-id="b904c-130">If this happens, you may need to enable using Docker locally without TLS.</span></span> <span data-ttu-id="b904c-131">Pour ce faire, ouvrez les paramètres de Docker et cochez l’option **Exposer Docker Daemon sur le port TCP://localhost:2375 sans TLS**.</span><span class="sxs-lookup"><span data-stu-id="b904c-131">To do so, open your Docker settings and check the option to **Expose daemon on TCP://localhost:2375 without TLS**.</span></span>
+> <span data-ttu-id="e1568-129">Lorsque vous utilisez Docker en local, vous pouvez rencontrer une erreur indiquant que la connexion à l’hôte local sur le port 2375 est impossible.</span><span class="sxs-lookup"><span data-stu-id="e1568-129">When you are using Docker locally, you may see an error which states that you cannot connect to localhost on port 2375.</span></span> <span data-ttu-id="e1568-130">Si cela se produit, autorisez l’utilisation de Docker en local sans TLS.</span><span class="sxs-lookup"><span data-stu-id="e1568-130">If this happens, you may need to enable using Docker locally without TLS.</span></span> <span data-ttu-id="e1568-131">Pour ce faire, ouvrez les paramètres de Docker et cochez l’option **Exposer Docker Daemon sur le port TCP://localhost:2375 sans TLS**.</span><span class="sxs-lookup"><span data-stu-id="e1568-131">To do so, open your Docker settings and check the option to **Expose daemon on TCP://localhost:2375 without TLS**.</span></span>
 >
 > ![Exposer Docker Daemon sur le port TCP local 2375][TL01]
 
-## <a name="create-an-azure-service-principal"></a><span data-ttu-id="b904c-133">Créer un principal du service Azure</span><span class="sxs-lookup"><span data-stu-id="b904c-133">Create an Azure service principal</span></span>
+## <a name="create-an-azure-service-principal"></a><span data-ttu-id="e1568-133">Créer un principal du service Azure</span><span class="sxs-lookup"><span data-stu-id="e1568-133">Create an Azure service principal</span></span>
 
-<span data-ttu-id="b904c-134">Dans cette section, vous créez un principal du service Azure utilisé par le plug-in Maven lors du déploiement de votre conteneur dans Azure.</span><span class="sxs-lookup"><span data-stu-id="b904c-134">In this section, you create an Azure service principal that the Maven plugin uses when deploying your container to Azure.</span></span>
+<span data-ttu-id="e1568-134">Dans cette section, vous créez un principal du service Azure utilisé par le plug-in Maven lors du déploiement de votre conteneur dans Azure.</span><span class="sxs-lookup"><span data-stu-id="e1568-134">In this section, you create an Azure service principal that the Maven plugin uses when deploying your container to Azure.</span></span>
 
-1. <span data-ttu-id="b904c-135">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="b904c-135">Open a command prompt.</span></span>
+1. <span data-ttu-id="e1568-135">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="e1568-135">Open a command prompt.</span></span>
 
-2. <span data-ttu-id="b904c-136">Connectez-vous à votre compte Azure à l’aide de l’interface de ligne de commande Azure :</span><span class="sxs-lookup"><span data-stu-id="b904c-136">Sign into your Azure account by using the Azure CLI:</span></span>
+2. <span data-ttu-id="e1568-136">Connectez-vous à votre compte Azure à l’aide de l’interface de ligne de commande Azure :</span><span class="sxs-lookup"><span data-stu-id="e1568-136">Sign into your Azure account by using the Azure CLI:</span></span>
    ```azurecli
    az login
    ```
-   <span data-ttu-id="b904c-137">Suivez les instructions pour terminer le processus de connexion.</span><span class="sxs-lookup"><span data-stu-id="b904c-137">Follow the instructions to complete the sign-in process.</span></span>
+   <span data-ttu-id="e1568-137">Suivez les instructions pour terminer le processus de connexion.</span><span class="sxs-lookup"><span data-stu-id="e1568-137">Follow the instructions to complete the sign-in process.</span></span>
 
-3. <span data-ttu-id="b904c-138">Créez un principal du service Azure :</span><span class="sxs-lookup"><span data-stu-id="b904c-138">Create an Azure service principal:</span></span>
+3. <span data-ttu-id="e1568-138">Créez un principal du service Azure :</span><span class="sxs-lookup"><span data-stu-id="e1568-138">Create an Azure service principal:</span></span>
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   <span data-ttu-id="b904c-139">Où :</span><span class="sxs-lookup"><span data-stu-id="b904c-139">Where:</span></span>
+   <span data-ttu-id="e1568-139">Où :</span><span class="sxs-lookup"><span data-stu-id="e1568-139">Where:</span></span>
 
-   | <span data-ttu-id="b904c-140">Paramètre</span><span class="sxs-lookup"><span data-stu-id="b904c-140">Parameter</span></span>  |                    <span data-ttu-id="b904c-141">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-141">Description</span></span>                     |
+   | <span data-ttu-id="e1568-140">Paramètre</span><span class="sxs-lookup"><span data-stu-id="e1568-140">Parameter</span></span>  |                    <span data-ttu-id="e1568-141">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-141">Description</span></span>                     |
    |------------|----------------------------------------------------|
-   | `uuuuuuuu` | <span data-ttu-id="b904c-142">Spécifie le nom d’utilisateur pour le principal de service.</span><span class="sxs-lookup"><span data-stu-id="b904c-142">Specifies the user name for the service principal.</span></span> |
-   | `pppppppp` | <span data-ttu-id="b904c-143">Spécifie le mot de passe pour le principal de service.</span><span class="sxs-lookup"><span data-stu-id="b904c-143">Specifies the password for the service principal.</span></span>  |
+   | `uuuuuuuu` | <span data-ttu-id="e1568-142">Spécifie le nom d’utilisateur pour le principal de service.</span><span class="sxs-lookup"><span data-stu-id="e1568-142">Specifies the user name for the service principal.</span></span> |
+   | `pppppppp` | <span data-ttu-id="e1568-143">Spécifie le mot de passe pour le principal de service.</span><span class="sxs-lookup"><span data-stu-id="e1568-143">Specifies the password for the service principal.</span></span>  |
 
 
-4. <span data-ttu-id="b904c-144">Azure répond avec un texte JSON similaire à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="b904c-144">Azure responds with JSON that resembles the following example:</span></span>
+4. <span data-ttu-id="e1568-144">Azure répond avec un texte JSON similaire à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="e1568-144">Azure responds with JSON that resembles the following example:</span></span>
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -135,36 +135,36 @@ ms.locfileid: "37090792"
 
    > [!NOTE]
    >
-   > <span data-ttu-id="b904c-145">Vous utiliserez les valeurs de cette réponse JSON lors de la configuration du plug-in Maven pour déployer votre conteneur dans Azure.</span><span class="sxs-lookup"><span data-stu-id="b904c-145">You will use the values from this JSON response when you configure the Maven plugin to deploy your container to Azure.</span></span> <span data-ttu-id="b904c-146">`aaaaaaaa`, `uuuuuuuu`, `pppppppp` et `tttttttt` sont des valeurs d’espace réservé qui sont utilisées dans cet exemple pour faciliter le mappage de ces valeurs avec leurs éléments respectifs lorsque vous configurerez votre fichier `settings.xml` Maven dans la section suivante.</span><span class="sxs-lookup"><span data-stu-id="b904c-146">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
+   > <span data-ttu-id="e1568-145">Vous utiliserez les valeurs de cette réponse JSON lors de la configuration du plug-in Maven pour déployer votre conteneur dans Azure.</span><span class="sxs-lookup"><span data-stu-id="e1568-145">You will use the values from this JSON response when you configure the Maven plugin to deploy your container to Azure.</span></span> <span data-ttu-id="e1568-146">`aaaaaaaa`, `uuuuuuuu`, `pppppppp` et `tttttttt` sont des valeurs d’espace réservé qui sont utilisées dans cet exemple pour faciliter le mappage de ces valeurs avec leurs éléments respectifs lorsque vous configurerez votre fichier `settings.xml` Maven dans la section suivante.</span><span class="sxs-lookup"><span data-stu-id="e1568-146">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
    >
    >
 
-## <a name="create-an-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="b904c-147">Créer un registre de conteneurs Azure à l’aide de l’interface de ligne de commande Azure</span><span class="sxs-lookup"><span data-stu-id="b904c-147">Create an Azure Container Registry using the Azure CLI</span></span>
+## <a name="create-an-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="e1568-147">Créer un registre de conteneurs Azure à l’aide de l’interface de ligne de commande Azure</span><span class="sxs-lookup"><span data-stu-id="e1568-147">Create an Azure Container Registry using the Azure CLI</span></span>
 
-1. <span data-ttu-id="b904c-148">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="b904c-148">Open a command prompt.</span></span>
+1. <span data-ttu-id="e1568-148">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="e1568-148">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="b904c-149">Connectez-vous à votre compte Azure :</span><span class="sxs-lookup"><span data-stu-id="b904c-149">Log in to your Azure account:</span></span>
+1. <span data-ttu-id="e1568-149">Connectez-vous à votre compte Azure :</span><span class="sxs-lookup"><span data-stu-id="e1568-149">Log in to your Azure account:</span></span>
    ```azurecli
    az login
    ```
 
-1. <span data-ttu-id="b904c-150">Créez un groupe de ressources pour les ressources Azure que vous utiliserez dans cet article :</span><span class="sxs-lookup"><span data-stu-id="b904c-150">Create a resource group for the Azure resources you will use in this article:</span></span>
+1. <span data-ttu-id="e1568-150">Créez un groupe de ressources pour les ressources Azure que vous utiliserez dans cet article :</span><span class="sxs-lookup"><span data-stu-id="e1568-150">Create a resource group for the Azure resources you will use in this article:</span></span>
    ```azurecli
    az group create --name=wingtiptoysresources --location=westus
    ```
-   <span data-ttu-id="b904c-151">Remplacez `wingtiptoysresources` dans cet exemple par un nom unique pour votre groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="b904c-151">Replace `wingtiptoysresources` in this example with a unique name for your resource group.</span></span>
+   <span data-ttu-id="e1568-151">Remplacez `wingtiptoysresources` dans cet exemple par un nom unique pour votre groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="e1568-151">Replace `wingtiptoysresources` in this example with a unique name for your resource group.</span></span>
 
-1. <span data-ttu-id="b904c-152">Créez un registre de conteneurs Azure privé dans le groupe de ressources pour votre application Spring Boot :</span><span class="sxs-lookup"><span data-stu-id="b904c-152">Create a private Azure container registry in the resource group for your Spring Boot app:</span></span> 
+1. <span data-ttu-id="e1568-152">Créez un registre de conteneurs Azure privé dans le groupe de ressources pour votre application Spring Boot :</span><span class="sxs-lookup"><span data-stu-id="e1568-152">Create a private Azure container registry in the resource group for your Spring Boot app:</span></span> 
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoysresources --location westus --name wingtiptoysregistry --sku Basic
    ```
-   <span data-ttu-id="b904c-153">Remplacez `wingtiptoysregistry` dans cet exemple par un nom unique pour votre registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="b904c-153">Replace `wingtiptoysregistry` in this example with a unique name for your container registry.</span></span>
+   <span data-ttu-id="e1568-153">Remplacez `wingtiptoysregistry` dans cet exemple par un nom unique pour votre registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="e1568-153">Replace `wingtiptoysregistry` in this example with a unique name for your container registry.</span></span>
 
-1. <span data-ttu-id="b904c-154">Récupérez le mot de passe pour votre registre de conteneurs :</span><span class="sxs-lookup"><span data-stu-id="b904c-154">Retrieve the password for your container registry:</span></span>
+1. <span data-ttu-id="e1568-154">Récupérez le mot de passe pour votre registre de conteneurs :</span><span class="sxs-lookup"><span data-stu-id="e1568-154">Retrieve the password for your container registry:</span></span>
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
-   <span data-ttu-id="b904c-155">Azure répond avec votre mot de passe ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-155">Azure will respond with your password; for example:</span></span>
+   <span data-ttu-id="e1568-155">Azure répond avec votre mot de passe ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-155">Azure will respond with your password; for example:</span></span>
    ```json
    {
       "name": "password",
@@ -172,14 +172,14 @@ ms.locfileid: "37090792"
    }
    ```
 
-## <a name="add-your-azure-container-registry-and-azure-service-principal-to-your-maven-settings"></a><span data-ttu-id="b904c-156">Ajouter votre registre de conteneurs Azure et votre principal du service Azure à vos paramètres Maven</span><span class="sxs-lookup"><span data-stu-id="b904c-156">Add your Azure container registry and Azure service principal to your Maven settings</span></span>
+## <a name="add-your-azure-container-registry-and-azure-service-principal-to-your-maven-settings"></a><span data-ttu-id="e1568-156">Ajouter votre registre de conteneurs Azure et votre principal du service Azure à vos paramètres Maven</span><span class="sxs-lookup"><span data-stu-id="e1568-156">Add your Azure container registry and Azure service principal to your Maven settings</span></span>
 
-1. <span data-ttu-id="b904c-157">Ouvrez votre fichier `settings.xml` Maven dans un éditeur de texte ; ce fichier peut avoir un chemin d’accès similaire aux exemples suivants :</span><span class="sxs-lookup"><span data-stu-id="b904c-157">Open your Maven `settings.xml` file in a text editor; this file might be in a path like the following examples:</span></span>
+1. <span data-ttu-id="e1568-157">Ouvrez votre fichier `settings.xml` Maven dans un éditeur de texte ; ce fichier peut avoir un chemin d’accès similaire aux exemples suivants :</span><span class="sxs-lookup"><span data-stu-id="e1568-157">Open your Maven `settings.xml` file in a text editor; this file might be in a path like the following examples:</span></span>
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-2. <span data-ttu-id="b904c-158">Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-158">Add your Azure Container Registry access settings from the previous section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
+2. <span data-ttu-id="e1568-158">Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-158">Add your Azure Container Registry access settings from the previous section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
 
    ```xml
    <servers>
@@ -190,16 +190,16 @@ ms.locfileid: "37090792"
       </server>
    </servers>
    ```
-   <span data-ttu-id="b904c-159">Où :</span><span class="sxs-lookup"><span data-stu-id="b904c-159">Where:</span></span>
+   <span data-ttu-id="e1568-159">Où :</span><span class="sxs-lookup"><span data-stu-id="e1568-159">Where:</span></span>
 
-   |   <span data-ttu-id="b904c-160">Élément</span><span class="sxs-lookup"><span data-stu-id="b904c-160">Element</span></span>    |                                 <span data-ttu-id="b904c-161">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-161">Description</span></span>                                  |
+   |   <span data-ttu-id="e1568-160">Élément</span><span class="sxs-lookup"><span data-stu-id="e1568-160">Element</span></span>    |                                 <span data-ttu-id="e1568-161">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-161">Description</span></span>                                  |
    |--------------|------------------------------------------------------------------------------|
-   |    `<id>`    |         <span data-ttu-id="b904c-162">Contient le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-162">Contains the name of your private Azure container registry.</span></span>          |
-   | `<username>` |         <span data-ttu-id="b904c-163">Contient le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-163">Contains the name of your private Azure container registry.</span></span>          |
-   | `<password>` | <span data-ttu-id="b904c-164">Contient le mot de passe que vous avez récupéré dans la section précédente de cet article.</span><span class="sxs-lookup"><span data-stu-id="b904c-164">Contains the password you retrieved in the previous section of this article.</span></span> |
+   |    `<id>`    |         <span data-ttu-id="e1568-162">Contient le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-162">Contains the name of your private Azure container registry.</span></span>          |
+   | `<username>` |         <span data-ttu-id="e1568-163">Contient le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-163">Contains the name of your private Azure container registry.</span></span>          |
+   | `<password>` | <span data-ttu-id="e1568-164">Contient le mot de passe que vous avez récupéré dans la section précédente de cet article.</span><span class="sxs-lookup"><span data-stu-id="e1568-164">Contains the password you retrieved in the previous section of this article.</span></span> |
 
 
-3. <span data-ttu-id="b904c-165">Ajoutez vos paramètres du principal de service Azure d’une section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-165">Add your Azure service principal settings from an earlier section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
+3. <span data-ttu-id="e1568-165">Ajoutez vos paramètres du principal de service Azure d’une section précédente de cet article à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-165">Add your Azure service principal settings from an earlier section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
 
    ```xml
    <servers>
@@ -214,24 +214,24 @@ ms.locfileid: "37090792"
       </server>
    </servers>
    ```
-   <span data-ttu-id="b904c-166">Où :</span><span class="sxs-lookup"><span data-stu-id="b904c-166">Where:</span></span>
+   <span data-ttu-id="e1568-166">Où :</span><span class="sxs-lookup"><span data-stu-id="e1568-166">Where:</span></span>
 
-   |     <span data-ttu-id="b904c-167">Élément</span><span class="sxs-lookup"><span data-stu-id="b904c-167">Element</span></span>     |                                                                                   <span data-ttu-id="b904c-168">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-168">Description</span></span>                                                                                   |
+   |     <span data-ttu-id="e1568-167">Élément</span><span class="sxs-lookup"><span data-stu-id="e1568-167">Element</span></span>     |                                                                                   <span data-ttu-id="e1568-168">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-168">Description</span></span>                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |     `<id>`      |                                <span data-ttu-id="b904c-169">Spécifie un nom unique que Maven utilise pour rechercher vos paramètres de sécurité lorsque vous déployez votre application web dans Azure.</span><span class="sxs-lookup"><span data-stu-id="b904c-169">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span>                                |
-   |   `<client>`    |                                                             <span data-ttu-id="b904c-170">Contient la valeur `appId` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="b904c-170">Contains the `appId` value from your service principal.</span></span>                                                             |
-   |   `<tenant>`    |                                                            <span data-ttu-id="b904c-171">Contient la valeur `tenant` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="b904c-171">Contains the `tenant` value from your service principal.</span></span>                                                             |
-   |     `<key>`     |                                                           <span data-ttu-id="b904c-172">Contient la valeur `password` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="b904c-172">Contains the `password` value from your service principal.</span></span>                                                            |
-   | `<environment>` | <span data-ttu-id="b904c-173">Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="b904c-173">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="b904c-174">(Une liste complète des environnements est disponible dans la documentation [Plug-in Maven pour Azure Web Apps])</span><span class="sxs-lookup"><span data-stu-id="b904c-174">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation)</span></span> |
+   |     `<id>`      |                                <span data-ttu-id="e1568-169">Spécifie un nom unique que Maven utilise pour rechercher vos paramètres de sécurité lorsque vous déployez votre application web dans Azure.</span><span class="sxs-lookup"><span data-stu-id="e1568-169">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span>                                |
+   |   `<client>`    |                                                             <span data-ttu-id="e1568-170">Contient la valeur `appId` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="e1568-170">Contains the `appId` value from your service principal.</span></span>                                                             |
+   |   `<tenant>`    |                                                            <span data-ttu-id="e1568-171">Contient la valeur `tenant` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="e1568-171">Contains the `tenant` value from your service principal.</span></span>                                                             |
+   |     `<key>`     |                                                           <span data-ttu-id="e1568-172">Contient la valeur `password` de votre principal du service.</span><span class="sxs-lookup"><span data-stu-id="e1568-172">Contains the `password` value from your service principal.</span></span>                                                            |
+   | `<environment>` | <span data-ttu-id="e1568-173">Définit l’environnement de cloud Azure cible, qui est `AZURE` dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="e1568-173">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="e1568-174">(Une liste complète des environnements est disponible dans la documentation [Plug-in Maven pour Azure Web Apps])</span><span class="sxs-lookup"><span data-stu-id="e1568-174">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation)</span></span> |
 
 
-4. <span data-ttu-id="b904c-175">Enregistrez et fermez le fichier *settings.xml*.</span><span class="sxs-lookup"><span data-stu-id="b904c-175">Save and close the *settings.xml* file.</span></span>
+4. <span data-ttu-id="e1568-175">Enregistrez et fermez le fichier *settings.xml*.</span><span class="sxs-lookup"><span data-stu-id="e1568-175">Save and close the *settings.xml* file.</span></span>
 
-## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a><span data-ttu-id="b904c-176">Créer votre image conteneur Docker et la placer dans votre registre de conteneurs Azure</span><span class="sxs-lookup"><span data-stu-id="b904c-176">Build your Docker container image and push it to your Azure container registry</span></span>
+## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a><span data-ttu-id="e1568-176">Créer votre image conteneur Docker et la placer dans votre registre de conteneurs Azure</span><span class="sxs-lookup"><span data-stu-id="e1568-176">Build your Docker container image and push it to your Azure container registry</span></span>
 
-1. <span data-ttu-id="b904c-177">Accédez au répertoire du projet terminé pour votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */users/robert/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="b904c-177">Navigate to the completed project directory for your Spring Boot application, (e.g. "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="e1568-177">Accédez au répertoire du projet terminé pour votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */users/robert/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="e1568-177">Navigate to the completed project directory for your Spring Boot application, (e.g. "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-2. <span data-ttu-id="b904c-178">Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-178">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
+2. <span data-ttu-id="e1568-178">Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-178">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
 
    ```xml
    <properties>
@@ -241,15 +241,15 @@ ms.locfileid: "37090792"
       <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
    </properties>
    ```
-   <span data-ttu-id="b904c-179">Où :</span><span class="sxs-lookup"><span data-stu-id="b904c-179">Where:</span></span>
+   <span data-ttu-id="e1568-179">Où :</span><span class="sxs-lookup"><span data-stu-id="e1568-179">Where:</span></span>
 
-   |           <span data-ttu-id="b904c-180">Élément</span><span class="sxs-lookup"><span data-stu-id="b904c-180">Element</span></span>           |                                                                       <span data-ttu-id="b904c-181">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-181">Description</span></span>                                                                       |
+   |           <span data-ttu-id="e1568-180">Élément</span><span class="sxs-lookup"><span data-stu-id="e1568-180">Element</span></span>           |                                                                       <span data-ttu-id="e1568-181">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-181">Description</span></span>                                                                       |
    |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | `<azure.containerRegistry>` |                                              <span data-ttu-id="b904c-182">Spécifie le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-182">Specifies the name of your private Azure container registry.</span></span>                                               |
-   |   `<docker.image.prefix>`   | <span data-ttu-id="b904c-183">Spécifie l’URL de votre registre de conteneurs Azure privé qui est obtenue en ajoutant « .azurecr.io » au nom de votre registre de conteneurs privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-183">Specifies the URL of your private Azure container registry, which is derived by appending ".azurecr.io" to the name of your private container registry.</span></span> |
+   | `<azure.containerRegistry>` |                                              <span data-ttu-id="e1568-182">Spécifie le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-182">Specifies the name of your private Azure container registry.</span></span>                                               |
+   |   `<docker.image.prefix>`   | <span data-ttu-id="e1568-183">Spécifie l’URL de votre registre de conteneurs Azure privé qui est obtenue en ajoutant « .azurecr.io » au nom de votre registre de conteneurs privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-183">Specifies the URL of your private Azure container registry, which is derived by appending ".azurecr.io" to the name of your private container registry.</span></span> |
 
 
-3. <span data-ttu-id="b904c-184">Vérifiez que `<plugin>` pour le plug-in Docker dans votre fichier *pom.xml* contient les propriétés appropriées de connexion pour l’adresse du serveur et le nom du registre mentionnées à l’étape précédente de ce didacticiel.</span><span class="sxs-lookup"><span data-stu-id="b904c-184">Verify that `<plugin>` for the Docker plugin in your *pom.xml* file contains the correct properties for the login server address and registry name from the previous step in this tutorial.</span></span> <span data-ttu-id="b904c-185">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="b904c-185">For example:</span></span>
+3. <span data-ttu-id="e1568-184">Vérifiez que `<plugin>` pour le plug-in Docker dans votre fichier *pom.xml* contient les propriétés appropriées de connexion pour l’adresse du serveur et le nom du registre mentionnées à l’étape précédente de ce didacticiel.</span><span class="sxs-lookup"><span data-stu-id="e1568-184">Verify that `<plugin>` for the Docker plugin in your *pom.xml* file contains the correct properties for the login server address and registry name from the previous step in this tutorial.</span></span> <span data-ttu-id="e1568-185">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="e1568-185">For example:</span></span>
 
    ```xml
    <plugin>
@@ -271,27 +271,27 @@ ms.locfileid: "37090792"
       </configuration>
    </plugin>
    ```
-   <span data-ttu-id="b904c-186">Où :</span><span class="sxs-lookup"><span data-stu-id="b904c-186">Where:</span></span>
+   <span data-ttu-id="e1568-186">Où :</span><span class="sxs-lookup"><span data-stu-id="e1568-186">Where:</span></span>
 
-   |     <span data-ttu-id="b904c-187">Élément</span><span class="sxs-lookup"><span data-stu-id="b904c-187">Element</span></span>     |                                       <span data-ttu-id="b904c-188">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-188">Description</span></span>                                       |
+   |     <span data-ttu-id="e1568-187">Élément</span><span class="sxs-lookup"><span data-stu-id="e1568-187">Element</span></span>     |                                       <span data-ttu-id="e1568-188">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-188">Description</span></span>                                       |
    |-----------------|-----------------------------------------------------------------------------------------|
-   |  `<serverId>`   |  <span data-ttu-id="b904c-189">Spécifie la propriété contenant le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-189">Specifies the property which contains name of your private Azure container registry.</span></span>   |
-   | `<registryUrl>` | <span data-ttu-id="b904c-190">Spécifie la propriété contenant l’URL de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="b904c-190">Specifies the property which contains the URL of your private Azure container registry.</span></span> |
+   |  `<serverId>`   |  <span data-ttu-id="e1568-189">Spécifie la propriété contenant le nom de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-189">Specifies the property which contains name of your private Azure container registry.</span></span>   |
+   | `<registryUrl>` | <span data-ttu-id="e1568-190">Spécifie la propriété contenant l’URL de votre registre de conteneurs Azure privé.</span><span class="sxs-lookup"><span data-stu-id="e1568-190">Specifies the property which contains the URL of your private Azure container registry.</span></span> |
 
 
-4. <span data-ttu-id="b904c-191">Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :</span><span class="sxs-lookup"><span data-stu-id="b904c-191">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure container registry:</span></span>
+4. <span data-ttu-id="e1568-191">Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :</span><span class="sxs-lookup"><span data-stu-id="e1568-191">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure container registry:</span></span>
 
    ```
    mvn package docker:build -DpushImage 
    ```
 
-5. <span data-ttu-id="b904c-192">FACULTATIF : accédez au [portail Azure] et vérifiez qu’il existe une image de conteneur Docker nommée **gs-spring-boot-docker** dans le registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="b904c-192">OPTIONAL: Browse to the [Azure portal] and verify that there is Docker container image named **gs-spring-boot-docker** in your container registry.</span></span>
+5. <span data-ttu-id="e1568-192">FACULTATIF : accédez au [portail Azure] et vérifiez qu’il existe une image de conteneur Docker nommée **gs-spring-boot-docker** dans le registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="e1568-192">OPTIONAL: Browse to the [Azure portal] and verify that there is Docker container image named **gs-spring-boot-docker** in your container registry.</span></span>
 
    ![Vérification du conteneur dans le portail Azure][CR01]
 
-## <a name="customize-your-pomxml-then-build-and-deploy-your-container-to-azure"></a><span data-ttu-id="b904c-194">Personnaliser votre pom.xml, puis créer et déployer votre conteneur dans Azure</span><span class="sxs-lookup"><span data-stu-id="b904c-194">Customize your pom.xml, then build and deploy your container to Azure</span></span>
+## <a name="customize-your-pomxml-then-build-and-deploy-your-container-to-azure"></a><span data-ttu-id="e1568-194">Personnaliser votre pom.xml, puis créer et déployer votre conteneur dans Azure</span><span class="sxs-lookup"><span data-stu-id="e1568-194">Customize your pom.xml, then build and deploy your container to Azure</span></span>
 
-<span data-ttu-id="b904c-195">Ouvrez le fichier `pom.xml` de votre application Spring Boot dans un éditeur de texte et recherchez l’élément `<plugin>` pour `azure-webapp-maven-plugin`.</span><span class="sxs-lookup"><span data-stu-id="b904c-195">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="b904c-196">Cet élément doit ressembler à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="b904c-196">This element should resemble the following example:</span></span>
+<span data-ttu-id="e1568-195">Ouvrez le fichier `pom.xml` de votre application Spring Boot dans un éditeur de texte et recherchez l’élément `<plugin>` pour `azure-webapp-maven-plugin`.</span><span class="sxs-lookup"><span data-stu-id="e1568-195">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="e1568-196">Cet élément doit ressembler à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="e1568-196">This element should resemble the following example:</span></span>
 
    ```xml
    <plugin>
@@ -320,38 +320,38 @@ ms.locfileid: "37090792"
    </plugin>
    ```
 
-<span data-ttu-id="b904c-197">Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Plug-in Maven pour Azure Web Apps] (Plug-in Maven pour Azure Web Apps).</span><span class="sxs-lookup"><span data-stu-id="b904c-197">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="b904c-198">Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :</span><span class="sxs-lookup"><span data-stu-id="b904c-198">That being said, there are several values that are worth highlighting in this article:</span></span>
+<span data-ttu-id="e1568-197">Il existe plusieurs valeurs que vous pouvez modifier pour le plug-in Maven ; une description détaillée de chacun de ces éléments est disponible dans la documentation [Plug-in Maven pour Azure Web Apps] (Plug-in Maven pour Azure Web Apps).</span><span class="sxs-lookup"><span data-stu-id="e1568-197">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="e1568-198">Cela dit, il s’avère intéressant de souligner plusieurs valeurs dans cet article :</span><span class="sxs-lookup"><span data-stu-id="e1568-198">That being said, there are several values that are worth highlighting in this article:</span></span>
 
-| <span data-ttu-id="b904c-199">Élément</span><span class="sxs-lookup"><span data-stu-id="b904c-199">Element</span></span> | <span data-ttu-id="b904c-200">Description</span><span class="sxs-lookup"><span data-stu-id="b904c-200">Description</span></span> |
+| <span data-ttu-id="e1568-199">Élément</span><span class="sxs-lookup"><span data-stu-id="e1568-199">Element</span></span> | <span data-ttu-id="e1568-200">Description</span><span class="sxs-lookup"><span data-stu-id="e1568-200">Description</span></span> |
 |---|---|
-| `<version>` | <span data-ttu-id="b904c-201">Spécifie la version du [plug-in Maven pour Azure Web Apps].</span><span class="sxs-lookup"><span data-stu-id="b904c-201">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="b904c-202">Vous devez vérifier la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente.</span><span class="sxs-lookup"><span data-stu-id="b904c-202">You should check the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
-| `<authentication>` | <span data-ttu-id="b904c-203">Spécifie les informations d’authentification pour Azure, qui dans cet exemple comportent un élément `<serverId>` contenant `azure-auth` ; Maven utilise cette valeur pour rechercher les valeurs du principal du service Azure dans votre fichier *settings.xml* Maven que vous avez défini dans une section précédente de cet article.</span><span class="sxs-lookup"><span data-stu-id="b904c-203">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
-| `<resourceGroup>` | <span data-ttu-id="b904c-204">Spécifie le groupe de ressources cible, qui est `wingtiptoysresources` dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="b904c-204">Specifies the target resource group, which is `wingtiptoysresources` in this example.</span></span> <span data-ttu-id="b904c-205">Il sera créé au cours du déploiement s’il n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="b904c-205">The resource group will be created during deployment if it does not already exist.</span></span> |
-| `<appName>` | <span data-ttu-id="b904c-206">Spécifie le nom cible de votre application web.</span><span class="sxs-lookup"><span data-stu-id="b904c-206">Specifies the target name for your web app.</span></span> <span data-ttu-id="b904c-207">Dans cet exemple, le nom cible est `maven-linux-app-${maven.build.timestamp}`, où le suffixe `${maven.build.timestamp}` est ajouté dans cet exemple pour éviter tout conflit.</span><span class="sxs-lookup"><span data-stu-id="b904c-207">In this example, the target name is `maven-linux-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="b904c-208">(L’horodatage est facultatif ; vous pouvez spécifier n’importe quelle chaîne unique pour le nom de l’application.)</span><span class="sxs-lookup"><span data-stu-id="b904c-208">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
-| `<region>` | <span data-ttu-id="b904c-209">Spécifie la région cible, qui dans cet exemple est `westus`.</span><span class="sxs-lookup"><span data-stu-id="b904c-209">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="b904c-210">(Une liste complète est disponible dans la documentation [Plug-in Maven pour Azure Web Apps].)</span><span class="sxs-lookup"><span data-stu-id="b904c-210">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<containerSettings>` | <span data-ttu-id="b904c-211">Spécifie les propriétés qui contiennent le nom et l’URL de votre conteneur.</span><span class="sxs-lookup"><span data-stu-id="b904c-211">Specifies the properties which contain the name and URL of your container.</span></span> |
-| `<appSettings>` | <span data-ttu-id="b904c-212">Spécifie des paramètres uniques que Maven utilisera lors du déploiement de votre application web dans Azure.</span><span class="sxs-lookup"><span data-stu-id="b904c-212">Specifies any unique settings for Maven to use when deploying your web app to Azure.</span></span> <span data-ttu-id="b904c-213">Dans cet exemple, un élément `<property>` contient une paire nom/valeur d’éléments enfants qui spécifie le port pour votre application.</span><span class="sxs-lookup"><span data-stu-id="b904c-213">In this example, a `<property>` element contains a name/value pair of child elements that specify the port for your app.</span></span> |
+| `<version>` | <span data-ttu-id="e1568-201">Spécifie la version du [plug-in Maven pour Azure Web Apps].</span><span class="sxs-lookup"><span data-stu-id="e1568-201">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="e1568-202">Vous devez vérifier la version répertoriée dans le [référentiel Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) pour vous assurer que vous utilisez la version la plus récente.</span><span class="sxs-lookup"><span data-stu-id="e1568-202">You should check the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
+| `<authentication>` | <span data-ttu-id="e1568-203">Spécifie les informations d’authentification pour Azure, qui dans cet exemple comportent un élément `<serverId>` contenant `azure-auth` ; Maven utilise cette valeur pour rechercher les valeurs du principal du service Azure dans votre fichier *settings.xml* Maven que vous avez défini dans une section précédente de cet article.</span><span class="sxs-lookup"><span data-stu-id="e1568-203">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
+| `<resourceGroup>` | <span data-ttu-id="e1568-204">Spécifie le groupe de ressources cible, qui est `wingtiptoysresources` dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="e1568-204">Specifies the target resource group, which is `wingtiptoysresources` in this example.</span></span> <span data-ttu-id="e1568-205">Il sera créé au cours du déploiement s’il n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="e1568-205">The resource group will be created during deployment if it does not already exist.</span></span> |
+| `<appName>` | <span data-ttu-id="e1568-206">Spécifie le nom cible de votre application web.</span><span class="sxs-lookup"><span data-stu-id="e1568-206">Specifies the target name for your web app.</span></span> <span data-ttu-id="e1568-207">Dans cet exemple, le nom cible est `maven-linux-app-${maven.build.timestamp}`, où le suffixe `${maven.build.timestamp}` est ajouté dans cet exemple pour éviter tout conflit.</span><span class="sxs-lookup"><span data-stu-id="e1568-207">In this example, the target name is `maven-linux-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="e1568-208">(L’horodatage est facultatif ; vous pouvez spécifier n’importe quelle chaîne unique pour le nom de l’application.)</span><span class="sxs-lookup"><span data-stu-id="e1568-208">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
+| `<region>` | <span data-ttu-id="e1568-209">Spécifie la région cible, qui dans cet exemple est `westus`.</span><span class="sxs-lookup"><span data-stu-id="e1568-209">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="e1568-210">(Une liste complète est disponible dans la documentation [Plug-in Maven pour Azure Web Apps].)</span><span class="sxs-lookup"><span data-stu-id="e1568-210">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<containerSettings>` | <span data-ttu-id="e1568-211">Spécifie les propriétés qui contiennent le nom et l’URL de votre conteneur.</span><span class="sxs-lookup"><span data-stu-id="e1568-211">Specifies the properties which contain the name and URL of your container.</span></span> |
+| `<appSettings>` | <span data-ttu-id="e1568-212">Spécifie des paramètres uniques que Maven utilisera lors du déploiement de votre application web dans Azure.</span><span class="sxs-lookup"><span data-stu-id="e1568-212">Specifies any unique settings for Maven to use when deploying your web app to Azure.</span></span> <span data-ttu-id="e1568-213">Dans cet exemple, un élément `<property>` contient une paire nom/valeur d’éléments enfants qui spécifie le port pour votre application.</span><span class="sxs-lookup"><span data-stu-id="e1568-213">In this example, a `<property>` element contains a name/value pair of child elements that specify the port for your app.</span></span> |
 
 > [!NOTE]
 >
-> <span data-ttu-id="b904c-214">Les paramètres de modification du numéro de port fournis dans cet exemple sont nécessaires uniquement lorsque vous modifiez le port à partir de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="b904c-214">The settings to change the port number in this example are only necessary when you are changing the port from the default.</span></span>
+> <span data-ttu-id="e1568-214">Les paramètres de modification du numéro de port fournis dans cet exemple sont nécessaires uniquement lorsque vous modifiez le port à partir de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="e1568-214">The settings to change the port number in this example are only necessary when you are changing the port from the default.</span></span>
 >
 
-1. <span data-ttu-id="b904c-215">À partir de l’invite de commandes ou de la fenêtre de terminal que vous utilisiez précédemment, régénérez le fichier JAR à l’aide de Maven si vous avez apporté des modifications au fichier *pom.xml* ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-215">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
+1. <span data-ttu-id="e1568-215">À partir de l’invite de commandes ou de la fenêtre de terminal que vous utilisiez précédemment, régénérez le fichier JAR à l’aide de Maven si vous avez apporté des modifications au fichier *pom.xml* ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-215">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="b904c-216">Déployez votre application web dans Azure à l’aide de Maven ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="b904c-216">Deploy your web app to Azure by using Maven; for example:</span></span>
+1. <span data-ttu-id="e1568-216">Déployez votre application web dans Azure à l’aide de Maven ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="e1568-216">Deploy your web app to Azure by using Maven; for example:</span></span>
    ```shell
    mvn azure-webapp:deploy
    ```
 
-<span data-ttu-id="b904c-217">Maven déploiera votre application web dans Azure. Si l’application web n’existe pas déjà, elle sera créée.</span><span class="sxs-lookup"><span data-stu-id="b904c-217">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
+<span data-ttu-id="e1568-217">Maven déploiera votre application web dans Azure. Si l’application web n’existe pas déjà, elle sera créée.</span><span class="sxs-lookup"><span data-stu-id="e1568-217">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="b904c-218">Si la région que vous spécifiez dans l’élément `<region>` de votre fichier *pom.xml* n’a pas suffisamment de serveurs disponibles lorsque vous démarrez votre déploiement, vous pouvez voir un message d’erreur similaire à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="b904c-218">If the region which you specify in the `<region>` element of your *pom.xml* file does not have enough servers available when you start your deployment, you might see an error similar to the following example:</span></span>
+> <span data-ttu-id="e1568-218">Si la région que vous spécifiez dans l’élément `<region>` de votre fichier *pom.xml* n’a pas suffisamment de serveurs disponibles lorsque vous démarrez votre déploiement, vous pouvez voir un message d’erreur similaire à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="e1568-218">If the region which you specify in the `<region>` element of your *pom.xml* file does not have enough servers available when you start your deployment, you might see an error similar to the following example:</span></span>
 >
 > ```
 > [INFO] Start deploying to Web App maven-linux-app-20170804...
@@ -365,33 +365,33 @@ ms.locfileid: "37090792"
 > [ERROR] Failed to execute goal com.microsoft.azure:azure-webapp-maven-plugin:0.1.3:deploy (default-cli) on project gs-spring-boot-docker: null: MojoExecutionException: CloudException: OnError while emitting onNext value: retrofit2.Response.class
 > ```
 >
-> <span data-ttu-id="b904c-219">Dans ce cas, vous pouvez spécifier une autre région et ré-exécuter la commande Maven pour déployer votre application.</span><span class="sxs-lookup"><span data-stu-id="b904c-219">If this happens, you can specify another region and re-run the Maven command to deploy your application.</span></span>
+> <span data-ttu-id="e1568-219">Dans ce cas, vous pouvez spécifier une autre région et ré-exécuter la commande Maven pour déployer votre application.</span><span class="sxs-lookup"><span data-stu-id="e1568-219">If this happens, you can specify another region and re-run the Maven command to deploy your application.</span></span>
 >
 >
 
-<span data-ttu-id="b904c-220">Lorsque votre application web aura été déployée, vous serez en mesure de la gérer à l’aide du [portail Azure].</span><span class="sxs-lookup"><span data-stu-id="b904c-220">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
+<span data-ttu-id="e1568-220">Lorsque votre application web aura été déployée, vous serez en mesure de la gérer à l’aide du [portail Azure].</span><span class="sxs-lookup"><span data-stu-id="e1568-220">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
 
-* <span data-ttu-id="b904c-221">Votre application web s’affichera dans **App Services** :</span><span class="sxs-lookup"><span data-stu-id="b904c-221">Your web app will be listed in **App Services**:</span></span>
+* <span data-ttu-id="e1568-221">Votre application web s’affichera dans **App Services** :</span><span class="sxs-lookup"><span data-stu-id="e1568-221">Your web app will be listed in **App Services**:</span></span>
 
    ![Application web répertoriée dans App Services dans le portail Azure][AP01]
 
-* <span data-ttu-id="b904c-223">Et l’URL de votre application web sera répertoriée dans la **Vue d’ensemble** de votre application web :</span><span class="sxs-lookup"><span data-stu-id="b904c-223">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
+* <span data-ttu-id="e1568-223">Et l’URL de votre application web sera répertoriée dans la **Vue d’ensemble** de votre application web :</span><span class="sxs-lookup"><span data-stu-id="e1568-223">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
 
    ![Détermination de l’URL de votre application web][AP02]
 
-## <a name="next-steps"></a><span data-ttu-id="b904c-225">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="b904c-225">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e1568-225">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="e1568-225">Next steps</span></span>
 
-<span data-ttu-id="b904c-226">Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="b904c-226">For more information about the various technologies discussed in this article, see the following articles:</span></span>
+<span data-ttu-id="e1568-226">Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="e1568-226">For more information about the various technologies discussed in this article, see the following articles:</span></span>
 
-* <span data-ttu-id="b904c-227">[Plug-in Maven pour Azure Web Apps]</span><span class="sxs-lookup"><span data-stu-id="b904c-227">[Maven Plugin for Azure Web Apps]</span></span>
+* <span data-ttu-id="e1568-227">[Plug-in Maven pour Azure Web Apps]</span><span class="sxs-lookup"><span data-stu-id="e1568-227">[Maven Plugin for Azure Web Apps]</span></span>
 
-* [<span data-ttu-id="b904c-228">Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure</span><span class="sxs-lookup"><span data-stu-id="b904c-228">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
+* [<span data-ttu-id="e1568-228">Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure</span><span class="sxs-lookup"><span data-stu-id="e1568-228">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
 
-* [<span data-ttu-id="b904c-229">Créer un principal du service avec Azure CLI 2.0</span><span class="sxs-lookup"><span data-stu-id="b904c-229">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
+* [<span data-ttu-id="e1568-229">Créer un principal du service avec Azure CLI 2.0</span><span class="sxs-lookup"><span data-stu-id="e1568-229">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-* [<span data-ttu-id="b904c-230">Référence des paramètres Maven</span><span class="sxs-lookup"><span data-stu-id="b904c-230">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
+* [<span data-ttu-id="e1568-230">Référence des paramètres Maven</span><span class="sxs-lookup"><span data-stu-id="e1568-230">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
 
-* <span data-ttu-id="b904c-231">[Plug-in Docker pour Maven]</span><span class="sxs-lookup"><span data-stu-id="b904c-231">[Docker plugin for Maven]</span></span>
+* <span data-ttu-id="e1568-231">[Plug-in Docker pour Maven]</span><span class="sxs-lookup"><span data-stu-id="e1568-231">[Docker plugin for Maven]</span></span>
 
 <!-- URL List -->
 
@@ -414,8 +414,9 @@ ms.locfileid: "37090792"
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
-[Avantages pour les abonnés MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
