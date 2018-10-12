@@ -15,15 +15,15 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954730"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893580"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Publier une application Spring Boot en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ
 
-L’[infrastructure Spring] est une solution open source qui aide les développeurs Java à créer des applications d’entreprise. Un des projets les plus connus basés sur cette plateforme est [Spring Boot], qui fournit une approche simplifiée pour la création d’applications Java autonomes.
+L’[Spring Framework] est une solution open source qui aide les développeurs Java à créer des applications d’entreprise. Un des projets les plus connus basés sur cette plateforme est [Spring Boot], qui fournit une approche simplifiée pour la création d’applications Java autonomes.
 
 [Docker] est une solution open source qui aide les développeurs à automatiser le déploiement, la mise à l’échelle et la gestion de leurs applications qui s’exécutent dans des conteneurs.
 
@@ -51,7 +51,7 @@ Les étapes suivantes détaillent la procédure de clonage du référentiel Dock
 
       ![Boîte de dialogue pour la saisie d’un jeton GitHub][CL02b]
 
-1. Entrez **https://github.com/spring-guides/gs-spring-boot-docker.git** pour l’URL du référentiel, spécifiez les informations de votre chemin d’accès local et du dossier, puis cliquez sur **Cloner**.
+1. Entrez **https://github.com/spring-guides/gs-spring-boot-docker.git** pour l’URL du référentiel, spécifiez les informations sur le chemin local et le dossier, puis cliquez sur **Cloner**.
 
    ![Boîte de dialogue Cloner le référentiel][CL03]
 
@@ -215,7 +215,7 @@ IntelliJ doit afficher l’artefact terminé pour votre application Spring Boot 
 
    ![Déploiement réussi de l’hôte Docker][PU06]
 
-## <a name="next-steps"></a>étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur les autres méthodes permettant de créer des applications Spring Boot à l’aide d’IntelliJ, voir [Creating Spring Boot Projects](https://www.jetbrains.com/help/idea/creating-spring-boot-projects.html) (Création de projets Spring Boot) sur le site web de JetBrains.
 
@@ -230,7 +230,7 @@ Pour en savoir plus sur les autres méthodes permettant de créer des applicatio
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[infrastructure Spring]: https://spring.io/
+[Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
 
