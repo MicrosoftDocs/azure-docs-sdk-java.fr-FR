@@ -11,26 +11,26 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: compute
-ms.openlocfilehash: a54bc40e1d28ba6ee1d8b0638cb259adbb69d78d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ea71c556f32a83d59d76b5fed8f3be26229f0cb1
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893040"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799815"
 ---
-# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="02d3d-103">Bibliothèques de machines virtuelle Azure</span><span class="sxs-lookup"><span data-stu-id="02d3d-103">Azure virtual machine libraries</span></span>
+# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="a37d9-103">Bibliothèques de machines virtuelle Azure</span><span class="sxs-lookup"><span data-stu-id="a37d9-103">Azure virtual machine libraries</span></span>
 
-## <a name="overview"></a><span data-ttu-id="02d3d-104">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="02d3d-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="a37d9-104">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="a37d9-104">Overview</span></span>
 
-<span data-ttu-id="02d3d-105">Des ressources de calcul à la demande et évolutives s’exécutant sous Linux et Windows.</span><span class="sxs-lookup"><span data-stu-id="02d3d-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
+<span data-ttu-id="a37d9-105">Des ressources de calcul à la demande et évolutives s’exécutant sous Linux et Windows.</span><span class="sxs-lookup"><span data-stu-id="a37d9-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
 
-<span data-ttu-id="02d3d-106">Pour découvrir les machines virtuelles Azure, consultez la section [Créer une machine virtuelle Linux avec le portail Azure](/azure/virtual-machines/linux/quick-create-portal).</span><span class="sxs-lookup"><span data-stu-id="02d3d-106">To get started with Azure virtual machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
+<span data-ttu-id="a37d9-106">Pour découvrir les machines virtuelles Azure, consultez la section [Créer une machine virtuelle Linux avec le portail Azure](/azure/virtual-machines/linux/quick-create-portal).</span><span class="sxs-lookup"><span data-stu-id="a37d9-106">To get started with Azure virtual machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="02d3d-107">API de gestion</span><span class="sxs-lookup"><span data-stu-id="02d3d-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="a37d9-107">API de gestion</span><span class="sxs-lookup"><span data-stu-id="a37d9-107">Management API</span></span>
 
-<span data-ttu-id="02d3d-108">Créez, configurez et augmentez la taille des instances des machines virtuelles Windows et Linux dans Azure à partir de votre code avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="02d3d-108">Create, configure, and scale out Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
+<span data-ttu-id="a37d9-108">Créez, configurez et augmentez la taille des instances des machines virtuelles Windows et Linux dans Azure à partir de votre code avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="a37d9-108">Create, configure, and scale out Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
 
-<span data-ttu-id="02d3d-109">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="02d3d-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="a37d9-109">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="a37d9-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -41,9 +41,9 @@ ms.locfileid: "48893040"
 ```   
 
 
-## <a name="example"></a><span data-ttu-id="02d3d-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="02d3d-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a37d9-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="a37d9-110">Example</span></span>
 
-<span data-ttu-id="02d3d-111">Créez une machine virtuelle Linux dans un groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="02d3d-111">Create a new Linux virtual machine in a new Azure resource group.</span></span>
+<span data-ttu-id="a37d9-111">Créez une machine virtuelle Linux dans un groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="a37d9-111">Create a new Linux virtual machine in a new Azure resource group.</span></span>
 
 ```java
 VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
@@ -60,16 +60,16 @@ VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="02d3d-112">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="02d3d-112">Explore the Management APIs</span></span>](/java/api/overview/azure/virtualmachines/management)
+> [<span data-ttu-id="a37d9-112">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="a37d9-112">Explore the Management APIs</span></span>](/java/api/overview/azure/virtualmachines/management)
 
 
-## <a name="samples"></a><span data-ttu-id="02d3d-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="02d3d-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="a37d9-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="a37d9-113">Samples</span></span>
 
-<span data-ttu-id="02d3d-114">[Gérer les machines virtuelles][1] </span><span class="sxs-lookup"><span data-stu-id="02d3d-114">[Manage virtual machines][1] </span></span>  
-<span data-ttu-id="02d3d-115">[Gérer des réseaux virtuels][6] </span><span class="sxs-lookup"><span data-stu-id="02d3d-115">[Manage virtual networks][6] </span></span>  
-<span data-ttu-id="02d3d-116">[Créer une machine virtuelle à partir d’une image personnalisée][2] </span><span class="sxs-lookup"><span data-stu-id="02d3d-116">[Create a virtual machine from a custom image][2] </span></span>  
-<span data-ttu-id="02d3d-117">[Créer des machines virtuelles entre des régions en parallèle][5]  </span><span class="sxs-lookup"><span data-stu-id="02d3d-117">[Create virtual machines across regions in parallel][5]  </span></span>  
-<span data-ttu-id="02d3d-118">[Créer un groupe de machines virtuelles identiques avec un équilibreur de charge][7]</span><span class="sxs-lookup"><span data-stu-id="02d3d-118">[Create a virtual machine scale set with a load balancer][7]</span></span>    
+<span data-ttu-id="a37d9-114">[Gérer les machines virtuelles][1] </span><span class="sxs-lookup"><span data-stu-id="a37d9-114">[Manage virtual machines][1] </span></span>  
+<span data-ttu-id="a37d9-115">[Gérer des réseaux virtuels][6] </span><span class="sxs-lookup"><span data-stu-id="a37d9-115">[Manage virtual networks][6] </span></span>  
+<span data-ttu-id="a37d9-116">[Créer une machine virtuelle à partir d’une image personnalisée][2] </span><span class="sxs-lookup"><span data-stu-id="a37d9-116">[Create a virtual machine from a custom image][2] </span></span>  
+<span data-ttu-id="a37d9-117">[Créer des machines virtuelles entre des régions en parallèle][5]  </span><span class="sxs-lookup"><span data-stu-id="a37d9-117">[Create virtual machines across regions in parallel][5]  </span></span>  
+<span data-ttu-id="a37d9-118">[Créer un groupe de machines virtuelles identiques avec un équilibreur de charge][7]</span><span class="sxs-lookup"><span data-stu-id="a37d9-118">[Create a virtual machine scale set with a load balancer][7]</span></span>    
 
 [1]: ../docs-ref-conceptual/java-sdk-manage-virtual-machines.md
 [2]: https://azure.microsoft.com/resources/samples/managed-disk-java-create-virtual-machine-using-custom-image/
@@ -77,4 +77,4 @@ VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
 [6]: ../docs-ref-conceptual/java-sdk-manage-virtual-networks.md
 [7]: ../docs-ref-conceptual/java-sdk-manage-vm-scalesets.md
 
-<span data-ttu-id="02d3d-119">Explorez d’autres [exemples de code Java pour les machines virtuelles Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) que vous pouvez utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="02d3d-119">Explore more [sample Java code for Azure virtual machines](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) you can use in your apps.</span></span>
+<span data-ttu-id="a37d9-119">Explorez d’autres [exemples de code Java pour les machines virtuelles Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) que vous pouvez utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="a37d9-119">Explore more [sample Java code for Azure virtual machines](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) you can use in your apps.</span></span>
