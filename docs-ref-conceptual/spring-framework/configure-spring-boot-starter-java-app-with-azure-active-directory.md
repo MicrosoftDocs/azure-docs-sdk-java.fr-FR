@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047179"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799905"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Comment utiliser Spring Boot Starter pour Azure Active Directory
 
@@ -85,54 +85,54 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
    ![Ajouter une inscription d’application][directory-04]
 
-1. Cliquez sur **Nouvelle inscription d’application**, spécifiez le **Nom** de votre application, utilisez http://localhost:8080 en tant qu’**URL de connexion**, puis cliquez sur **Créer**.
+2. Cliquez sur **Nouvelle inscription d’application**, spécifiez le **Nom** de votre application, utilisez http://localhost:8080 en tant qu’**URL de connexion**, puis cliquez sur **Créer**.
 
    ![Créer une inscription d’application][directory-05]
 
-1. Cliquez sur l’inscription d’application une fois cette dernière créée.
+3. Cliquez sur l’inscription d’application une fois cette dernière créée.
 
    ![Sélectionner votre inscription d’application][directory-06]
 
-1. Lorsque la page pour l’inscription de votre application s’affiche, copiez votre **ID d’application** ; vous utiliserez cette valeur pour configurer votre fichier *application.properties* plus tard dans ce tutoriel. Cliquez sur **Paramètres**, puis sur **Clés**.
+4. Lorsque la page pour l’inscription de votre application s’affiche, copiez votre **ID d’application** ; vous utiliserez cette valeur pour configurer votre fichier *application.properties* plus tard dans ce tutoriel. Cliquez sur **Paramètres**, puis sur **Clés**.
 
    ![Créer des clés d’inscription d’application][directory-07]
 
-1. Ajoutez une **Description**, spécifiez la **Durée** d’une nouvelle clé, puis cliquez sur **Enregistrer** ; la valeur de la clé est automatiquement renseignée lorsque vous cliquez sur l’icône **Enregistrer**, vous devez copier la valeur de la clé pour configurer votre fichier *application.properties* plus tard dans ce tutoriel. (Il ne vous sera pas possible de récupérer cette valeur plus tard.)
+5. Ajoutez une **Description**, spécifiez la **Durée** d’une nouvelle clé, puis cliquez sur **Enregistrer** ; la valeur de la clé est automatiquement renseignée lorsque vous cliquez sur l’icône **Enregistrer**, vous devez copier la valeur de la clé pour configurer votre fichier *application.properties* plus tard dans ce tutoriel. (Il ne vous sera pas possible de récupérer cette valeur plus tard.)
 
    ![Spécifier les paramètres de la clé d’inscription d’application][directory-08]
 
-1. Sur la page principale de votre inscription d’application, cliquez sur **Paramètres** puis sur **Autorisations requises**.
+6. Sur la page principale de votre inscription d’application, cliquez sur **Paramètres** puis sur **Autorisations requises**.
 
    ![Autorisations requises de l’inscription d’application][directory-09]
 
-1. Cliquez sur **Windows Azure Active Directory**.
+7. Cliquez sur **Windows Azure Active Directory**.
 
    ![Sélectionner Windows Azure Active Directory][directory-10]
 
-1. Cochez les cases en regard de **Accéder au répertoire en tant qu’utilisateur actuellement connecté** et **Activer la connexion et lire le profil utilisateur**, puis cliquez sur **Enregistrer**.
+8. Cochez les cases en regard de **Accéder au répertoire en tant qu’utilisateur actuellement connecté** et **Activer la connexion et lire le profil utilisateur**, puis cliquez sur **Enregistrer**.
 
    ![Activer les autorisations d’accès][directory-11]
 
-1. Sur la page **Autorisations requises**, cliquez sur **Accorder les autorisations**, puis cliquez sur **Oui** à l’invite.
+9. Sur la page **Autorisations requises**, cliquez sur **Accorder les autorisations**, puis cliquez sur **Oui** à l’invite.
 
    ![Accorder les autorisations d’accès][directory-12]
 
-1. Sur la page principale de votre inscription d’application, cliquez sur **Paramètres** puis sur **URL de réponse**.
+10. Sur la page principale de votre inscription d’application, cliquez sur **Paramètres** puis sur **URL de réponse**.
 
-   ![Modifier les URL de réponse][directory-14]
+    ![Modifier les URL de réponse][directory-14]
 
-1. Saisissez la nouvelle URL de réponse « http://localhost:8080/login/oauth2/code/azure », puis cliquez sur **Enregistrer**.
+11. Saisissez la nouvelle URL de réponse « <http://localhost:8080/login/oauth2/code/azure> », puis cliquez sur **Enregistrer**.
 
-   ![Ajouter une nouvelle URL de réponse][directory-15]
+    ![Ajouter une nouvelle URL de réponse][directory-15]
 
-1. Dans la page principale de l’inscription de votre application, cliquez sur **Manifeste**, définissez la valeur du paramètre `oauth2AllowImplicitFlow` sur `true`, puis cliquez sur **Enregistrer**.
+12. Dans la page principale de l’inscription de votre application, cliquez sur **Manifeste**, définissez la valeur du paramètre `oauth2AllowImplicitFlow` sur `true`, puis cliquez sur **Enregistrer**.
 
-   ![Configurer le manifeste de l’application][directory-16]
+    ![Configurer le manifeste de l’application][directory-16]
 
-   > [!NOTE]
-   > 
-   > Pour plus d’informations sur le paramètre `oauth2AllowImplicitFlow` et les autres paramètres d’applications, consultez [Manifeste de l’application Azure Active Directory][AAD app manifest]. 
-   >
+    > [!NOTE]
+    > 
+    > Pour plus d’informations sur le paramètre `oauth2AllowImplicitFlow` et les autres paramètres d’applications, consultez [Manifeste de l’application Azure Active Directory][AAD app manifest]. 
+    >
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>Ajouter un compte d’utilisateur à votre répertoire et ajouter ce compte à un groupe
 

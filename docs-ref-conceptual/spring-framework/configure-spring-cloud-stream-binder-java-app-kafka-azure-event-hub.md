@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 00062f5442e072af30036388f2f1f066221d7316
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 85fe1d9c56530b716a1f1750713f4c87d43dfad3
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506432"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799955"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Comment utiliser le démarreur Spring Boot pour Apache Kafka avec Azure Event Hubs
 
@@ -40,15 +40,15 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 > La version 2.0 de Spring Boot ou une version ultérieure est requise pour effectuer les différentes étapes de cet article.
 >
 
-## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Créez un Event Hub Azure à l’aide du portail Azure
+## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Créer un hub Azure Event Hub à l’aide du portail Azure
 
-### <a name="create-an-azure-event-hub-namespace"></a>Créez un espace de noms d’Event Hub Azure
+### <a name="create-an-azure-event-hub-namespace"></a>Créer un espace de noms Azure Event Hub
 
 1. Accédez au portail Azure à l’adresse <https://portal.azure.com/> et connectez-vous.
 
 1. Cliquez sur **+Créer une ressource**, puis sur **Internet des objets**, et cliquez ensuite sur **Event Hubs**.
 
-   ![Créez un espace de noms d’Event Hub Azure][IMG01]
+   ![Créer un espace de noms Azure Event Hub][IMG01]
 
 1. Sur la page **Créer un espace de noms**, saisissez les informations suivantes :
 
@@ -58,12 +58,12 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    * Choisissez l’**Abonnement** que vous souhaitez utiliser pour votre espace de noms.
    * Indiquez si vous souhaitez créer un nouveau **Groupe de ressources** pour votre espace de noms ou choisissez un groupe de ressources déjà existant.
    * Précisez l’**Emplacement** de l’espace de noms de votre Event Hub.
-   
+
    ![Spécifier les options de l’espace de noms de votre Event Hub Azure][IMG02]
 
-1. Une fois ces options définies, cliquez sur **Créer** pour créer votre espace de noms.
+1. Une fois les options ci-dessus définies, cliquez sur **Créer** pour créer votre espace de noms.
 
-### <a name="create-an-azure-event-hub-in-your-namespace"></a>Créer un Event Hub Azure dans votre espace de noms
+### <a name="create-an-azure-event-hub-in-your-namespace"></a>Créer un Hub d’événements Azure dans votre espace de noms
 
 1. Accédez au portail Azure à l’adresse <https://portal.azure.com/>.
 
@@ -73,13 +73,13 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
 1. Cliquez sur **Event Hubs**, puis sur **+Event Hub**.
 
-   ![Ajoutez un nouvel Event Hub Azure][IMG04]
+   ![Ajoutez un nouvel hub Azure Event Hub][IMG04]
 
 1. Sur la page **Créer un Event Hub**, saisissez un **Nom** unique pour votre Event Hub, puis cliquez sur **Créer**.
 
    ![Créer un Event Hub Azure][IMG05]
 
-1. Lorsque votre Event Hub a été créé, il sera répertorié sur la page **Event Hubs**.
+1. Lorsque votre Hub d’événements est créé, il sera répertorié sur la page **Event Hubs**.
 
    ![Créer un Event Hub Azure][IMG06]
 
@@ -101,7 +101,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    > Le Spring Initializr utilise les noms de **Groupe** et d’**Artefact** pour créer le nom du package. Par exemple, *com.wingtiptoys.kafka*.
    >
 
-1. Une fois ces options définies, cliquez sur **Générer le projet**.
+1. Une fois les options ci-dessus définies, cliquez sur **Générer le projet**.
 
 1. Lorsque vous y êtes invité, téléchargez le projet dans un emplacement défini par un chemin d’accès sur votre ordinateur local.
 
@@ -212,7 +212,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    }
    ```
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a>Configurez votre application Spring Boot pour utiliser votre Event Hub Azure
+## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a>Configurer votre application Spring Boot pour utiliser Azure Event Hub
 
 1. Localisez le fichier *application.properties* dans le répertoire des *ressources* de votre application. Par exemple :
 
@@ -222,7 +222,7 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  Ouvrez le fichier *application.properties* dans un éditeur de texte, ajoutez-y les lignes suivantes, puis remplacez les exemples de valeurs par les propriétés appropriées à votre Event Hub :
+2. Ouvrez le fichier *application.properties* dans un éditeur de texte, ajoutez-y les lignes suivantes, puis remplacez les exemples de valeurs par les propriétés appropriées à votre Event Hub :
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -235,21 +235,23 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    Où :
-   | Champ | Description |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | Spécifie le fichier d’informations d’identification Azure que vous avez précédemment créé dans ce didacticiel. |
-   | `spring.cloud.azure.resource-group` | Spécifie le groupe de ressources Azure qui contient votre Event Hub Azure. |
-   | `spring.cloud.azure.region` | Spécifie la région géographique que vous avez indiquée lors de la création de votre Event Hub Azure. |
-   | `spring.cloud.azure.eventhub.namespace` | Spécifie le nom unique que vous avez choisi lors de la création de l’espace de noms de votre Event Hub Azure. |
-   | `spring.cloud.stream.bindings.input.destination` | Spécifie l’Event Hub Azure qui servira de destination d’entrée. Dans le cas présent, il s’agit du hub que vous avez précédemment créé dans ce didacticiel. |
-   | `spring.cloud.stream.bindings.input.group `| Spécifie un groupe de consommateurs d’un Event Hub Azure, qui peut être défini comme « $Default » afin d’utiliser le groupe de consommateurs de base généré lors de la création de votre Event Hub Azure. |
-   | `spring.cloud.stream.bindings.output.destination` | Spécifie l’Event Hub Azure qui servira de destination de sortie. Dans le cas présent, il sera identique à la destination d’entrée. |
 
-1. Enregistrez et fermez le fichier *application.properties*.
+   |                       Champ                       |                                                                                   Description                                                                                    |
+   |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `spring.cloud.azure.credential-file-path`     |                                                    Spécifie le fichier d’informations d’identification Azure que vous avez précédemment créé dans ce didacticiel.                                                    |
+   |        `spring.cloud.azure.resource-group`        |                                                      Spécifie le groupe de ressources Azure qui contient votre Event Hub Azure.                                                      |
+   |            `spring.cloud.azure.region`            |                                           Spécifie la région géographique que vous avez indiquée lors de la création de votre Hub d’événements Azure.                                            |
+   |      `spring.cloud.azure.eventhub.namespace`      |                                          Spécifie le nom unique que vous avez choisi lors de la création de l’espace de noms de votre Event Hub Azure.                                           |
+   | `spring.cloud.stream.bindings.input.destination`  |                            Spécifie l’Event Hub Azure qui servira de destination d’entrée. Dans le cas présent, il s’agit du hub que vous avez précédemment créé dans ce didacticiel.                            |
+   |    `spring.cloud.stream.bindings.input.group `    | Spécifie un groupe de consommateurs d’un Event Hub Azure, qui peut être défini comme « $Default » afin d’utiliser le groupe de consommateurs de base généré lors de la création de votre Event Hub Azure. |
+   | `spring.cloud.stream.bindings.output.destination` |                               Spécifie l’Event Hub Azure qui servira de destination de sortie. Dans le cas présent, il sera identique à la destination d’entrée.                               |
+
+
+3. Enregistrez et fermez le fichier *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Ajouter un exemple de code pour implémenter une fonctionnalité Event Hub de base
 
-Dans cette section, vous pouvez créer les classes Java nécessaires à l’envoi d’événements dans votre Event Hub.
+Dans cette section, vous créez les classes Java nécessaires à l’envoi d’événements dans votre hub d’événements.
 
 ### <a name="modify-the-main-application-class"></a>Modifiez la classe d’application principale
 
@@ -265,10 +267,10 @@ Dans cette section, vous pouvez créer les classes Java nécessaires à l’envo
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class KafkaApplication {
       public static void main(String[] args) {
@@ -286,7 +288,7 @@ Dans cette section, vous pouvez créer les classes Java nécessaires à l’envo
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -295,7 +297,7 @@ Dans cette section, vous pouvez créer les classes Java nécessaires à l’envo
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RequestParam;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class KafkaSource {
@@ -318,13 +320,13 @@ Dans cette section, vous pouvez créer les classes Java nécessaires à l’envo
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
-   
+
    @EnableBinding(Sink.class)
    public class KafkaSink {
       private static final Logger LOGGER = LoggerFactory.getLogger(KafkaSink.class);
