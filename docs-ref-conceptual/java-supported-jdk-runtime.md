@@ -5,18 +5,20 @@ author: rloutlaw
 manager: angerobe
 ms.devlang: java
 ms.topic: article
-ms.date: 10/15/2017
+ms.date: 10/26/2017
 ms.author: routlaw
-ms.openlocfilehash: 2865219f350990e8b07f7d2cd99f536168a6b8d4
-ms.sourcegitcommit: 7df2d442ad7cbdb235e5dd35302a9b73379c23d5
+ms.openlocfilehash: 7f75b26bffc02a161e8d58827970bd80a3a6c48a
+ms.sourcegitcommit: 66f3dd4bdb09712b73c9194e23028567c0c4ee3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50026995"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235205"
 ---
 # <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a>Obtenir des téléchargements et le support du JDK Java lors du développement pour Azure
 
-Les développeurs Java disponibles sur Azure et Azure Stack peuvent générer et exécuter des applications de production Java grâce aux [versions OpenJDK d’Azul Systems Zulu Entreprise](https://www.azul.com/downloads/azure-only/zulu/) sans entraîner de frais supplémentaires de support. Vous pouvez utiliser le runtime Java que vous souhaitez sur Azure, mais lorsque vous utilisez Zulu, vous obtenez des mises à jour de maintenance gratuites et vous pouvez créer des questions de prise en charge avec Microsoft avec un [plan de support Azure qualifié](https://azure.microsoft.com/support/plans/).
+Les développeurs Java sur Azure et Azure Stack peuvent générer et exécuter des applications de production Java grâce à [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/) sans entraîner de frais supplémentaires de support. Vous pouvez utiliser le runtime Java que vous souhaitez sur Azure, mais lorsque vous utilisez Zulu, vous obtenez des mises à jour de maintenance gratuites et vous pouvez créer des questions de prise en charge avec Microsoft avec un [plan de support Azure qualifié](https://azure.microsoft.com/support/plans/).
+
+Les développeurs peuvent utiliser leurs propres runtimes Java, y compris le JDK Oracle et le JDK Red Hat, pour exécuter leurs applications sur Azure et se connecter aux services et aux fonctionnalités Azure. L’édition de production d’Oracle Java SE reste disponible pour les développeurs Java qui exécutent des charges de travail sur des machines virtuelles Windows ou Linux Azure.
 
 ## <a name="supported-java-versions-and-update-schedule"></a>Versions de Java prises en charge et planification de la mise à jour
 
@@ -31,9 +33,9 @@ Azul Systems conserve une [feuille de route Java SE](https://www.azul.com/produc
 
 ## <a name="use-for-local-development"></a>Utilisation pour le développement local 
 
-Les développeurs peuvent télécharger des JDK Java pour Azure et Azure Stack à partir du [site Web d’Azul Systems](https://www.azul.com/downloads/azure-only/zulu/). Les téléchargements sont disponibles pour Windows, Linux et MacOS. Les développeurs qui travaillent sur Linux peuvent obtenir des packages par l’intermédiaire des gestionnaires de package [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) et [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo).
+Les développeurs peuvent [télécharger](https://www.azul.com/downloads/azure-only/zulu/) des JDK Java pour Azure et Azure Stack afin de les utiliser dans des environnements de développement locaux. Les téléchargements sont disponibles pour Windows, Linux et MacOS. Les développeurs qui travaillent sur Linux peuvent obtenir des packages par l’intermédiaire des gestionnaires de package [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) et [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo).
 
-La prise en charge produit du kit JDK Zulu d’Azul pris en charge par Azure est disponible si vous développez pour Azure ou Azure Stack avec un [plan de support Azure éligible](https://azure.microsoft.com/support/plans/).
+Le support du développement local pour le JDK est disponible avec un [plan de support Azure éligible](https://azure.microsoft.com/support/plans/) lors du développement pour Azure ou Azure Stack.
 
 ## <a name="use-in-docker-containers"></a>Utilisation dans les conteneurs Docker
 
