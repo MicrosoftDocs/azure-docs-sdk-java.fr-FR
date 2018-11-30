@@ -7,13 +7,13 @@ ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 9/20/2018
-ms.openlocfilehash: 9fd35d12e0aa864b5d23cf03547f7b76dc74c677
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.date: 11/21/2018
+ms.openlocfilehash: 96ecbedc90706775a80b97c42f0d55a46a45b8ac
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799895"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338683"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>Kit de développement logiciel (SDK) de gestion Java HDInsight (Préversion)
 
@@ -24,7 +24,7 @@ Le kit de développement logiciel (SDK) Java HDInsight fournit des classes et de
 ## <a name="prerequisites"></a>Prérequis
 
 * Un compte Azure. Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/).
-* [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * [Maven](https://maven.apache.org/install.html)
 
 ## <a name="sdk-installation"></a>Installation du Kit de développement logiciel (SDK)
@@ -342,7 +342,7 @@ client.clusters.update("<Resource Group Name>", "<Cluster Name>", <Map<String,St
 
 ### <a name="resize-cluster"></a>Redimensionner le cluster
 
-Vous pouvez mettre à l’échelle un nombre donné de clusters de nœuds Worker en spécifiant une nouvelle taille comme suit :
+Vous pouvez mettre à l’échelle le nombre de nœuds Worker d’un cluster en spécifiant une nouvelle taille comme suit :
 
 ```java
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", <Num of Worker Nodes (int)>)

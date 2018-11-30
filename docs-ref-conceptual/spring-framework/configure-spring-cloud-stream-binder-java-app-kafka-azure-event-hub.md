@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: ccef834d0ff1c40b061946f8ab1852584da80d7b
-ms.sourcegitcommit: a168dc8c2396b6c4749abef03debb1f69298da38
+ms.openlocfilehash: ab465b56c05c7d480109fc97a4f1c74beaf53856
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50747000"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339113"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Comment utiliser le démarreur Spring Boot pour Apache Kafka avec Azure Event Hubs
 
@@ -32,7 +32,7 @@ Cet article vous explique comment configurer un Stream Binder Spring Cloud basé
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
-* Le [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 ou ultérieure.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.
 
 > [!IMPORTANT]

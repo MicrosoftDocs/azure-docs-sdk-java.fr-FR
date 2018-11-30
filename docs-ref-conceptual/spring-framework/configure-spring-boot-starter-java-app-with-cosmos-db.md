@@ -4,22 +4,22 @@ description: Découvrez comment configurer une application créée avec Spring B
 services: cosmos-db
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 08/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: aa753692b1a3f342a47a07d3bb0cd4e90558a0f8
-ms.sourcegitcommit: a168dc8c2396b6c4749abef03debb1f69298da38
+ms.openlocfilehash: 6675b3f76f19ec0bfdb28351681258b8c4792104
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50747010"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339103"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Comment utiliser Spring Boot Starter avec une API SQL Azure Cosmos DB
 
@@ -34,7 +34,7 @@ Cet article illustre la création d’une base de données Azure Cosmos DB à l�
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
-* Le [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 ou ultérieure.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>Créer une base de données Azure Cosmos DB à l’aide du portail Azure

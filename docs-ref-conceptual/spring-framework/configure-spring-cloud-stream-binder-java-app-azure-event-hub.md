@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dfc3b6121bddcb637735047e2e7bc7485da9a4fe
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: 49fd85690d21fa2eb4a2830e3958ef21cbd2e8c1
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799945"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338893"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Comment créer une application Spring Cloud Stream Binder avec Azure Event Hubs
 
@@ -32,12 +32,12 @@ Cet article vous explique comment configurer une application Java basée sur Spr
 Pour suivre les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
-* Le [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 ou ultérieure.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.
 
 > [!IMPORTANT]
 >
-> La version 2.0 de Spring Boot ou une version ultérieure est requise pour effectuer les différentes étapes de cet article.
+> Spring Boot 2.0 ou version ultérieure est requis pour effectuer les différentes étapes de cet article.
 >
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Créer un hub Azure Event Hub à l’aide du portail Azure

@@ -2,7 +2,7 @@
 Pour réaliser les étapes présentes dans cet article, vous devez installer le kit de ressources Azure pour IntelliJ, ce qui nécessite les composants logiciels suivants :
 
 * IntelliJ IDEA édition Ultimate ou Community, qui peuvent être téléchargées à partir du [site web Jetbrains](https://www.jetbrains.com/idea/download/).
-* Kit de développeur Java (JDK) version 1.8 ou ultérieure.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * Système d’exploitation. Le Kit de ressources Azure pour IntelliJ a été testé sur les systèmes d’exploitation suivants :
   
   * Windows 10, Windows 8.1, Windows 8 et Windows 7
