@@ -3,23 +3,23 @@ title: ''
 description: Ce didacticiel vous montre comment utiliser la version 3.0.6 (ou ultérieure) du Kit de ressources Azure pour Eclipse pour créer une application web Hello World pour Azure.
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: b05dcd52f36524ab17652f83c6ced4006f874365
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892560"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338713"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Créer une application web Hello World pour Azure à l’aide de l’ancien kit de ressources pour Eclipse
 
@@ -109,7 +109,7 @@ Vous pouvez déployer une application web Java sur Azure de plusieurs façons. C
 
    d. Dans le menu déroulant **Web Container** (Conteneur d’application), sélectionnez le logiciel approprié pour votre application.
       
-      Pour le moment, vous pouvez choisir entre Tomcat 8, Tomcat 7 ou Jetty 9. Une distribution récente du logiciel sélectionné sera fournie par Azure, et il s’exécutera sur une distribution récente de JDK 8 créée par Oracle et fournie par Azure.
+      Pour le moment, vous pouvez choisir entre Tomcat 8, Tomcat 7 ou Jetty 9. Une distribution récente du logiciel sélectionné sera fournie par Azure, et il s’exécutera sur une distribution récente du kit de développement fourni par Azure.
 
    e. Dans le menu déroulant **Subscription** (Abonnement), sélectionnez l’abonnement à utiliser pour ce déploiement.
 
@@ -124,7 +124,7 @@ Vous pouvez déployer une application web Java sur Azure de plusieurs façons. C
    * Dans la zone de texte **Name** (Nom), spécifiez un nom pour votre nouveau groupe de ressources.
    * Dans le menu déroulant **Region** (Région), sélectionnez l’emplacement de centre de données Azure approprié pour votre groupe de ressources.
    * FACULTATIF : par défaut, une distribution récente de Java 8 sera déployée automatiquement par Azure sur votre conteneur d’application web en tant que votre machine virtuelle Java. Vous pouvez cependant spécifier une version et une distribution de machine virtuelle Java différentes si votre application web l’exige. Pour spécifier le JDK de votre application web, cliquez sur l’onglet **JDK** et sélectionnez une des options suivantes :
-     * **Deploy the default JDK offered by Azure Web Apps service**(Déployer le JDK par défaut offert par le service Azure Web Apps) : cette option déploiera une distribution récente de Java 8.
+     * **Deploy the default JDK offered by Azure Web Apps service**(Déployer le kit de développement (JDK) par défaut offert par le service Azure Web Apps) : cette option déploiera une distribution récente de Java.
      * **Deploy a 3rd party JDK available on Azure**(Déployer un JDK tiers disponible sur Azure) : cette option vous permet de choisir dans la liste des JDK fournis par Microsoft Azure.
      * **Deploy my own JDK from this download location**(Déployer mon propre JDK à partir de cet emplacement de téléchargement) : cette option vous permet de spécifier votre propre distribution JDK, qui doit être fournie comme un fichier ZIP puis chargée vers un emplacement de téléchargement disponible publiquement ou un compte de stockage Azure auquel lequel vous avez accès.
           

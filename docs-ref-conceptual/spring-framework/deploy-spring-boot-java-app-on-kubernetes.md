@@ -4,38 +4,38 @@ description: Ce didacticiel vous guidera à travers les étapes à suivre pour d
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: asirveda;robmcm
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962503"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338723"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Déployer une application Spring Boot sur un cluster Kubernetes dans Azure Kubernetes Service
 
 **[Kubernetes]** et **[Docker]** sont des solutions open source qui aident les développeurs à automatiser le déploiement, la mise à l’échelle et la gestion de leurs applications en cours d’exécution dans des conteneurs.
 
-Ce didacticiel vous guide tout au long de la combinaison de ces deux technologies open source populaires pour développer et déployer une application Spring Boot sur Microsoft Azure. Plus précisément, *[Spring Boot]* sert au développement d’applications, *[Kubernetes]* au déploiement de conteneurs et [Azure Kubernetes Service (AKS)] à l’hébergement de votre application.
+Ce didacticiel vous guide tout au long de la combinaison de ces deux technologies open source populaires pour développer et déployer une application Spring Boot sur Microsoft Azure. Plus précisément, *[Spring Boot]* sert au développement d’applications, *[Kubernetes]* au déploiement de conteneurs et [Azure Kubernetes Service (AKS)] à l’hébergement de votre application.
 
 ### <a name="prerequisites"></a>Prérequis
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
-* Un [JDK (Java Developer Kit)] à jour.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * L’outil de génération [Maven] (version 3) d’Apache.
-* Un [Git].
-* Un [Docker].
+* Un client [Git].
+* Un client [Docker].
 
 > [!NOTE]
 >
@@ -344,18 +344,20 @@ Pour obtenir des exemples supplémentaires sur l’utilisation d’images Docker
 [Docker]: https://www.docker.com/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[JDK (Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
+[Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Configuration des comptes de service pour des pods]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [Espaces de noms]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [Extraction d’une image à partir d’un registre privé]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
 [S’authentifier avec Azure Container Registry à partir d’Azure Kubernetes Service]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/

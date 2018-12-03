@@ -3,23 +3,23 @@ title: Créer une application web Hello World pour Azure à l’aide de l’anci
 description: Ce didacticiel vous montre comment utiliser la version 3.0.6 (ou ultérieure) du Kit de ressources Azure pour IntelliJ pour créer une application web Hello World pour Azure.
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4a1d9ee79fdc4284dff65f6b026ec103b3d623ce
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893391"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338973"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>Créer une application web Hello World pour Azure à l’aide de l’ancien kit de ressources pour IntelliJ
 
@@ -27,7 +27,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
 > [!NOTE]
 >
-> Pour obtenir une version de cet article qui utilise le [boîte à outils Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
+> Pour obtenir une version de cet article qui utilise le [Kit de ressources Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
 >
 
 > [!IMPORTANT]
@@ -127,7 +127,7 @@ Lorsque vous avez configuré vos paramètres de module, vous pouvez publier votr
 
    d. Dans le menu déroulant **Web Container** (Conteneur d’application), sélectionnez le logiciel approprié pour votre application.
       
-      Pour le moment, vous pouvez choisir entre Tomcat 8, Tomcat 7 ou Jetty 9. Une distribution récente du logiciel sélectionné sera fournie par Azure, et il s’exécutera sur une distribution récente de JDK 8 créée par Oracle et fournie par Azure.
+      Pour le moment, vous pouvez choisir entre Tomcat 8, Tomcat 7 ou Jetty 9. Une distribution récente du logiciel sélectionné sera fournie par Azure, et il s’exécutera sur une distribution récente du kit de développement fourni par Azure.
 
    e. Dans le menu déroulant **Subscription** (Abonnement), sélectionnez l’abonnement à utiliser pour ce déploiement.
 
@@ -242,7 +242,7 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 <!-- URL List -->
 
 [Kit de ressources Azure pour IntelliJ]: azure-toolkit-for-intellij.md
-[boîte à outils Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[Kit de ressources Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

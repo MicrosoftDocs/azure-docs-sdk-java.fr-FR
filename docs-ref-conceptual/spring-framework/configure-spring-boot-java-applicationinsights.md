@@ -8,18 +8,18 @@ manager: alexklim
 editor: ''
 ms.assetid: ''
 ms.author: dhdoshi
-ms.date: 05/19/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: e78987a05527aef739bc1467511381665513a3ab
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: eef5afa1bcd8ceb92eca1584df8816b73ac78948
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639732"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338733"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Configurer une application Spring Boot Initializer pour utiliser Application Insights
 
@@ -34,7 +34,7 @@ Cet article vous explique comment créer une application Spring Boot à l’aide
 Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
-* Un Kit de développement Java (JDK), version 1.7 ou 1.8.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Créer une application personnalisée à l’aide de Spring Initializr
@@ -112,7 +112,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
    > [!NOTE]
    > 
-   > Vous pouvez utiliser différentes clés d’instrumentation Application Insights (p. ex. différentes ressources) pour les différents profils tels que PROD, DEV, etc. Reportez-vous à la page [Propriétés spécifiques du profil Spring Boot] (propriétés spécifiques du profil Spring Boot) pour plus d’informations. 
+   > Vous pouvez utiliser différentes clés d’instrumentation Application Insights (p. ex. différentes ressources) pour les différents profils tels que PROD, DEV, etc. Reportez-vous à la page [Propriétés spécifiques du profil Spring Boot] pour plus d’informations. 
 
 1. Enregistrez et fermez le fichier *application.properties*.
 

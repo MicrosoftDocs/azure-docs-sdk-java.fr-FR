@@ -8,18 +8,18 @@ manager: routlaw
 editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
-ms.date: 07/30/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
-ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
+ms.openlocfilehash: 22870b7ba32f115e7270c63d1bf42cbfc6531d7e
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43324325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338783"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Déployer une application MicroProfile sur le cloud avec Docker et Azure
 
@@ -27,7 +27,7 @@ Cet article explique comment placer une application [MicroProfile.io] dans un co
 
 > [!NOTE]
 >
-> Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image du conteneur Docker s’exécute automatiquement (c’est-à-dire qu’elle inclue le runtime).
+> Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image du conteneur Docker s’exécute automatiquement (c’est-à-dire qu’elle inclut le runtime).
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -35,7 +35,7 @@ Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des élé
 
 * Abonnement Azure ; si vous ne disposez pas d’un abonnement Azure, vous pouvez vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
-* Un [Kit de développement Java (JDK)] à jour, d’une version 1.8 ou ultérieure.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * L’outil de génération [Maven] (version 3+) d’Apache.
 * Un client [Git].
 
@@ -165,6 +165,7 @@ Pour plus d’informations sur les différentes technologies présentées dans c
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Maven]: http://maven.apache.org/
-[Kit de développement Java (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 [Azure Container Instances]: https://docs.microsoft.com/azure/container-instances/
 [Azure Container Registry]:  https://docs.microsoft.com/azure/container-registry

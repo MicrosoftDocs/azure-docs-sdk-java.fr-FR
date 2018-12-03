@@ -4,22 +4,22 @@ description: Ce didacticiel vous guide à travers les étapes pour déployer une
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: yuwzho;robmcm
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ab3babf358cf4899709a9a9d2d7917cb2c6d220e
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338833"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Déployer une application Spring Boot à l’aide du plug-in Fabric8 Maven
 
@@ -33,10 +33,10 @@ Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des élé
 
 * Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].
 * [Azure CLI].
-* Un [JDK (Java Developer Kit)] à jour.
+* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
 * L’outil de génération [Maven] (version 3) d’Apache.
-* Un [Git].
-* Un [Docker].
+* Un client [Git].
+* Un client [Docker].
 
 > [!NOTE]
 >
@@ -535,7 +535,6 @@ Pour obtenir des exemples supplémentaires sur l’utilisation d’images Docker
 [Fabric8]: https://fabric8.io/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[JDK (Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
@@ -543,6 +542,9 @@ Pour obtenir des exemples supplémentaires sur l’utilisation d’images Docker
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 
