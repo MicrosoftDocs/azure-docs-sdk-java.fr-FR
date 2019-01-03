@@ -9,6 +9,6 @@ Pour plus d’informations sur le kit de ressources Azure pour IntelliJ IDEA, co
 Pour plus d’informations sur l’utilisation de Java avec Azure, consultez les liens suivants : 
 
 * [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) 
-* [Outils Java pour Visual Studio Team Services](https://java.visualstudio.com/) 
+* [Outils Java pour Visual Studio Team Services](/azure/devops/java/)
 * [Obtenir des téléchargements et le support du kit de développement (JDK) Java lors du développement pour Azure](https://aka.ms/azure-jdks)
 <!-- TODO: Add URLs for Java in VSCode here --> 
