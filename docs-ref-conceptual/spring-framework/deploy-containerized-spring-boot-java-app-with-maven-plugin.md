@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc14ac8dfd393d60924c39be0870c3caedc9741c
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: bcc56a92e2fd6891cdccb92c5541787f227d828a
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339083"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991493"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Découvrez comment utiliser le plug-in Maven pour Azure Web Apps afin de déployer une application Spring Boot en conteneur dans Azure
 
@@ -88,7 +88,7 @@ Dans cette section, vous clonez une application Spring Boot en conteneur et vous
    curl http://localhost:8080
    ```
 
-1. Vous devez normalement voir le message suivant : **Hello Docker World**
+1. Vous devriez voir le message suivant : **Hello Docker World**
 
 ## <a name="create-an-azure-service-principal"></a>Créer un principal du service Azure
 
@@ -168,7 +168,7 @@ Dans cette section, vous utilisez les valeurs de votre principal du service Azur
 
 3. Enregistrez et fermez le fichier *settings.xml*.
 
-## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>FACULTATIF : Déployer votre fichier Docker local dans Docker Hub
+## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>FACULTATIF : déployer votre fichier Docker local dans Docker Hub
 
 Si vous avez un compte Docker, vous pouvez générer votre image de conteneur Docker localement et la placer dans Docker Hub. Pour ce faire, procédez comme suit.
 
@@ -196,7 +196,7 @@ Si vous avez un compte Docker, vous pouvez générer votre image de conteneur Do
       mvn clean package docker:build -DpushImage
       ```
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>FACULTATIF : Personnaliser votre fichier pom.xml avant de déployer votre conteneur dans Azure
+## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>FACULTATIF : personnaliser votre fichier pom.xml avant de déployer votre conteneur dans Azure
 
 Ouvrez le fichier `pom.xml` de votre application Spring Boot dans un éditeur de texte et recherchez l’élément `<plugin>` pour `azure-webapp-maven-plugin`. Cet élément doit ressembler à l’exemple suivant :
 
@@ -310,6 +310,13 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
+Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.
+
+> [!div class="nextstepaction"]
+> [Spring sur Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Ressources supplémentaires
+
 Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :
 
 * [Plug-in Maven pour Azure Web Apps]
@@ -324,16 +331,18 @@ Pour plus d’informations sur les différentes technologies présentées dans c
 
 * [Plug-in Docker pour Maven]
 
+Pour plus d’informations sur l’utilisation d’Azure avec Java, renseignez-vous sur [Azure pour les développeurs Java] et l’[utilisation d’Azure DevOps et Java].
+
 <!-- URL List -->
 
 [Azure CLI]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure pour les développeurs Java]: /java/azure/
 [Portail Azure]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Plug-in Docker pour Maven]: https://github.com/spotify/docker-maven-plugin
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Utilisation d’Azure DevOps et Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

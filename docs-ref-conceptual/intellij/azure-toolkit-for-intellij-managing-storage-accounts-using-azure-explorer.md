@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bf5d5ad1c4ccd24e3e0174e70bcbae568f0e839d
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899057"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636434"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -43,20 +43,20 @@ Pour créer un compte de stockage à l’aide de l’Explorateur Azure, procéde
 
    ![Boîte de dialogue Créer un compte de stockage][CS02]
 
-   * **Nom** : spécifie le nom du nouveau compte de stockage.
+   * **Nom** : spécifie le nom du nouveau compte de stockage.
 
    * **Type de compte** : spécifie le type de compte de stockage à créer (par exemple, « Stockage Blob »). Pour plus d’informations, consultez la rubrique [À propos des comptes de stockage Azure]. 
 
-   * **Performances** : spécifie l’offre de compte de stockage de l’éditeur sélectionné qu’il faut utiliser (par exemple « Premium »). Pour plus d’informations, voir [Objectifs de scalabilité et de performances de Stockage Azure]. 
+   * **Performances** : spécifie l’offre de compte de stockage de l’éditeur sélectionné qu’il faut utiliser (par exemple, « Premium »). Pour plus d’informations, voir [Objectifs de scalabilité et de performances de Stockage Azure]. 
 
-   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant dans une zone »). Pour plus d’informations, voir [Réplication du stockage Azure]. 
+   * **Réplication** : spécifie la réplication pour le compte de stockage (par exemple, « Redondant interzone »). Pour plus d’informations, consultez [Réplication du stockage Azure]. 
 
-   * **Abonnement** : spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau compte de stockage.
+   * **Abonnement**: spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau compte de stockage.
 
-   * **Emplacement** : spécifie l’emplacement où votre compte de stockage sera créé (par exemple « USA Ouest »).
+   * **Emplacement** : spécifie l’emplacement où votre compte de stockage sera créé (par exemple, « USA Ouest »).
 
-   * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
-      * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
+   * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
+      * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
       * **Utiliser l’existant** : spécifie que vous allez opérer un choix dans une liste de groupes de ressources associés à votre compte Azure.
 
 4. Après avoir spécifié toutes les options ci-dessus, cliquez sur **OK**.
@@ -123,8 +123,8 @@ Pour plus d’informations sur les comptes de stockage Azure, leurs tailles et l
 
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Tarification des comptes de stockage Windows]: /pricing/details/virtual-machines/windows/
-[Tarification des comptes de stockage Linux]: /pricing/details/virtual-machines/linux/
+[Tarification des comptes de stockage Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Tarification des comptes de stockage Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

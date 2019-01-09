@@ -7,20 +7,20 @@ author: rmcmurray
 manager: mbaldwin
 editor: brborges
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 066ac30697c6adccc0c6a7b9d57205de488bdc53
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 950b360eb525b0c6b97daad0798c27ded0582b8b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339003"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991343"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Déployer le fichier JAR d’une application web Spring Boot sur Azure App Service sur Linux
 
-Cet article présente l’utilisation du [plug-in Maven pour Azure App Service Web Apps](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) afin de déployer un package d’application Java SE JAR sur [Azure App Service sur Linux](https://docs.microsoft.com/en-us/azure/app-service/containers/). Choisissez le déploiement Java SE sur les [fichiers Tomcat et WAR](/azure/app-service/containers/quickstart-java) lorsque vous voulez consolider les dépendances de vos applications, ainsi que leur runtime et leur configuration dans un seul artefact déployable.
+Cet article présente l’utilisation du [plug-in Maven pour Azure App Service Web Apps](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) afin de déployer un package d’application Java SE JAR sur [Azure App Service sur Linux](/azure/app-service/containers/). Choisissez le déploiement Java SE sur les [fichiers Tomcat et WAR](/azure/app-service/containers/quickstart-java) lorsque vous voulez consolider les dépendances de vos applications, ainsi que leur runtime et leur configuration dans un seul artefact déployable.
 
 
 Si vous n’avez pas d’abonnement Azure, créez un [compte gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) avant de commencer.
@@ -36,7 +36,7 @@ Pour effectuer les étapes de ce didacticiel, les éléments suivants doivent ê
 
 ## <a name="install-and-sign-in-to-azure-cli"></a>Installer Azure CLI et se connecter
 
-La façon la plus simple et la plus rapide que le Plugin Maven déploie votre application Spring Boot est d’utiliser[Azure CLI](https://docs.microsoft.com/cli/azure/).
+La façon la plus simple et la plus rapide que le Plugin Maven déploie votre application Spring Boot est d’utiliser[Azure CLI](/cli/azure/).
 
 Connectez-vous à votre compte Azure à l’aide de l’interface de ligne de commande Azure :
    
@@ -86,7 +86,7 @@ Dans cette section, vous allez cloner une application Spring Boot terminée et l
    curl http://localhost:8080
    ```
 
-1. Vous devez normalement voir le message suivant : **Greetings from Spring Boot!**
+1. Vous devriez voir le message suivant : **Greetings from Spring Boot!**
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>Configurer le plug-in Maven pour Azure App Service
 
@@ -159,9 +159,16 @@ Lorsque votre application web aura été déployée, vous serez en mesure de la 
 
    ![Détermination de l’URL de votre application web][AP02]
 
-Vérifiez que le déploiement a été effectué en utilisant la même commande cURL qu’auparavant, en utilisant l’URL de votre application web du portail au lieu de `localhost`. Vous devez normalement voir le message suivant : **Greetings from Spring Boot!** 
+Vérifiez que le déploiement a été effectué en utilisant la même commande cURL qu’auparavant, en utilisant l’URL de votre application web du portail au lieu de `localhost`. Vous devriez voir le message suivant : **Greetings from Spring Boot!** 
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.
+
+> [!div class="nextstepaction"]
+> [Spring sur Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Ressources supplémentaires
 
 Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :
 
@@ -176,17 +183,17 @@ Pour plus d’informations sur les différentes technologies présentées dans c
 <!-- URL List -->
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: /java/azure/
 [Portail Azure]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Plug-in Maven pour Azure Web Apps]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Plug-in Maven pour Azure Web Apps]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->

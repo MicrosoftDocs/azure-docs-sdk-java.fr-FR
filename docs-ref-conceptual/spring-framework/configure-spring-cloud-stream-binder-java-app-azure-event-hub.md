@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 49fd85690d21fa2eb4a2830e3958ef21cbd2e8c1
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338893"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991423"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Comment créer une application Spring Cloud Stream Binder avec Azure Event Hubs
 
@@ -196,8 +196,8 @@ Pour suivre les étapes décrites dans cet article, vous devez disposer des él�
        }
      }
    ]
-
-1. Specify the GUID for the subscription you want to use with Azure; for example:
+   ```
+1. Spécifiez le GUID de l’abonnement que vous souhaitez utiliser avec Azure, par exemple :
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
@@ -395,6 +395,13 @@ Dans cette section, vous créez les classes Java nécessaires à l’envoi d’�
 
 ## <a name="next-steps"></a>Étapes suivantes
 
+Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.
+
+> [!div class="nextstepaction"]
+> [Spring sur Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Ressources supplémentaires
+
 Pour plus d’informations sur la prise en charge Azure pour Event Hub Stream Binder, voir les articles suivants :
 
 * [Nouveautés des concentrateurs d’événements Azure ?](/azure/event-hubs/event-hubs-about)
@@ -403,14 +410,14 @@ Pour plus d’informations sur la prise en charge Azure pour Event Hub Stream Bi
 
 * [Comment utiliser le starter Spring Boot pour Apache Kafka avec Azure Event Hubs](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
 
-Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java] et [Outils Java pour Visual Studio Team Services].
+Pour plus d’informations sur l’utilisation d’Azure avec Java, renseignez-vous sur [Azure pour les développeurs Java] et l’[utilisation d’Azure DevOps et Java].
 
 **[Spring Framework]** est une solution open source qui aide les développeurs Java à créer des applications d’entreprise. L’un des projets les plus connus basés sur cette plateforme est [Spring Boot], qui fournit une approche simplifiée pour la création d’applications Java autonomes. Pour aider les développeurs à bien démarrer avec Spring Boot, plusieurs exemples de packages Spring Boot sont disponibles à l’adresse <https://github.com/spring-guides/>. En plus de choisir dans la liste des projets Spring Boot de base, **[Spring Initializr]** aide les développeurs à commencer à créer des applications Spring Boot personnalisées.
 
 <!-- URL List -->
 
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
-[Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
+[Utilisation d’Azure DevOps et Java]: /azure/devops/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

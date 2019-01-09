@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 57441a9cbdf0805e08f303c1f05049ce7f668ac0
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: a3aff77bc2fd2dac0396187d9e6b27910bc60e58
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338663"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636414"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ
 
@@ -46,17 +46,17 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
 4. Dans la fenêtre **Sélectionner une image de machine virtuelle**, entrez les informations suivantes :
 
-   * **Emplacement**: spécifie l’emplacement où votre machine virtuelle sera créée (par exemple *USA Ouest*). 
+   * **Emplacement** : spécifie l’emplacement où votre machine virtuelle sera créée (par exemple, *USA Ouest*). 
 
    * **Image recommandée** : spécifie que vous allez choisir une image dans une liste abrégée d’images couramment utilisées.
 
    * **Image personnalisée** : spécifie que vous allez choisir une image personnalisée en fournissant les informations suivantes :
 
-      * **Éditeur**: spécifie l’éditeur qui a créé l’image que vous allez utiliser pour votre machine virtuelle (par exemple, *Microsoft*).
+      * **Éditeur** : spécifie l’éditeur qui a créé l’image que vous allez utiliser pour votre machine virtuelle (par exemple, *Microsoft*).
 
-      * **Offre** : spécifie la machine virtuelle et l’offre de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
+      * **Offre** : spécifie l’offre de machine virtuelle de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
 
-      * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
+      * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) à utiliser selon l’offre sélectionnée (par exemple, *JDK_8*).
 
       * **N° de version** : spécifie la version de la référence (SKU) sélectionnée à utiliser.
 
@@ -66,11 +66,11 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
 6. Dans la fenêtre **Paramètres de base de la machine virtuelle**, entrez les informations suivantes :
 
-   * **Nom de la machine virtuelle**: spécifie le nom de votre nouvelle machine virtuelle, qui doit commencer par une lettre et ne peut contenir que des lettres, des chiffres et des traits d’union.
+   * **Nom de la machine virtuelle** : spécifie le nom de votre nouvelle machine virtuelle, qui doit commencer par une lettre et contenir uniquement des lettres, des chiffres et des traits d’union.
 
-   * **Taille** : spécifie le nombre de cœurs et la quantité de mémoire à allouer à votre machine virtuelle.
+   * **Taille**: spécifie le nombre de cœurs et la quantité de mémoire à allouer à votre machine virtuelle.
 
-   * **Nom d’utilisateur** : spécifie le compte administrateur à créer pour la gestion de votre machine virtuelle.
+   * **Nom d’utilisateur :** spécifie le compte administrateur à créer pour la gestion de votre machine virtuelle.
 
    * **Mot de passe** et **Confirmer** : spécifient le mot de passe pour votre compte administrateur.
 
@@ -81,7 +81,7 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 8. Dans la fenêtre **Ressources associées**, entrez les informations suivantes :
 
    * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
-      * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
+      * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
       * **Utiliser l’existant** : spécifie que vous souhaitez opérer une sélection dans la liste des groupes de ressources associés à votre compte Azure.
 
        ![Fenêtre ressources associées][CR07]
@@ -90,11 +90,11 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
       ![Boîte de dialogue Créer un compte de stockage][CR05]
 
-   * **Réseau virtuel** et **sous-réseau** : spécifient le réseau virtuel et le sous-réseau auquel se connectera votre machine virtuelle. Vous pouvez utiliser un réseau et un sous-réseau existants, ou créer un réseau et un sous-réseau. Si vous sélectionnez **Créer**, la boîte de dialogue suivante s’affiche :
+   * **Réseau virtuel** et **Sous-réseau** : spécifient le réseau virtuel et le sous-réseau auxquels se connectera votre machine virtuelle. Vous pouvez utiliser un réseau et un sous-réseau existants, ou créer un réseau et un sous-réseau. Si vous sélectionnez **Créer**, la boîte de dialogue suivante s’affiche :
 
       ![Boîte de dialogue Créer un réseau virtuel][CR06]
 
-   * **Adresse IP publique** : spécifie l’adresse IP externe de votre machine virtuelle. Vous pouvez choisir de créer une adresse IP ou, si votre machine virtuelle n’a pas besoin d’adresse IP publique, vous pouvez sélectionner **(Aucune)**. 
+   * **Adresse IP publique** : spécifie l’adresse IP externe de votre machine virtuelle. Vous pouvez choisir de créer une adresse IP ou, si votre machine virtuelle n’a pas besoin d’adresse IP publique, vous pouvez sélectionner **(Aucune)**. 
 
    * **Groupe de sécurité réseau** : spécifie un pare-feu réseau facultatif pour votre machine virtuelle. Vous pouvez sélectionner un pare-feu existant ou, si votre machine virtuelle n’a pas besoin de pare-feu réseau, vous pouvez sélectionner **(Aucun)**. 
 
@@ -159,8 +159,8 @@ Pour plus d’informations sur les tailles et tarifications des machines virtuel
 [Instructions de connexion pour le kit de ressources Azure pour IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Tarification des machines virtuelles Windows]: /pricing/details/virtual-machines/windows/
-[Tarification des machines virtuelles Linux]: /pricing/details/virtual-machines/linux/
+[Tarification des machines virtuelles Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Tarification des machines virtuelles Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

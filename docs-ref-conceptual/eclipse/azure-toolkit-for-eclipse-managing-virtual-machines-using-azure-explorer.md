@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 53dfbfb0de2bcb56ebfc4d5ca2c4c19528edcfbf
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 7f3b4a6adb4234bbf11f0f7cddafbe99fa0ff3df
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338693"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636695"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse
 
@@ -47,13 +47,13 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
 4. Dans la fenêtre **Sélectionner une image de machine virtuelle**, entrez les informations suivantes :
 
-   * **Emplacement**: spécifie l’emplacement où votre machine virtuelle sera créée (par exemple *USA Ouest*).
+   * **Emplacement** : spécifie l’emplacement où votre machine virtuelle sera créée (par exemple, *USA Ouest*).
 
-   * **Éditeur** : spécifie l’éditeur qui a créé l’image et que vous allez utiliser pour créer votre machine virtuelle, par exemple *Microsoft*.
+   * **Éditeur** : spécifie l’éditeur qui a créé l’image et que vous allez utiliser pour créer votre machine virtuelle (par exemple, *Microsoft*).
 
-   * **Offre** : spécifie la machine virtuelle et l’offre de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
+   * **Offre** : spécifie l’offre de machine virtuelle de l’éditeur sélectionné à utiliser (par exemple, *JDK*).
 
-   * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) de l’offre sélectionnée à utiliser (par exemple, *JDK_8*).
+   * **Référence (SKU)**  : spécifie l’unité de gestion de stock (SKU) à utiliser selon l’offre sélectionnée (par exemple, *JDK_8*).
 
    * **N° de version** : spécifie la version de la référence (SKU) sélectionnée à utiliser.
 
@@ -65,9 +65,9 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
    * **Nom de la machine virtuelle** : spécifie le nom de votre nouvelle machine virtuelle, qui doit commencer par une lettre et contenir uniquement des lettres, des chiffres et des traits d’union.
 
-   * **Taille** : spécifie le nombre de cœurs et la quantité de mémoire à allouer à votre machine virtuelle.
+   * **Taille**: spécifie le nombre de cœurs et la quantité de mémoire à allouer à votre machine virtuelle.
 
-   * **Nom d’utilisateur** : spécifie le compte administrateur à créer pour la gestion de votre machine virtuelle.
+   * **Nom d’utilisateur :** spécifie le compte administrateur à créer pour la gestion de votre machine virtuelle.
 
    * **Mot de passe** et **Confirmer** : spécifient le mot de passe pour votre compte administrateur.
 
@@ -77,21 +77,21 @@ Pour créer une machine virtuelle à l’aide de l’Explorateur Azure, procéde
 
 8. Dans la fenêtre **Créer un nouveau compte de stockage**, saisissez les informations suivantes :
 
-   * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
-     * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
+   * **Groupe de ressources** : spécifie le groupe de ressources pour votre machine virtuelle. Sélectionnez l’une des options suivantes :
+     * **Créer** : spécifie que vous souhaitez créer un groupe de ressources.
      * **Utiliser l’existant** : spécifie que vous souhaitez sélectionner un groupe de ressources déjà associé à votre compte Azure.
 
        ![La boîte de dialogue Créer un compte de stockage][CR05]
 
    * **Compte de stockage** : spécifie le compte de stockage à utiliser pour le stockage de votre machine virtuelle. Vous pouvez utiliser un compte de stockage existant ou en créer un nouveau.
 
-   * **Réseau virtuel** et **sous-réseau** : spécifient le réseau virtuel et le sous-réseau auquel se connectera votre machine virtuelle. Vous pouvez utiliser un réseau et un sous-réseau existants, ou créer un réseau et un sous-réseau. Si vous sélectionnez **Créer**, la boîte de dialogue suivante s’affiche :
+   * **Réseau virtuel** et **Sous-réseau** : spécifient le réseau virtuel et le sous-réseau auxquels se connectera votre machine virtuelle. Vous pouvez utiliser un réseau et un sous-réseau existants, ou créer un réseau et un sous-réseau. Si vous sélectionnez **Créer**, la boîte de dialogue suivante s’affiche :
 
       ![La boîte de dialogue Créer un réseau virtuel][CR06]
 
 9. Dans la fenêtre **Ressources associées**, entrez les informations suivantes :
 
-   * **Adresse IP publique** : spécifie l’adresse IP externe de votre machine virtuelle. Vous pouvez choisir de créer une adresse IP ou, si votre machine virtuelle n’a pas besoin d’adresse IP publique, vous pouvez sélectionner **(Aucune)**.
+   * **Adresse IP publique** : spécifie l’adresse IP externe de votre machine virtuelle. Vous pouvez choisir de créer une adresse IP ou, si votre machine virtuelle n’a pas besoin d’adresse IP publique, vous pouvez sélectionner **(Aucune)**.
 
    * **Groupe de sécurité réseau** : spécifie un pare-feu réseau facultatif pour votre machine virtuelle. Vous pouvez sélectionner un pare-feu existant ou, si votre machine virtuelle n’a pas besoin de pare-feu réseau, vous pouvez sélectionner **(Aucun)**.
 
@@ -158,8 +158,8 @@ Pour plus d’informations sur les tailles et tarifications des machines virtuel
 
 [Tailles des machines virtuelles Windows dans Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tailles des machines virtuelles Linux dans Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Tarification des machines virtuelles Windows]: /pricing/details/virtual-machines/windows/
-[Tarification des machines virtuelles Linux]: /pricing/details/virtual-machines/linux/
+[Tarification des machines virtuelles Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Tarification des machines virtuelles Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

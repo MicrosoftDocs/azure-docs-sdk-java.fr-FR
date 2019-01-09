@@ -8,18 +8,18 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 69c0381313994796af31d5301ceadb9f6f40dcb5
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893500"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991553"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Pour débuter avec Spring Boot pour Azure
 
@@ -48,7 +48,7 @@ Les applications suivantes de démarrage de Spring Boot sont actuellement dispon
 <a name="azure-support"></a>
 ## <a name="azure-support"></a>Support Azure
 
-Cette instance Spring Boot Starter fournit une prise en charge de configuration automatique pour les services Azure, par exemple : Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, etc.
+Spring Boot Starter fourni un support pour la configuration automatique des services Azure, par exemple : Service Bus, Stockage, Active Directory, Cosmos DB, Key Vault, etc.
 
 Pour des exemples sur l’utilisation des différentes fonctionnalités Azure fournies par cette application de démarrage, consultez la ressource suivante :
 
@@ -229,18 +229,25 @@ Lorsque vous ajoutez cette application de démarrage à un projet Spring Boot, l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation d’applications [Spring Boot] sur Azure, consultez [Spring sur Azure].
+Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.
 
-Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java] et [Outils Java pour Visual Studio Team Services].
+> [!div class="nextstepaction"]
+> [Spring sur Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Ressources supplémentaires
+
+Pour plus d’informations sur l’utilisation d’applications [Spring Boot] sur Azure, consultez [Spring sur Azure].
+
+Pour plus d’informations sur l’utilisation d’Azure avec Java, renseignez-vous sur [Azure pour les développeurs Java] et l’[utilisation d’Azure DevOps et Java].
 
 Pour obtenir de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.
 
 <!-- URL List -->
 
-[Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
-[Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring sur Azure]: https://docs.microsoft.com/java/azure/spring-framework/
+[Azure pour les développeurs Java]: /java/azure/
+[Utilisation d’Azure DevOps et Java]: /azure/devops/
+[Spring Boot]: http://projects.spring.io/spring-boot/
+[Spring sur Azure]: /java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 
