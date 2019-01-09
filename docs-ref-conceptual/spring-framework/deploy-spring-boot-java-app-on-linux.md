@@ -8,119 +8,119 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: container-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 30be16aebb18e3c9e18f9a023ea9b82e5d614e94
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339143"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991503"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a><span data-ttu-id="1248b-103">Déployer une application Spring Boot sur Linux dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="1248b-103">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>
+# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a><span data-ttu-id="0d685-103">Déployer une application Spring Boot sur Linux dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="0d685-103">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>
 
-<span data-ttu-id="1248b-104">Ce didacticiel vous guide dans l’utilisation de [Docker] pour développer et déployer une application [Spring Boot] sur un hôte Linux dans [Azure Container Service (AKS)].</span><span class="sxs-lookup"><span data-stu-id="1248b-104">This tutorial walks you through using [Docker] to develop and deploy a [Spring Boot] application to a Linux host in the [Azure Container Service (AKS)].</span></span>
+<span data-ttu-id="0d685-104">Ce didacticiel vous guide dans l’utilisation de [Docker] pour développer et déployer une application [Spring Boot] sur un hôte Linux dans [Azure Container Service (AKS)].</span><span class="sxs-lookup"><span data-stu-id="0d685-104">This tutorial walks you through using [Docker] to develop and deploy a [Spring Boot] application to a Linux host in the [Azure Container Service (AKS)].</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="1248b-105">Prérequis</span><span class="sxs-lookup"><span data-stu-id="1248b-105">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="0d685-105">Prérequis</span><span class="sxs-lookup"><span data-stu-id="0d685-105">Prerequisites</span></span>
 
-<span data-ttu-id="1248b-106">Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="1248b-106">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
+<span data-ttu-id="0d685-106">Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="0d685-106">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
 
-* <span data-ttu-id="1248b-107">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="1248b-107">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="1248b-108">[Azure CLI].</span><span class="sxs-lookup"><span data-stu-id="1248b-108">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="1248b-109">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="1248b-109">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="1248b-110">Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="1248b-110">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
-* <span data-ttu-id="1248b-111">L’outil de génération [Maven] (version 3) d’Apache.</span><span class="sxs-lookup"><span data-stu-id="1248b-111">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="1248b-112">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="1248b-112">A [Git] client.</span></span>
-* <span data-ttu-id="1248b-113">Un client [Docker].</span><span class="sxs-lookup"><span data-stu-id="1248b-113">A [Docker] client.</span></span>
+* <span data-ttu-id="0d685-107">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="0d685-107">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="0d685-108">[Azure CLI].</span><span class="sxs-lookup"><span data-stu-id="0d685-108">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="0d685-109">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="0d685-109">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="0d685-110">Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="0d685-110">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="0d685-111">L’outil de génération [Maven] (version 3) d’Apache.</span><span class="sxs-lookup"><span data-stu-id="0d685-111">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="0d685-112">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="0d685-112">A [Git] client.</span></span>
+* <span data-ttu-id="0d685-113">Un client [Docker].</span><span class="sxs-lookup"><span data-stu-id="0d685-113">A [Docker] client.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="1248b-114">En raison des nécessités liées à la virtualisation de ce didacticiel, vous ne pouvez pas suivre les étapes de cet article sur une machine virtuelle : vous devez utiliser un ordinateur physique où les fonctionnalités de virtualisation sont activées.</span><span class="sxs-lookup"><span data-stu-id="1248b-114">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
+> <span data-ttu-id="0d685-114">En raison des nécessités liées à la virtualisation de ce didacticiel, vous ne pouvez pas suivre les étapes de cet article sur une machine virtuelle : vous devez utiliser un ordinateur physique où les fonctionnalités de virtualisation sont activées.</span><span class="sxs-lookup"><span data-stu-id="0d685-114">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
 >
 
-## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="1248b-115">Créer l’application web Spring Boot on Docker Getting Started</span><span class="sxs-lookup"><span data-stu-id="1248b-115">Create the Spring Boot on Docker Getting Started web app</span></span>
+## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="0d685-115">Créer l’application web Spring Boot on Docker Getting Started</span><span class="sxs-lookup"><span data-stu-id="0d685-115">Create the Spring Boot on Docker Getting Started web app</span></span>
 
-<span data-ttu-id="1248b-116">La procédure suivante vous guide à travers les étapes nécessaires pour créer une application web Spring Boot simple et pour la tester localement.</span><span class="sxs-lookup"><span data-stu-id="1248b-116">The following steps walk you through the steps that are required to create a simple Spring Boot web application and test it locally.</span></span>
+<span data-ttu-id="0d685-116">La procédure suivante vous guide à travers les étapes nécessaires pour créer une application web Spring Boot simple et pour la tester localement.</span><span class="sxs-lookup"><span data-stu-id="0d685-116">The following steps walk you through the steps that are required to create a simple Spring Boot web application and test it locally.</span></span>
 
-1. <span data-ttu-id="1248b-117">Ouvrez une invite de commandes et créez un répertoire local pour y stocker votre application, puis accédez à ce répertoire. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-117">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
+1. <span data-ttu-id="0d685-117">Ouvrez une invite de commandes et créez un répertoire local pour y stocker votre application, puis accédez à ce répertoire. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-117">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
    ```
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   <span data-ttu-id="1248b-118">- ou -</span><span class="sxs-lookup"><span data-stu-id="1248b-118">-- or --</span></span>
+   <span data-ttu-id="0d685-118">- ou -</span><span class="sxs-lookup"><span data-stu-id="0d685-118">-- or --</span></span>
    ```
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
-1. <span data-ttu-id="1248b-119">Clonez l’exemple de projet [Spring Boot on Docker Getting Started] dans le répertoire que vous venez de créer. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-119">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
+1. <span data-ttu-id="0d685-119">Clonez l’exemple de projet [Spring Boot on Docker Getting Started] dans le répertoire que vous venez de créer. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-119">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
-1. <span data-ttu-id="1248b-120">Accédez au répertoire du projet terminé. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-120">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="0d685-120">Accédez au répertoire du projet terminé. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-120">Change directory to the completed project; for example:</span></span>
    ```
    cd gs-spring-boot-docker/complete
    ```
 
-1. <span data-ttu-id="1248b-121">Générez le fichier JAR en utilisant Maven. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-121">Build the JAR file using Maven; for example:</span></span>
+1. <span data-ttu-id="0d685-121">Générez le fichier JAR en utilisant Maven. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-121">Build the JAR file using Maven; for example:</span></span>
    ```
    mvn package
    ```
 
-1. <span data-ttu-id="1248b-122">Une fois l’application web créée, accédez au répertoire `target` où se trouve fichier JAR et démarrez l’application web. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-122">Once the web app has been created, change directory to the `target` directory where the JAR file is located and start the web app; for example:</span></span>
+1. <span data-ttu-id="0d685-122">Une fois l’application web créée, accédez au répertoire `target` où se trouve fichier JAR et démarrez l’application web. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-122">Once the web app has been created, change directory to the `target` directory where the JAR file is located and start the web app; for example:</span></span>
    ```
    cd target
    java -jar gs-spring-boot-docker-0.1.0.jar
    ```
 
-1. <span data-ttu-id="1248b-123">Testez l’application web en y accédant localement via un navigateur web.</span><span class="sxs-lookup"><span data-stu-id="1248b-123">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="1248b-124">Par exemple, si curl est disponible et que vous configuré le serveur Tomcat pour s’exécuter sur le port 80 :</span><span class="sxs-lookup"><span data-stu-id="1248b-124">For example, if you have curl available and you configured the Tomcat server to run on port 80:</span></span>
+1. <span data-ttu-id="0d685-123">Testez l’application web en y accédant localement via un navigateur web.</span><span class="sxs-lookup"><span data-stu-id="0d685-123">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="0d685-124">Par exemple, si curl est disponible et que vous configuré le serveur Tomcat pour s’exécuter sur le port 80 :</span><span class="sxs-lookup"><span data-stu-id="0d685-124">For example, if you have curl available and you configured the Tomcat server to run on port 80:</span></span>
    ```
    curl http://localhost
    ```
 
-1. <span data-ttu-id="1248b-125">Vous devez normalement voir le message suivant : **Hello Docker World!**</span><span class="sxs-lookup"><span data-stu-id="1248b-125">You should see the following message displayed: **Hello Docker World!**</span></span>
+1. <span data-ttu-id="0d685-125">Vous devriez voir le message suivant : **Hello Docker World!**</span><span class="sxs-lookup"><span data-stu-id="0d685-125">You should see the following message displayed: **Hello Docker World!**</span></span>
 
    ![Parcourir l’exemple d’application en local][SB01]
 
-## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a><span data-ttu-id="1248b-127">Créer un registre de conteneurs Azure à utiliser comme registre Docker privé</span><span class="sxs-lookup"><span data-stu-id="1248b-127">Create an Azure Container Registry to use as a Private Docker Registry</span></span>
+## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a><span data-ttu-id="0d685-127">Créer un registre de conteneurs Azure à utiliser comme registre Docker privé</span><span class="sxs-lookup"><span data-stu-id="0d685-127">Create an Azure Container Registry to use as a Private Docker Registry</span></span>
 
-<span data-ttu-id="1248b-128">Les étapes suivantes vous guident dans l’utilisation du portail Azure pour créer un registre de conteneurs Azure.</span><span class="sxs-lookup"><span data-stu-id="1248b-128">The following steps walk you through using the Azure portal to create an Azure Container Registry.</span></span>
+<span data-ttu-id="0d685-128">Les étapes suivantes vous guident dans l’utilisation du portail Azure pour créer un registre de conteneurs Azure.</span><span class="sxs-lookup"><span data-stu-id="0d685-128">The following steps walk you through using the Azure portal to create an Azure Container Registry.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="1248b-129">Si vous souhaitez utiliser Azure CLI au lieu du portail Azure, suivez les étapes décrites dans [Créer un registre de conteneurs Docker privé à l’aide d’Azure CLI 2.0](/azure/container-registry/container-registry-get-started-azure-cli).</span><span class="sxs-lookup"><span data-stu-id="1248b-129">If you want to use the Azure CLI instead of the Azure portal, follow the steps in [Create a private Docker container registry using the Azure CLI 2.0](/azure/container-registry/container-registry-get-started-azure-cli).</span></span>
+> <span data-ttu-id="0d685-129">Si vous souhaitez utiliser Azure CLI au lieu du portail Azure, suivez les étapes décrites dans [Créer un registre de conteneurs Docker privé à l’aide d’Azure CLI 2.0](/azure/container-registry/container-registry-get-started-azure-cli).</span><span class="sxs-lookup"><span data-stu-id="0d685-129">If you want to use the Azure CLI instead of the Azure portal, follow the steps in [Create a private Docker container registry using the Azure CLI 2.0](/azure/container-registry/container-registry-get-started-azure-cli).</span></span>
 >
 
-1. <span data-ttu-id="1248b-130">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="1248b-130">Browse to the [Azure portal] and sign in.</span></span>
+1. <span data-ttu-id="0d685-130">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="0d685-130">Browse to the [Azure portal] and sign in.</span></span>
 
-   <span data-ttu-id="1248b-131">Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créer un registre de conteneurs Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.</span><span class="sxs-lookup"><span data-stu-id="1248b-131">Once you have signed in to your account on the Azure portal, you can follow the steps in the [Create a private Docker container registry using the Azure portal] article, which are paraphrased in the following steps for the sake of expediency.</span></span>
+   <span data-ttu-id="0d685-131">Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créer un registre de conteneurs Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.</span><span class="sxs-lookup"><span data-stu-id="0d685-131">Once you have signed in to your account on the Azure portal, you can follow the steps in the [Create a private Docker container registry using the Azure portal] article, which are paraphrased in the following steps for the sake of expediency.</span></span>
 
-1. <span data-ttu-id="1248b-132">Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Conteneurs** puis cliquez sur **Registre de conteneurs Azure**.</span><span class="sxs-lookup"><span data-stu-id="1248b-132">Click the menu icon for **+ New**, then click **Containers**, and then click **Azure Container Registry**.</span></span>
+1. <span data-ttu-id="0d685-132">Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Conteneurs** puis cliquez sur **Registre de conteneurs Azure**.</span><span class="sxs-lookup"><span data-stu-id="0d685-132">Click the menu icon for **+ New**, then click **Containers**, and then click **Azure Container Registry**.</span></span>
    
    ![Créer un registre de conteneurs Azure][AR01]
 
-1. <span data-ttu-id="1248b-134">Quand la page d’informations pour le modèle de registre de conteneurs Azure s’affiche, cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="1248b-134">When the information page for the Azure Container Registry template is displayed, click **Create**.</span></span> 
+1. <span data-ttu-id="0d685-134">Quand la page d’informations pour le modèle de registre de conteneurs Azure s’affiche, cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="0d685-134">When the information page for the Azure Container Registry template is displayed, click **Create**.</span></span> 
 
    ![Créer un registre de conteneurs Azure][AR02]
 
-1. <span data-ttu-id="1248b-136">Quand la page **Créer un registre de conteneurs** s’affiche, entrez votre **Nom du registre** et votre **Groupe de ressources**, choisissez **Activer** pour **l’utilisateur administrateur**, puis cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="1248b-136">When the **Create container registry** page is displayed, enter your **Registry name** and **Resource group**, choose **Enable** for the **Admin user**, and then click **Create**.</span></span>
+1. <span data-ttu-id="0d685-136">Quand la page **Créer un registre de conteneurs** s’affiche, entrez votre **Nom du registre** et votre **Groupe de ressources**, choisissez **Activer** pour **l’utilisateur administrateur**, puis cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="0d685-136">When the **Create container registry** page is displayed, enter your **Registry name** and **Resource group**, choose **Enable** for the **Admin user**, and then click **Create**.</span></span>
 
    ![Configurer les paramètres du registre de conteneurs Azure][AR03]
 
-1. <span data-ttu-id="1248b-138">Une fois votre registre de conteneurs créé, accédez à celui-ci dans le portail Azure puis cliquez sur **Clés d’accès**.</span><span class="sxs-lookup"><span data-stu-id="1248b-138">Once your container registry has been created, navigate to your container registry in the Azure portal, and then click **Access Keys**.</span></span> <span data-ttu-id="1248b-139">Notez le nom d’utilisateur et le mot de passe pour les étapes suivantes.</span><span class="sxs-lookup"><span data-stu-id="1248b-139">Take note of the username and password for the next steps.</span></span>
+1. <span data-ttu-id="0d685-138">Une fois votre registre de conteneurs créé, accédez à celui-ci dans le portail Azure puis cliquez sur **Clés d’accès**.</span><span class="sxs-lookup"><span data-stu-id="0d685-138">Once your container registry has been created, navigate to your container registry in the Azure portal, and then click **Access Keys**.</span></span> <span data-ttu-id="0d685-139">Notez le nom d’utilisateur et le mot de passe pour les étapes suivantes.</span><span class="sxs-lookup"><span data-stu-id="0d685-139">Take note of the username and password for the next steps.</span></span>
 
    ![Clés d’accès du registre de conteneurs Azure][AR04]
 
-## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a><span data-ttu-id="1248b-141">Configurer Maven pour utiliser les clés d’accès de votre registre de conteneurs Azure</span><span class="sxs-lookup"><span data-stu-id="1248b-141">Configure Maven to use your Azure Container Registry access keys</span></span>
+## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a><span data-ttu-id="0d685-141">Configurer Maven pour utiliser les clés d’accès de votre registre de conteneurs Azure</span><span class="sxs-lookup"><span data-stu-id="0d685-141">Configure Maven to use your Azure Container Registry access keys</span></span>
 
-1. <span data-ttu-id="1248b-142">Accédez au répertoire de configuration de votre installation de Maven et ouvrez le fichier *settings.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="1248b-142">Navigate to the configuration directory for your Maven installation and open the *settings.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="0d685-142">Accédez au répertoire de configuration de votre installation de Maven et ouvrez le fichier *settings.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="0d685-142">Navigate to the configuration directory for your Maven installation and open the *settings.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="1248b-143">Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de ce didacticiel à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-143">Add your Azure Container Registry access settings from the previous section of this tutorial to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
+1. <span data-ttu-id="0d685-143">Ajoutez les paramètres d’accès de votre registre de conteneurs Azure de la section précédente de ce didacticiel à la collection `<servers>` dans le fichier *settings.xml*. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-143">Add your Azure Container Registry access settings from the previous section of this tutorial to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
 
    ```xml
    <servers>
@@ -132,9 +132,9 @@ ms.locfileid: "52339143"
    </servers>
    ```
 
-1. <span data-ttu-id="1248b-144">Accédez au répertoire de projet terminé de votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou «  */users/robert/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="1248b-144">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="0d685-144">Accédez au répertoire du projet terminé pour votre application Spring Boot (par exemple : « *C:\SpringBoot\gs-spring-boot-docker\complete* » ou « */users/robert/SpringBoot/gs-spring-boot-docker/complete* ») et ouvrez le fichier *pom.xml* avec un éditeur de texte.</span><span class="sxs-lookup"><span data-stu-id="0d685-144">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="1248b-145">Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-145">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
+1. <span data-ttu-id="0d685-145">Mettez à jour la collection `<properties>` dans le fichier *pom.xml* avec la valeur du serveur de connexion pour votre registre de conteneurs Azure de la section précédente de ce didacticiel. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-145">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
 
    ```xml
    <properties>
@@ -143,7 +143,7 @@ ms.locfileid: "52339143"
    </properties>
    ```
 
-1. <span data-ttu-id="1248b-146">Mettez à jour la collection `<plugins>` dans le fichier *pom.xml* de façon à ce que le `<plugin>` contienne l’adresse du serveur de connexion et le nom de registre de votre registre de conteneurs Azure de la section précédente de ce didacticiel.</span><span class="sxs-lookup"><span data-stu-id="1248b-146">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry from the previous section of this tutorial.</span></span> <span data-ttu-id="1248b-147">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="1248b-147">For example:</span></span>
+1. <span data-ttu-id="0d685-146">Mettez à jour la collection `<plugins>` dans le fichier *pom.xml* de façon à ce que le `<plugin>` contienne l’adresse du serveur de connexion et le nom de registre de votre registre de conteneurs Azure de la section précédente de ce didacticiel.</span><span class="sxs-lookup"><span data-stu-id="0d685-146">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry from the previous section of this tutorial.</span></span> <span data-ttu-id="0d685-147">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="0d685-147">For example:</span></span>
 
    ```xml
    <plugin>
@@ -166,7 +166,7 @@ ms.locfileid: "52339143"
    </plugin>
    ```
 
-1. <span data-ttu-id="1248b-148">Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :</span><span class="sxs-lookup"><span data-stu-id="1248b-148">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure Container Registry:</span></span>
+1. <span data-ttu-id="0d685-148">Accédez au répertoire du projet terminé de votre application Spring Boot, et exécutez la commande suivante pour régénérer l’application et placer le conteneur dans votre registre de conteneurs Azure :</span><span class="sxs-lookup"><span data-stu-id="0d685-148">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure Container Registry:</span></span>
 
    ```
    mvn package docker:build -DpushImage 
@@ -174,68 +174,68 @@ ms.locfileid: "52339143"
 
 > [!NOTE]
 >
-> <span data-ttu-id="1248b-149">Quand vous placez votre conteneur Docker dans Azure, vous pouvez recevoir un message d’erreur similaire à un de ceux-ci, même si votre conteneur Docker a été créé correctement :</span><span class="sxs-lookup"><span data-stu-id="1248b-149">When you are pushing your Docker container to Azure, you may receive an error message that is similar to one of the following even though your Docker container was created successfully:</span></span>
+> <span data-ttu-id="0d685-149">Quand vous placez votre conteneur Docker dans Azure, vous pouvez recevoir un message d’erreur similaire à un de ceux-ci, même si votre conteneur Docker a été créé correctement :</span><span class="sxs-lookup"><span data-stu-id="0d685-149">When you are pushing your Docker container to Azure, you may receive an error message that is similar to one of the following even though your Docker container was created successfully:</span></span>
 >
 > * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: no basic auth credentials`
 >
 > * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: Incomplete Docker registry authorization credentials. Please provide all of username, password, and email or none.`
 >
-> <span data-ttu-id="1248b-150">Dans ce cas, vous pouvez être amené à vous connecter à votre compte Azure à partir de la ligne de commande de Docker. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-150">If this happens, you may need to sign in to your Azure account from the Docker command line; for example:</span></span>
+> <span data-ttu-id="0d685-150">Dans ce cas, vous pouvez être amené à vous connecter à votre compte Azure à partir de la ligne de commande de Docker. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-150">If this happens, you may need to sign in to your Azure account from the Docker command line; for example:</span></span>
 >
 > `docker login -u wingtiptoysregistry -p "AbCdEfGhIjKlMnOpQrStUvWxYz" wingtiptoysregistry.azurecr.io`
 >
-> <span data-ttu-id="1248b-151">Vous pouvez ensuite placer votre conteneur à partir de la ligne de commande. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="1248b-151">You can then push your container from the command line; for example:</span></span>
+> <span data-ttu-id="0d685-151">Vous pouvez ensuite placer votre conteneur à partir de la ligne de commande. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="0d685-151">You can then push your container from the command line; for example:</span></span>
 >
 > `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
 >
 
-## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a><span data-ttu-id="1248b-152">Créer une application web sur Linux sur Azure App Service en utilisant votre image de conteneur</span><span class="sxs-lookup"><span data-stu-id="1248b-152">Create a web app on Linux on Azure App Service using your container image</span></span>
+## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a><span data-ttu-id="0d685-152">Créer une application web sur Linux sur Azure App Service en utilisant votre image de conteneur</span><span class="sxs-lookup"><span data-stu-id="0d685-152">Create a web app on Linux on Azure App Service using your container image</span></span>
 
-1. <span data-ttu-id="1248b-153">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="1248b-153">Browse to the [Azure portal] and sign in.</span></span>
+1. <span data-ttu-id="0d685-153">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="0d685-153">Browse to the [Azure portal] and sign in.</span></span>
 
-2. <span data-ttu-id="1248b-154">Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Web + Mobile** puis cliquez sur **Application web sur Linux**.</span><span class="sxs-lookup"><span data-stu-id="1248b-154">Click the menu icon for **+ New**, then click **Web + Mobile**, and then click **Web App on Linux**.</span></span>
+2. <span data-ttu-id="0d685-154">Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Web + Mobile** puis cliquez sur **Application web sur Linux**.</span><span class="sxs-lookup"><span data-stu-id="0d685-154">Click the menu icon for **+ New**, then click **Web + Mobile**, and then click **Web App on Linux**.</span></span>
    
    ![Créer une application web dans le portail Azure][LX01]
 
-3. <span data-ttu-id="1248b-156">Quand la page **Application web sur Linux** s’affiche, entrez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="1248b-156">When the **Web App on Linux** page is displayed, enter the following information:</span></span>
+3. <span data-ttu-id="0d685-156">Quand la page **Application web sur Linux** s’affiche, entrez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="0d685-156">When the **Web App on Linux** page is displayed, enter the following information:</span></span>
 
-   <span data-ttu-id="1248b-157">a.</span><span class="sxs-lookup"><span data-stu-id="1248b-157">a.</span></span> <span data-ttu-id="1248b-158">Entrez un nom unique pour le **Nom de l’application**, par exemple : « *wingtiptoyslinux* ».</span><span class="sxs-lookup"><span data-stu-id="1248b-158">Enter a unique name for the **App name**; for example: "*wingtiptoyslinux*."</span></span>
+   <span data-ttu-id="0d685-157">a.</span><span class="sxs-lookup"><span data-stu-id="0d685-157">a.</span></span> <span data-ttu-id="0d685-158">Entrez un nom unique pour le **Nom de l’application**, par exemple : « *wingtiptoyslinux* ».</span><span class="sxs-lookup"><span data-stu-id="0d685-158">Enter a unique name for the **App name**; for example: "*wingtiptoyslinux*."</span></span>
 
-   <span data-ttu-id="1248b-159">b.</span><span class="sxs-lookup"><span data-stu-id="1248b-159">b.</span></span> <span data-ttu-id="1248b-160">Choisissez votre **abonnement** dans la liste déroulante.</span><span class="sxs-lookup"><span data-stu-id="1248b-160">Choose your **Subscription** from the drop-down list.</span></span>
+   <span data-ttu-id="0d685-159">b.</span><span class="sxs-lookup"><span data-stu-id="0d685-159">b.</span></span> <span data-ttu-id="0d685-160">Choisissez votre **abonnement** dans la liste déroulante.</span><span class="sxs-lookup"><span data-stu-id="0d685-160">Choose your **Subscription** from the drop-down list.</span></span>
 
-   <span data-ttu-id="1248b-161">c.</span><span class="sxs-lookup"><span data-stu-id="1248b-161">c.</span></span> <span data-ttu-id="1248b-162">Choisissez un **Groupe de ressources** existant ou spécifiez un nom pour en créer un.</span><span class="sxs-lookup"><span data-stu-id="1248b-162">Choose an existing **Resource Group**, or specify a name to create a new resource group.</span></span>
+   <span data-ttu-id="0d685-161">c.</span><span class="sxs-lookup"><span data-stu-id="0d685-161">c.</span></span> <span data-ttu-id="0d685-162">Choisissez un **Groupe de ressources** existant ou spécifiez un nom pour en créer un.</span><span class="sxs-lookup"><span data-stu-id="0d685-162">Choose an existing **Resource Group**, or specify a name to create a new resource group.</span></span>
 
-   <span data-ttu-id="1248b-163">d.</span><span class="sxs-lookup"><span data-stu-id="1248b-163">d.</span></span> <span data-ttu-id="1248b-164">Cliquez sur **Configurer le conteneur** et entrez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="1248b-164">Click **Configure container** and enter the following information:</span></span>
+   <span data-ttu-id="0d685-163">d.</span><span class="sxs-lookup"><span data-stu-id="0d685-163">d.</span></span> <span data-ttu-id="0d685-164">Cliquez sur **Configurer le conteneur** et entrez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="0d685-164">Click **Configure container** and enter the following information:</span></span>
 
-   * <span data-ttu-id="1248b-165">Choisissez **Registre privé**.</span><span class="sxs-lookup"><span data-stu-id="1248b-165">Choose **Private registry**.</span></span>
+   * <span data-ttu-id="0d685-165">Choisissez **Registre privé**.</span><span class="sxs-lookup"><span data-stu-id="0d685-165">Choose **Private registry**.</span></span>
 
-   * <span data-ttu-id="1248b-166">**Image et étiquette facultative** : spécifiez le nom de votre conteneur utilisé plus haut, par exemple : « *wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest* »</span><span class="sxs-lookup"><span data-stu-id="1248b-166">**Image and optional tag**: Specify your container name from earlier; for example: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"</span></span>
+   * <span data-ttu-id="0d685-166">**Image et étiquette facultative** : spécifiez le nom de votre conteneur utilisé plus haut, par exemple : « *wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest* ».</span><span class="sxs-lookup"><span data-stu-id="0d685-166">**Image and optional tag**: Specify your container name from earlier; for example: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"</span></span>
 
-   * <span data-ttu-id="1248b-167">**URL du serveur** : spécifiez l’URL du registre déclaré plus haut, par exemple : « *<https://wingtiptoysregistry.azurecr.io>*  »</span><span class="sxs-lookup"><span data-stu-id="1248b-167">**Server URL**: Specify your registry URL from earlier; for example: "*<https://wingtiptoysregistry.azurecr.io>*"</span></span>
+   * <span data-ttu-id="0d685-167">**URL du serveur** : spécifiez l’URL du registre déclaré plus haut, par exemple : « *<https://wingtiptoysregistry.azurecr.io>*  ».</span><span class="sxs-lookup"><span data-stu-id="0d685-167">**Server URL**: Specify your registry URL from earlier; for example: "*<https://wingtiptoysregistry.azurecr.io>*"</span></span>
 
-   * <span data-ttu-id="1248b-168">**Nom d’utilisateur de connexion** et **Mot de passe** : spécifiez vos informations d’identification de connexion des **clés d’accès** que vous avez utilisées dans les étapes précédentes.</span><span class="sxs-lookup"><span data-stu-id="1248b-168">**Login username** and **Password**: Specify your login credentials from your **Access Keys** that you used in previous steps.</span></span>
+   * <span data-ttu-id="0d685-168">**Nom d’utilisateur de connexion** et **Mot de passe** : spécifiez vos informations d’identification de connexion issues des **clés d’accès** que vous avez utilisées aux étapes précédentes.</span><span class="sxs-lookup"><span data-stu-id="0d685-168">**Login username** and **Password**: Specify your login credentials from your **Access Keys** that you used in previous steps.</span></span>
    
-   <span data-ttu-id="1248b-169">e.</span><span class="sxs-lookup"><span data-stu-id="1248b-169">e.</span></span> <span data-ttu-id="1248b-170">Après avoir entré toutes les informations ci-dessus, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="1248b-170">Once you have entered all of the above information, click **OK**.</span></span>
+   <span data-ttu-id="0d685-169">e.</span><span class="sxs-lookup"><span data-stu-id="0d685-169">e.</span></span> <span data-ttu-id="0d685-170">Après avoir entré toutes les informations ci-dessus, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="0d685-170">Once you have entered all of the above information, click **OK**.</span></span>
 
    ![Configurer les paramètres de l’application web][LX02]
 
-4. <span data-ttu-id="1248b-172">Cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="1248b-172">Click **Create**.</span></span>
+4. <span data-ttu-id="0d685-172">Cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="0d685-172">Click **Create**.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="1248b-173">Azure mappera automatiquement les demandes Internet au serveur Tomcat incorporé qui s’exécute sur les ports standard 80 ou 8080.</span><span class="sxs-lookup"><span data-stu-id="1248b-173">Azure will automatically map Internet requests to embedded Tomcat server that is running on the standard ports of 80 or 8080.</span></span> <span data-ttu-id="1248b-174">Cependant, si vous avez configuré votre serveur Tomcat incorporé pour qu’il s’exécute sur un port personnalisé, vous devez ajouter une variable d’environnement à votre application web qui définit le port pour votre serveur Tomcat incorporé.</span><span class="sxs-lookup"><span data-stu-id="1248b-174">However, if you configured your embedded Tomcat server to run on a custom port, you need to add an environment variable to your web app that defines the port for your embedded Tomcat server.</span></span> <span data-ttu-id="1248b-175">Pour ce faire, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="1248b-175">To do so, use the following steps:</span></span>
+> <span data-ttu-id="0d685-173">Azure mappera automatiquement les demandes Internet au serveur Tomcat incorporé qui s’exécute sur les ports standard 80 ou 8080.</span><span class="sxs-lookup"><span data-stu-id="0d685-173">Azure will automatically map Internet requests to embedded Tomcat server that is running on the standard ports of 80 or 8080.</span></span> <span data-ttu-id="0d685-174">Cependant, si vous avez configuré votre serveur Tomcat incorporé pour qu’il s’exécute sur un port personnalisé, vous devez ajouter une variable d’environnement à votre application web qui définit le port pour votre serveur Tomcat incorporé.</span><span class="sxs-lookup"><span data-stu-id="0d685-174">However, if you configured your embedded Tomcat server to run on a custom port, you need to add an environment variable to your web app that defines the port for your embedded Tomcat server.</span></span> <span data-ttu-id="0d685-175">Pour ce faire, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="0d685-175">To do so, use the following steps:</span></span>
 >
-> 1. <span data-ttu-id="1248b-176">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="1248b-176">Browse to the [Azure portal] and sign in.</span></span>
+> 1. <span data-ttu-id="0d685-176">Accédez au [portail Azure] et connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="0d685-176">Browse to the [Azure portal] and sign in.</span></span>
 > 
-> 2. <span data-ttu-id="1248b-177">Cliquez sur l’icône pour **App Services**.</span><span class="sxs-lookup"><span data-stu-id="1248b-177">Click the icon for **App Services**.</span></span> <span data-ttu-id="1248b-178">(Voir l’élément 1 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="1248b-178">(See item #1 in the image below.)</span></span>
+> 2. <span data-ttu-id="0d685-177">Cliquez sur l’icône pour **App Services**.</span><span class="sxs-lookup"><span data-stu-id="0d685-177">Click the icon for **App Services**.</span></span> <span data-ttu-id="0d685-178">(Voir l’élément 1 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="0d685-178">(See item #1 in the image below.)</span></span>
 >
-> 3. <span data-ttu-id="1248b-179">Sélectionnez votre application web dans la liste.</span><span class="sxs-lookup"><span data-stu-id="1248b-179">Select your web app from the list.</span></span> <span data-ttu-id="1248b-180">(Élément 2 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="1248b-180">(Item #2 in the image below.)</span></span>
+> 3. <span data-ttu-id="0d685-179">Sélectionnez votre application web dans la liste.</span><span class="sxs-lookup"><span data-stu-id="0d685-179">Select your web app from the list.</span></span> <span data-ttu-id="0d685-180">(Élément 2 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="0d685-180">(Item #2 in the image below.)</span></span>
 >
-> 4. <span data-ttu-id="1248b-181">Cliquez sur **Paramètres de l’application**.</span><span class="sxs-lookup"><span data-stu-id="1248b-181">Click **Application Settings**.</span></span> <span data-ttu-id="1248b-182">(Élément 3 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="1248b-182">(Item #3 in the image below.)</span></span>
+> 4. <span data-ttu-id="0d685-181">Cliquez sur **Paramètres de l’application**.</span><span class="sxs-lookup"><span data-stu-id="0d685-181">Click **Application Settings**.</span></span> <span data-ttu-id="0d685-182">(Élément 3 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="0d685-182">(Item #3 in the image below.)</span></span>
 >
-> 5. <span data-ttu-id="1248b-183">Dans la section **Paramètres de l’application**, ajoutez une nouvelle variable d’environnement nommée **PORT** et entrez comme valeur votre numéro de port personnalisé.</span><span class="sxs-lookup"><span data-stu-id="1248b-183">In the **App settings** section, add a new environment variable named **PORT** and enter your custom port number for the value.</span></span> <span data-ttu-id="1248b-184">(Élément 4 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="1248b-184">(Item #4 in the image below.)</span></span>
+> 5. <span data-ttu-id="0d685-183">Dans la section **Paramètres de l’application**, ajoutez une nouvelle variable d’environnement nommée **PORT** et entrez comme valeur votre numéro de port personnalisé.</span><span class="sxs-lookup"><span data-stu-id="0d685-183">In the **App settings** section, add a new environment variable named **PORT** and enter your custom port number for the value.</span></span> <span data-ttu-id="0d685-184">(Élément 4 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="0d685-184">(Item #4 in the image below.)</span></span>
 >
-> 6. <span data-ttu-id="1248b-185">Cliquez sur **Enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="1248b-185">Click **Save**.</span></span> <span data-ttu-id="1248b-186">(Élément 5 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="1248b-186">(Item #5 in the image below.)</span></span>
+> 6. <span data-ttu-id="0d685-185">Cliquez sur **Enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="0d685-185">Click **Save**.</span></span> <span data-ttu-id="0d685-186">(Élément 5 de l’image ci-dessous.)</span><span class="sxs-lookup"><span data-stu-id="0d685-186">(Item #5 in the image below.)</span></span>
 >
 > ![Enregistrement d’un numéro de port personnalisé dans le portail Azure][LX03]
 >
@@ -261,30 +261,37 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="1248b-188">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="1248b-188">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="0d685-188">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="0d685-188">Next steps</span></span>
 
-<span data-ttu-id="1248b-189">Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="1248b-189">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+<span data-ttu-id="0d685-189">Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.</span><span class="sxs-lookup"><span data-stu-id="0d685-189">To learn more about Spring and Azure, continue to the Spring on Azure documentation center.</span></span>
 
-* [<span data-ttu-id="1248b-190">Déployer une application Spring Boot sur Azure App Service</span><span class="sxs-lookup"><span data-stu-id="1248b-190">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
-* [<span data-ttu-id="1248b-191">Déployer une application Spring Boot sur un cluster Kubernetes dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="1248b-191">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="0d685-190">Spring sur Azure</span><span class="sxs-lookup"><span data-stu-id="0d685-190">Spring on Azure</span></span>](/java/azure/spring-framework)
 
-<span data-ttu-id="1248b-192">Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java] et [Outils Java pour Visual Studio Team Services].</span><span class="sxs-lookup"><span data-stu-id="1248b-192">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="0d685-191">Ressources supplémentaires</span><span class="sxs-lookup"><span data-stu-id="0d685-191">Additional Resources</span></span>
 
-<span data-ttu-id="1248b-193">Pour plus d’informations sur l’exemple de projet Spring Boot on Docker, consultez [Spring Boot on Docker Getting Started].</span><span class="sxs-lookup"><span data-stu-id="1248b-193">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
+<span data-ttu-id="0d685-192">Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="0d685-192">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-<span data-ttu-id="1248b-194">Pour obtenir de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.</span><span class="sxs-lookup"><span data-stu-id="1248b-194">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
+* [<span data-ttu-id="0d685-193">Déployer une application Spring Boot sur Azure App Service</span><span class="sxs-lookup"><span data-stu-id="0d685-193">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+* [<span data-ttu-id="0d685-194">Déployer une application Spring Boot sur un cluster Kubernetes dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="0d685-194">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
 
-<span data-ttu-id="1248b-195">Pour plus d’informations sur la création d’une application Spring Boot simple, consultez Spring Initializr à l’adresse https://start.spring.io/.</span><span class="sxs-lookup"><span data-stu-id="1248b-195">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at https://start.spring.io/.</span></span>
+<span data-ttu-id="0d685-195">Pour plus d’informations sur l’utilisation d’Azure avec Java, renseignez-vous sur [Azure pour les développeurs Java] et l’[utilisation d’Azure DevOps et Java].</span><span class="sxs-lookup"><span data-stu-id="0d685-195">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Working with Azure DevOps and Java].</span></span>
 
-<span data-ttu-id="1248b-196">Pour obtenir des exemples supplémentaires sur l’utilisation d’images Docker personnalisées avec Azure, consultez [Comment utiliser une image Docker personnalisée pour Azure Web App sur Linux].</span><span class="sxs-lookup"><span data-stu-id="1248b-196">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
+<span data-ttu-id="0d685-196">Pour plus d’informations sur l’exemple de projet Spring Boot on Docker, consultez [Spring Boot on Docker Getting Started].</span><span class="sxs-lookup"><span data-stu-id="0d685-196">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
+
+<span data-ttu-id="0d685-197">Pour obtenir de l’aide sur la mise en route de vos propres applications Spring Boot, consultez **Spring Initializr** à l’adresse https://start.spring.io/.</span><span class="sxs-lookup"><span data-stu-id="0d685-197">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
+
+<span data-ttu-id="0d685-198">Pour plus d’informations sur la création d’une application Spring Boot simple, consultez Spring Initializr à l’adresse https://start.spring.io/.</span><span class="sxs-lookup"><span data-stu-id="0d685-198">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at https://start.spring.io/.</span></span>
+
+<span data-ttu-id="0d685-199">Pour obtenir des exemples supplémentaires sur l’utilisation d’images Docker personnalisées avec Azure, consultez [Comment utiliser une image Docker personnalisée pour Azure Web App sur Linux].</span><span class="sxs-lookup"><span data-stu-id="0d685-199">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
 
 <!-- URL List -->
 
 [Azure CLI]: /cli/azure/overview
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure pour les développeurs Java]: /java/azure/
+[Azure for Java Developers]: /java/azure/
 [Portail Azure]: https://portal.azure.com/
 [Azure portal]: https://portal.azure.com/
 [Créer un registre de conteneurs Docker privé à l’aide du portail Azure]: /azure/container-registry/container-registry-get-started-portal
@@ -295,8 +302,8 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Utilisation d’Azure DevOps et Java]: /azure/devops/java/
+[Working with Azure DevOps and Java]: /azure/devops/java/
 [Maven]: http://maven.apache.org/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

@@ -8,96 +8,96 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 2c4dfe35ed2f4728e5704aac938410f847fe5b1f
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 4b720cf4639a12c6dd8cc5040107c1b52de6f642
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338673"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991403"
 ---
-# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a><span data-ttu-id="aea4a-103">Configurer une application Spring Boot Initializer pour utiliser le cache Redis dans le cloud avec le Cache Redis Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="aea4a-103">Configure a Spring Boot Initializer app to use Redis in the cloud with Azure Redis Cache</span></span>
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a><span data-ttu-id="f206c-103">Configurer une application Spring Boot Initializer pour utiliser le cache Redis dans le cloud avec le Cache Redis Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="f206c-103">Configure a Spring Boot Initializer app to use Redis in the cloud with Azure Redis Cache</span></span>
 
-<span data-ttu-id="aea4a-104">Cet article explique comment créer un cache Redis dans le cloud par le biais du portail Azure, utiliser **[Spring Initializr]** pour créer une application personnalisée, puis créer une application web Java qui stocke et récupère des données à l’aide de votre cache Redis.</span><span class="sxs-lookup"><span data-stu-id="aea4a-104">This article walks you through creating a Redis cache in the cloud using the Azure portal, then using the **[Spring Initializr]** to create a custom application, and then creating a Java web application that stores and retrieves data using your Redis cache.</span></span>
+<span data-ttu-id="f206c-104">Cet article explique comment créer un cache Redis dans le cloud par le biais du portail Azure, utiliser **[Spring Initializr]** pour créer une application personnalisée, puis créer une application web Java qui stocke et récupère des données à l’aide de votre cache Redis.</span><span class="sxs-lookup"><span data-stu-id="f206c-104">This article walks you through creating a Redis cache in the cloud using the Azure portal, then using the **[Spring Initializr]** to create a custom application, and then creating a Java web application that stores and retrieves data using your Redis cache.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="aea4a-105">Prérequis</span><span class="sxs-lookup"><span data-stu-id="aea4a-105">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f206c-105">Prérequis</span><span class="sxs-lookup"><span data-stu-id="f206c-105">Prerequisites</span></span>
 
-<span data-ttu-id="aea4a-106">Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="aea4a-106">The following prerequisites are required in order to complete the steps in this article:</span></span>
+<span data-ttu-id="f206c-106">Pour réaliser les étapes décrites dans cet article, vous devez disposer des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="f206c-106">The following prerequisites are required in order to complete the steps in this article:</span></span>
 
-* <span data-ttu-id="aea4a-107">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="aea4a-107">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="aea4a-108">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="aea4a-108">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="aea4a-109">Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="aea4a-109">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
-* <span data-ttu-id="aea4a-110">[Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="aea4a-110">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
+* <span data-ttu-id="f206c-107">Un abonnement Azure. Si vous n’avez pas déjà un abonnement Azure, vous pouvez activer vos [avantages d’abonné MSDN] ou vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="f206c-107">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="f206c-108">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="f206c-108">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="f206c-109">Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="f206c-109">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="f206c-110">[Apache Maven](http://maven.apache.org/), version 3.0 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="f206c-110">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a><span data-ttu-id="aea4a-111">Créer une application personnalisée à l’aide de Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="aea4a-111">Create a custom application using the Spring Initializr</span></span>
+## <a name="create-a-custom-application-using-the-spring-initializr"></a><span data-ttu-id="f206c-111">Créer une application personnalisée à l’aide de Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="f206c-111">Create a custom application using the Spring Initializr</span></span>
 
-1. <span data-ttu-id="aea4a-112">Accédez à <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="aea4a-112">Browse to <https://start.spring.io/>.</span></span>
+1. <span data-ttu-id="f206c-112">Accédez à <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="f206c-112">Browse to <https://start.spring.io/>.</span></span>
 
-1. <span data-ttu-id="aea4a-113">Précisez que vous souhaitez générer un projet **Maven** avec **Java**, entrez les noms de **Groupe** et d’**Artefact** pour votre application, puis cliquez sur le lien pour **basculer vers la version complète** de Spring Initializr.</span><span class="sxs-lookup"><span data-stu-id="aea4a-113">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Aritifact** names for your application, and then click the link to **Switch to the full version** of the Spring Initializr.</span></span>
+1. <span data-ttu-id="f206c-113">Précisez que vous souhaitez générer un projet **Maven** avec **Java**, entrez les noms de **Groupe** et d’**Artefact** pour votre application, puis cliquez sur le lien pour **basculer vers la version complète** de Spring Initializr.</span><span class="sxs-lookup"><span data-stu-id="f206c-113">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Aritifact** names for your application, and then click the link to **Switch to the full version** of the Spring Initializr.</span></span>
 
    ![Options de base de Spring Initializr][SI01]
 
    > [!NOTE]
    >
-   > <span data-ttu-id="aea4a-115">Spring Initializr utilisera les noms de **Groupe** et d’**Artefact** pour créer le nom du package ; par exemple : *com.contoso.myazuredemo*.</span><span class="sxs-lookup"><span data-stu-id="aea4a-115">The Spring Initializr will use the **Group** and **Aritifact** names to create the package name; for example: *com.contoso.myazuredemo*.</span></span>
+   > <span data-ttu-id="f206c-115">Spring Initializr utilisera les noms de **Groupe** et d’**Artefact** pour créer le nom du package ; par exemple : *com.contoso.myazuredemo*.</span><span class="sxs-lookup"><span data-stu-id="f206c-115">The Spring Initializr will use the **Group** and **Aritifact** names to create the package name; for example: *com.contoso.myazuredemo*.</span></span>
    >
 
-1. <span data-ttu-id="aea4a-116">Faites défiler jusqu’à la section**Web** et cochez la case **Web**, faites défiler jusqu’à la section **NoSQL** et cochez la case **Redis**, puis faites défiler jusqu’au bas de la page et cliquez sur le bouton pour **générer le projet**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-116">Scroll down to the **Web** section and check the box for **Web**, then scroll down to the **NoSQL** section and check the box for **Redis**, then scroll to the bottom of the page and click the button to **Generate Project**.</span></span>
+1. <span data-ttu-id="f206c-116">Faites défiler jusqu’à la section**Web** et cochez la case **Web**, faites défiler jusqu’à la section **NoSQL** et cochez la case **Redis**, puis faites défiler jusqu’au bas de la page et cliquez sur le bouton pour **générer le projet**.</span><span class="sxs-lookup"><span data-stu-id="f206c-116">Scroll down to the **Web** section and check the box for **Web**, then scroll down to the **NoSQL** section and check the box for **Redis**, then scroll to the bottom of the page and click the button to **Generate Project**.</span></span>
 
    ![Options complètes de Spring Initializr][SI02]
 
-1. <span data-ttu-id="aea4a-118">À l’invite, téléchargez le projet vers un emplacement sur votre ordinateur local.</span><span class="sxs-lookup"><span data-stu-id="aea4a-118">When prompted, download the project to a path on your local computer.</span></span>
+1. <span data-ttu-id="f206c-118">À l’invite, téléchargez le projet vers un emplacement sur votre ordinateur local.</span><span class="sxs-lookup"><span data-stu-id="f206c-118">When prompted, download the project to a path on your local computer.</span></span>
 
    ![Télécharger un projet Spring Boot personnalisé][SI03]
 
-1. <span data-ttu-id="aea4a-120">Une fois que vous avez extrait les fichiers sur votre système local, votre application Spring Boot personnalisée est prête à être modifiée.</span><span class="sxs-lookup"><span data-stu-id="aea4a-120">After you have extracted the files on your local system, your custom Spring Boot application will be ready for editing.</span></span>
+1. <span data-ttu-id="f206c-120">Une fois que vous avez extrait les fichiers sur votre système local, votre application Spring Boot personnalisée est prête à être modifiée.</span><span class="sxs-lookup"><span data-stu-id="f206c-120">After you have extracted the files on your local system, your custom Spring Boot application will be ready for editing.</span></span>
 
    ![Fichiers de projet Spring Boot personnalisé][SI04]
 
-## <a name="create-a-redis-cache-on-azure"></a><span data-ttu-id="aea4a-122">Créer un Cache Redis sur Azure</span><span class="sxs-lookup"><span data-stu-id="aea4a-122">Create a Redis cache on Azure</span></span>
+## <a name="create-a-redis-cache-on-azure"></a><span data-ttu-id="f206c-122">Créer un Cache Redis sur Azure</span><span class="sxs-lookup"><span data-stu-id="f206c-122">Create a Redis cache on Azure</span></span>
 
-1. <span data-ttu-id="aea4a-123">Accédez au Portail Azure à l’adresse <https://portal.azure.com/> et cliquez sur **+Nouveau**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-123">Browse to the Azure portal at <https://portal.azure.com/> and click **+New**.</span></span>
+1. <span data-ttu-id="f206c-123">Accédez au Portail Azure à l’adresse <https://portal.azure.com/> et cliquez sur **+Nouveau**.</span><span class="sxs-lookup"><span data-stu-id="f206c-123">Browse to the Azure portal at <https://portal.azure.com/> and click **+New**.</span></span>
 
    ![Portail Azure][AZ01]
 
-1. <span data-ttu-id="aea4a-125">Cliquez sur **Base de données**, puis sur **Cache Redis**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-125">Click **Database**, and then click **Redis Cache**.</span></span>
+1. <span data-ttu-id="f206c-125">Cliquez sur **Base de données**, puis sur **Cache Redis**.</span><span class="sxs-lookup"><span data-stu-id="f206c-125">Click **Database**, and then click **Redis Cache**.</span></span>
 
    ![Portail Azure][AZ02]
 
-1. <span data-ttu-id="aea4a-127">Dans la page **Nouveau cache Redis**, spécifiez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="aea4a-127">On the **New Redis Cache** page, specify the following information:</span></span>
+1. <span data-ttu-id="f206c-127">Dans la page **Nouveau cache Redis**, spécifiez les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="f206c-127">On the **New Redis Cache** page, specify the following information:</span></span>
 
-   * <span data-ttu-id="aea4a-128">Entrez le **nom DNS** de votre cache.</span><span class="sxs-lookup"><span data-stu-id="aea4a-128">Enter the **DNS name** for your cache.</span></span>
-   * <span data-ttu-id="aea4a-129">Spécifiez votre **abonnement**, **groupe de ressources**, **emplacement** et **niveau tarifaire**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-129">Specify your **Subscription**, **Resource group**, **Location**, and **Pricing tier**.</span></span>
-   * <span data-ttu-id="aea4a-130">Pour ce didacticiel, choisissez **Débloquer le port 6379**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-130">For this tutorial, choose **Unblock port 6379**.</span></span>
+   * <span data-ttu-id="f206c-128">Entrez le **nom DNS** de votre cache.</span><span class="sxs-lookup"><span data-stu-id="f206c-128">Enter the **DNS name** for your cache.</span></span>
+   * <span data-ttu-id="f206c-129">Spécifiez votre **abonnement**, **groupe de ressources**, **emplacement** et **niveau tarifaire**.</span><span class="sxs-lookup"><span data-stu-id="f206c-129">Specify your **Subscription**, **Resource group**, **Location**, and **Pricing tier**.</span></span>
+   * <span data-ttu-id="f206c-130">Pour ce didacticiel, choisissez **Débloquer le port 6379**.</span><span class="sxs-lookup"><span data-stu-id="f206c-130">For this tutorial, choose **Unblock port 6379**.</span></span>
 
    > [!NOTE]
    >
-   > <span data-ttu-id="aea4a-131">Vous pouvez utiliser SSL avec les caches Redis, mais vous devez utiliser un autre client Redis comme Jedis.</span><span class="sxs-lookup"><span data-stu-id="aea4a-131">You can use SSL with Redis caches, but you would need to use a different Redis client like Jedis.</span></span> <span data-ttu-id="aea4a-132">Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="aea4a-132">For more information, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span>
+   > <span data-ttu-id="f206c-131">Vous pouvez utiliser SSL avec les caches Redis, mais vous devez utiliser un autre client Redis comme Jedis.</span><span class="sxs-lookup"><span data-stu-id="f206c-131">You can use SSL with Redis caches, but you would need to use a different Redis client like Jedis.</span></span> <span data-ttu-id="f206c-132">Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="f206c-132">For more information, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span>
    >
 
-   <span data-ttu-id="aea4a-133">Une fois que vous avez défini ces options, cliquez sur **Créer** pour créer votre cache.</span><span class="sxs-lookup"><span data-stu-id="aea4a-133">When you have specified these options, click **Create** to create your cache.</span></span>
+   <span data-ttu-id="f206c-133">Une fois que vous avez défini ces options, cliquez sur **Créer** pour créer votre cache.</span><span class="sxs-lookup"><span data-stu-id="f206c-133">When you have specified these options, click **Create** to create your cache.</span></span>
 
    ![Portail Azure][AZ03]
 
-1. <span data-ttu-id="aea4a-135">Une fois votre cache terminé, il est répertorié dans votre **Tableau de bord** Azure et dans les pages **Toutes les ressources** et **Caches Redis**.</span><span class="sxs-lookup"><span data-stu-id="aea4a-135">Once your cache has been completed, you will see it listed on your Azure **Dashboard**, as well as under the **All Resources**, and **Redis Caches** pages.</span></span> <span data-ttu-id="aea4a-136">Vous pouvez cliquer sur le cache à l’un de ces emplacements pour ouvrir la page des propriétés de votre cache.</span><span class="sxs-lookup"><span data-stu-id="aea4a-136">You can click on your cache on any of those locations to open the properties page for your cache.</span></span>
+1. <span data-ttu-id="f206c-135">Une fois votre cache terminé, il est répertorié dans votre **Tableau de bord** Azure et dans les pages **Toutes les ressources** et **Caches Redis**.</span><span class="sxs-lookup"><span data-stu-id="f206c-135">Once your cache has been completed, you will see it listed on your Azure **Dashboard**, as well as under the **All Resources**, and **Redis Caches** pages.</span></span> <span data-ttu-id="f206c-136">Vous pouvez cliquer sur le cache à l’un de ces emplacements pour ouvrir la page des propriétés de votre cache.</span><span class="sxs-lookup"><span data-stu-id="f206c-136">You can click on your cache on any of those locations to open the properties page for your cache.</span></span>
 
    ![Portail Azure][AZ04]
 
-1. <span data-ttu-id="aea4a-138">Quand la page qui contient la liste des propriétés de votre cache est affichée, cliquez sur **Clés d’accès** et copiez vos clés d’accès pour votre cache.</span><span class="sxs-lookup"><span data-stu-id="aea4a-138">When the page that contains the list of properties for your cache is displayed, click **Access keys** and copy your access keys for your cache.</span></span>
+1. <span data-ttu-id="f206c-138">Quand la page qui contient la liste des propriétés de votre cache est affichée, cliquez sur **Clés d’accès** et copiez vos clés d’accès pour votre cache.</span><span class="sxs-lookup"><span data-stu-id="f206c-138">When the page that contains the list of properties for your cache is displayed, click **Access keys** and copy your access keys for your cache.</span></span>
 
    ![Portail Azure][AZ05]
 
-## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a><span data-ttu-id="aea4a-140">Configurer votre Spring Boot personnalisé pour utiliser votre Cache Redis</span><span class="sxs-lookup"><span data-stu-id="aea4a-140">Configure your custom Spring Boot to use your Redis Cache</span></span>
+## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a><span data-ttu-id="f206c-140">Configurer votre Spring Boot personnalisé pour utiliser votre Cache Redis</span><span class="sxs-lookup"><span data-stu-id="f206c-140">Configure your custom Spring Boot to use your Redis Cache</span></span>
 
-1. <span data-ttu-id="aea4a-141">Recherchez le fichier *application.properties* dans le répertoire *resources* de votre application, ou créez le fichier s’il n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="aea4a-141">Locate the *application.properties* file in the *resources* directory of your app, or create the file if it does not already exist.</span></span>
+1. <span data-ttu-id="f206c-141">Recherchez le fichier *application.properties* dans le répertoire *resources* de votre application, ou créez le fichier s’il n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="f206c-141">Locate the *application.properties* file in the *resources* directory of your app, or create the file if it does not already exist.</span></span>
 
    ![Rechercher le fichier application.properties][RE01]
 
-1. <span data-ttu-id="aea4a-143">Ouvrez le fichier *application.properties* dans un éditeur de texte, ajoutez les lignes suivantes au fichier et remplacez les exemples de valeurs par les propriétés appropriées de votre cache :</span><span class="sxs-lookup"><span data-stu-id="aea4a-143">Open the *application.properties* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties from your cache:</span></span>
+1. <span data-ttu-id="f206c-143">Ouvrez le fichier *application.properties* dans un éditeur de texte, ajoutez les lignes suivantes au fichier et remplacez les exemples de valeurs par les propriétés appropriées de votre cache :</span><span class="sxs-lookup"><span data-stu-id="f206c-143">Open the *application.properties* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties from your cache:</span></span>
 
    ```yaml
    # Specify the DNS URI of your Redis cache.
@@ -114,7 +114,7 @@ ms.locfileid: "52338673"
 
    > [!NOTE] 
    > 
-   > <span data-ttu-id="aea4a-145">Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez que vous voulez utiliser le protocole SSL dans votre fichier *application.properties* et le port 6380.</span><span class="sxs-lookup"><span data-stu-id="aea4a-145">If you were using a different Redis client like Jedis that enables SSL, you would specify that you want to use SSL in your *application.properties* file and use port 6380.</span></span> <span data-ttu-id="aea4a-146">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="aea4a-146">For example:</span></span>
+   > <span data-ttu-id="f206c-145">Si vous utilisez un autre client Redis comme Jedis qui active SSL, spécifiez que vous voulez utiliser le protocole SSL dans votre fichier *application.properties* et le port 6380.</span><span class="sxs-lookup"><span data-stu-id="f206c-145">If you were using a different Redis client like Jedis that enables SSL, you would specify that you want to use SSL in your *application.properties* file and use port 6380.</span></span> <span data-ttu-id="f206c-146">Par exemple : </span><span class="sxs-lookup"><span data-stu-id="f206c-146">For example:</span></span>
    > 
    > ```yaml
    > # Specify the DNS URI of your Redis cache.
@@ -127,20 +127,20 @@ ms.locfileid: "52338673"
    > spring.redis.port=6380
    > ```
    > 
-   > <span data-ttu-id="aea4a-147">Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="aea4a-147">For more information, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span> 
+   > <span data-ttu-id="f206c-147">Pour plus d’informations, consultez [Utilisation du cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="f206c-147">For more information, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span> 
    > 
 
-1. <span data-ttu-id="aea4a-148">Enregistrez et fermez le fichier *application.properties*.</span><span class="sxs-lookup"><span data-stu-id="aea4a-148">Save and close the *application.properties* file.</span></span>
+1. <span data-ttu-id="f206c-148">Enregistrez et fermez le fichier *application.properties*.</span><span class="sxs-lookup"><span data-stu-id="f206c-148">Save and close the *application.properties* file.</span></span>
 
-1. <span data-ttu-id="aea4a-149">Créez un dossier nommé *controller* sous le dossier source de votre package, par exemple :</span><span class="sxs-lookup"><span data-stu-id="aea4a-149">Create a folder named *controller* under the source folder for your package; for example:</span></span>
+1. <span data-ttu-id="f206c-149">Créez un dossier nommé *controller* sous le dossier source de votre package, par exemple :</span><span class="sxs-lookup"><span data-stu-id="f206c-149">Create a folder named *controller* under the source folder for your package; for example:</span></span>
 
    `C:\SpringBoot\myazuredemo\src\main\java\com\contoso\myazuredemo\controller`
 
-   <span data-ttu-id="aea4a-150">-ou-</span><span class="sxs-lookup"><span data-stu-id="aea4a-150">-or-</span></span>
+   <span data-ttu-id="f206c-150">-ou-</span><span class="sxs-lookup"><span data-stu-id="f206c-150">-or-</span></span>
 
    `/users/example/home/myazuredemo/src/main/java/com/contoso/myazuredemo/controller`
 
-1. <span data-ttu-id="aea4a-151">Créez un fichier nommé *HelloController.java* dans le dossier *controller*.</span><span class="sxs-lookup"><span data-stu-id="aea4a-151">Create a new file named *HelloController.java* in the *controller* folder.</span></span> <span data-ttu-id="aea4a-152">Ouvrez le fichier dans un éditeur de texte, puis ajoutez-y le code suivant :</span><span class="sxs-lookup"><span data-stu-id="aea4a-152">Open the file in a text editor and add the following code to it:</span></span>
+1. <span data-ttu-id="f206c-151">Créez un fichier nommé *HelloController.java* dans le dossier *controller*.</span><span class="sxs-lookup"><span data-stu-id="f206c-151">Create a new file named *HelloController.java* in the *controller* folder.</span></span> <span data-ttu-id="f206c-152">Ouvrez le fichier dans un éditeur de texte, puis ajoutez-y le code suivant :</span><span class="sxs-lookup"><span data-stu-id="f206c-152">Open the file in a text editor and add the following code to it:</span></span>
 
    ```java
    package com.contoso.myazuredemo;
@@ -177,47 +177,54 @@ ms.locfileid: "52338673"
    }
    ```
    
-   <span data-ttu-id="aea4a-153">Où vous devez remplacer `com.contoso.myazuredemo` par le nom du package de votre projet.</span><span class="sxs-lookup"><span data-stu-id="aea4a-153">Where you will need to replace `com.contoso.myazuredemo` with the package name for your project.</span></span>
+   <span data-ttu-id="f206c-153">Où vous devez remplacer `com.contoso.myazuredemo` par le nom du package de votre projet.</span><span class="sxs-lookup"><span data-stu-id="f206c-153">Where you will need to replace `com.contoso.myazuredemo` with the package name for your project.</span></span>
 
-1. <span data-ttu-id="aea4a-154">Enregistrez et fermez le fichier *HelloController.java*.</span><span class="sxs-lookup"><span data-stu-id="aea4a-154">Save and close the *HelloController.java* file.</span></span>
+1. <span data-ttu-id="f206c-154">Enregistrez et fermez le fichier *HelloController.java*.</span><span class="sxs-lookup"><span data-stu-id="f206c-154">Save and close the *HelloController.java* file.</span></span>
 
-1. <span data-ttu-id="aea4a-155">Générez votre application Spring Boot avec Maven, puis exécutez-la. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="aea4a-155">Build your Spring Boot application with Maven and run it; for example:</span></span>
+1. <span data-ttu-id="f206c-155">Générez votre application Spring Boot avec Maven, puis exécutez-la. Par exemple :</span><span class="sxs-lookup"><span data-stu-id="f206c-155">Build your Spring Boot application with Maven and run it; for example:</span></span>
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="aea4a-156">Testez l’application web en accédant à http://localhost:8080 avec un navigateur web, ou utilisez la syntaxe de l’exemple suivant si vous disposez de curl :</span><span class="sxs-lookup"><span data-stu-id="aea4a-156">Test the web app by browsing to http://localhost:8080 using a web browser, or use the syntax like the following example if you have curl available:</span></span>
+1. <span data-ttu-id="f206c-156">Testez l’application web en accédant à http://localhost:8080 avec un navigateur web, ou utilisez la syntaxe de l’exemple suivant si vous disposez de curl :</span><span class="sxs-lookup"><span data-stu-id="f206c-156">Test the web app by browsing to http://localhost:8080 using a web browser, or use the syntax like the following example if you have curl available:</span></span>
 
    ```shell
    curl http://localhost:8080
    ```
 
-   <span data-ttu-id="aea4a-157">Le message « Hello World! » de votre exemple de contrôleur</span><span class="sxs-lookup"><span data-stu-id="aea4a-157">You should see the "Hello World!"</span></span> <span data-ttu-id="aea4a-158">doit s’afficher. Il est extrait de manière dynamique à partir de votre cache Redis.</span><span class="sxs-lookup"><span data-stu-id="aea4a-158">message from your sample controller displayed, which is being retrieved dynamically from your Redis cache.</span></span>
+   <span data-ttu-id="f206c-157">Le message « Hello World! » de votre exemple de contrôleur</span><span class="sxs-lookup"><span data-stu-id="f206c-157">You should see the "Hello World!"</span></span> <span data-ttu-id="f206c-158">doit s’afficher. Il est extrait de manière dynamique à partir de votre cache Redis.</span><span class="sxs-lookup"><span data-stu-id="f206c-158">message from your sample controller displayed, which is being retrieved dynamically from your Redis cache.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="aea4a-159">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="aea4a-159">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f206c-159">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="f206c-159">Next steps</span></span>
 
-<span data-ttu-id="aea4a-160">Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="aea4a-160">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+<span data-ttu-id="f206c-160">Pour en savoir plus sur Spring et Azure, poursuivez vers le centre de documentation Spring sur Azure.</span><span class="sxs-lookup"><span data-stu-id="f206c-160">To learn more about Spring and Azure, continue to the Spring on Azure documentation center.</span></span>
 
-* [<span data-ttu-id="aea4a-161">Déployer une application Spring Boot sur Azure App Service</span><span class="sxs-lookup"><span data-stu-id="aea4a-161">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="f206c-161">Spring sur Azure</span><span class="sxs-lookup"><span data-stu-id="f206c-161">Spring on Azure</span></span>](/java/azure/spring-framework)
 
-* [<span data-ttu-id="aea4a-162">Exécution d’une application Spring Boot sur un cluster Kubernetes dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="aea4a-162">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+### <a name="additional-resources"></a><span data-ttu-id="f206c-162">Ressources supplémentaires</span><span class="sxs-lookup"><span data-stu-id="f206c-162">Additional Resources</span></span>
 
-<span data-ttu-id="aea4a-163">Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java] et [Outils Java pour Visual Studio Team Services].</span><span class="sxs-lookup"><span data-stu-id="aea4a-163">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="f206c-163">Pour plus d’informations sur l’utilisation d’applications Spring Boot sur Azure, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="f206c-163">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-<span data-ttu-id="aea4a-164">Pour plus d’informations sur la prise en main du Cache Redis avec Java sur Azure, consultez [Utilisation du Cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="aea4a-164">For more information about getting started using Redis Cache with Java on Azure, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span>
+* [<span data-ttu-id="f206c-164">Déployer une application Spring Boot sur Azure App Service</span><span class="sxs-lookup"><span data-stu-id="f206c-164">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
 
-<span data-ttu-id="aea4a-165">**[Spring Framework]** est une solution open source qui aide les développeurs Java à créer des applications d’entreprise.</span><span class="sxs-lookup"><span data-stu-id="aea4a-165">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="aea4a-166">L’un des projets les plus connus basés sur cette plateforme est [Spring Boot], qui fournit une approche simplifiée pour la création d’applications Java autonomes.</span><span class="sxs-lookup"><span data-stu-id="aea4a-166">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="aea4a-167">Pour aider les développeurs à bien démarrer avec Spring Boot, plusieurs exemples de packages Spring Boot sont disponibles à l’adresse <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="aea4a-167">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="aea4a-168">En plus de choisir dans la liste des projets Spring Boot de base, **[Spring Initializr]** aide les développeurs à commencer à créer des applications Spring Boot personnalisées.</span><span class="sxs-lookup"><span data-stu-id="aea4a-168">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
+* [<span data-ttu-id="f206c-165">Exécution d’une application Spring Boot sur un cluster Kubernetes dans Azure Container Service</span><span class="sxs-lookup"><span data-stu-id="f206c-165">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+
+<span data-ttu-id="f206c-166">Pour plus d’informations sur l’utilisation d’Azure avec Java, renseignez-vous sur [Azure pour les développeurs Java] et l’[utilisation d’Azure DevOps et Java].</span><span class="sxs-lookup"><span data-stu-id="f206c-166">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Working with Azure DevOps and Java].</span></span>
+
+<span data-ttu-id="f206c-167">Pour plus d’informations sur la prise en main du Cache Redis avec Java sur Azure, consultez [Utilisation du Cache Redis Azure avec Java][Redis Cache with Java].</span><span class="sxs-lookup"><span data-stu-id="f206c-167">For more information about getting started using Redis Cache with Java on Azure, see [How to use Azure Redis Cache with Java][Redis Cache with Java].</span></span>
+
+<span data-ttu-id="f206c-168">**[Spring Framework]** est une solution open source qui aide les développeurs Java à créer des applications d’entreprise.</span><span class="sxs-lookup"><span data-stu-id="f206c-168">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="f206c-169">L’un des projets les plus connus basés sur cette plateforme est [Spring Boot], qui fournit une approche simplifiée pour la création d’applications Java autonomes.</span><span class="sxs-lookup"><span data-stu-id="f206c-169">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="f206c-170">Pour aider les développeurs à bien démarrer avec Spring Boot, plusieurs exemples de packages Spring Boot sont disponibles à l’adresse <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="f206c-170">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="f206c-171">En plus de choisir dans la liste des projets Spring Boot de base, **[Spring Initializr]** aide les développeurs à commencer à créer des applications Spring Boot personnalisées.</span><span class="sxs-lookup"><span data-stu-id="f206c-171">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
 
 <!-- URL List -->
 
-[Azure pour les développeurs Java]: https://docs.microsoft.com/java/azure/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure pour les développeurs Java]: /java/azure/
+[Azure for Java Developers]: /java/azure/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Outils Java pour Visual Studio Team Services]: https://java.visualstudio.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Utilisation d’Azure DevOps et Java]: /azure/devops/java/
+[Working with Azure DevOps and Java]: /azure/devops/java/
 [avantages d’abonné MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
