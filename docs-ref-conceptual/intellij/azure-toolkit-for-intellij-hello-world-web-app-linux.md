@@ -8,18 +8,17 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/20/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: fdff8dc2bd7a29473314d5c0bc99b7bcda369156
+ms.sourcegitcommit: 54e7f077d694a5b1dd7fa6c8870b7d476af9829c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892590"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55648723"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Déployer une application web Hello World sur un conteneur Linux dans le cloud à l’aide du kit de ressources Azure pour IntelliJ
 
@@ -28,7 +27,7 @@ Les conteneurs [Docker] constituent une méthode largement utilisée pour déplo
 Cet article décrit les étapes requises pour créer une application web Hello World basique et la publier dans un conteneur Linux sur Azure à l’aide du kit de ressources Azure pour IntelliJ.
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
-* Un [Docker].
+* Un client [Docker].
 
 > [!NOTE]
 >
@@ -72,23 +71,15 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
 1. Accédez au [portail Azure] et connectez-vous.
 
-   Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créez un registre de conteneur Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.
+   Une fois que vous êtes connecté à votre compte sur le portail Azure, vous pouvez suivre les étapes décrites dans l’article [Créer un registre de conteneurs Docker privé à l’aide du portail Azure], qui sont formulées différemment ci-après pour la circonstance.
 
-1. Cliquez sur l’icône de menu pour **+ Nouveau**, cliquez sur **Conteneurs** puis cliquez sur **Registre de conteneurs Azure**.
+1. Cliquez sur l’icône de menu pour **+ Créer une ressource**, cliquez sur **Conteneurs**, puis sur **Registre de conteneurs**.
    
-   ![Créer un registre de conteneurs Azure][AR01]
-
-1. Quand la page d’informations pour le modèle de registre de conteneurs Azure s’affiche, cliquez sur **Créer**. 
-
-   ![Créer un registre de conteneurs Azure][AR02]
+   ![Créer un registre de conteneurs Azure][create-container-registry-01]
 
 1. Quand la page **Créer un registre de conteneurs** s’affiche, entrez votre **Nom du registre** et votre **Groupe de ressources**, choisissez **Activer** pour **l’utilisateur administrateur**, puis cliquez sur **Créer**.
 
-   ![Configurer les paramètres du registre de conteneurs Azure][AR03]
-
-1. Une fois votre registre de conteneurs créé, accédez à celui-ci dans le portail Azure puis cliquez sur **Clés d’accès**. Notez le nom d’utilisateur et le mot de passe pour les étapes suivantes.
-
-   ![Clés d’accès du registre de conteneurs Azure][AR04]
+   ![Configurer les paramètres du registre de conteneurs Azure][create-container-registry-02]
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Déployer votre application web dans un conteneur Docker
 
@@ -98,31 +89,37 @@ Les étapes suivantes vous guident dans l’utilisation du portail Azure pour cr
 
    ![Ajouter la prise en charge Docker][add-docker-support]
 
-1. Une fois que vous avez ajouté la prise en charge Docker, cliquez avec le bouton droit sur votre projet dans l’Explorateur de projets, choisissez **Azure**, puis cliquez sur **Exécuter sur l’application web (Linux)**.
+1. Une fois que vous avez ajouté la prise en charge Docker, cliquez avec le bouton droit sur votre projet dans l’Explorateur de projets, choisissez **Azure**, puis cliquez sur **Run on Web App for Containers** (Exécuter sur Web App pour conteneurs).
 
-   ![Exécuter sur l’application web (Linux)][run-on-web-app-linux]
+   ![Run on Web App for Containers (Exécuter sur Web App pour conteneurs)][run-on-web-app-for-containers]
 
-1. Quand la boîte de dialogue **Exécuter sur l’application web (Linux)** s’affiche, entrez les informations requises :
+1. Quand la boîte de dialogue **Run on Web App for Containers** (Exécuter sur Web App pour conteneurs) s’affiche, entrez les informations demandées :
 
-   * **Nom** : spécifie le nom convivial qui s’affiche dans le kit de ressources Azure. 
+   * **Nom** : spécifie le nom convivial qui s’affiche dans Azure Toolkit. 
 
-   * **URL du serveur** : spécifie l’URL de votre registre de conteneurs déterminé dans la section précédente de cet article ; généralement elle utilise la syntaxe suivante : « *registre*.azurecr.io ». 
+   * **Container Registry** (Registre de conteneurs) : dans le menu déroulant, choisissez le registre de conteneurs que vous avez créé dans la section précédente de cet article. Les champs **Server URL** (URL du serveur), **Username** (Nom d’utilisateur) et **Password** (Mot de passe) sont renseignés automatiquement.
 
-   * **Nom d’utilisateur** et **Mot de passe** : spécifie les clés d’accès de votre registre de conteneur déterminé dans la section précédente de cet article. 
-
-   * **Image et étiquette** : spécifie le nom d’image du conteneur ; généralement il utilise la syntaxe suivante : « *registre*.azurecr.io/*nom_app*:latest », où : 
+   * **Image and tag** (Image et étiquette) : spécifie le nom de l’image conteneur. Ce nom suit généralement la syntaxe « *registre*.azurecr.io/*nom_app*:latest », où : 
       * *registre* correspond au registre de conteneurs déterminé dans la section précédente de cet article, 
       * *nom_app* correspond au nom de votre application web. 
 
-   * **Utiliser une application web existante** ou **Créer une application web** : spécifie si vous déployez votre conteneur dans une application web existante ou si vous en créez une. 
+   * **Use Existing Web App** (Utiliser une application web existante) ou **Create New Web App** (Créer une application web) : indique si vous déployez votre conteneur dans une application web existante ou si vous en créez une. Le nom de l’application (**App name**) que vous indiquez sert à générer l’URL de votre application web ; par exemple : *wingtiptoys.azurewebsites.net*.
 
-   * **Groupe de ressources** : spécifie si vous utilisez un groupe de ressources existant ou si vous en créez un. 
+   * **Groupe de ressources** : indique si vous utilisez un groupe de ressources existant ou si vous en créez un. 
 
-   * **Plan App Service** : spécifie si vous utilisez un plan App Service existant ou si vous en créez un. 
+   * **App Service Plan** (Plan App Service) : indique si vous utilisez un plan App Service existant ou si vous en créez un. 
 
-1. Quand vous avez terminé de configurer les paramètres indiqués ci-dessus, cliquez sur **Exécuter**.
+   ![Run on Web App for Containers (Exécuter sur Web App pour conteneurs)][run-on-web-app-linux]
 
-   ![Créer une application web][create-web-app]
+1. Quand vous avez terminé de configurer les paramètres indiqués ci-dessus, cliquez sur **Exécuter**. Une fois votre application web déployée, l’état s’affiche dans la fenêtre **Run** (Exécuter).
+
+   ![Application web déployée][successfully-deployed]
+
+1. Une fois votre application web publiée, vous pouvez y accéder à l’aide de l’URL spécifiée précédemment ; par exemple : *wingtiptoys.azurewebsites.net*.
+
+   ![Accès à votre application web][browsing-to-web-app]
+
+## <a name="optional-modify-your-web-app-publish-settings"></a>Facultatif : Modifier les paramètres de publication de votre application web
 
 1. Une fois que vous avez publié votre application web, vos paramètres sont enregistrés comme valeur par défaut, et vous pouvez exécuter votre application sur Azure en cliquant sur l’icône en forme de flèche verte dans la barre d’outils. Vous pouvez modifier ces paramètres en cliquant sur le menu déroulant de votre application web, puis sur **Modifier les configurations**.
 
@@ -141,7 +138,7 @@ Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web
 <!-- URL List -->
 
 [Portail Azure]: https://portal.azure.com/
-[Créez un registre de conteneur Docker privé à l’aide du portail Azure]: /azure/container-registry/container-registry-get-started-portal
+[Créer un registre de conteneurs Docker privé à l’aide du portail Azure]: /azure/container-registry/container-registry-get-started-portal
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Create Docker Registry using Azure CLI]: /azure/container-registry/container-registry-get-started-azure-cli
@@ -151,20 +148,18 @@ Pour obtenir des ressources supplémentaires pour Docker, consultez le [site web
 
 <!-- IMG List -->
 
-[AR01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR01.png
-[AR02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR02.png
-[AR03]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR03.png
-[AR04]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR04.png
-
+[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[browsing-to-web-app]:  media/azure-toolkit-for-intellij-hello-world-web-app-linux/browsing-to-web-app.png
+[create-container-registry-01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-01.png
+[create-container-registry-02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-02.png
 [docker-settings-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/docker-settings-menu.png
+[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
+[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
 [file-new-project]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/file-new-project.png
-[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [groupid-and-artifactid]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/groupid-and-artifactid.png
+[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [maven-options]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-options.png
 [project-name]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/project-name.png
-[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[run-on-web-app-for-containers]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-for-containers.png
 [run-on-web-app-linux]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-linux.png
-[create-web-app]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-web-app.png
-[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
-[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
 [successfully-deployed]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/successfully-deployed.png
