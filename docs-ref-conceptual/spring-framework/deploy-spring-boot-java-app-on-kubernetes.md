@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 87bbf46fe5b22c4a147d6010d3813334caa774fb
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335412"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Déployer une application Spring Boot sur un cluster Kubernetes dans Azure Kubernetes Service
 
@@ -177,7 +177,7 @@ Le `id` et `username` correspondent au nom du registre. Utilisez la valeur `pass
 1. Pour créer le conteneur Docker et envoyer l’image dans le registre, accédez au répertoire de projet terminé de votre application Spring Boot et exécutez la commande suivante :
 
    ```
-   mvn package docker:build -DpushImage
+   mvn package dockerfile:build -DpushImage
    ```
 
 > [!NOTE]
