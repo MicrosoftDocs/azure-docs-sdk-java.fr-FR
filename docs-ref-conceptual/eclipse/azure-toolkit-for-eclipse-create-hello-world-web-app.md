@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
+ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893090"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57786888"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Créer une application web Hello World pour Azure à l’aide d’Eclipse
 
@@ -92,6 +92,8 @@ Ce didacticiel explique comment créer une application Hello World de base et la
       ![Créer un App Service][create-app-service]
 
       Spécifiez les informations requises pour votre application web dans la boîte de dialogue **Créer App Service**, puis cliquez sur **Créer**.
+
+      Ici, vous pouvez configurer l’environnement d’exécution, les paramètres de l’application, le plan de service et le groupe de ressources.
 
       ![Boîte de dialogue Créer App Service][create-app-service-dialog]
 
