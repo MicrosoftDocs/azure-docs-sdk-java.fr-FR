@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc68e16a6940a1f0f2b08f0b63c90c58ec6dbc4e
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 7055751d1b1c37e019ef4ed59f1710ce6905e9f8
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892860"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489637"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>Créer une application web Hello World pour Azure à l’aide d’IntelliJ
 
@@ -27,7 +27,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
 > [!NOTE]
 >
-> Pour obtenir une version de cet article qui utilise le [boîte à outils Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
+> Pour obtenir une version de cet article qui utilise le [Kit de ressources Azure pour Eclipse], consultez [Créer une application web pour Azure à l’aide d’Eclipse][eclipse-hello-world].
 >
 
 > [!IMPORTANT]
@@ -91,7 +91,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
       ![Boîte de dialogue Run on Web App][run-on-web-app-dialog]
 
-   * Cliquez sur **Create New Web App**. Si vous choisissez de créer une application web, spécifiez les informations requises pour votre application web, puis cliquez sur **Run**.
+   * Cliquez sur **Créer une application web** dans le menu déroulant WebApp. Si vous choisissez de créer une application web, spécifiez les informations requises pour votre application web, puis cliquez sur **Run** après avoir créé l’application web.
 
       ![Créer une application web][create-new-web-app-dialog]
 
@@ -120,7 +120,7 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 <!-- URL List -->
 
 [Kit de ressources Azure pour IntelliJ]: azure-toolkit-for-intellij.md
-[boîte à outils Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[Kit de ressources Azure pour Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
