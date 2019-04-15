@@ -385,7 +385,7 @@ Dans cette section, vous créez les classes Java nécessaires à l’envoi d’�
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   Vous devriez voir « hello » publié dans les journaux de votre application. Par exemple : 
+   Vous devriez voir « hello » publié dans les journaux d’activité de votre application. Par exemple : 
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'

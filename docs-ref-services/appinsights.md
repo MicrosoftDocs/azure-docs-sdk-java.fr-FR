@@ -1,7 +1,7 @@
 ---
 title: Bibliothèques Azure Application Insights pour Java
 description: Consulter la documentation sur l’API de gestion Java pour Azure Application Insights
-keywords: Azure, Java, SDK, API, AppInsights, télémétrie, diagnostics, suivi, journaux, performances
+keywords: Azure, Java, SDK, API, AppInsights, télémétrie, diagnostics, suivi, journaux d’activité, performances
 author: rloutlaw
 ms.author: routlaw
 manager: douge

@@ -140,7 +140,7 @@ PublicIPAddress pip = (PublicIPAddress) virtualMachine.createdRelatedResource(pu
 
 Étendue des classes d’exception des bibliothèques de gestion sur `com.microsoft.rest.RestException`. Interceptez des exceptions générées par les bibliothèques de gestion avec un bloc `catch (RestException exception)` après l’instruction pertinente `try`.
 
-## <a name="logs-and-trace"></a>Journaux et suivi
+## <a name="logs-and-trace"></a>Journaux d’activité et suivi
 
 Configurez la quantité de journalisation de la bibliothèque de gestion lorsque vous créez l’objet de point d’entrée `Azure` à l’aide de `withLogLevel()`. Voici les niveaux de trace existants :
 

@@ -363,7 +363,7 @@ Dans cette section, vous créez les classes Java nécessaires à l’envoi d’�
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   Vous devriez voir « hello » publié dans les journaux de votre application. Par exemple : 
+   Vous devriez voir « hello » publié dans les journaux d’activité de votre application. Par exemple : 
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
