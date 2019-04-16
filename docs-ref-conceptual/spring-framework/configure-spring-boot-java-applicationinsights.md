@@ -188,7 +188,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
    ![Portail Azure][AZ08] 
 
-## <a name="configure-springboot-application-to-send-log4j-logs-to-application-insights"></a>Configurer l’application Springboot pour envoyer les journaux log4j à Application Insights
+## <a name="configure-springboot-application-to-send-log4j-logs-to-application-insights"></a>Configurer l’application Springboot pour envoyer les journaux d’activité log4j à Application Insights
 
 1. Modifiez le fichier POM.xml du projet et ajoutez/modifiez la section dépendances avec les éléments suivants. 
 
@@ -259,7 +259,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 ```
 4. Générez et exécutez à nouveau l’application Spring Boot comme indiqué ci-dessus. 
 
-Au bout de quelques secondes, vous devriez voir tous les journaux spring disponibles sur le portail Azure. 
+Au bout de quelques secondes, vous devriez voir tous les journaux d’activité spring disponibles sur le portail Azure. 
 
 ![Portail Azure][AZ06]
 
