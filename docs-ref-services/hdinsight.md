@@ -1,25 +1,25 @@
 ---
-title: Kit de développement logiciel (SDK) Java Azure HDInsight
-description: Référence pour le kit de développement logiciel (SDK) Java Azure HDInsight. Le kit de développement logiciel (SDK) Java HDInsight fournit des classes et des méthodes qui vous permettent de gérer vos clusters HDInsight.
+title: Kit SDK Azure HDInsight pour Java
+description: Informations de référence sur le kit SDK Azure HDInsight pour Java. Le kit SDK HDInsight pour Java fournit des classes et des méthodes qui vous permettent de gérer vos clusters HDInsight.
 author: tylerfox
 ms.author: tyfox
 ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 11/21/2018
-ms.openlocfilehash: 0ae8d78a0618c4dbcc5e734fce311f7c2e5684bd
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.date: 04/15/2019
+ms.openlocfilehash: fe87c9214e2a620230cf2f1f52261fd66a2b8857
+ms.sourcegitcommit: f33befab25a66a252b4c91c7aeb1b77cb32821bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489647"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59705117"
 ---
-# <a name="hdinsight-java-management-sdk-preview"></a>Kit de développement logiciel (SDK) de gestion Java HDInsight (Préversion)
+# <a name="hdinsight-sdk-for-java"></a>Kit SDK HDInsight pour Java
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Le kit de développement logiciel (SDK) Java HDInsight fournit des classes et des méthodes qui vous permettent de gérer vos clusters HDInsight. Il inclut des opérations permettant de créer, supprimer, mettre à jour, répertorier, mettre à l’échelle, exécuter des actions de script, surveiller, obtenir des propriétés des clusters HDInsight, et bien plus encore.
+Le kit SDK HDInsight pour Java fournit des classes et des méthodes qui vous permettent de gérer vos clusters HDInsight. Il inclut des opérations permettant de créer, supprimer, mettre à jour, répertorier, mettre à l’échelle, exécuter des actions de script, surveiller, obtenir des propriétés des clusters HDInsight, et bien plus encore.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -29,7 +29,7 @@ Le kit de développement logiciel (SDK) Java HDInsight fournit des classes et de
 
 ## <a name="sdk-installation"></a>Installation du Kit de développement logiciel (SDK)
 
-Le Kit de développement logiciel (SDK) Java HDInsight est disponible via Maven [ici](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight). Ajoutez la dépendance suivante à votre fichier pom.xml :
+Le kit SDK HDInsight pour Java est disponible via Maven [ici](https://search.maven.org/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight). Ajoutez la dépendance suivante à votre fichier pom.xml :
 
 ```
 <dependency>
@@ -41,21 +41,21 @@ Le Kit de développement logiciel (SDK) Java HDInsight est disponible via Maven 
 
 Vous devrez aussi ajouter les dépendances suivantes à votre fichier pom.xml :
 
-* [Bibliothèque d’authentification de client Azure :](https://mvnrepository.com/artifact/com.microsoft.azure/azure-client-authentication/1.6.2)
+* [Bibliothèque d’authentification de client Azure :](https://search.maven.org/artifact/com.microsoft.azure/azure-client-authentication)
   ```
   <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.5</version>
   </dependency>
   ```
 
-* [CLR de client Java Azure pour ARM :](https://mvnrepository.com/artifact/com.microsoft.azure/azure-arm-client-runtime/1.6.2)
+* [CLR de client Java Azure pour ARM :](https://search.maven.org/artifact/com.microsoft.azure/azure-arm-client-runtime)
   ```
   <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-arm-client-runtime</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.5</version>
   </dependency>
   ```
 
@@ -153,7 +153,6 @@ public class Main {
                 .withSubscriptionId(SUBSCRIPTION_ID);
 ```
 
-
 ## <a name="cluster-management"></a>Gestion du cluster
 
 > [!NOTE]
@@ -162,6 +161,10 @@ public class Main {
 ### <a name="create-a-cluster"></a>Créer un cluster
 
 Un nouveau cluster peut être créé en appelant `client.clusters().create()`.
+
+#### <a name="samples"></a>Exemples
+
+Des exemples de code pour créer plusieurs types courants de clusters HDInsight sont disponibles : [HDInsight Java Samples](https://github.com/Azure-Samples/hdinsight-java-sdk-samples).
 
 #### <a name="example"></a>Exemples
 
@@ -342,7 +345,7 @@ client.clusters.update("<Resource Group Name>", "<Cluster Name>", <Map<String,St
 
 ### <a name="resize-cluster"></a>Redimensionner le cluster
 
-Vous pouvez mettre à l’échelle le nombre de nœuds Worker d’un cluster en spécifiant une nouvelle taille comme suit :
+Vous pouvez mettre à l’échelle un nombre donné de clusters de nœuds Worker en spécifiant une nouvelle taille comme suit :
 
 ```java
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", <Num of Worker Nodes (int)>)
