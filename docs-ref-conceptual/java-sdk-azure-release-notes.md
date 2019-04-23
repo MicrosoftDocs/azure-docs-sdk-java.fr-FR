@@ -39,7 +39,7 @@ Certaines API toujours en version bêta dans les versions précédentes sont dé
 
 Service ou fonctionnalité | Disponible en tant que GA | Disponible en préversion 
 ---------|---------|---------|-
-Calcul  | Les machines virtuelles et leurs extensions, les groupes de machines virtuelles identiques, les disques gérés   | Azure container service, Azure container registry 
+Calcul  | Les machines virtuelles et leurs extensions, les groupes de machines virtuelles identiques, les disques managés   | Azure container service, Azure container registry 
 Stockage   |  Comptes de stockage       |    Chiffrement     
 Base de données SQL  | Bases de données, pare-feu, pools élastiques              
 Mise en réseau    |  Réseaux virtuels, interfaces réseau, adresses IP, tables de routage, groupes de sécurité réseau, DNS, Traffic Manager, Application Gateways  |    Équilibreurs de charge, homologation de réseaux, passerelle de réseau virtuel, observateurs de réseau 

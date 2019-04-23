@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: 4b70a81f5b59fd6e26ad18fdf58b3d932cf2a897
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893800"
+---
 | **Créer des machines virtuelles** || 
 |---|---|
 | [Gérer des machines virtuelles][1] | Créez, modifiez, démarrez, arrêtez et supprimez des machines virtuelles. |
 | [Créer une machine virtuelle à partir d’une image personnalisée][2] | Créez une image de machine virtuelle personnalisée et utilisez-la pour créer de nouvelles machines virtuelles. | 
-| [Créer une machine virtuelle à l’aide d’un VHD spécialisé à partir d’une capture instantanée][3] | Créez une capture instantanée à partir du système d’exploitation de la machine virtuelle et des disques de données, créez des disques gérés à partir des captures instantanées, puis créez une machine virtuelle en joignant les disques gérés. |  
+| [Créer une machine virtuelle à l’aide d’un VHD spécialisé à partir d’une capture instantanée][3] | Créez une capture instantanée à partir du système d’exploitation de la machine virtuelle et des disques de données, créez des disques managés à partir des captures instantanées, puis créez une machine virtuelle en joignant les disques managés. |  
 | [Créer des machines virtuelles en parallèle dans le même réseau][4] | Créez des machines virtuelles dans la même région sur le même réseau virtuel avec deux sous-réseaux en parallèle. |
 | [Créer des machines virtuelles entre des régions en parallèle][5] | Créez et équilibrez la charge d’un ensemble de machines virtuelles entre plusieurs régions Azure. |
 | **Mettre en réseau des machines virtuelles** || 
