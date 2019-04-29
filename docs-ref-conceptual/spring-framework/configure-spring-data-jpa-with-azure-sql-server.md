@@ -38,7 +38,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 
 ## <a name="create-an-azure-sql-satabase"></a>Créer une base de données SQL Azure
 
-### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Créer un serveur de base de données SQL à l’aide du portail Azure
+### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Créer un serveur SQL Database à l’aide du portail Azure
 
 > [!NOTE]
 > 
