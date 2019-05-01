@@ -11,26 +11,26 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: traffic-manager
-ms.openlocfilehash: fd78402f50df16ad7d57c0ca67815bfad5b18d51
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c9dc6bedfd8f7a79494a8a547983b2771e51a494
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593244"
 ---
-# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="37753-104">Bibliothèques Azure Traffic Manager pour Java</span><span class="sxs-lookup"><span data-stu-id="37753-104">Azure Traffic Manager libraries for Java</span></span>
+# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="62ff8-104">Bibliothèques Azure Traffic Manager pour Java</span><span class="sxs-lookup"><span data-stu-id="62ff8-104">Azure Traffic Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="37753-105">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="37753-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="62ff8-105">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="62ff8-105">Overview</span></span>
 
-<span data-ttu-id="37753-106">Contrôlez la distribution du trafic utilisateur pour les points de terminaison de service dans différents centres de données avec [ Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="37753-106">Control the distribution of user traffic for service endpoints in different datacenters with [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span></span>
+<span data-ttu-id="62ff8-106">Contrôlez la distribution du trafic utilisateur pour les points de terminaison de service dans différents centres de données avec [ Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="62ff8-106">Control the distribution of user traffic for service endpoints in different datacenters with [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span></span>
 
-<span data-ttu-id="37753-107">Pour découvrir Azure Traffic Manager, consultez [Créer un profil Traffic Manager](/azure/traffic-manager/traffic-manager-create-profile).</span><span class="sxs-lookup"><span data-stu-id="37753-107">To get started with Azure Traffic Manager, see [Create a Traffic Manager profile](/azure/traffic-manager/traffic-manager-create-profile).</span></span>
+<span data-ttu-id="62ff8-107">Pour découvrir Azure Traffic Manager, consultez [Créer un profil Traffic Manager](/azure/traffic-manager/traffic-manager-create-profile).</span><span class="sxs-lookup"><span data-stu-id="62ff8-107">To get started with Azure Traffic Manager, see [Create a Traffic Manager profile](/azure/traffic-manager/traffic-manager-create-profile).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="37753-108">API de gestion</span><span class="sxs-lookup"><span data-stu-id="37753-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="62ff8-108">API de gestion</span><span class="sxs-lookup"><span data-stu-id="62ff8-108">Management API</span></span>
 
-<span data-ttu-id="37753-109">Créez des profils Traffic Manager, définissez des points de terminaison et modifiez la méthode de routage avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="37753-109">Create Traffic Manager profiles, define endpoints, and change the routing method with the management API.</span></span> 
+<span data-ttu-id="62ff8-109">Créez des profils Traffic Manager, définissez des points de terminaison et modifiez la méthode de routage avec l’API de gestion.</span><span class="sxs-lookup"><span data-stu-id="62ff8-109">Create Traffic Manager profiles, define endpoints, and change the routing method with the management API.</span></span> 
 
-<span data-ttu-id="37753-110">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="37753-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="62ff8-110">[Ajoutez une dépendance](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) au fichier Maven `pom.xml` pour utiliser l’API de gestion dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="62ff8-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.locfileid: "48892870"
 </dependency>
 ```   
 
-## <a name="example"></a><span data-ttu-id="37753-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="37753-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="62ff8-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="62ff8-111">Example</span></span>
 
-<span data-ttu-id="37753-112">Créez un profil Traffic Manager et assignez un point de terminaison unique.</span><span class="sxs-lookup"><span data-stu-id="37753-112">Create a Traffic Manager profile and assign a single endpoint.</span></span>
+<span data-ttu-id="62ff8-112">Créez un profil Traffic Manager et assignez un point de terminaison unique.</span><span class="sxs-lookup"><span data-stu-id="62ff8-112">Create a Traffic Manager profile and assign a single endpoint.</span></span>
 
 ```java
 TrafficManagerProfile tmProfile = azure.trafficManagerProfiles().define("testTMProfile")
@@ -57,10 +57,10 @@ TrafficManagerProfile tmProfile = azure.trafficManagerProfiles().define("testTMP
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="37753-113">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="37753-113">Explore the Management APIs</span></span>](/java/api/overview/azure/trafficmanager/management)
+> [<span data-ttu-id="62ff8-113">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="62ff8-113">Explore the Management APIs</span></span>](/java/api/overview/azure/trafficmanager/management)
 
-## <a name="samples"></a><span data-ttu-id="37753-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="37753-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="62ff8-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="62ff8-114">Samples</span></span>
 
-[<span data-ttu-id="37753-115">Équilibrer le trafic d’application web dans plusieurs régions</span><span class="sxs-lookup"><span data-stu-id="37753-115">Balance web app traffic across multiple regions</span></span>](https://github.com/Azure-Samples/traffic-manager-java-manage-profiles)
+[<span data-ttu-id="62ff8-115">Équilibrer le trafic d’application web dans plusieurs régions</span><span class="sxs-lookup"><span data-stu-id="62ff8-115">Balance web app traffic across multiple regions</span></span>](https://github.com/Azure-Samples/traffic-manager-java-manage-profiles)
 
-<span data-ttu-id="37753-116">Explorez d’autres [exemples de code Java pour Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) que vous pouvez utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="37753-116">Explore more [sample Java code for Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) you can use in your apps.</span></span>
+<span data-ttu-id="62ff8-116">Explorez d’autres [exemples de code Java pour Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) que vous pouvez utiliser avec vos applications.</span><span class="sxs-lookup"><span data-stu-id="62ff8-116">Explore more [sample Java code for Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) you can use in your apps.</span></span>
