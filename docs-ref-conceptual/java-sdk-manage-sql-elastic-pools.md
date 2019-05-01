@@ -10,16 +10,16 @@ ms.devlang: java
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 59d2601ef21b91a364887fe0548cb95023c79b5e
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592684"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Gérer des bases de données SQL Azure dans les pools élastiques à partir de vos applications Java
 
-[Cet exemple](https://github.com/Azure-Samples/sql-database-java-manage-sql-dbs-in-elastic-pool) crée un serveur de base de données SQL avec un [pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) pour gérer et mettre à l’échelle des ressources pour plusieurs bases de données dans un plan unique.
+[Cet exemple](https://github.com/Azure-Samples/sql-database-java-manage-sql-dbs-in-elastic-pool) crée un serveur SQL Database avec un [pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) pour gérer et mettre à l’échelle des ressources pour plusieurs bases de données dans un plan unique.
 
 ## <a name="run-the-sample"></a>Exécution de l'exemple
 
