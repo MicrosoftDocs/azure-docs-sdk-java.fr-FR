@@ -305,7 +305,7 @@ Supprimez l’application web et le plan de votre abonnement après vérificatio
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a>Se connecter à une instance Azure SQL Database
+## <a name="connect-to-an-azure-sql-database"></a>Se connecter à une base de données Azure SQL
 
 Remplacez la méthode principale actuelle dans `AzureApp.java` par le code ci-dessous, et définissez une valeur réelle pour la variable `dbPassword`.
 Ce code crée une nouvelle base de données SQL avec une règle de pare-feu autorisant l’accès à distance, puis se connecte à l’aide du pilote JBDC de SQL Database. 

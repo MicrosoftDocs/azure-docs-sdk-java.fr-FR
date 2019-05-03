@@ -1,6 +1,6 @@
 ---
 title: Bibliothèques Azure SQL Database pour Java
-description: Connectez-vous à Azure SQL Database à l’aide du pilote JDBC ou des instances de base de données de gestion Azure SQL avec l’API de gestion.
+description: Connectez-vous à une base de données Azure SQL à l’aide du pilote JDBC ou des instances de base de données de gestion Azure SQL avec l’API de gestion.
 keywords: Azure, Java, SDK, API, SQL, base de données, JDBC
 author: rloutlaw
 ms.author: routlaw
