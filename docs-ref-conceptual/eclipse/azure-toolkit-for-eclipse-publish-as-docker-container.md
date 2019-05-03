@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: be76733bffa36160d6e366c383672a15374a9996
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4eb159bef52b384de32ada18937b0b9a47a93afc
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48898919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590745"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse
 
@@ -64,15 +64,15 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
 4. Dans la fenêtre **Configure the new virtual machine** (Configurer la nouvelle machine virtuelle), spécifiez les options suivantes pour votre hôte Docker. (L’Assistant génère automatiquement la plupart des options pour vous, mais vous pouvez les modifier.)
 
-   a. **Name** (Nom) : entrez un nom unique pour l’hôte Docker. (Ce n’est pas le même que le nom de l’image Docker que vous avez spécifié précédemment.)
+   a. **Nom** : entrez un nom unique pour l’hôte Docker. (Ce n’est pas le même que le nom de l’image Docker que vous avez spécifié précédemment.)
 
-   b. **Subscription** (Abonnement) : entrez l’abonnement Azure que vous utilisez pour votre hôte.
+   b. **Abonnement**: entrez l’abonnement Azure que vous utilisez pour votre hôte.
 
-   c. **Region** (Région) : entrez la région géographique où se trouve votre hôte.
+   c. **Région** : entrez la région géographique où se trouve votre hôte.
 
    d. Dans l’onglet **Host OS and Size** (Système d’exploitation et taille de l’hôte) : 
-   * **Host OS** (Système d’exploitation de l’hôte) : entrez le système d’exploitation de la machine virtuelle qui contient votre hôte.
-   * **Size** (Taille) : entrez la taille de la machine virtuelle de votre hôte.
+   * **Host OS** (Système d’exploitation hôte) : entrez le système d’exploitation de la machine virtuelle qui contient votre hôte.
+   * **Taille**: entrez la taille de la machine virtuelle de votre hôte.
 
    e. Dans l’onglet **Groupe de ressources** : 
    * **New resource group** (Nouveau groupe de ressources) : créez un groupe de ressources pour votre hôte.
@@ -96,14 +96,14 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
    >Un coffre de clés Azure créé avec un compte ou un principal de service spécifique n’est pas automatiquement accessible par un autre compte ou principal de service qui partage l’abonnement. Pour permettre à un autre compte ou principal de service d’utiliser le coffre de clés, vous devez utiliser le portail Azure pour ajouter le compte ou le principal de service.
    >
 
-   * **New log in credentials** (Nouvelles informations d’identification de connexion) : crée un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit : 
+   * **New log in credentials** (Nouvelles informations de connexion) : crée un nouvel ensemble d’informations d’identification de connexion. Si vous sélectionnez cette option, procédez comme suit : 
     
      * Sous l’onglet **VM Credentials** (Informations d’identification de la machine virtuelle), choisissez une des options suivantes pour les informations d’identification de connexion de la machine virtuelle de votre hôte Docker : 
 
-       * **Username** (Nom d’utilisateur) : entrez le nom d’utilisateur des informations d’identification de connexion de votre machine virtuelle. 
-       * **Password** (Mot de passe) et **Confirm** (Confirmer) : entrez le mot de passe pour les informations d’identification de connexion de votre machine virtuelle. 
+       * **Nom d’utilisateur** : entrez le nom d’utilisateur des informations de connexion de votre machine virtuelle. 
+       * **Mot de passe** et **Confirmer** : entrez le mot de passe des informations de connexion de votre machine virtuelle. 
        * **SSH** : entrez les paramètres SSH (Secure Shell) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
-          * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH. 
+          * **Aucun** : spécifie que votre machine virtuelle n’autorisera pas les connexions SSH. 
           * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via SSH. 
           * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres SSH précédemment enregistrés. Le répertoire doit contenir les deux fichiers suivants : 
              * *id_rsa* : contient l’identification RSA d’un utilisateur. 
@@ -115,11 +115,11 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
 
        * **Docker Daemon port** (Port du démon Docker) : entrez le port TCP unique pour votre hôte Docker. 
        * **TLS Security** (Sécurité TLS) : entrez les paramètres TLS (Transport Layer Security) pour votre hôte Docker. Vous pouvez choisir parmi les options suivantes : 
-          * **None** (Aucun) : spécifie que votre machine virtuelle n’autorisera pas les connexions TLS. 
+          * **Aucun** : spécifie que votre machine virtuelle n’autorisera pas les connexions TLS. 
           * **Auto-generate** (Générer automatiquement) : crée automatiquement les paramètres nécessaire pour la connexion via TLS. 
           * **Import from directory** (Importer à partir du répertoire) : spécifie un répertoire qui contient un jeu de paramètres TLS précédemment enregistrés. Plus précisément, le répertoire doit contenir les six fichiers suivants : 
              * *ca.pem* et *ca-key.pem* : contiennent le certificat et la clé publique de l’autorité de certification TLS. 
-             * *cert.pem* et *key.pem*: contiennent le certificat client et la clé publique qui est utilisée pour l’authentification TLS. 
+             * *cert.pem* et *key.pem* : contiennent le certificat client et la clé publique qui est utilisée pour l’authentification TLS. 
              * *server.pem* et *server-key.pem* : contiennent la clé publique et le certificat de serveur pour l’hôte. 
 
          ![Créer un hôte Docker][PUB06]
@@ -145,10 +145,10 @@ Les conteneurs Docker constituent une méthode largement utilisée pour déploye
    * **Custom Dockerfile** (Fichier Dockerfile personnalisé) : spécifie un fichier Dockerfile précédemment enregistré sur votre ordinateur local.
 
      >[!NOTE]
-     >Il s’agit d’une fonctionnalité plus avancée destinée aux développeurs qui souhaitent déployer leur propre fichier Dockerfile. Toutefois, les développeurs qui utilisent cette option doivent s’assurer que leur fichier Docker est construit correctement. Comme le kit de ressources Azure ne valide pas le contenu d’un fichier Dockerfile personnalisé, le déploiement peut échouer si le fichier Dockerfile présente des problèmes. En outre, comme le kit de ressources Azure attend que le fichier Dockerfile personnalisé contienne un artefact d’application web, il tente d’ouvrir une connexion HTTP. Si les développeurs publient un autre type d’artefact, ils peuvent recevoir des erreurs sans effet après le déploiement.
+     >Il s’agit d’une fonctionnalité plus avancée destinée aux développeurs qui veulent déployer leur propre fichier Dockerfile. Toutefois, les développeurs qui utilisent cette option doivent s’assurer que leur fichier Docker est construit correctement. Comme le kit de ressources Azure ne valide pas le contenu d’un fichier Dockerfile personnalisé, le déploiement peut échouer si le fichier Dockerfile présente des problèmes. En outre, comme le kit de ressources Azure attend que le fichier Dockerfile personnalisé contienne un artefact d’application web, il tente d’ouvrir une connexion HTTP. Si les développeurs publient un autre type d’artefact, ils peuvent recevoir des erreurs sans effet après le déploiement.
      >
 
-   c. **Port settings** (Paramètres de port), entrez la liaison de port TCP unique pour votre conteneur Docker.
+   c. **Port settings** (Paramètres de port) : entrez la liaison de port TCP unique pour votre conteneur Docker.
 
       ![La fenêtre Configure the Docker container to be created (Configurer le conteneur Docker à créer)][PUB08]
 

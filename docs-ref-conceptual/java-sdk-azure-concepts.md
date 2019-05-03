@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4e7d5ea8b796733ab9386ea5ee37f935a4347a18
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593218"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Modèles et meilleures pratiques pour le développement avec les bibliothèques Azure pour Java 
 
@@ -72,9 +72,9 @@ for (VirtualMachine vm : vms) {
 
 Les bibliothèques de gestion retournent des types de collection spécifiques des requêtes, en fonction de la structure des résultats.
 
-- `List<T>` : données non triées faciles à chercher et à itérer.
-- `Map<T>` : les mappages sont des paires clé-valeur dont les clés sont uniques, mais pas forcément les valeurs. Exemple de mappage : des paramètres d’application d’une application web d’App Service.
-- `Set<T>` : les ensembles possèdent des valeurs et des clés uniques. Exemple d’ensemble : des réseaux attachés à une machine virtuelle, dont l’identificateur (la clé) et la configuration (la valeur) sont uniques.
+- `List<T>`: données non triées faciles à chercher et à itérer.
+- `Map<T>`: les mappages sont des paires clé-valeur dont les clés sont uniques, mais pas forcément les valeurs. Exemple de mappage : des paramètres d’application d’une application web d’App Service.
+- `Set<T>`: les ensembles possèdent des valeurs et des clés uniques. Exemple d’ensemble : des réseaux attachés à une machine virtuelle, dont l’identificateur (la clé) et la configuration (la valeur) sont uniques.
 
 ## <a name="actionable-verbs"></a>Verbes actionnables
 
