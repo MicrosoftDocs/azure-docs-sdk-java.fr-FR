@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ee5d286f3c5979b3a10e3e3be08a68caa6eef31d
+ms.sourcegitcommit: 420fcd58e3a907d629c9c15fda56ad818d9dfe7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892520"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65470182"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Gestion des caches Redis avec l’Explorateur Azure pour IntelliJ
 
@@ -43,19 +43,19 @@ Les étapes suivantes vous indiquent comment créer un cache Redis avec l’Expl
 
    ![Boîte de dialogue de création de cache Redis][CR02]
 
-   a. **Nom DNS** : spécifie le sous-domaine DNS pour le nouveau cache Redis, placé avant « .redis.cache.windows.net », par exemple : *wingtiptoys.redis.cache.windows.net*.
+   a. **Nom DNS** : spécifie le sous-domaine DNS pour le nouveau cache Redis, lequel est précédé de « .redis.cache.windows.net », par exemple : *wingtiptoys.redis.cache.windows.net*.
 
-   b. **Abonnement** : spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau cache Redis.
+   b. **Abonnement**: spécifie l’abonnement Azure que vous voulez utiliser pour le nouveau cache Redis.
 
-   c. **Groupe de ressources** : spécifie le groupe de ressources pour votre cache Redis ; vous devez en choisir un parmi les options ci-dessous : 
+   c. **Groupe de ressources** : spécifie le groupe de ressources pour votre cache Redis ; vous devez en choisir un parmi les options ci-dessous : 
       * **Créer** : spécifie que vous souhaitez créer un groupe de ressources. 
-      * **Utiliser existant** : spécifie que vous allez choisir à partir d’une liste de groupes de ressources associés à votre compte Azure. 
+      * **Utiliser l’existant** : spécifie que vous allez choisir à partir d’une liste de groupes de ressources associés à votre compte Azure. 
 
-   d. **Emplacement** : spécifie l’emplacement où votre cache Redis est créé (par exemple *USA Ouest*).
+   d. **Emplacement** : spécifie l’emplacement où votre cache Redis est créé (par exemple *USA Ouest*).
 
-   e. **Niveau tarifaire** : spécifie le niveau tarifaire utilisé par votre cache Redis ; ce paramètre détermine le nombre de connexions client. (Pour plus d’informations, consultez [Tarification du Cache Redis].)
+   e. **Niveau tarifaire** : spécifie le niveau tarifaire utilisé par votre cache Redis ; ce paramètre détermine le nombre de connexions clientes. (Pour plus d’informations, consultez [Tarification du Cache Redis].)
 
-   f. **Port non-SSL** : spécifie si le cache Redis autorise les connexions non-SSL ; par défaut, seules les connexions SSL sont autorisées.
+   f. **Port non-SSL** : spécifie si le cache Redis autorise les connexions non-SSL ; par défaut, seules les connexions SSL sont autorisées.
 
 1. Une fois que vous avez spécifié tous les paramètres du cache Redis, cliquez sur **OK**.
 
