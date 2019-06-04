@@ -13,16 +13,16 @@ ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 7119283bec250a4ab0854ba2c29b0906624448e9
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 02b6eff059c8b7dff1c7473d0460ca44e76f6f2e
+ms.sourcegitcommit: 04cff6e3c6d3a9c15f7d88d5d3c238f0bdc787fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64673958"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Comment utiliser Spring Data JPA avec Azure SQL Database
 
-## <a name="overview"></a>Vue d’ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 Cet article illustre la création d’un exemple d’application qui utilise [Spring Data] pour stocker et récupérer des informations dans une [base de données Azure SQL](https://azure.microsoft.com/services/sql-database/) à l’aide de l’[API de persistance Java (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
@@ -36,7 +36,7 @@ Pour réaliser les étapes décrites dans cet article, vous devez disposer des �
 * [Curl](https://curl.haxx.se/) ou l’utilitaire HTTP similaire pour tester la fonctionnalité.
 * Un client [Git](https://git-scm.com/downloads).
 
-## <a name="create-an-azure-sql-satabase"></a>Créer une base de données SQL Azure
+## <a name="create-an-azure-sql-database"></a>Création d’une base de données Azure SQL
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Créer un serveur SQL Database à l’aide du portail Azure
 
