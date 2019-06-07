@@ -14,73 +14,52 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
-ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
+ms.openlocfilehash: 5bec0af1a17b87d24f29bc856691870d4d697888
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53638958"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625748"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Kit de ressources Azure pour Eclipse
 
-Le kit de ressources Azure pour Eclipse contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications cloud sur Azure depuis l’environnement de développement intégré (IDE) Eclipse.
+Azure Toolkit for Eclipse contient des modèles et des fonctionnalités qui vous permettent de créer, développer, tester et déployer facilement des applications cloud sur Azure à partir de l’IDE Eclipse.
 
 > [!NOTE]
 > 
-> Il existe également une boîte à outils Azure pour l’environnement de développement IntelliJ. Pour plus d’informations, consultez [Kit de ressources Azure pour IntelliJ](../intellij/azure-toolkit-for-intellij.md).
+> Il existe également une boîte à outils Azure pour IntelliJ IDEA. Pour plus d’informations, consultez [Kit de ressources Azure pour IntelliJ](../intellij/azure-toolkit-for-intellij.md).
 > 
 
-## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Commencer avec le kit de ressources Azure pour Eclipse
-Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour Eclipse :
+## <a name="get-started-in-10-minutes"></a>Bien démarrer en 10 minutes
 
-* [Installation du kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-installation.md)
+* [Créer une application web Hello World pour Azure App Service](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
-* [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-sign-in-instructions.md)
+## <a name="step-by-step-tutorials"></a>Tutoriels pas à pas
 
-* [Créer une application web Hello World pour Azure dans Eclipse](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
+* [Publier une application Spring Boot en tant que conteneur Docker](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
 
-## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a>Utilisez le kit de ressources Azure pour Eclipse avec vos projets Java
-Les articles suivants expliquent comment utiliser la Boîte à outils Azure pour Eclipse afin d’ajouter la fonctionnalité Azure à vos projets Azure :
-
-* [Publier une application Spring Boot en tant que conteneur Docker avec le kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
-
-* [Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour Eclipse](azure-toolkit-for-eclipse-publish-as-docker-container.md)
+* [Publier une application web en tant que conteneur Docker](azure-toolkit-for-eclipse-publish-as-docker-container.md)
 
 * [Utiliser le plug-in HDInsight Tools pour Eclipse afin de créer des applications Spark pour un cluster Linux HDInsight Spark](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
 
 * [Affichage du contenu Javadoc dans Eclipse pour le package de bibliothèques Azure pour Java](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
 
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a>Gérer des ressources Azure à l’aide du kit de ressources Azure pour Eclipse
-Les articles suivants expliquent comment utiliser le kit de ressources Azure pour Eclipse afin de gérer vos ressources Azure :
+## <a name="managing-azure-resources"></a>Gestion des ressources Azure
 
-* [Gérer des caches Redis à l’aide de l’Explorateur Azure pour Eclipse](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
+* [Caches Redis](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
 
-* [Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour Eclipse](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+* [Comptes de stockage](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
-* [Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour Eclipse](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+* [Machines virtuelles](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="whats-more"></a>En plus
 
-Pour plus d’informations sur le kit de ressources Azure pour Eclipse, voir les pages suivantes :
-
-* [Notes de publication du kit de ressources Azure](https://github.com/Microsoft/azure-tools-for-java/releases)
-
-* [Kit de ressources Azure pour Eclipse sur la Place de marché](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
-
-Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) et [Outils Java pour Visual Studio Team Services](/azure/devops/java/).
-
-<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 > [!NOTE]
 > 
 > Le kit de ressources Azure pour Eclipse est un projet Open Source, dont le code source est disponible sous [licence MIT sur le site du projet](https://github.com/microsoft/azure-tools-for-java).
 > 
-
-<!-- URL List -->
-
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure
-
-<!-- Temporarily Deprecated URLs -->
 
 <!-- [Deploying large deployments](azure-toolkit-for-eclipse-deploying-large-deployments.md) -->
 <!-- [How to Maintain Session Data with Session Affinity]: http://go.microsoft.com/fwlink/?LinkID=699539 -->

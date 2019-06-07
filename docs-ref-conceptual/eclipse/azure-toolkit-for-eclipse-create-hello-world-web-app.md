@@ -1,7 +1,8 @@
 ---
-title: Créer une application web Hello World pour Azure à l’aide d’Eclipse
+title: Créer une application web Hello World pour Azure App Service à l’aide d’Eclipse
 description: Ce didacticiel vous montre comment utiliser le Kit de ressources Azure pour Eclipse pour créer une application Web Hello World pour Azure.
 services: app-service
+keywords: java, eclipse, web app, azure app service, hello world, démarrage rapide
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,38 +15,56 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
-ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
+ms.openlocfilehash: 7e88298afaf0b4601d85d6063b7096c79e677421
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57786888"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625851"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Créer une application web Hello World pour Azure à l’aide d’Eclipse
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Créer une application web Hello World pour Azure App Service à l’aide d’Eclipse
 
-Ce didacticiel explique comment créer une application Hello World de base et la déployer sur Azure en tant qu’application web à l’aide du [Kit de ressources Azure pour Eclipse].
+Avec le plug-in open source [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse), la création et le déploiement d’une application Hello World de base sur Azure App Service en tant qu’application web ne prennent que quelques minutes.
 
 > [!NOTE]
 >
-> Pour obtenir une version de cet article qui utilise le [Kit de ressources Azure pour IntelliJ], consultez [Créer une application web pour Azure à l’aide d’IntelliJ][intellij-hello-world].
+> Si vous préférez utiliser IntelliJ IDEA, consultez notre [tutoriel similaire pour IntelliJ][intellij-hello-world].
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> N’oubliez pas de nettoyer les ressources après avoir terminé ce tutoriel. Dans ce cas, l’exécution de ce guide ne provoquera pas de dépassement du quota de votre compte gratuit.
 >
 
-> [!IMPORTANT]
-> 
-> Le Kit de ressources Azure pour Eclipse a été mis à jour en août 2017 avec un flux de travail différent. Cet article illustre la création d’une application web Hello World à l’aide de la version 3.0.7 (ou antérieure) du Kit de ressources Azure pour Eclipse. Si vous utilisez la version 3.0.6 (ou ultérieure) du kit de ressources, vous devez suivre les étapes de l’article [Créer une application web Hello World pour Azure dans Eclipse à l’aide de l’ancien kit de ressources][Legacy Version].
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-eclipse-basic-prerequisites.md)]
 
-À la fin de ce didacticiel, votre application ressemble à l’illustration suivante quand vous l’affichez dans un navigateur web :
+## <a name="installation-and-sign-in"></a>Installation et connexion
 
-![Version préliminaire de l’application Hello World][browse-web-app]
+1. Faites glisser le bouton suivant vers votre espace de travail Eclipse en cours d’exécution pour installer le plug-in Azure Toolkit for Eclipse ([autres options d’installation](azure-toolkit-for-eclipse-installation.md)).
 
-[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+    [![Faites glisser vers votre espace de travail Eclipse* en cours d’exécution. *Nécessite Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Faites glisser vers votre espace de travail Eclipse* en cours d’exécution. *Nécessite Eclipse Marketplace Client")
 
-## <a name="create-a-new-web-app-project"></a>Créer un projet d’application web
+1. Pour vous connecter à votre compte Azure, cliquez sur **Tools**, **Azure**, puis **Sign In**.
+   ![Menu d’Eclipse pour la connexion à Azure][I01]
 
-1. Démarrez Eclipse et connectez-vous à votre compte Azure en suivant les instructions indiquées dans l’article [Instructions de connexion Azure pour le Kit de ressources Azure pour Eclipse][instructions-connexion-eclipse].
+1. Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Connexion à l’appareil**, puis cliquez sur **Connexion** ([autres options de connexion](azure-toolkit-for-eclipse-sign-in-instructions.md)).
 
-1. Cliquez sur **File** (Fichier), sur **New** (Nouveau), puis sur **Dynamic Web Project** (Projet web dynamique). (si **Dynamic Web Project (Projet web dynamique)** n’est pas répertorié en tant que projet disponible une fois que vous avez cliqué sur **File (Fichier)** et **New (Nouveau)**, procédez comme suit : cliquez sur **File (Fichier)**, cliquez sur **New (Nouveau)**, sur **Project (Projet)...**, développez **Web**, puis cliquez sur **Dynamic Web Project (Projet web dynamique)** et sur **Next (Suivant)**).
+   ![Fenêtre Connexion à Azure avec l’option Connexion à l’appareil activée][I02]
+
+1. Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.
+
+   ![Boîte de dialogue Connexion à Azure][I03]
+
+1. Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.
+
+   ![Navigateur de connexion à l’appareil][I04]
+
+1. Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
+
+   ![Boîte de dialogue Sélectionner des abonnements][I05]
+
+## <a name="creating-web-app-project"></a>Création de projet d’application web
+
+1. Cliquez sur **File** (Fichier), sur **New** (Nouveau), puis sur **Dynamic Web Project** (Projet web dynamique). (si **Dynamic Web Project (Projet web dynamique)** n’est pas répertorié en tant que projet disponible une fois que vous avez cliqué sur **File (Fichier)** et **New (Nouveau)** , procédez comme suit : cliquez sur **File (Fichier)** , cliquez sur **New (Nouveau)** , sur **Project (Projet)...** , développez **Web**, puis cliquez sur **Dynamic Web Project (Projet web dynamique)** et sur **Next (Suivant)** ).
 
    ![Création d’un nouveau projet Web dynamique][file-new-dynamic-web-project]
 
@@ -55,7 +74,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
 3. Cliquez sur **Terminer**.
 
-4. Dans la vue Explorateur de projets d’Eclipse, développez **MyWebApp**. Cliquez avec le bouton droit sur **WebContent**, cliquez sur **New (Nouveau)**, puis sur **JSP File (Fichier JSP)**.
+4. Dans la vue Explorateur de projets d’Eclipse, développez **MyWebApp**. Cliquez avec le bouton droit sur **WebContent**, cliquez sur **New (Nouveau)** , puis sur **JSP File (Fichier JSP)** .
 
    ![Créer Nouveau fichier JSP][create-new-jsp-file]
 
@@ -75,7 +94,7 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
 8. Enregistrez index.jsp.
 
-## <a name="deploy-your-web-app-to-azure"></a>Déployer votre application web sur Azure
+## <a name="deploying-web-app-to-azure"></a>Déploiement d’application web sur Azure
 
 1. Dans la vue de l’Explorateur de projets d’Eclipse, cliquez avec le bouton droit sur votre projet, choisissez **Azure**, puis **Publish as Azure Web App** (Publier en tant qu’application web Azure).
    
@@ -109,7 +128,11 @@ Ce didacticiel explique comment créer une application Hello World de base et la
 
    ![Accès à votre application web][browse-web-app]
 
-1. Après avoir publié votre application web sur Azure, vous pouvez la gérer en faisant un clic droit et en sélectionnant une des options dans le menu contextuel. Vous pouvez par exemple **Démarrer**, **Arrêter** ou **Supprimer** votre application web.
+[!INCLUDE [azure-toolkit-for-eclipse-show-azure-explorer](../includes/azure-toolkit-for-eclipse-show-azure-explorer.md)]
+
+## <a name="cleaning-up-resources"></a>Suppression des ressources
+
+1. Après avoir publié votre application web sur Azure, vous pouvez la gérer en cliquant avec le bouton droit dans Azure Explorer et en sélectionnant l’une des options dans le menu contextuel. Par exemple, vous pouvez **supprimer** votre application web ici afin de nettoyer la ressource pour ce tutoriel.
 
    ![Gérer App Service][manage-app-service]
 
@@ -121,8 +144,8 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 
 <!-- URL List -->
 
-[Kit de ressources Azure pour Eclipse]: azure-toolkit-for-eclipse.md
-[Kit de ressources Azure pour IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
+[Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
@@ -130,6 +153,11 @@ Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vu
 [Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
 [file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png

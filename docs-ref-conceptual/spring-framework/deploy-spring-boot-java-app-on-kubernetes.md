@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 42bb030a916cc5aaf1e20242518a0a400b8baa88
-ms.sourcegitcommit: f33befab25a66a252b4c91c7aeb1b77cb32821bb
+ms.openlocfilehash: 9ab781d27e8968ab867efc65f3ac422ac6253a6a
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745157"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270856"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Déployer une application Spring Boot sur un cluster Kubernetes dans Azure Kubernetes Service
 
@@ -123,7 +123,7 @@ Les étapes suivantes vous guident à travers la création d’une application w
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -136,10 +136,10 @@ Les étapes suivantes vous guident à travers la création d’une application w
      <groupId>com.google.cloud.tools</groupId>
      <version>${jib-maven-plugin.version}</version>
      <configuration>
-        <from>              
+        <from>
             <image>openjdk:8-jre-alpine</image>
         </from>
-        <to>                
+        <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
         </to>
      </configuration>
@@ -148,9 +148,14 @@ Les étapes suivantes vous guident à travers la création d’une application w
 
 1. Pour créer l’image Docker et la pousser dans le registre, accédez au répertoire de projet terminé de votre application Spring Boot et exécutez la commande suivante :
 
-   ```
+   ```cmd
    mvn compile jib:build
    ```
+
+> [!NOTE]
+>
+> En raison du problème de sécurité lié à Azure CLI et Azure Container Registry, les informations d’identification créées par `az acr login` sont valides pendant une heure. Si vous obtenez l’erreur *401 Non autorisé*, vous pouvez exécuter la commande `az acr login -n <your registry name>` pour vous réauthentifier.
+>
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Créer un cluster Kubernetes sur AKS à l’aide d’Azure CLI
 
@@ -205,7 +210,7 @@ Ce didacticiel déploie l’application à l’aide de `kubectl`, puis vous perm
 
 1. Ouvrez une invite de commandes.
 
-1. Exécutez votre conteneur dans le cluster Kubernetes en utilisant la commande `kubectl run`. Donnez un nom de service à votre application dans Kubernetes et saisissez le nom complet de l’image. Par exemple : 
+1. Exécutez votre conteneur dans le cluster Kubernetes en utilisant la commande `kubectl run`. Donnez un nom de service à votre application dans Kubernetes et saisissez le nom complet de l’image. Par exemple :
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -215,7 +220,7 @@ Ce didacticiel déploie l’application à l’aide de `kubectl`, puis vous perm
 
    * Le paramètre `--image` spécifie le nom combiné du nom de serveur et du nom de l’image en tant que `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`
 
-1. Exposez votre cluster Kubernetes en externe à l’aide de la commande `kubectl expose`. Spécifiez le nom de votre service, le port TCP destiné au public permettant d’accéder à l’application, et le port cible interne que votre application écoutera. Par exemple : 
+1. Exposez votre cluster Kubernetes en externe à l’aide de la commande `kubectl expose`. Spécifiez le nom de votre service, le port TCP destiné au public permettant d’accéder à l’application, et le port cible interne que votre application écoutera. Par exemple :
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```

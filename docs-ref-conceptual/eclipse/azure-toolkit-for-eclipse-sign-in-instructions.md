@@ -14,127 +14,113 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
-ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.openlocfilehash: b4b13de38913ae6e7ae2bb09210ac742efc9d0ad
+ms.sourcegitcommit: d18d9dce22b7f7af178f756bd341433d24e3c3b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61591003"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66575318"
 ---
-# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse
+# <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Instructions de connexion pour le kit de ressources Azure pour Eclipse
 
 Le kit de ressources Azure pour Eclipse propose deux méthodes pour vous connecter à votre compte Azure :
 
-  * **Automatisée** : si vous utilisez cette méthode, vous devez créer un fichier d’informations d’identification qui contiendra vos données de principal de service, après quoi vous pourrez utiliser le fichier d’informations d’identification pour vous connecter automatiquement à votre compte Azure.
-  * **Interactive** : si vous utilisez cette méthode, vous devez entrer vos informations d’identification Azure à chaque fois que vous vous connectez à votre compte Azure.
+  - [Connexion à votre compte Azure par Connexion à l’appareil](#sign-in-to-your-azure-account-by-device-login)
+  - [Connexion à votre compte Azure par Principal du service](#sign-in-to-your-azure-account-by-service-principal)
 
-Les étapes décrites dans les sections suivantes décrivent l’utilisation de chaque méthode.
+Des méthodes de [**déconnexion**](#sign-out-of-your-azure-account) sont également fournies.
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a>Connexion automatique à votre compte Azure et création d’un fichier d’informations d’identification à utiliser à l’avenir
+## <a name="sign-in-to-your-azure-account-by-device-login"></a>Connexion à votre compte Azure par Connexion à l’appareil
 
-La procédure suivante vous guide dans la création d’un fichier d’informations d’identification qui contient vos données de principal de service. Une fois que vous avez effectué ces étapes, Eclipse utilise automatiquement le fichier d’informations d’identification pour vous connecter automatiquement à Azure à chaque fois que vous ouvrez votre projet.
-
-1. Ouvrez votre projet avec Eclipse.
-
-1. Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.
-
-   ![Menu d’Eclipse pour la connexion à Azure][A01]
-
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Automatisée**, puis cliquez sur **Nouveau**.
-
-   ![Boîte de dialogue Se connecter][A02]
-
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.
-
-   ![Boîte de dialogue Connexion à Azure][A03]
-
-1. Lorsque la boîte de dialogue **Create authentication files (Créer des fichiers d’authentification)** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.
-
-   ![Boîte de dialogue Connexion à Azure][A04]
-
-1. La boîte de dialogue **Service Principal Creation Status (État de création du principal de service)** s’affiche, et une fois que vos fichiers ont été créés, cliquez sur **OK**.
-
-   ![Boîte de dialogue Service Principal Creation Status (État de création du principal de service)][A05]
-
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, cliquez sur **Se connecter**.
-
-   ![Boîte de dialogue Connexion à Azure][A06]
-
-1. Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
-
-   ![Boîte de dialogue Sélectionner des abonnements][A07]
-
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a>Déconnexion de votre compte Azure lorsque vous vous êtes connecté automatiquement
-
-Après avoir configuré les étapes indiquées dans la section précédente, le kit de ressources Azure vous connecte automatiquement à votre compte Azure à chaque redémarrage d’Eclipse. Toutefois, pour vous déconnecter de votre compte Azure et empêcher le kit de ressources Azure de vous connecter automatiquement, procédez comme suit.
-
-1. Dans Eclipse, cliquez successivement sur **Outils**, **Azure** et **Se déconnecter**.
-
-   ![Menu d’Eclipse pour la déconnexion d’Azure][L01]
-
-1. Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.
-
-   ![Boîte de dialogue Se déconnecter][L03]
-
-## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a>Connexion automatique à votre compte Azure et utilisation d’un fichier d’informations d’identification que vous avez déjà créé
-
-Si vous vous déconnectez d’Azure lorsque vous utilisez Eclipse, vous devez reconfigurer le kit de ressources Azure pour Eclipse afin d’utiliser un fichier d’informations d’identification qui a été créé pour pouvoir vous connecter automatiquement à votre compte Azure. La procédure suivante vous guide dans la configuration du kit de ressources Azure pour utiliser un fichier d’informations d’identification existant.
+Pour vous connecter dans Azure par Connexion à l’appareil, effectuez les étapes suivantes :
 
 1. Ouvrez votre projet avec Eclipse.
 
-1. Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.
-
-   ![Menu d’Eclipse pour la connexion à Azure][A01]
-
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Automatisée**, puis cliquez sur **Parcourir**.
-
-   ![Boîte de dialogue Se connecter][A02]
-
-1. Lorsque la boîte de dialogue **Sélectionner un fichier authentifié** s’affiche, sélectionnez un fichier d’informations d’identification que vous avez créé précédemment, puis cliquez sur **Ouvrir**.
-
-   ![Boîte de dialogue Se connecter][A08]
-
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, cliquez sur **Se connecter**.
-
-   ![Boîte de dialogue Connexion à Azure][A06]
-
-1. Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
-
-   ![Boîte de dialogue Sélectionner des abonnements][A07]
-
-## <a name="signing-into-your-azure-account-interactively"></a>Connexion interactive à votre compte Azure
-
-La procédure suivante indique comment vous connecter à Azure en entrant manuellement vos informations d’identification Azure.
-
-1. Ouvrez votre projet avec Eclipse.
-
-1. Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.
-
+2. Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.
    ![Menu d’Eclipse pour la connexion à Azure][I01]
 
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Interactive**, puis cliquez sur **Se connecter**.
+3. Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Connexion à l’appareil**, puis cliquez sur **Connexion**.
 
-   ![Boîte de dialogue Se connecter][I02]
+   ![Fenêtre Connexion à Microsoft Azure avec l’option Connexion à l’appareil activée][I02]
 
-1. Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.
+4. Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.
 
    ![Boîte de dialogue Connexion à Azure][I03]
 
-1. Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
+> [!NOTE]
+>
+> Si le navigateur ne s’ouvre pas, configurez Eclipse pour utiliser un navigateur externe comme Internet Explorer, Firefox ou Chrome :
+>
+> 1. Ouvrez Preferences -> General -> Web Browser -> Use external web browser in Eclipse.
+>
+> 2. Sélectionnez le navigateur que vous préférez utiliser.
+>
 
-   ![Boîte de dialogue Sélectionner des abonnements][I04]
+5. Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a>Déconnexion de votre compte Azure lorsque vous vous êtes connecté de manière interactive
+   ![Navigateur de connexion à l’appareil][I04]
 
-Après avoir configuré les étapes indiquées dans la section précédente, vous êtes déconnecté automatiquement de votre compte Azure à chaque redémarrage d’Eclipse. Toutefois, si vous souhaitez vous déconnecter de votre compte Azure sans redémarrer Eclipse, procédez comme suit.
+6. Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
+
+   ![Boîte de dialogue Sélectionner des abonnements][I05]
+
+## <a name="sign-in-to-your-azure-account-by-service-principal"></a>Connexion à votre compte Azure par Principal du service
+
+Cette section vous guide dans la création d’un fichier d’informations d’identification contenant les données de votre principal de service. Une fois ce processus terminé, Eclipse utilise le fichier d’informations d’identification pour vous connecter automatiquement à Azure quand vous ouvrez votre projet.
+
+1. Ouvrez votre projet avec Eclipse.
+
+2. Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.
+   ![Commande Connexion à Azure dans Eclipse][A01]
+
+3. Dans la fenêtre **Connexion à Azure**, sélectionnez **Principal du service**. Si vous n’avez pas encore le fichier d’authentification de principal du service, cliquez sur **Nouveau** pour en créer un. Autrement, vous pouvez cliquer sur **Parcourir** pour l’ouvrir et passer à l’étape 8.
+
+   ![La fenêtre Connexion à Azure avec principal du service sélectionné][A02]
+
+4. Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.
+
+   ![Boîte de dialogue Connexion à Azure][A08]
+
+> [!NOTE]
+>
+> Si le navigateur ne s’ouvre pas, configurez Eclipse pour utiliser un navigateur externe comme Internet Explorer ou Chrome :
+>
+> 1. Ouvrez Preferences -> General -> Web Browser -> Use external web browser in Eclipse.
+>
+> 2. Sélectionnez le navigateur que vous préférez utiliser.
+>
+
+5. Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.
+
+   ![Navigateur de connexion à l’appareil][A03]
+
+6. Dans la fenêtre **Créer les fichiers d’authentification**, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.
+
+   ![Fenêtre Créer les fichiers d’authentification][A04]
+
+7. Dans la boîte de dialogue **État de création du principal de service**, cliquez sur **OK** une fois vos fichiers créés.
+
+   ![Boîte de dialogue État de création du principal de service][A05]
+
+8. L’adresse du fichier créé est renseignée automatiquement dans la fenêtre **Connexion à Azure**. Maintenant, cliquez sur **Connexion**.
+
+   ![Boîte de dialogue Connexion à Azure][A06]
+
+9. Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.
+
+   ![Boîte de dialogue Sélectionner des abonnements][A07]
+
+## <a name="sign-out-of-your-azure-account"></a>Déconnectez-vous de votre compte Azure
+
+Après avoir configuré votre compte à l’aide des étapes précédentes, vous serez connecté automatiquement chaque fois que vous démarrerez Eclipse. Toutefois, si vous souhaitez vous déconnecter de votre compte Azure, effectuez les étapes suivantes.
 
 1. Dans Eclipse, cliquez successivement sur **Outils**, **Azure** et **Se déconnecter**.
 
    ![Menu d’Eclipse pour la déconnexion d’Azure][L01]
 
-1. Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.
+2. Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.
 
    ![Boîte de dialogue Se déconnecter][L02]
 
@@ -151,6 +137,7 @@ Après avoir configuré les étapes indiquées dans la section précédente, vou
 [I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
 [I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
 [I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [A01]: media/azure-toolkit-for-eclipse-sign-in-instructions/A01.png
 [A02]: media/azure-toolkit-for-eclipse-sign-in-instructions/A02.png
