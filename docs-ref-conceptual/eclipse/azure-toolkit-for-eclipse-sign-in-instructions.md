@@ -14,131 +14,117 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
-ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.openlocfilehash: b4b13de38913ae6e7ae2bb09210ac742efc9d0ad
+ms.sourcegitcommit: d18d9dce22b7f7af178f756bd341433d24e3c3b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61591003"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66575318"
 ---
-# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="09c47-103">Instructions de connexion à Azure pour le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="09c47-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
+# <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="d675b-103">Instructions de connexion pour le kit de ressources Azure pour Eclipse</span><span class="sxs-lookup"><span data-stu-id="d675b-103">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="09c47-104">Le kit de ressources Azure pour Eclipse propose deux méthodes pour vous connecter à votre compte Azure :</span><span class="sxs-lookup"><span data-stu-id="09c47-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
+<span data-ttu-id="d675b-104">Le kit de ressources Azure pour Eclipse propose deux méthodes pour vous connecter à votre compte Azure :</span><span class="sxs-lookup"><span data-stu-id="d675b-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
 
-  * <span data-ttu-id="09c47-105">**Automatisée** : si vous utilisez cette méthode, vous devez créer un fichier d’informations d’identification qui contiendra vos données de principal de service, après quoi vous pourrez utiliser le fichier d’informations d’identification pour vous connecter automatiquement à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="09c47-105">**Automated** - when you are using this method, you will create a credentials file which contains your service principal data, after which you can use the credentials file to automatically sign into your Azure account.</span></span>
-  * <span data-ttu-id="09c47-106">**Interactive** : si vous utilisez cette méthode, vous devez entrer vos informations d’identification Azure à chaque fois que vous vous connectez à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="09c47-106">**Interactive** - when you are using this method, you will enter your Azure credentials each time you sign into your Azure account.</span></span>
+  - [<span data-ttu-id="d675b-105">Connexion à votre compte Azure par Connexion à l’appareil</span><span class="sxs-lookup"><span data-stu-id="d675b-105">Sign in to your Azure account by Device Login</span></span>](#sign-in-to-your-azure-account-by-device-login)
+  - [<span data-ttu-id="d675b-106">Connexion à votre compte Azure par Principal du service</span><span class="sxs-lookup"><span data-stu-id="d675b-106">Sign in to your Azure account by Service Principal</span></span>](#sign-in-to-your-azure-account-by-service-principal)
 
-<span data-ttu-id="09c47-107">Les étapes décrites dans les sections suivantes décrivent l’utilisation de chaque méthode.</span><span class="sxs-lookup"><span data-stu-id="09c47-107">The steps in the following sections will describe how to use each method.</span></span>
+<span data-ttu-id="d675b-107">Des méthodes de [**déconnexion**](#sign-out-of-your-azure-account) sont également fournies.</span><span class="sxs-lookup"><span data-stu-id="d675b-107">[**Sign out**](#sign-out-of-your-azure-account) methods are also provided.</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a><span data-ttu-id="09c47-108">Connexion automatique à votre compte Azure et création d’un fichier d’informations d’identification à utiliser à l’avenir</span><span class="sxs-lookup"><span data-stu-id="09c47-108">Signing into your Azure account automatically and creating a credentials file to use in the future</span></span>
+## <a name="sign-in-to-your-azure-account-by-device-login"></a><span data-ttu-id="d675b-108">Connexion à votre compte Azure par Connexion à l’appareil</span><span class="sxs-lookup"><span data-stu-id="d675b-108">Sign in to your Azure account by Device Login</span></span>
 
-<span data-ttu-id="09c47-109">La procédure suivante vous guide dans la création d’un fichier d’informations d’identification qui contient vos données de principal de service.</span><span class="sxs-lookup"><span data-stu-id="09c47-109">The following steps will walk you through creating a credentials file which contains your service principal data.</span></span> <span data-ttu-id="09c47-110">Une fois que vous avez effectué ces étapes, Eclipse utilise automatiquement le fichier d’informations d’identification pour vous connecter automatiquement à Azure à chaque fois que vous ouvrez votre projet.</span><span class="sxs-lookup"><span data-stu-id="09c47-110">Once you have completed these steps, Eclipse will automatically use the credentials file to automatically sign you into Azure each time you open your project.</span></span>
+<span data-ttu-id="d675b-109">Pour vous connecter dans Azure par Connexion à l’appareil, effectuez les étapes suivantes :</span><span class="sxs-lookup"><span data-stu-id="d675b-109">To sign in Azure by device login, do the following:</span></span>
 
-1. <span data-ttu-id="09c47-111">Ouvrez votre projet avec Eclipse.</span><span class="sxs-lookup"><span data-stu-id="09c47-111">Open your project with Eclipse.</span></span>
+1. <span data-ttu-id="d675b-110">Ouvrez votre projet avec Eclipse.</span><span class="sxs-lookup"><span data-stu-id="d675b-110">Open your project with Eclipse.</span></span>
 
-1. <span data-ttu-id="09c47-112">Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-112">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+2. <span data-ttu-id="d675b-111">Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="d675b-111">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+   <span data-ttu-id="d675b-112">![Menu d’Eclipse pour la connexion à Azure][I01]</span><span class="sxs-lookup"><span data-stu-id="d675b-112">![Eclipse Menu for Azure Sign In][I01]</span></span>
 
-   ![Menu d’Eclipse pour la connexion à Azure][A01]
+3. <span data-ttu-id="d675b-113">Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Connexion à l’appareil**, puis cliquez sur **Connexion**.</span><span class="sxs-lookup"><span data-stu-id="d675b-113">In the **Azure Sign In** window, select **Device Login**, and then click **Sign in**.</span></span>
 
-1. <span data-ttu-id="09c47-114">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Automatisée**, puis cliquez sur **Nouveau**.</span><span class="sxs-lookup"><span data-stu-id="09c47-114">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **New**.</span></span>
+   ![Fenêtre Connexion à Microsoft Azure avec l’option Connexion à l’appareil activée][I02]
 
-   ![Boîte de dialogue Se connecter][A02]
-
-1. <span data-ttu-id="09c47-116">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-116">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
-
-   ![Boîte de dialogue Connexion à Azure][A03]
-
-1. <span data-ttu-id="09c47-118">Lorsque la boîte de dialogue **Create authentication files (Créer des fichiers d’authentification)** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.</span><span class="sxs-lookup"><span data-stu-id="09c47-118">When the **Create authentication files** dialog box appears, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
-
-   ![Boîte de dialogue Connexion à Azure][A04]
-
-1. <span data-ttu-id="09c47-120">La boîte de dialogue **Service Principal Creation Status (État de création du principal de service)** s’affiche, et une fois que vos fichiers ont été créés, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="09c47-120">The **Service Principal Creatation Status** dialog box will be displayed, and after your files have been created successfully, click **OK**.</span></span>
-
-   ![Boîte de dialogue Service Principal Creation Status (État de création du principal de service)][A05]
-
-1. <span data-ttu-id="09c47-122">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-122">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
-
-   ![Boîte de dialogue Connexion à Azure][A06]
-
-1. <span data-ttu-id="09c47-124">Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="09c47-124">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
-
-   ![Boîte de dialogue Sélectionner des abonnements][A07]
-
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a><span data-ttu-id="09c47-126">Déconnexion de votre compte Azure lorsque vous vous êtes connecté automatiquement</span><span class="sxs-lookup"><span data-stu-id="09c47-126">Signing out of your Azure account when you signed in automatically</span></span>
-
-<span data-ttu-id="09c47-127">Après avoir configuré les étapes indiquées dans la section précédente, le kit de ressources Azure vous connecte automatiquement à votre compte Azure à chaque redémarrage d’Eclipse.</span><span class="sxs-lookup"><span data-stu-id="09c47-127">After you have configured the steps in the previous section, the Azure Toolkit will automatically sign you into your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="09c47-128">Toutefois, pour vous déconnecter de votre compte Azure et empêcher le kit de ressources Azure de vous connecter automatiquement, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="09c47-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, use the following steps.</span></span>
-
-1. <span data-ttu-id="09c47-129">Dans Eclipse, cliquez successivement sur **Outils**, **Azure** et **Se déconnecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-129">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
-
-   ![Menu d’Eclipse pour la déconnexion d’Azure][L01]
-
-1. <span data-ttu-id="09c47-131">Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="09c47-131">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
-
-   ![Boîte de dialogue Se déconnecter][L03]
-
-## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a><span data-ttu-id="09c47-133">Connexion automatique à votre compte Azure et utilisation d’un fichier d’informations d’identification que vous avez déjà créé</span><span class="sxs-lookup"><span data-stu-id="09c47-133">Signing into your Azure account automatically using a credentials file which you have already created</span></span>
-
-<span data-ttu-id="09c47-134">Si vous vous déconnectez d’Azure lorsque vous utilisez Eclipse, vous devez reconfigurer le kit de ressources Azure pour Eclipse afin d’utiliser un fichier d’informations d’identification qui a été créé pour pouvoir vous connecter automatiquement à votre compte Azure.</span><span class="sxs-lookup"><span data-stu-id="09c47-134">If you sign out of Azure when you are using Eclipse, you will need to reconfigure the Azure Toolkit for Eclipse to use a credentials file which have created before you can automatically sign into your Azure acccount.</span></span> <span data-ttu-id="09c47-135">La procédure suivante vous guide dans la configuration du kit de ressources Azure pour utiliser un fichier d’informations d’identification existant.</span><span class="sxs-lookup"><span data-stu-id="09c47-135">The following steps will walk you through configuring the Azure Toolkit to use an existing credentials file.</span></span>
-
-1. <span data-ttu-id="09c47-136">Ouvrez votre projet avec Eclipse.</span><span class="sxs-lookup"><span data-stu-id="09c47-136">Open your project with Eclipse.</span></span>
-
-1. <span data-ttu-id="09c47-137">Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-137">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
-
-   ![Menu d’Eclipse pour la connexion à Azure][A01]
-
-1. <span data-ttu-id="09c47-139">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Automatisée**, puis cliquez sur **Parcourir**.</span><span class="sxs-lookup"><span data-stu-id="09c47-139">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **Browse**.</span></span>
-
-   ![Boîte de dialogue Se connecter][A02]
-
-1. <span data-ttu-id="09c47-141">Lorsque la boîte de dialogue **Sélectionner un fichier authentifié** s’affiche, sélectionnez un fichier d’informations d’identification que vous avez créé précédemment, puis cliquez sur **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="09c47-141">When the **Select Authenticated File** dialog box appears, select a credentials file which you created earlier, and then click **Open**.</span></span>
-
-   ![Boîte de dialogue Se connecter][A08]
-
-1. <span data-ttu-id="09c47-143">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-143">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
-
-   ![Boîte de dialogue Connexion à Azure][A06]
-
-1. <span data-ttu-id="09c47-145">Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="09c47-145">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
-
-   ![Boîte de dialogue Sélectionner des abonnements][A07]
-
-## <a name="signing-into-your-azure-account-interactively"></a><span data-ttu-id="09c47-147">Connexion interactive à votre compte Azure</span><span class="sxs-lookup"><span data-stu-id="09c47-147">Signing into your Azure account interactively</span></span>
-
-<span data-ttu-id="09c47-148">La procédure suivante indique comment vous connecter à Azure en entrant manuellement vos informations d’identification Azure.</span><span class="sxs-lookup"><span data-stu-id="09c47-148">The following steps will illustrate how to sign into Azure by manually entering your Azure credentials.</span></span>
-
-1. <span data-ttu-id="09c47-149">Ouvrez votre projet avec Eclipse.</span><span class="sxs-lookup"><span data-stu-id="09c47-149">Open your project with Eclipse.</span></span>
-
-1. <span data-ttu-id="09c47-150">Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-150">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
-
-   ![Menu d’Eclipse pour la connexion à Azure][I01]
-
-1. <span data-ttu-id="09c47-152">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, sélectionnez **Interactive**, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-152">When the **Azure Sign In** dialog box appears, select **Interactive**, and then click **Sign In**.</span></span>
-
-   ![Boîte de dialogue Se connecter][I02]
-
-1. <span data-ttu-id="09c47-154">Lorsque la boîte de dialogue **Connexion à Azure** s’affiche, entrez vos informations d’identification Azure, puis cliquez sur **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-154">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+4. <span data-ttu-id="d675b-115">Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.</span><span class="sxs-lookup"><span data-stu-id="d675b-115">Click **Copy&Open** in **Azure Device Login** dialog .</span></span>
 
    ![Boîte de dialogue Connexion à Azure][I03]
 
-1. <span data-ttu-id="09c47-156">Lorsque la boîte de dialogue **Sélectionner des abonnements** s’affiche, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="09c47-156">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+> [!NOTE]
+>
+> <span data-ttu-id="d675b-117">Si le navigateur ne s’ouvre pas, configurez Eclipse pour utiliser un navigateur externe comme Internet Explorer, Firefox ou Chrome :</span><span class="sxs-lookup"><span data-stu-id="d675b-117">If the browser doesn't open, configure Eclipse to use an external browser like Internet Explorer, Firefox, or Chrome:</span></span>
+>
+> 1. <span data-ttu-id="d675b-118">Ouvrez Preferences -> General -> Web Browser -> Use external web browser in Eclipse.</span><span class="sxs-lookup"><span data-stu-id="d675b-118">Open Preferences -> General -> Web Browser -> Use external web browser in Eclipse</span></span>
+>
+> 2. <span data-ttu-id="d675b-119">Sélectionnez le navigateur que vous préférez utiliser.</span><span class="sxs-lookup"><span data-stu-id="d675b-119">Select the browser you prefer to use</span></span>
+>
 
-   ![Boîte de dialogue Sélectionner des abonnements][I04]
+5. <span data-ttu-id="d675b-120">Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.</span><span class="sxs-lookup"><span data-stu-id="d675b-120">In the browser, paste your device code (which has been copied when you clicked **Copy&Open** in last step) and then click **Next**.</span></span>
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a><span data-ttu-id="09c47-158">Déconnexion de votre compte Azure lorsque vous vous êtes connecté de manière interactive</span><span class="sxs-lookup"><span data-stu-id="09c47-158">Signing out of your Azure account when you signed in interactively</span></span>
+   ![Navigateur de connexion à l’appareil][I04]
 
-<span data-ttu-id="09c47-159">Après avoir configuré les étapes indiquées dans la section précédente, vous êtes déconnecté automatiquement de votre compte Azure à chaque redémarrage d’Eclipse.</span><span class="sxs-lookup"><span data-stu-id="09c47-159">After you have configured the steps in the previous section, you will automatically signed out of your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="09c47-160">Toutefois, si vous souhaitez vous déconnecter de votre compte Azure sans redémarrer Eclipse, procédez comme suit.</span><span class="sxs-lookup"><span data-stu-id="09c47-160">However, if you want to sign out of your Azure account without restarting Eclipse, use the following steps.</span></span>
+6. <span data-ttu-id="d675b-122">Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="d675b-122">Finally, in the **Select Subscriptions** dialog box, select the subscriptions that you want to use, then click **OK**.</span></span>
 
-1. <span data-ttu-id="09c47-161">Dans Eclipse, cliquez successivement sur **Outils**, **Azure** et **Se déconnecter**.</span><span class="sxs-lookup"><span data-stu-id="09c47-161">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+   ![Boîte de dialogue Sélectionner des abonnements][I05]
+
+## <a name="sign-in-to-your-azure-account-by-service-principal"></a><span data-ttu-id="d675b-124">Connexion à votre compte Azure par Principal du service</span><span class="sxs-lookup"><span data-stu-id="d675b-124">Sign in to your Azure account by Service Principal</span></span>
+
+<span data-ttu-id="d675b-125">Cette section vous guide dans la création d’un fichier d’informations d’identification contenant les données de votre principal de service.</span><span class="sxs-lookup"><span data-stu-id="d675b-125">This section walks you through creating a credentials file that contains your service principal data.</span></span> <span data-ttu-id="d675b-126">Une fois ce processus terminé, Eclipse utilise le fichier d’informations d’identification pour vous connecter automatiquement à Azure quand vous ouvrez votre projet.</span><span class="sxs-lookup"><span data-stu-id="d675b-126">After you have completed this process, Eclipse uses the credentials file to automatically sign you in to Azure when open your project.</span></span>
+
+1. <span data-ttu-id="d675b-127">Ouvrez votre projet avec Eclipse.</span><span class="sxs-lookup"><span data-stu-id="d675b-127">Open your project with Eclipse.</span></span>
+
+2. <span data-ttu-id="d675b-128">Cliquez successivement sur **Outils**, **Azure** et **Se connecter**.</span><span class="sxs-lookup"><span data-stu-id="d675b-128">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+   <span data-ttu-id="d675b-129">![Commande Connexion à Azure dans Eclipse][A01]</span><span class="sxs-lookup"><span data-stu-id="d675b-129">![The Eclipse Azure Sign In command][A01]</span></span>
+
+3. <span data-ttu-id="d675b-130">Dans la fenêtre **Connexion à Azure**, sélectionnez **Principal du service**.</span><span class="sxs-lookup"><span data-stu-id="d675b-130">In the **Azure Sign In** window, select **Service Principal**.</span></span> <span data-ttu-id="d675b-131">Si vous n’avez pas encore le fichier d’authentification de principal du service, cliquez sur **Nouveau** pour en créer un.</span><span class="sxs-lookup"><span data-stu-id="d675b-131">If you do not have the service principal authentication file yet, click **New** to create one.</span></span> <span data-ttu-id="d675b-132">Autrement, vous pouvez cliquer sur **Parcourir** pour l’ouvrir et passer à l’étape 8.</span><span class="sxs-lookup"><span data-stu-id="d675b-132">Otherwise you can click **Browse** to open it and jump to step 8.</span></span>
+
+   ![La fenêtre Connexion à Azure avec principal du service sélectionné][A02]
+
+4. <span data-ttu-id="d675b-134">Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.</span><span class="sxs-lookup"><span data-stu-id="d675b-134">Click **Copy&Open** in **Azure Device Login** dialog.</span></span>
+
+   ![Boîte de dialogue Connexion à Azure][A08]
+
+> [!NOTE]
+>
+> <span data-ttu-id="d675b-136">Si le navigateur ne s’ouvre pas, configurez Eclipse pour utiliser un navigateur externe comme Internet Explorer ou Chrome :</span><span class="sxs-lookup"><span data-stu-id="d675b-136">If the browser doesn't open, configure eclipse to use an external browser like IE or Chrome:</span></span>
+>
+> 1. <span data-ttu-id="d675b-137">Ouvrez Preferences -> General -> Web Browser -> Use external web browser in Eclipse.</span><span class="sxs-lookup"><span data-stu-id="d675b-137">Open Preferences -> General -> Web Browser -> Use external web browser in Eclipse</span></span>
+>
+> 2. <span data-ttu-id="d675b-138">Sélectionnez le navigateur que vous préférez utiliser.</span><span class="sxs-lookup"><span data-stu-id="d675b-138">Select the browser you prefer to use</span></span>
+>
+
+5. <span data-ttu-id="d675b-139">Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.</span><span class="sxs-lookup"><span data-stu-id="d675b-139">In the browser, paste your device code (which has been copied when you click **Copy&Open** in last step) and then click **Next**.</span></span>
+
+   ![Navigateur de connexion à l’appareil][A03]
+
+6. <span data-ttu-id="d675b-141">Dans la fenêtre **Créer les fichiers d’authentification**, sélectionnez les abonnements que vous souhaitez utiliser, choisissez votre répertoire de destination, puis cliquez sur **Démarrer**.</span><span class="sxs-lookup"><span data-stu-id="d675b-141">In the **Create Authentication Files** window, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+
+   ![Fenêtre Créer les fichiers d’authentification][A04]
+
+7. <span data-ttu-id="d675b-143">Dans la boîte de dialogue **État de création du principal de service**, cliquez sur **OK** une fois vos fichiers créés.</span><span class="sxs-lookup"><span data-stu-id="d675b-143">In the **Service Principal Creation Status** dialog box, click **OK** after your files have been created successfully.</span></span>
+
+   ![Boîte de dialogue État de création du principal de service][A05]
+
+8. <span data-ttu-id="d675b-145">L’adresse du fichier créé est renseignée automatiquement dans la fenêtre **Connexion à Azure**. Maintenant, cliquez sur **Connexion**.</span><span class="sxs-lookup"><span data-stu-id="d675b-145">Address of the created file will be automatically filled in the **Azure Sign In** window, now click **Sign in**.</span></span>
+
+   ![Boîte de dialogue Connexion à Azure][A06]
+
+9. <span data-ttu-id="d675b-147">Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="d675b-147">Finally, in the **Select Subscriptions** dialog box, select the subscriptions that you want to use, then click **OK**.</span></span>
+
+   ![Boîte de dialogue Sélectionner des abonnements][A07]
+
+## <a name="sign-out-of-your-azure-account"></a><span data-ttu-id="d675b-149">Déconnectez-vous de votre compte Azure</span><span class="sxs-lookup"><span data-stu-id="d675b-149">Sign out of your Azure account</span></span>
+
+<span data-ttu-id="d675b-150">Après avoir configuré votre compte à l’aide des étapes précédentes, vous serez connecté automatiquement chaque fois que vous démarrerez Eclipse.</span><span class="sxs-lookup"><span data-stu-id="d675b-150">After you have configured your account by preceding steps, you will be automatically signed in each time you start Eclipse.</span></span> <span data-ttu-id="d675b-151">Toutefois, si vous souhaitez vous déconnecter de votre compte Azure, effectuez les étapes suivantes.</span><span class="sxs-lookup"><span data-stu-id="d675b-151">However, if you want to sign out of your Azure account, use the following steps.</span></span>
+
+1. <span data-ttu-id="d675b-152">Dans Eclipse, cliquez successivement sur **Outils**, **Azure** et **Se déconnecter**.</span><span class="sxs-lookup"><span data-stu-id="d675b-152">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
 
    ![Menu d’Eclipse pour la déconnexion d’Azure][L01]
 
-1. <span data-ttu-id="09c47-163">Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="09c47-163">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+2. <span data-ttu-id="d675b-154">Lorsque la boîte de dialogue **Déconnexion d’Azure** s’affiche, cliquez sur **Oui**.</span><span class="sxs-lookup"><span data-stu-id="d675b-154">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
 
    ![Boîte de dialogue Se déconnecter][L02]
 
-## <a name="next-steps"></a><span data-ttu-id="09c47-165">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="09c47-165">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="d675b-156">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="d675b-156">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
@@ -151,6 +137,7 @@ ms.locfileid: "61591003"
 [I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
 [I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
 [I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [A01]: media/azure-toolkit-for-eclipse-sign-in-instructions/A01.png
 [A02]: media/azure-toolkit-for-eclipse-sign-in-instructions/A02.png

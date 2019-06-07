@@ -1,7 +1,8 @@
 ---
-title: Créer une application web Hello World pour Azure à l’aide d’Eclipse
+title: Créer une application web Hello World pour Azure App Service à l’aide d’Eclipse
 description: Ce didacticiel vous montre comment utiliser le Kit de ressources Azure pour Eclipse pour créer une application Web Hello World pour Azure.
 services: app-service
+keywords: java, eclipse, web app, azure app service, hello world, démarrage rapide
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,116 +15,136 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
-ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
+ms.openlocfilehash: 7e88298afaf0b4601d85d6063b7096c79e677421
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57786888"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625851"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a><span data-ttu-id="e6d86-103">Créer une application web Hello World pour Azure à l’aide d’Eclipse</span><span class="sxs-lookup"><span data-stu-id="e6d86-103">Create a Hello World web app for Azure using Eclipse</span></span>
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a><span data-ttu-id="12a97-104">Créer une application web Hello World pour Azure App Service à l’aide d’Eclipse</span><span class="sxs-lookup"><span data-stu-id="12a97-104">Create a Hello World web app for Azure App Service using Eclipse</span></span>
 
-<span data-ttu-id="e6d86-104">Ce didacticiel explique comment créer une application Hello World de base et la déployer sur Azure en tant qu’application web à l’aide du [Kit de ressources Azure pour Eclipse].</span><span class="sxs-lookup"><span data-stu-id="e6d86-104">This tutorial shows how to create and deploy a basic Hello World application to Azure as a web app by using the [Azure Toolkit for Eclipse].</span></span>
+<span data-ttu-id="12a97-105">Avec le plug-in open source [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse), la création et le déploiement d’une application Hello World de base sur Azure App Service en tant qu’application web ne prennent que quelques minutes.</span><span class="sxs-lookup"><span data-stu-id="12a97-105">Using open sourced [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse) plugin, creating and deploying a basic Hello World application to Azure App Service as a web app can be done in a few minutes.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="e6d86-105">Pour obtenir une version de cet article qui utilise le [Kit de ressources Azure pour IntelliJ], consultez [Créer une application web pour Azure à l’aide d’IntelliJ][intellij-hello-world].</span><span class="sxs-lookup"><span data-stu-id="e6d86-105">For a version of this article that uses the [Azure Toolkit for IntelliJ], see [Create a Hello World web app for Azure using IntelliJ][intellij-hello-world].</span></span>
+> <span data-ttu-id="12a97-106">Si vous préférez utiliser IntelliJ IDEA, consultez notre [tutoriel similaire pour IntelliJ][intellij-hello-world].</span><span class="sxs-lookup"><span data-stu-id="12a97-106">If you prefer using IntelliJ IDEA, check out our [similar tutorial for IntelliJ][intellij-hello-world].</span></span>
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> <span data-ttu-id="12a97-107">N’oubliez pas de nettoyer les ressources après avoir terminé ce tutoriel.</span><span class="sxs-lookup"><span data-stu-id="12a97-107">Don't forget to clean up the resources after you complete this tutorial.</span></span> <span data-ttu-id="12a97-108">Dans ce cas, l’exécution de ce guide ne provoquera pas de dépassement du quota de votre compte gratuit.</span><span class="sxs-lookup"><span data-stu-id="12a97-108">In that case, running this guide will not exceed your free account quota.</span></span>
 >
 
-> [!IMPORTANT]
-> 
-> <span data-ttu-id="e6d86-106">Le Kit de ressources Azure pour Eclipse a été mis à jour en août 2017 avec un flux de travail différent.</span><span class="sxs-lookup"><span data-stu-id="e6d86-106">The Azure Toolkit for Eclipse was updated in August 2017 with a different workflow.</span></span> <span data-ttu-id="e6d86-107">Cet article illustre la création d’une application web Hello World à l’aide de la version 3.0.7 (ou antérieure) du Kit de ressources Azure pour Eclipse.</span><span class="sxs-lookup"><span data-stu-id="e6d86-107">This article illustrates creating a Hello World web app by using version 3.0.7 (or later) of the Azure Toolkit for Eclipse.</span></span> <span data-ttu-id="e6d86-108">Si vous utilisez la version 3.0.6 (ou ultérieure) du kit de ressources, vous devez suivre les étapes de l’article [Créer une application web Hello World pour Azure dans Eclipse à l’aide de l’ancien kit de ressources][Legacy Version].</span><span class="sxs-lookup"><span data-stu-id="e6d86-108">If you are using the version 3.0.6 (or earlier) of the toolkit, you will need to follow the steps in [Create a Hello World web app for Azure in Eclipse using the legacy toolkit][Legacy Version].</span></span>
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-eclipse-basic-prerequisites.md)]
 
-<span data-ttu-id="e6d86-109">À la fin de ce didacticiel, votre application ressemble à l’illustration suivante quand vous l’affichez dans un navigateur web :</span><span class="sxs-lookup"><span data-stu-id="e6d86-109">When you have completed this tutorial, your application will look similar to the following illustration when you view it in a web browser:</span></span>
+## <a name="installation-and-sign-in"></a><span data-ttu-id="12a97-109">Installation et connexion</span><span class="sxs-lookup"><span data-stu-id="12a97-109">Installation and sign-in</span></span>
 
-![Version préliminaire de l’application Hello World][browse-web-app]
+1. <span data-ttu-id="12a97-110">Faites glisser le bouton suivant vers votre espace de travail Eclipse en cours d’exécution pour installer le plug-in Azure Toolkit for Eclipse ([autres options d’installation](azure-toolkit-for-eclipse-installation.md)).</span><span class="sxs-lookup"><span data-stu-id="12a97-110">Drag the following button to your running Eclipse workspace to install the Azure Toolkit for Eclipse plugin ([other installation options](azure-toolkit-for-eclipse-installation.md)).</span></span>
 
-[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+    <span data-ttu-id="12a97-111">[![Faites glisser vers votre espace de travail Eclipse* en cours d’exécution. *Nécessite Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Faites glisser vers votre espace de travail Eclipse* en cours d’exécution. *Nécessite Eclipse Marketplace Client")</span><span class="sxs-lookup"><span data-stu-id="12a97-111">[![Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client")</span></span>
 
-## <a name="create-a-new-web-app-project"></a><span data-ttu-id="e6d86-111">Créer un projet d’application web</span><span class="sxs-lookup"><span data-stu-id="e6d86-111">Create a new web app project</span></span>
+1. <span data-ttu-id="12a97-112">Pour vous connecter à votre compte Azure, cliquez sur **Tools**, **Azure**, puis **Sign In**.</span><span class="sxs-lookup"><span data-stu-id="12a97-112">To sign in to your Azure account, click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+   <span data-ttu-id="12a97-113">![Menu d’Eclipse pour la connexion à Azure][I01]</span><span class="sxs-lookup"><span data-stu-id="12a97-113">![Eclipse Menu for Azure Sign In][I01]</span></span>
 
-1. <span data-ttu-id="e6d86-112">Démarrez Eclipse et connectez-vous à votre compte Azure en suivant les instructions indiquées dans l’article [Instructions de connexion Azure pour le Kit de ressources Azure pour Eclipse][instructions-connexion-eclipse].</span><span class="sxs-lookup"><span data-stu-id="e6d86-112">Start Eclipse, and sign into your Azure account by using the instructions in the [Azure Sign In Instructions for the Azure Toolkit for Eclipse][eclipse-sign-in-instructions] article.</span></span>
+1. <span data-ttu-id="12a97-114">Dans la fenêtre **Connexion à Azure** qui s’affiche, sélectionnez **Connexion à l’appareil**, puis cliquez sur **Connexion** ([autres options de connexion](azure-toolkit-for-eclipse-sign-in-instructions.md)).</span><span class="sxs-lookup"><span data-stu-id="12a97-114">In the **Azure Sign In** window, select **Device Login**, and then click **Sign in** ([other sign-in options](azure-toolkit-for-eclipse-sign-in-instructions.md)).</span></span>
 
-1. <span data-ttu-id="e6d86-113">Cliquez sur **File** (Fichier), sur **New** (Nouveau), puis sur **Dynamic Web Project** (Projet web dynamique).</span><span class="sxs-lookup"><span data-stu-id="e6d86-113">Click **File**, click **New**, and then click **Dynamic Web Project**.</span></span> <span data-ttu-id="e6d86-114">(si **Dynamic Web Project (Projet web dynamique)** n’est pas répertorié en tant que projet disponible une fois que vous avez cliqué sur **File (Fichier)** et **New (Nouveau)**, procédez comme suit : cliquez sur **File (Fichier)**, cliquez sur **New (Nouveau)**, sur **Project (Projet)...**, développez **Web**, puis cliquez sur **Dynamic Web Project (Projet web dynamique)** et sur **Next (Suivant)**).</span><span class="sxs-lookup"><span data-stu-id="e6d86-114">(If you don't see **Dynamic Web Project** listed as an available project after clicking **File** and **New**, then do the following: click **File**, click **New**, click **Project...**, expand **Web**, click **Dynamic Web Project**, and click **Next**.)</span></span>
+   ![Fenêtre Connexion à Azure avec l’option Connexion à l’appareil activée][I02]
+
+1. <span data-ttu-id="12a97-116">Cliquez sur **Copier et ouvrir** dans la boîte de dialogue **Connexion à l’appareil Azure**.</span><span class="sxs-lookup"><span data-stu-id="12a97-116">Click **Copy&Open** in **Azure Device Login** dialog .</span></span>
+
+   ![Boîte de dialogue Connexion à Azure][I03]
+
+1. <span data-ttu-id="12a97-118">Dans le navigateur, collez le code de votre appareil (qui a été copié quand vous avez cliqué sur **Copier et ouvrir** à la dernière étape), puis cliquez sur **Suivant**.</span><span class="sxs-lookup"><span data-stu-id="12a97-118">In the browser, paste your device code (which has been copied when you clicked **Copy&Open** in last step) and then click **Next**.</span></span>
+
+   ![Navigateur de connexion à l’appareil][I04]
+
+1. <span data-ttu-id="12a97-120">Pour finir, dans la boîte de dialogue **Sélectionner des abonnements**, sélectionnez les abonnements que vous souhaitez utiliser, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="12a97-120">Finally, in the **Select Subscriptions** dialog box, select the subscriptions that you want to use, then click **OK**.</span></span>
+
+   ![Boîte de dialogue Sélectionner des abonnements][I05]
+
+## <a name="creating-web-app-project"></a><span data-ttu-id="12a97-122">Création de projet d’application web</span><span class="sxs-lookup"><span data-stu-id="12a97-122">Creating web app project</span></span>
+
+1. <span data-ttu-id="12a97-123">Cliquez sur **File** (Fichier), sur **New** (Nouveau), puis sur **Dynamic Web Project** (Projet web dynamique).</span><span class="sxs-lookup"><span data-stu-id="12a97-123">Click **File**, click **New**, and then click **Dynamic Web Project**.</span></span> <span data-ttu-id="12a97-124">(si **Dynamic Web Project (Projet web dynamique)** n’est pas répertorié en tant que projet disponible une fois que vous avez cliqué sur **File (Fichier)** et **New (Nouveau)** , procédez comme suit : cliquez sur **File (Fichier)** , cliquez sur **New (Nouveau)** , sur **Project (Projet)...** , développez **Web**, puis cliquez sur **Dynamic Web Project (Projet web dynamique)** et sur **Next (Suivant)** ).</span><span class="sxs-lookup"><span data-stu-id="12a97-124">(If you don't see **Dynamic Web Project** listed as an available project after clicking **File** and **New**, then do the following: click **File**, click **New**, click **Project...**, expand **Web**, click **Dynamic Web Project**, and click **Next**.)</span></span>
 
    ![Création d’un nouveau projet Web dynamique][file-new-dynamic-web-project]
 
-2. <span data-ttu-id="e6d86-116">Pour l’exemple de ce didacticiel, nommez le projet **MyWebApp**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-116">For purposes of this tutorial, name the project **MyWebApp**.</span></span> <span data-ttu-id="e6d86-117">Votre écran se présente comme suit :</span><span class="sxs-lookup"><span data-stu-id="e6d86-117">Your screen will appear similar to the following:</span></span>
+2. <span data-ttu-id="12a97-126">Pour l’exemple de ce didacticiel, nommez le projet **MyWebApp**.</span><span class="sxs-lookup"><span data-stu-id="12a97-126">For purposes of this tutorial, name the project **MyWebApp**.</span></span> <span data-ttu-id="12a97-127">Votre écran se présente comme suit :</span><span class="sxs-lookup"><span data-stu-id="12a97-127">Your screen will appear similar to the following:</span></span>
    
    ![Propriétés Nouveau projet web dynamique][dynamic-web-project-properties]
 
-3. <span data-ttu-id="e6d86-119">Cliquez sur **Terminer**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-119">Click **Finish**.</span></span>
+3. <span data-ttu-id="12a97-129">Cliquez sur **Terminer**.</span><span class="sxs-lookup"><span data-stu-id="12a97-129">Click **Finish**.</span></span>
 
-4. <span data-ttu-id="e6d86-120">Dans la vue Explorateur de projets d’Eclipse, développez **MyWebApp**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-120">Within Eclipse's Project Explorer view, expand **MyWebApp**.</span></span> <span data-ttu-id="e6d86-121">Cliquez avec le bouton droit sur **WebContent**, cliquez sur **New (Nouveau)**, puis sur **JSP File (Fichier JSP)**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-121">Right-click **WebContent**, click **New**, and then click **JSP File**.</span></span>
+4. <span data-ttu-id="12a97-130">Dans la vue Explorateur de projets d’Eclipse, développez **MyWebApp**.</span><span class="sxs-lookup"><span data-stu-id="12a97-130">Within Eclipse's Project Explorer view, expand **MyWebApp**.</span></span> <span data-ttu-id="12a97-131">Cliquez avec le bouton droit sur **WebContent**, cliquez sur **New (Nouveau)** , puis sur **JSP File (Fichier JSP)** .</span><span class="sxs-lookup"><span data-stu-id="12a97-131">Right-click **WebContent**, click **New**, and then click **JSP File**.</span></span>
 
    ![Créer Nouveau fichier JSP][create-new-jsp-file]
 
-5. <span data-ttu-id="e6d86-123">Dans la boîte de dialogue **New JSP File** (Nouveau fichier JSP), nommez le fichier **index.jsp**, conservez le dossier parent en tant que **MyWebApp/WebContent**, puis cliquez sur **Next** (Suivant).</span><span class="sxs-lookup"><span data-stu-id="e6d86-123">In the **New JSP File** dialog box, name the file **index.jsp**, keep the parent folder as **MyWebApp/WebContent**, and then click **Next**.</span></span>
+5. <span data-ttu-id="12a97-133">Dans la boîte de dialogue **New JSP File** (Nouveau fichier JSP), nommez le fichier **index.jsp**, conservez le dossier parent en tant que **MyWebApp/WebContent**, puis cliquez sur **Next** (Suivant).</span><span class="sxs-lookup"><span data-stu-id="12a97-133">In the **New JSP File** dialog box, name the file **index.jsp**, keep the parent folder as **MyWebApp/WebContent**, and then click **Next**.</span></span>
 
    ![Boîte de dialogue New JSP File (Nouveau fichier JSP)][new-jsp-file-dialog]
 
-6. <span data-ttu-id="e6d86-125">Pour les besoins de ce didacticiel, dans la boîte de dialogue **Select JSP Template** (Sélectionner le modèle JSP), sélectionnez **New JSP File (html)** (Nouveau fichier JSP (html)) et cliquez sur **Finish** (Terminer).</span><span class="sxs-lookup"><span data-stu-id="e6d86-125">In the **Select JSP Template** dialog box, for purposes of this tutorial select **New JSP File (html)**, and then click **Finish**.</span></span>
+6. <span data-ttu-id="12a97-135">Pour les besoins de ce didacticiel, dans la boîte de dialogue **Select JSP Template** (Sélectionner le modèle JSP), sélectionnez **New JSP File (html)** (Nouveau fichier JSP (html)) et cliquez sur **Finish** (Terminer).</span><span class="sxs-lookup"><span data-stu-id="12a97-135">In the **Select JSP Template** dialog box, for purposes of this tutorial select **New JSP File (html)**, and then click **Finish**.</span></span>
 
    ![Sélectionner un modèle JSP][select-jsp-template]
 
-7. <span data-ttu-id="e6d86-127">Quand votre fichier index.jsp s’ouvre dans Eclipse, ajoutez un texte pour afficher dynamiquement **Hello World!**</span><span class="sxs-lookup"><span data-stu-id="e6d86-127">When your index.jsp file opens in Eclipse, add in text to dynamically display **Hello World!**</span></span> <span data-ttu-id="e6d86-128">dans l’élément `<body>` existant.</span><span class="sxs-lookup"><span data-stu-id="e6d86-128">within the existing `<body>` element.</span></span> <span data-ttu-id="e6d86-129">Le contenu `<body>` mis à jour doit ressembler à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="e6d86-129">Your updated `<body>` content should resemble the following example:</span></span>
+7. <span data-ttu-id="12a97-137">Quand votre fichier index.jsp s’ouvre dans Eclipse, ajoutez un texte pour afficher dynamiquement **Hello World!**</span><span class="sxs-lookup"><span data-stu-id="12a97-137">When your index.jsp file opens in Eclipse, add in text to dynamically display **Hello World!**</span></span> <span data-ttu-id="12a97-138">dans l’élément `<body>` existant.</span><span class="sxs-lookup"><span data-stu-id="12a97-138">within the existing `<body>` element.</span></span> <span data-ttu-id="12a97-139">Le contenu `<body>` mis à jour doit ressembler à l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="12a97-139">Your updated `<body>` content should resemble the following example:</span></span>
    
    ```jsp
    <body><b><% out.println("Hello World!"); %></b></body>
    ```
 
-8. <span data-ttu-id="e6d86-130">Enregistrez index.jsp.</span><span class="sxs-lookup"><span data-stu-id="e6d86-130">Save index.jsp.</span></span>
+8. <span data-ttu-id="12a97-140">Enregistrez index.jsp.</span><span class="sxs-lookup"><span data-stu-id="12a97-140">Save index.jsp.</span></span>
 
-## <a name="deploy-your-web-app-to-azure"></a><span data-ttu-id="e6d86-131">Déployer votre application web sur Azure</span><span class="sxs-lookup"><span data-stu-id="e6d86-131">Deploy your web app to Azure</span></span>
+## <a name="deploying-web-app-to-azure"></a><span data-ttu-id="12a97-141">Déploiement d’application web sur Azure</span><span class="sxs-lookup"><span data-stu-id="12a97-141">Deploying web app to Azure</span></span>
 
-1. <span data-ttu-id="e6d86-132">Dans la vue de l’Explorateur de projets d’Eclipse, cliquez avec le bouton droit sur votre projet, choisissez **Azure**, puis **Publish as Azure Web App** (Publier en tant qu’application web Azure).</span><span class="sxs-lookup"><span data-stu-id="e6d86-132">Within Eclipse's Project Explorer view, right-click your project, choose **Azure**, and then choose **Publish as Azure Web App**.</span></span>
+1. <span data-ttu-id="12a97-142">Dans la vue de l’Explorateur de projets d’Eclipse, cliquez avec le bouton droit sur votre projet, choisissez **Azure**, puis **Publish as Azure Web App** (Publier en tant qu’application web Azure).</span><span class="sxs-lookup"><span data-stu-id="12a97-142">Within Eclipse's Project Explorer view, right-click your project, choose **Azure**, and then choose **Publish as Azure Web App**.</span></span>
    
    ![Publish as Azure Web App][publish-as-azure-web-app]
 
-1. <span data-ttu-id="e6d86-134">Lorsque la boîte de dialogue **Deploy Web App** (Déployer une application web) s’affiche, vous pouvez choisir l’une des options suivantes :</span><span class="sxs-lookup"><span data-stu-id="e6d86-134">When the **Deploy Web App** dialog box appears, you can choose one of the following options:</span></span>
+1. <span data-ttu-id="12a97-144">Lorsque la boîte de dialogue **Deploy Web App** (Déployer une application web) s’affiche, vous pouvez choisir l’une des options suivantes :</span><span class="sxs-lookup"><span data-stu-id="12a97-144">When the **Deploy Web App** dialog box appears, you can choose one of the following options:</span></span>
 
-   * <span data-ttu-id="e6d86-135">Sélectionnez une application web existante, s’il y en a.</span><span class="sxs-lookup"><span data-stu-id="e6d86-135">Select an existing web app if one exists.</span></span>
+   * <span data-ttu-id="12a97-145">Sélectionnez une application web existante, s’il y en a.</span><span class="sxs-lookup"><span data-stu-id="12a97-145">Select an existing web app if one exists.</span></span>
 
       ![Sélectionner un App Service][select-app-service]
 
-   * <span data-ttu-id="e6d86-137">Cliquez sur **Create New Web App**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-137">Click **Create New Web App**.</span></span>
+   * <span data-ttu-id="12a97-147">Cliquez sur **Create New Web App**.</span><span class="sxs-lookup"><span data-stu-id="12a97-147">Click **Create New Web App**.</span></span>
 
       ![Créer un App Service][create-app-service]
 
-      <span data-ttu-id="e6d86-139">Spécifiez les informations requises pour votre application web dans la boîte de dialogue **Créer App Service**, puis cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-139">Specify the requisite information for your web app in the **Create App Service** dialog box, and then click **Create**.</span></span>
+      <span data-ttu-id="12a97-149">Spécifiez les informations requises pour votre application web dans la boîte de dialogue **Créer App Service**, puis cliquez sur **Créer**.</span><span class="sxs-lookup"><span data-stu-id="12a97-149">Specify the requisite information for your web app in the **Create App Service** dialog box, and then click **Create**.</span></span>
 
-      <span data-ttu-id="e6d86-140">Ici, vous pouvez configurer l’environnement d’exécution, les paramètres de l’application, le plan de service et le groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="e6d86-140">Here you can configure the runtime environment, app settings, service plan and resource group.</span></span>
+      <span data-ttu-id="12a97-150">Ici, vous pouvez configurer l’environnement d’exécution, les paramètres de l’application, le plan de service et le groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="12a97-150">Here you can configure the runtime environment, app settings, service plan and resource group.</span></span>
 
       ![Boîte de dialogue Créer App Service][create-app-service-dialog]
 
-1. <span data-ttu-id="e6d86-142">Sélectionnez votre application web, puis cliquez sur **Déployer**.</span><span class="sxs-lookup"><span data-stu-id="e6d86-142">Select your web app and then click **Deploy**.</span></span>
+1. <span data-ttu-id="12a97-152">Sélectionnez votre application web, puis cliquez sur **Déployer**.</span><span class="sxs-lookup"><span data-stu-id="12a97-152">Select your web app and then click **Deploy**.</span></span>
 
    ![Déployer App Service][deploy-app-service]
 
-1. <span data-ttu-id="e6d86-144">Le Kit de ressources affiche un le statut **Published** (Publié) sous l’onglet **Azure Activity Log** lorsque le déploiement de votre application web a été effectué. Il s’agit d’un hyperlien pour l’URL de votre application web déployée.</span><span class="sxs-lookup"><span data-stu-id="e6d86-144">The toolkit will display a **Published** status under the **Azure Activity Log** tab when it has successfully deployed your web app, which is a hyperlink for the URL of your deployed web app.</span></span>
+1. <span data-ttu-id="12a97-154">Le Kit de ressources affiche un le statut **Published** (Publié) sous l’onglet **Azure Activity Log** lorsque le déploiement de votre application web a été effectué. Il s’agit d’un hyperlien pour l’URL de votre application web déployée.</span><span class="sxs-lookup"><span data-stu-id="12a97-154">The toolkit will display a **Published** status under the **Azure Activity Log** tab when it has successfully deployed your web app, which is a hyperlink for the URL of your deployed web app.</span></span>
 
    ![État de publication][publish-status]
 
-1. <span data-ttu-id="e6d86-146">Vous pouvez accéder à votre application web à l’aide du lien fourni dans le message d’état.</span><span class="sxs-lookup"><span data-stu-id="e6d86-146">You can browse to your web app using the link provided in the status message.</span></span>
+1. <span data-ttu-id="12a97-156">Vous pouvez accéder à votre application web à l’aide du lien fourni dans le message d’état.</span><span class="sxs-lookup"><span data-stu-id="12a97-156">You can browse to your web app using the link provided in the status message.</span></span>
 
    ![Accès à votre application web][browse-web-app]
 
-1. <span data-ttu-id="e6d86-148">Après avoir publié votre application web sur Azure, vous pouvez la gérer en faisant un clic droit et en sélectionnant une des options dans le menu contextuel.</span><span class="sxs-lookup"><span data-stu-id="e6d86-148">After you have published your web to Azure, you can manage your app by right-clicking on it and selecting one of the options on the context menu.</span></span> <span data-ttu-id="e6d86-149">Vous pouvez par exemple **Démarrer**, **Arrêter** ou **Supprimer** votre application web.</span><span class="sxs-lookup"><span data-stu-id="e6d86-149">For example, you can **Start**, **Stop**, or **Delete** your web app.</span></span>
+[!INCLUDE [azure-toolkit-for-eclipse-show-azure-explorer](../includes/azure-toolkit-for-eclipse-show-azure-explorer.md)]
+
+## <a name="cleaning-up-resources"></a><span data-ttu-id="12a97-158">Suppression des ressources</span><span class="sxs-lookup"><span data-stu-id="12a97-158">Cleaning up resources</span></span>
+
+1. <span data-ttu-id="12a97-159">Après avoir publié votre application web sur Azure, vous pouvez la gérer en cliquant avec le bouton droit dans Azure Explorer et en sélectionnant l’une des options dans le menu contextuel.</span><span class="sxs-lookup"><span data-stu-id="12a97-159">After you have published your web app to Azure, you can manage it by right-clicking in Azure Explorer and selecting one of the options in the context menu.</span></span> <span data-ttu-id="12a97-160">Par exemple, vous pouvez **supprimer** votre application web ici afin de nettoyer la ressource pour ce tutoriel.</span><span class="sxs-lookup"><span data-stu-id="12a97-160">For example, you can **Delete** your web app here to clean up the resource for this tutorial.</span></span>
 
    ![Gérer App Service][manage-app-service]
 
-## <a name="next-steps"></a><span data-ttu-id="e6d86-151">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="e6d86-151">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="12a97-162">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="12a97-162">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
-<span data-ttu-id="e6d86-152">Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vue d’ensemble de Web Apps].</span><span class="sxs-lookup"><span data-stu-id="e6d86-152">For additional information about creating Azure Web Apps, see the [Web Apps Overview].</span></span>
+<span data-ttu-id="12a97-163">Pour plus d’informations sur la création d’Azure Web Apps, consultez la [Vue d’ensemble de Web Apps].</span><span class="sxs-lookup"><span data-stu-id="12a97-163">For additional information about creating Azure Web Apps, see the [Web Apps Overview].</span></span>
 
 <!-- URL List -->
 
-[Kit de ressources Azure pour Eclipse]: azure-toolkit-for-eclipse.md
 [Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
-[Kit de ressources Azure pour IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Vue d’ensemble de Web Apps]: /azure/app-service/app-service-web-overview
@@ -133,6 +154,11 @@ ms.locfileid: "57786888"
 [Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
 [file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png

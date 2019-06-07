@@ -14,71 +14,48 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 0cbb515a62e540fdc9decb8055bb57e0cb35e7b2
-ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
+ms.openlocfilehash: 0b57e60df9a4439cf0acbac19288b6fecfce6ee5
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53638988"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626094"
 ---
-# <a name="azure-toolkit-for-intellij"></a><span data-ttu-id="4f702-103">Kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-103">Azure Toolkit for IntelliJ</span></span>
-<span data-ttu-id="4f702-104">Le kit de ressources Azure pour IntelliJ contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="4f702-104">The Azure Toolkit for IntelliJ provides templates and functionality that you can use to easily create, develop, test, and deploy Azure applications by using the IntelliJ integrated development environment (IDE).</span></span>
+# <a name="azure-toolkit-for-intellij"></a><span data-ttu-id="1e395-103">Kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="1e395-103">Azure Toolkit for IntelliJ</span></span>
+
+<span data-ttu-id="1e395-104">Le kit de ressources Azure pour IntelliJ contient des modèles et fonctionnalités qui vous permettent de créer, développer, tester et déployer aisément des applications Azure en utilisant l’environnement de développement intégré (IDE) IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="1e395-104">The Azure Toolkit for IntelliJ provides templates and functionality that you can use to easily create, develop, test, and deploy Azure applications by using the IntelliJ integrated development environment (IDE).</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="4f702-105">Il existe également une boîte à outils Azure pour l’environnement de développement Eclipse.</span><span class="sxs-lookup"><span data-stu-id="4f702-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="4f702-106">Pour plus d’informations, consultez [Kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse.md).</span><span class="sxs-lookup"><span data-stu-id="4f702-106">For more information, see [Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse.md).</span></span>
+> <span data-ttu-id="1e395-105">Il existe également une boîte à outils Azure pour l’environnement de développement Eclipse.</span><span class="sxs-lookup"><span data-stu-id="1e395-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="1e395-106">Pour plus d’informations, consultez [Kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse.md).</span><span class="sxs-lookup"><span data-stu-id="1e395-106">For more information, see [Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse.md).</span></span>
 > 
 
-## <a name="get-started-with-the-azure-toolkit-for-intellij"></a><span data-ttu-id="4f702-107">Commencer avec le kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-107">Get started with the Azure Toolkit for IntelliJ</span></span>
-<span data-ttu-id="4f702-108">Les articles suivants vous aideront à commencer à utiliser le kit de ressources Azure pour IntelliJ :</span><span class="sxs-lookup"><span data-stu-id="4f702-108">The following articles will help you start using the Azure Toolkit for IntelliJ:</span></span>
+## <a name="get-started-in-10-minutes"></a><span data-ttu-id="1e395-107">Bien démarrer en 10 minutes</span><span class="sxs-lookup"><span data-stu-id="1e395-107">Get started in 10 minutes</span></span>
 
-* [<span data-ttu-id="4f702-109">Installation du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-109">Installing the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-installation.md)
+* [<span data-ttu-id="1e395-108">Créer une application web Hello World pour Azure App Service</span><span class="sxs-lookup"><span data-stu-id="1e395-108">Create a Hello World web app for Azure App Service</span></span>](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
-* [<span data-ttu-id="4f702-110">Instructions de connexion pour le kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-110">Sign-in instructions for the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-sign-in-instructions.md)
+## <a name="step-by-step-tutorials"></a><span data-ttu-id="1e395-109">Tutoriels pas à pas</span><span class="sxs-lookup"><span data-stu-id="1e395-109">Step-by-Step tutorials</span></span>
 
-* [<span data-ttu-id="4f702-111">Créer une application web Hello World pour Azure dans IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-111">Create a Hello World web app for Azure in IntelliJ</span></span>](azure-toolkit-for-intellij-create-hello-world-web-app.md)
+* [<span data-ttu-id="1e395-110">Exécuter une application web Hello World dans un conteneur Linux à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="1e395-110">Run a Hello World web app in a Linux container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-hello-world-web-app-linux.md)
 
-## <a name="use-the-azure-toolkit-for-intellij-with-your-java-projects"></a><span data-ttu-id="4f702-112">Utilisez le kit de ressources Azure pour IntelliJ avec vos projets Java</span><span class="sxs-lookup"><span data-stu-id="4f702-112">Use the Azure Toolkit for IntelliJ with your Java Projects</span></span>
-<span data-ttu-id="4f702-113">Les articles suivants expliquent comment utiliser la Boîte à outils Azure pour IntelliJ afin d’ajouter la fonctionnalité Azure à vos projets Java :</span><span class="sxs-lookup"><span data-stu-id="4f702-113">The following articles demonstrate using the Azure Toolkit for IntelliJ to add Azure functionality to your Java projects:</span></span>
+* [<span data-ttu-id="1e395-111">Publier une application Spring Boot en tant que conteneur Docker avec le kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="1e395-111">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-publish-spring-boot-docker-app.md)
 
-* [<span data-ttu-id="4f702-114">Exécuter une application web Hello World dans un conteneur Linux à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-114">Run a Hello World web app in a Linux container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-hello-world-web-app-linux.md)
+* [<span data-ttu-id="1e395-112">Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="1e395-112">Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-publish-as-docker-container.md)
 
-* [<span data-ttu-id="4f702-115">Publier une application Spring Boot en tant que conteneur Docker avec le kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-115">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-publish-spring-boot-docker-app.md)
+* [<span data-ttu-id="1e395-113">Utiliser le plug-in Outils HDInsight pour IntelliJ IDEA afin de créer des applications Spark pour un cluster Linux HDInsight Spark</span><span class="sxs-lookup"><span data-stu-id="1e395-113">Use HDInsight Tools Plugin for IntelliJ IDEA to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin)
 
-* [<span data-ttu-id="4f702-116">Publier une application web en tant que conteneur Docker à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-116">Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>](azure-toolkit-for-intellij-publish-as-docker-container.md)
+## <a name="managing-azure-resources"></a><span data-ttu-id="1e395-114">Gestion des ressources Azure</span><span class="sxs-lookup"><span data-stu-id="1e395-114">Managing Azure resources</span></span>
 
-* [<span data-ttu-id="4f702-117">Utiliser le plug-in Outils HDInsight pour IntelliJ IDEA afin de créer des applications Spark pour un cluster Linux HDInsight Spark</span><span class="sxs-lookup"><span data-stu-id="4f702-117">Use HDInsight Tools Plugin for IntelliJ IDEA to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin)
+* [<span data-ttu-id="1e395-115">Caches Redis</span><span class="sxs-lookup"><span data-stu-id="1e395-115">Redis caches</span></span>](azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md)
 
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="4f702-118">Gérer des ressources Azure à l’aide du kit de ressources Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-118">Manage Azure resources using the Azure Toolkit for IntelliJ</span></span>
-<span data-ttu-id="4f702-119">Les articles suivants expliquent comment utiliser le kit de ressources Azure pour IntelliJ afin de gérer vos ressources Azure :</span><span class="sxs-lookup"><span data-stu-id="4f702-119">The following articles demonstrate using the Azure Toolkit for IntelliJ to manage your Azure resources:</span></span>
+* [<span data-ttu-id="1e395-116">Comptes de stockage</span><span class="sxs-lookup"><span data-stu-id="1e395-116">Storage accounts</span></span>](azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md)
 
-* [<span data-ttu-id="4f702-120">Gérer des caches Redis à l’aide de l’Explorateur Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-120">Manage redis caches by using the Azure Explorer for IntelliJ</span></span>](azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md)
+* [<span data-ttu-id="1e395-117">Machines virtuelles</span><span class="sxs-lookup"><span data-stu-id="1e395-117">Virtual machines</span></span>](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 
-* [<span data-ttu-id="4f702-121">Gérer des comptes de stockage à l’aide de l’Explorateur Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-121">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>](azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md)
+## <a name="whats-more"></a><span data-ttu-id="1e395-118">En plus</span><span class="sxs-lookup"><span data-stu-id="1e395-118">What's more</span></span>
 
-* [<span data-ttu-id="4f702-122">Gérer des machines virtuelles à l’aide de l’Explorateur Azure pour IntelliJ</span><span class="sxs-lookup"><span data-stu-id="4f702-122">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
-
-## <a name="next-steps"></a><span data-ttu-id="4f702-123">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="4f702-123">Next steps</span></span>
-
-<span data-ttu-id="4f702-124">Pour plus d’informations sur le kit de ressources Azure pour IntelliJ, voir les pages suivantes :</span><span class="sxs-lookup"><span data-stu-id="4f702-124">For more information about the Azure Toolkit for IntelliJ, see the following pages:</span></span>
-
-* [<span data-ttu-id="4f702-125">Notes de publication du kit de ressources Azure</span><span class="sxs-lookup"><span data-stu-id="4f702-125">Azure Toolkit Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases)
-
-* [<span data-ttu-id="4f702-126">Kit de ressources Azure pour IntelliJ dans le référentiel des plug-ins JetBrains</span><span class="sxs-lookup"><span data-stu-id="4f702-126">Azure Toolkit for IntelliJ in the JetBrains Plugins Repository</span></span>](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
-
-<span data-ttu-id="4f702-127">Pour plus d’informations sur l’utilisation d’Azure avec Java, consultez les pages [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) et [Outils Java pour Visual Studio Team Services](/azure/devops/java/).</span><span class="sxs-lookup"><span data-stu-id="4f702-127">For more information about using Java with Azure, see the [Azure for Java Developers](https://docs.microsoft.com/java/azure/) and the [Java Tools for Visual Studio Team Services](/azure/devops/java/).</span></span>
-
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 > [!NOTE]
 > 
-> <span data-ttu-id="4f702-128">Le kit de ressources Azure pour IntelliJ est un projet Open Source, dont le code source est disponible sous [licence MIT sur le site du projet](https://github.com/microsoft/azure-tools-for-java).</span><span class="sxs-lookup"><span data-stu-id="4f702-128">The Azure Toolkit for IntelliJ is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
+> <span data-ttu-id="1e395-119">Le kit de ressources Azure pour IntelliJ est un projet Open Source, dont le code source est disponible sous [licence MIT sur le site du projet](https://github.com/microsoft/azure-tools-for-java).</span><span class="sxs-lookup"><span data-stu-id="1e395-119">The Azure Toolkit for IntelliJ is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
 > 
-
-<!-- [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)] -->
-
-<!-- URL List -->
-
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-
-<!-- Temporarily Deprecated URLs -->
-
-<!-- [Debug a Java Web App on Azure in IntelliJ]: ./app-service-web/app-service-web-debug-java-web-app-in-intellij.md -->
