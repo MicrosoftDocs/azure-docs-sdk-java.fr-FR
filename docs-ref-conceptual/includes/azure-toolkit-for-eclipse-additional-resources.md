@@ -1,14 +1,16 @@
-Pour plus d’informations sur le kit de ressources Azure pour Eclipse, consultez les pages suivantes : 
-
-* [Kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse.md) 
-* [Notes de publication](https://github.com/Microsoft/azure-tools-for-java/releases) 
-* [Installation du kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse-installation.md) 
-* [Créer une application web Hello World pour Azure dans Eclipse](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
-* [Instructions de connexion pour le Kit de ressources Azure pour Eclipse](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
+---
+ms.openlocfilehash: 93fd5e752d6b18a0c48e7a2bf9a307dbaf75c25c
+ms.sourcegitcommit: 599405a9ce892d75073ef0776befa2fa22407b4c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67237634"
+---
+Pour signaler des bogues ou demander de nouvelles fonctionnalités, créez une entrée dans [notre dépôt GitHub](https://github.com/Microsoft/azure-tools-for-java/issues). Vous pouvez aussi poser des questions sur [Stack Overflow avec la balise azure-java-tools](https://stackoverflow.com/questions/tagged/azure-java-tools).
 
 Pour plus d’informations sur l’utilisation de Java avec Azure, consultez les liens suivants : 
 
-* [Azure pour les développeurs Java](https://docs.microsoft.com/java/azure/) 
-* [Outils Java pour Visual Studio Team Services](/azure/devops/java/)
-* [Obtenir des téléchargements et le support du kit de développement (JDK) Java lors du développement pour Azure](https://aka.ms/azure-jdks)
+* [Azure pour les développeurs Java](/java/azure/) 
+* [Java avec Azure DevOps Services](/azure/devops/java/)
+* [Obtenir les téléchargements et le support du kit JDK Java lors du développement pour Azure](https://aka.ms/azure-jdks)
 <!-- TODO: Add URLs for Java in VSCode here --> 
