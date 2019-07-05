@@ -1,7 +1,7 @@
 ---
-title: Déployer une application MicroProfile sur le cloud avec Docker et Azure
-description: Découvrez comment déployer une application MicroProfile sur le cloud à l’aide de Docker et d’Azure Container Instances.
-services: container-instances;container-retistry
+title: Déployer une application MicroProfile dans le cloud avec Docker et Azure
+description: Découvrez comment déployer une application MicroProfile dans le cloud à l’aide de Docker et d’Azure Container Instances.
+services: container-instances;container-registry
 documentationcenter: java
 author: brunoborges
 manager: routlaw
@@ -14,36 +14,33 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 22870b7ba32f115e7270c63d1bf42cbfc6531d7e
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 6ba12bb183969103676fa988199603df6cf36bba
+ms.sourcegitcommit: f8faa4a14c714e148c513fd46f119524f3897abf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338783"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533601"
 ---
-# <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Déployer une application MicroProfile sur le cloud avec Docker et Azure
+# <a name="deploy-a-microprofile-app-to-the-cloud-by-using-docker-and-azure"></a>Déployer une application MicroProfile dans le cloud avec Docker et Azure
 
 Cet article explique comment placer une application [MicroProfile.io] dans un conteneur Docker et l’exécuter sur Azure Container Instances.
 
 > [!NOTE]
->
-> Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image du conteneur Docker s’exécute automatiquement (c’est-à-dire qu’elle inclut le runtime).
+> Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image conteneur Docker est auto-exécutable (c’est-à-dire qu’elle inclut le runtime).
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :
+Pour effectuer ce didacticiel, vous avez besoin de ce qui suit :
 
-* Abonnement Azure ; si vous ne disposez pas d’un abonnement Azure, vous pouvez vous inscrire pour un [compte Azure gratuit].
-* [Azure CLI].
-* Un kit de développement Java (JDK) pris en charge. Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.
-* L’outil de génération [Maven] (version 3+) d’Apache.
+* Un abonnement Azure. Si vous n’avez pas d’abonnement Azure, vous pouvez vous inscrire pour obtenir un [compte Azure gratuit].
+* [Interface de ligne de commande Azure] installé.
+* Un kit de développement Java (JDK) pris en charge. Pour plus d’informations sur les JDK qui peuvent être utilisés lorsque vous développez dans Azure, consultez [Prise en charge à long terme de Java pour Azure et Azure Stack](https://aka.ms/azure-jdks).
+* L’outil de génération [Apache Maven] (version 3 ou ultérieure).
 * Un client [Git].
 
 ## <a name="microprofile-hello-azure-sample"></a>Exemple MicroProfile Hello Azure
 
-Pour cet article, nous utiliserons l’exemple de [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) :
-
-### <a name="clone-build-and-run-locally"></a>Cloner, générer, et exécuter en local
+Pour cet article, vous allez utiliser l’exemple [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure). Clonez, générez, puis exécutez-le localement en utilisant les commandes suivantes :
 
 ```bash
 $ git clone https://github.com/Azure-Samples/microprofile-hello-azure.git
@@ -57,40 +54,40 @@ $ mvn payara-micro:start
 ...
 ```
 
-Vous pouvez tester l’application avec un appel `curl` ou en la consultant dans un [navigateur](http://localhost:8080/api/hello) :
+Vous pouvez tester l’application en appelant `curl` ou à l’aide d’un [navigateur](http://localhost:8080/api/hello) :
 
 ```bash
 $ curl http://localhost:8080/api/hello
 Hello, Azure!
 ```
 
-## <a name="deploy-to-azure"></a>Déployer dans Azure
+## <a name="deploy-the-app-to-azure"></a>Déploiement de l’application dans Azure
 
-Chargeons à présent cette application sur le cloud avec les services [Azure Container Instances] et [Azure Container Registry].
+Chargeons à présent cette application dans Azure avec les services [Azure Container Instances] et [Azure Container Registry].
 
 ### <a name="build-a-docker-image"></a>Générer une image Docker
 
 L’exemple de projet met à votre disposition un fichier Dockerfile. Vous n’avez pas besoin d’installer le logiciel Docker, étant donné que nous utiliserons la fonctionnalité de génération d’Azure Container Registry pour générer l’image dans le cloud.
 
-Pour générer l’image et la rendre exécutable sur Azure, procédez comme suit :
+Pour créer l’image et préparer son exécution dans Azure, effectuez les étapes suivantes :
 
-1. Installer et se connecter avec Azure CLI
-1. Créer un groupe de ressources Azure
-1. Créer un ACR (Azure Container Registry)
-1. Créer l’image Docker
-1. Publier l’image de Docker sur l’ACR précédemment créé
-1. (Facultatif) Générer et publier sur ACR en une seule commande
+1. Installez Azure CLI, puis connectez-vous.
+1. Création d’un groupe de ressources Azure.
+1. Créez une instance de registre de conteneurs Azure.
+1. Générez une image Docker.
+1. Publiez l’image Docker dans l’instance de registre de conteneurs créée précédemment.
+1. (Facultatif) Générez et publiez l’image dans l’instance de registre de conteneurs à l’aide d’une seule commande.
 
 
-#### <a name="set-up-azure-cli"></a>Configuration de l’interface de ligne de commande Azure CLI
+#### <a name="set-up-the-azure-cli"></a>Configuration de l’interface de ligne de commande Azure
 
-Vérifiez que vous disposez d’un abonnement Azure, que l’interface [Azure CLI est bien installée](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest), et que vous êtes bien authentifié sur votre compte :
+Vérifiez que vous avez un abonnement Azure, que vous avez installé [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) et que vous êtes bien connecté à votre compte :
 
 ```bash
 az login
 ```
 
-#### <a name="create-a-resource-group"></a>Création d’un groupe de ressources
+#### <a name="create-a-resource-group"></a>Créer un groupe de ressources
 
 ```bash
 export ARG=microprofileRG
@@ -98,9 +95,9 @@ export ADCL=eastus
 az group create --name $ARG --location $ADCL
 ```
 
-#### <a name="create-an-azure-container-registry-instance"></a>Créer une instance Azure Container Registry
+#### <a name="create-a-container-registry-instance"></a>Créer une instance de registre de conteneurs
 
-Cette commande devrait créer un registre de conteneurs global et unique utilisant un nom de base accompagné d’un nombre aléatoire.
+Cette commande doit créer un registre de conteneurs global et unique avec un nom de base et un numéro aléatoire.
 
 ```bash
 export RANDINT=`date +"%m%d%y$RANDOM"`
@@ -110,14 +107,14 @@ az acr create --name $ACR -g $ARG --sku Basic --admin-enabled
 
 #### <a name="build-the-docker-image"></a>Créer l’image Docker
 
-Même si vous pouvez facilement générer une image Docker locale à l’aide du logiciel Docker lui-même, vous pouvez également la générer dans le cloud, et ce pour diverses raisons :
+Même si vous pouvez facilement générer une image Docker locale à l’aide du logiciel Docker, vous pouvez également choisir de la générer dans le cloud, et ce pour diverses raisons :
 
-1. Vous n’avez pas besoin d’installer Docker en local
-1. Le temps d’exécution est beaucoup plus rapide grâce à la génération à distance (à l’exception du temps de chargement en contexte)
-1. Le traitement dans le cloud dispose d’une connexion internet plus rapide, optimisant ainsi la vitesse des téléchargements
-1. L’image est directement acheminée dans Container Registry
+* Il n’est pas nécessaire d’installer Docker localement.
+* Le temps d’exécution est beaucoup plus rapide grâce à la génération à distance (à l’exception du temps de chargement en contexte).
+* Le traitement dans le cloud dispose d’une connexion Internet plus rapide, optimisant ainsi la vitesse des téléchargements.
+* L’image est directement acheminée vers l’instance de registre de conteneurs.
 
-Pour toutes ces raisons, nous générerons l’image à l’aide de la fonctionnalité de génération d’[Générer ACR] :
+Pour toutes ces raisons, vous allez générer l’image à l’aide de la fonctionnalité de génération d’[Générer ACR] :
 
 ```bash
 export IMG_NAME="mympapp:latest"
@@ -127,9 +124,9 @@ Build complete
 Build ID: aa1 was successful after 1m2.674577892s
 ```
 
-#### <a name="deploy-docker-image-from-azure-container-registry-acr-into-container-instances-aci"></a>Déployer une image Docker depuis Azure Container Registry (ACR) vers Azure Container Instances (ACI)
+#### <a name="deploy-the-docker-image-from-the-azure-container-registry-instance-to-container-instances"></a>Déployer l’image dans Container Instances à partir de l’instance de registre de conteneurs Azure
 
-Maintenant que l’image est disponible sur votre ACR, essayons d’envoyer et d’instancier une instance de conteneur sur ACI. Mais avant toute chose, il faut nous assurer que nous pouvons nous authentifier dans l’ACR :
+Maintenant que l’image est disponible dans votre instance de registre de conteneurs, poussez (push) puis instanciez une instance de conteneur dans Container Instances. Mais d’abord, vérifiez que vous pouvez vous authentifier auprès de l’instance de registre de conteneurs :
 
 ```bash
 export ACR_REPO=`az acr show --name $ACR -g $ARG --query loginServer -o tsv`
@@ -139,32 +136,32 @@ export ACI_INSTANCE=myapp`date +"%m%d%y$RANDOM"`
 az container create --resource-group $ARG --name $ACR --image $ACR_REPO/$IMG_NAME --cpu 1 --memory 1 --registry-login-server $ACR_REPO --registry-username $ACR --registry-password $ACR_PASS --dns-name-label $ACI_INSTANCE --ports 8080
 ```
 
-#### <a name="test-your-deployed-microprofile-application"></a>Testez votre application MicroProfile déployée
+#### <a name="test-your-deployed-microprofile-application"></a>Tester l’application MicroProfile déployée
 
-Votre application devrait à présent être fonctionnelle. Pour la tester depuis l’interface de ligne de commande, essayez la commande suivante :
+Votre application devrait à présent être fonctionnelle. Pour la tester dans l’interface de ligne de commande, utilisez la commande suivante :
 
 ```bash
 curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 ````
 
-Félicitations ! Vous avez généré et déployé avec succès une application MicroProfile comme conteneur Docker sur Microsoft Azure.
+Félicitations ! Vous avez généré une application MicroProfile comme conteneur Docker et l’avez déployée dans Azure.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :
+Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez :
 
-* [Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure](/azure/xplat-cli-connect)
+* [Se connecter à Azure à partir d’Azure CLI](/azure/xplat-cli-connect)
 
 <!-- URL List -->
 
 [Générer ACR]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
-[Azure CLI]: /cli/azure/overview
+[Interface de ligne de commande Azure]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Maven]: http://maven.apache.org/
+[Apache Maven]: http://maven.apache.org/
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 [Azure Container Instances]: https://docs.microsoft.com/azure/container-instances/

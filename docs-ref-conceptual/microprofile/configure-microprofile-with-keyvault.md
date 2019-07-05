@@ -1,6 +1,6 @@
 ---
 title: Configurer MicroProfile avec Azure Key Vault
-description: Découvrez comment injecter des clés secrètes dans un service web de MicroProfile avec Azure Key Vault
+description: Découvrez comment injecter des secrets dans un service web MicroProfile avec Azure Key Vault.
 services: key-vault
 documentationcenter: java
 author: jonathangiles
@@ -14,18 +14,18 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: fa93788f9b600d963f35ea599a58d309d3a3ee52
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: c405711813176823f2ddee6b4002f75c2b25fdb5
+ms.sourcegitcommit: f8faa4a14c714e148c513fd46f119524f3897abf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240822"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533616"
 ---
-# <a name="configure-microprofile-with-azure-key-vault"></a>Configurer MicroProfile avec Azure Key Vault
+# <a name="configure-microprofile-by-using-azure-key-vault"></a>Configurer MicroProfile avec Azure Key Vault
 
-Ce tutoriel vous présentera comment configurer une application [MicroProfile](http://microprofile.io) pour extraire des clés secrètes à partir d’[Azure Key Vault](https://azure.microsoft.com/services/key-vault/) à l’aide des [API MicroProfile Config](https://microprofile.io/project/eclipse/microprofile-config) pour créer une connexion directe vers Azure Key Vault. Avec les API MicroProfile Config, les développeurs bénéficient d’une API standard pour extraire et injecter des données de configuration dans leurs microservices.
+Cet article montre comment configurer une application [MicroProfile](http://microprofile.io) pour récupérer des secrets à partir d’[Azure Key Vault](https://azure.microsoft.com/services/key-vault/). Dans ce processus, vous allez utiliser les [API MicroProfile Config](https://microprofile.io/project/eclipse/microprofile-config) pour créer une connexion directe à Azure Key Vault. En tant que développeur, l’utilisation des API MicroProfile Config vous permet de bénéficier d’une API standard pour récupérer et injecter des données de configuration dans leurs microservices.
 
-Avant de rentrer dans le vif du sujet, jetons un rapide coup d’œil à ce que la combinaison d’Azure Key Vault et de l’API MicroProfile Config nous permet d’écrire dans notre code. Voici un extrait de code d’un champ au sein d’une classe annotée avec `@Inject` et `@ConfigProperty`. Le `name` spécifié dans l’annotation correspond au nom de la propriété à rechercher dans Azure Key Vault, et le `defaultValue` correspond à ce qui sera configuré si la clé n’est pas découverte. À la fin de l’opération, la valeur stockée dans Azure Key Vault, ou la valeur par défaut, est automatiquement injectée dans le champ lors de l’exécution, ce qui simplifie la tâche des développeurs, leur évitant ainsi le transfert de valeurs pour les méthodes constructors et setter, désormais prise en charge par MicroProfile.
+Avant de rentrer dans le vif du sujet, jetons un rapide coup d’œil à ce que la combinaison d’Azure Key Vault et de l’API MicroProfile Config nous permet d’écrire dans notre code. L’extrait de code suivant correspond à un champ au sein d’une classe annotée avec `@Inject` et `@ConfigProperty`. Le nom (*name*) spécifié dans l’annotation correspond au nom de la propriété à rechercher dans Azure Key Vault, et *defaultValue* correspond à ce qui sera configuré si la clé n’est pas découverte. De cette façon, la valeur qui est stockée dans le coffre de clés (c’est-à-dire, la valeur par défaut) est automatiquement injectée dans le champ lors de l’exécution. Cette action peut vous simplifier la vie, car vous n’avez plus besoin de passer des valeurs dans les constructeurs et les méthodes setter. C’est MicroProfile qui s’en charge.
 
 ```java
 @Inject
@@ -33,7 +33,7 @@ Avant de rentrer dans le vif du sujet, jetons un rapide coup d’œil à ce que 
 String keyValue;
 ```
 
-Il est également possible d’accéder directement à MicroProfile Config, afin d’effectuer des requêtes de clés secrètes si nécessaire, par exemple :
+Pour demander des secrets, vous pouvez accéder directement à MicroProfile Config. Par exemple :
 
 ```java
 public class DemoClass {
@@ -46,91 +46,93 @@ public class DemoClass {
 }
 ```
 
-Cet exemple utilise [Payara Micro](https://www.payara.fish/payara_micro) et [MicroProfile](https://microprofile.io/) pour créer un petit fichier Java au format war pouvant être exécuté localement sur votre machine. Il n’illustre pas la procédure d’ancrage ni l’envoi de code vers Azure. Vous trouverez en fin de tutoriel une section de liens renvoyant vers d’autres tutoriels vous expliquant ces opérations.
+Cet exemple de code utilise [Payara Micro](https://www.payara.fish/payara_micro) et [MicroProfile](https://microprofile.io/) pour créer un petit fichier Java au format WAR pouvant être exécuté localement sur votre machine. Il ne montre pas la procédure de dockerisation ni la poussé (push) de code vers Azure. Toutefois, la section située à la fin de cet article fournit des liens vers des tutoriels qui expliquent ces procédures.
 
-Cet exemple utilise une bibliothèque gratuite en open source créant une source de configuration (via l’API MicroProfile Config) pour Azure Key Vault. Pour en apprendre davantage sur cette bibliothèque et passer en revue le code, consultez la [page du projet GitHub](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault). Grâce à cette bibliothèque, vous pouvez utiliser le code de ce tutoriel pour configurer la bibliothèque et injecter des clés à votre code, sans qu’il n’y ait besoin de rédiger un code spécifique à Azure.
+Cet exemple utilise une bibliothèque gratuite en open source qui crée une source de configuration (via l’API MicroProfile Config) dans votre coffre de clés. Pour obtenir plus d’informations sur cette bibliothèque et passer en revue le code, consultez la [page GitHub du projet](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault). Si vous utilisez la bibliothèque, le code de ce tutoriel peut se concentrer sur la configuration de la bibliothèque, puis injecter des clés dans votre code. Vous n’avez pas besoin d’écrire du code spécialement pour Azure.
 
-Voici les étapes nécessaires à l’exécution de ce code sur votre ordinateur local, la première consistant à créer une ressource pour Azure Key Vault.
+Pour exécuter ce code sur votre ordinateur local, commencez par créer une ressource de coffre de clés, puis suivez les instructions des sections suivantes.
 
-## <a name="creating-an-azure-key-vault-resource"></a>Création d’une ressource Azure Key Vault
+## <a name="create-a-key-vault-resource"></a>Créer une ressource de coffre de clés
 
-Nous utiliserons l’interface Azure CLI pour créer la ressource Azure Key Vault et remplir cette dernière avec une clé secrète.
+Dans cette section, vous allez utiliser Azure CLI pour créer une ressource de coffre de clés et ajouter un secret à celle-ci.
 
-1. Tout d’abord, il nous faut créer un principal de service Azure. Celui-ci nous fournira l’ID client ainsi que sa clé qui permettront d’accéder à Key Vault :
+1. Créez un principal de service Azure. Cette étape vous donne l’ID client et la clé dont vous avez besoin pour accéder à votre coffre de clés :
 
-```bash
-az login
-az account set --subscription <subscription_id>
+    ```bash
+    az login
+    az account set --subscription <subscription_id>
 
-az ad sp create-for-rbac --name <service_principal_name>
-```
+    az ad sp create-for-rbac --name <service_principal_name>
+    ```
 
-Commençons par utiliser `microprofile-keyvault-service-principal` comme nom du principal de service de l’étape précédente. La réponse d’Azure à cette action s’affichera sous la forme suivante (affichage partiel) :
+    Nous allons utiliser *microprofile-keyvault-service-principal* pour remplacer *\<nom_principal_service>* dans l’étape précédente. La réponse d’Azure ressemblera à celle-ci :
 
-```json
-{
-  "appId": "5292398e-XXXX-40ce-XXXX-d49fXXXX9e79",
-  "displayName": "microprofile-keyvault-service-principal",
-  "name": "http://microprofile-keyvault-service-principal",
-  "password": "9b217777-XXXX-4954-XXXX-deafXXXX790a",
-  "tenant": "72f988bf-XXXX-41af-XXXX-2d7cd011db47"
-}
-```
+    ```json
+    {
+      "appId": "5292398e-XXXX-40ce-XXXX-d49fXXXX9e79",
+      "displayName": "microprofile-keyvault-service-principal",
+      "name": "http://microprofile-keyvault-service-principal",
+      "password": "9b217777-XXXX-4954-XXXX-deafXXXX790a",
+      "tenant": "72f988bf-XXXX-41af-XXXX-2d7cd011db47"
+    }
+    ```
 
-Remarquez particulièrement les valeurs `appID` et `password`. Nous les utiliserons plus tard, respectivement comme `client ID` et `key`.
+    Notez les valeurs *appId* et *password*. Vous en aurez besoin plus loin dans cet article pour l’*ID client* et la *clé*.
 
-À présent que nous avons créé un principal de service, nous pouvons éventuellement créer un groupe de ressources (si vous disposez déjà d’un groupe que vous souhaitez utiliser, vous pouvez passer cette étape). Notez que vous pouvez obtenir une liste des emplacements des groupes de ressources à l’aide de la requête `az account list-locations` et utiliser la valeur `name` de cette liste pour spécifier l’emplacement de création du groupe de ressources.
+1. (Facultatif) Maintenant que vous avez créé un principal de service, vous pouvez créer un groupe de ressources. Vous pouvez ignorer cette étape si vous disposez déjà d’un groupe de ressources. Pour obtenir la liste des emplacements des groupes de ressources, vous pouvez appeler `az account list-locations` et utiliser la valeur *name* de cette liste pour spécifier l’emplacement de création du groupe de ressources.
 
-```bash
-# For this tutorial, the author chose to use `westus`
-# and `jg-test` for the resource group name.
-az group create -l <resource_group_location> -n <resource_group_name>
-```
+    ```bash
+    # In this tutorial, "westus" is the resource group location
+    # and "jg-test" is the resource group name.
+    az group create -l <resource_group_location> -n <resource_group_name>
+    ```
 
-Nous allons désormais créer une ressource Azure Key Vault. Notez que le nom du Key Vault nous servira plus tard pour nous référer au coffre de clés, nous vous conseillons donc de choisir un nom facile à retenir.
+1. Créez une ressource de coffre de clés. Vous allez utiliser son nom pour faire référence au coffre de clés, veillez donc à choisir un nom facile à mémoriser.
 
-```bash
-az keyvault create --name <your_keyvault_name>            \
-                   --resource-group <your_resource_group> \
-                   --location <location>                  \
-                   --enabled-for-deployment true          \
-                   --enabled-for-disk-encryption true     \
-                   --enabled-for-template-deployment true \
-                   --sku standard
-```
+    ```bash
+    az keyvault create --name <your_keyvault_name>            \
+                      --resource-group <your_resource_group> \
+                      --location <location>                  \
+                      --enabled-for-deployment true          \
+                      --enabled-for-disk-encryption true     \
+                      --enabled-for-template-deployment true \
+                      --sku standard
+    ```
 
-Nous avons également besoin d’accorder les autorisations appropriées au principal de service que nous avons précédemment créé, de sorte qu’il puisse accéder aux clés secrètes Key Vault. Notez que la valeur de l’ID de l’application correspond à la valeur `appId` attribuée en amont de la création du principal de service (à savoir `5292398e-XXXX-40ce-XXXX-d49fXXXX9e79`, mais utilisez la valeur indiquée en sortie sur votre terminal).
+1. Accordez les autorisations nécessaires au principal de service que vous avez précédemment créé, de sorte qu’il puisse accéder aux secrets du coffre de clés. Dans le code suivant, la valeur appId correspond à la valeur *appId* de l’étape 1, lors de laquelle vous avez créé le principal du service. Autrement dit, même si l’*appId* de l’étape 1 était *5292398e-XXXX-40ce-XXXX-d49fXXXX9e79*, vous devez utiliser la valeur à partir de votre propre sortie de terminal.
 
-```bash
-az keyvault set-policy --name <your_keyvault_name>   \
-                       --secret-permission get list  \
-                       --spn <your_sp_appId_created_in_step1>
-```
+    ```bash
+    az keyvault set-policy --name <your_keyvault_name>   \
+                          --secret-permission get list  \
+                          --spn <your_sp_appId_created_in_step1>
+    ```
 
-C’est le moment pour nous d’envoyer une clé secrète dans Key Vault. Utilisons le nom de clé `demo-key`, puis définissons la valeur de la clé sur `demo-value` :
+1. Maintenant, vous pouvez pousser (push) un secret vers votre coffre de clés. Utilisez le nom de clé *demo-key*, puis définissez la valeur de la clé sur *demo-value* :
 
-```bash
-az keyvault secret set --name demo-key      \
-                       --value demo-value   \
-                       --vault-name <your_keyvault_name>  
-```
+    ```bash
+    az keyvault secret set --name demo-key      \
+                           --value demo-value   \
+                           --vault-name <your_keyvault_name>  
+    ```
 
-Et voilà ! Nous disposons à présent d’un Key Vault fonctionnant sur Azure avec une clé secrète. Nous pouvons à présent cloner ce référentiel et le configurer pour utiliser cette ressource dans notre application.
+Et voilà ! Vous disposez à présent d’un coffre de clés fonctionnant dans Azure avec un secret. Vous pouvez cloner ce dépôt et le configurer pour utiliser cette ressource dans votre application.
 
-## <a name="getting-up-and-running-locally"></a>Mise en route et exécution en local
+## <a name="get-up-and-running-locally"></a>Mise en route et exécution locales
 
-Cet exemple se fonde sur un exemple d’application disponible sur GitHub, nous pouvons donc le cloner et parcourir le code pas à pas. Suivez les étapes ci-dessous pour cloner le code sur votre ordinateur :
+Cet exemple se fonde sur un exemple d’application disponible sur GitHub. Vous allez donc cloner cette application puis parcourir le code pas à pas. 
 
-1. `git clone https://github.com/Azure-Samples/microprofile-configsource-keyvault.git`
+1. Clonez le code sur votre ordinateur en entrant les commandes suivantes :
 
-1. `cd microprofile-configsource-keyvault`
+    `git clone https://github.com/Azure-Samples/microprofile-configsource-keyvault.git`
 
-1. Accédez à `src/main/resources/META-INF/microprofile-config.properties` et modifiez les propriétés dans le fichier microprofile-config.properties avec les détails renseignés plus haut.
+    `cd microprofile-configsource-keyvault`
 
-1. Essayez de faire fonctionner le serveur en utilisant `mvn clean package payara-micro:start`
+1. Accédez à *src/main/resources/META-INF/microprofile-config.properties*, puis changez les propriétés du fichier *microprofile-config.Properties* en utilisant les valeurs des étapes précédentes.
 
-1. Essayez d’accéder à [http://localhost:8080/keyvault-configsource/api/config](http://localhost:8080/keyvault-configsource/api/config) dans votre navigateur web. Vous devriez voir une réponse simple illustrant les valeurs lues depuis Azure Key Vault.
+1. Essayez d’exécuter le serveur en utilisant `mvn clean package payara-micro:start`.
+
+1. Essayez d’accéder à [http://localhost:8080/keyvault-configsource/api/config](http://localhost:8080/keyvault-configsource/api/config) dans votre navigateur web. Vous devriez voir une réponse simple montrant les valeurs qui sont lues dans votre coffre de clés.
 
 ## <a name="summary"></a>Résumé
 
-Cet exemple d’application mêle l’API de MicroProfile Config, d’Azure Key Vault et de la bibliothèque gratuite et open source [microprofile-config-keyvault](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault), afin de faciliter l’injection de données de configuration et de clés secrètes dans nos services web MicroProfile.
+Cet exemple d’application combine l’API de MicroProfile Config, Azure Key Vault et la bibliothèque gratuite et open source [microprofile-config-keyvault](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault), afin de faciliter l’injection des données de configuration et des secrets dans vos services web MicroProfile.
