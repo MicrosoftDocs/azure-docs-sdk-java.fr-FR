@@ -1,7 +1,7 @@
 ---
-title: Déployer une application MicroProfile sur le cloud avec Docker et Azure
-description: Découvrez comment déployer une application MicroProfile sur le cloud à l’aide de Docker et d’Azure Container Instances.
-services: container-instances;container-retistry
+title: Déployer une application MicroProfile dans le cloud avec Docker et Azure
+description: Découvrez comment déployer une application MicroProfile dans le cloud à l’aide de Docker et d’Azure Container Instances.
+services: container-instances;container-registry
 documentationcenter: java
 author: brunoborges
 manager: routlaw
@@ -14,36 +14,33 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 22870b7ba32f115e7270c63d1bf42cbfc6531d7e
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 6ba12bb183969103676fa988199603df6cf36bba
+ms.sourcegitcommit: f8faa4a14c714e148c513fd46f119524f3897abf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338783"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533601"
 ---
-# <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a><span data-ttu-id="9bff9-103">Déployer une application MicroProfile sur le cloud avec Docker et Azure</span><span class="sxs-lookup"><span data-stu-id="9bff9-103">Deploy a MicroProfile application to the cloud with Docker and Azure</span></span>
+# <a name="deploy-a-microprofile-app-to-the-cloud-by-using-docker-and-azure"></a><span data-ttu-id="9b60e-103">Déployer une application MicroProfile dans le cloud avec Docker et Azure</span><span class="sxs-lookup"><span data-stu-id="9b60e-103">Deploy a MicroProfile app to the cloud by using Docker and Azure</span></span>
 
-<span data-ttu-id="9bff9-104">Cet article explique comment placer une application [MicroProfile.io] dans un conteneur Docker et l’exécuter sur Azure Container Instances.</span><span class="sxs-lookup"><span data-stu-id="9bff9-104">This article demonstrates how to pack a [MicroProfile.io] application in a Docker container and run it on Azure Container Instances.</span></span>
+<span data-ttu-id="9b60e-104">Cet article explique comment placer une application [MicroProfile.io] dans un conteneur Docker et l’exécuter sur Azure Container Instances.</span><span class="sxs-lookup"><span data-stu-id="9b60e-104">This article demonstrates how to pack a [MicroProfile.io] application in a Docker container and run it on Azure Container Instances.</span></span>
 
 > [!NOTE]
->
-> <span data-ttu-id="9bff9-105">Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image du conteneur Docker s’exécute automatiquement (c’est-à-dire qu’elle inclut le runtime).</span><span class="sxs-lookup"><span data-stu-id="9bff9-105">This procedure works with any implementation of MicroProfile.io as long the Docker container image is self-executable (i.e. includes the runtime).</span></span>
+> <span data-ttu-id="9b60e-105">Cette procédure fonctionne avec n’importe quelle implémentation de MicroProfile.io tant que l’image conteneur Docker est auto-exécutable (c’est-à-dire qu’elle inclut le runtime).</span><span class="sxs-lookup"><span data-stu-id="9b60e-105">This procedure works with any implementation of MicroProfile.io, as long as the Docker container image is self-executable (that is, the image includes the runtime).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="9bff9-106">Prérequis</span><span class="sxs-lookup"><span data-stu-id="9bff9-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="9b60e-106">Prérequis</span><span class="sxs-lookup"><span data-stu-id="9b60e-106">Prerequisites</span></span>
 
-<span data-ttu-id="9bff9-107">Pour pouvoir effectuer les étapes de ce didacticiel, vous avez besoin des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="9bff9-107">In order to complete the steps in this tutorial, you will need to have the following prerequisites:</span></span>
+<span data-ttu-id="9b60e-107">Pour effectuer ce didacticiel, vous avez besoin de ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="9b60e-107">To complete this tutorial, you need the following prerequisites:</span></span>
 
-* <span data-ttu-id="9bff9-108">Abonnement Azure ; si vous ne disposez pas d’un abonnement Azure, vous pouvez vous inscrire pour un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="9bff9-108">An Azure subscription; if you don't already have an Azure subscription, you can sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="9bff9-109">[Azure CLI].</span><span class="sxs-lookup"><span data-stu-id="9bff9-109">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="9bff9-110">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="9bff9-110">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="9bff9-111">Pour en savoir plus sur les kits de développement disponibles pour le développement sur Azure, consultez <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="9bff9-111">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
-* <span data-ttu-id="9bff9-112">L’outil de génération [Maven] (version 3+) d’Apache.</span><span class="sxs-lookup"><span data-stu-id="9bff9-112">Apache's [Maven] build tool (version 3+).</span></span>
-* <span data-ttu-id="9bff9-113">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="9bff9-113">A [Git] client.</span></span>
+* <span data-ttu-id="9b60e-108">Un abonnement Azure.</span><span class="sxs-lookup"><span data-stu-id="9b60e-108">An Azure subscription.</span></span> <span data-ttu-id="9b60e-109">Si vous n’avez pas d’abonnement Azure, vous pouvez vous inscrire pour obtenir un [compte Azure gratuit].</span><span class="sxs-lookup"><span data-stu-id="9b60e-109">If you don't already have an Azure subscription, you can sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="9b60e-110">[Interface de ligne de commande Azure] installé.</span><span class="sxs-lookup"><span data-stu-id="9b60e-110">The [Azure CLI], installed.</span></span>
+* <span data-ttu-id="9b60e-111">Un kit de développement Java (JDK) pris en charge.</span><span class="sxs-lookup"><span data-stu-id="9b60e-111">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="9b60e-112">Pour plus d’informations sur les JDK qui peuvent être utilisés lorsque vous développez dans Azure, consultez [Prise en charge à long terme de Java pour Azure et Azure Stack](https://aka.ms/azure-jdks).</span><span class="sxs-lookup"><span data-stu-id="9b60e-112">For more information about the JDKs that are available to use when you develop on Azure, see [Java long-term support for Azure and Azure Stack](https://aka.ms/azure-jdks).</span></span>
+* <span data-ttu-id="9b60e-113">L’outil de génération [Apache Maven] (version 3 ou ultérieure).</span><span class="sxs-lookup"><span data-stu-id="9b60e-113">The [Apache Maven] build tool (version 3 or later).</span></span>
+* <span data-ttu-id="9b60e-114">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="9b60e-114">A [Git] client.</span></span>
 
-## <a name="microprofile-hello-azure-sample"></a><span data-ttu-id="9bff9-114">Exemple MicroProfile Hello Azure</span><span class="sxs-lookup"><span data-stu-id="9bff9-114">MicroProfile Hello Azure sample</span></span>
+## <a name="microprofile-hello-azure-sample"></a><span data-ttu-id="9b60e-115">Exemple MicroProfile Hello Azure</span><span class="sxs-lookup"><span data-stu-id="9b60e-115">MicroProfile Hello Azure sample</span></span>
 
-<span data-ttu-id="9bff9-115">Pour cet article, nous utiliserons l’exemple de [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) :</span><span class="sxs-lookup"><span data-stu-id="9bff9-115">For this article, we will use the [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) sample:</span></span>
-
-### <a name="clone-build-and-run-locally"></a><span data-ttu-id="9bff9-116">Cloner, générer, et exécuter en local</span><span class="sxs-lookup"><span data-stu-id="9bff9-116">Clone, build, and run locally</span></span>
+<span data-ttu-id="9b60e-116">Pour cet article, vous allez utiliser l’exemple [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure).</span><span class="sxs-lookup"><span data-stu-id="9b60e-116">In this article, you use the [MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) sample.</span></span> <span data-ttu-id="9b60e-117">Clonez, générez, puis exécutez-le localement en utilisant les commandes suivantes :</span><span class="sxs-lookup"><span data-stu-id="9b60e-117">Clone, build, and run it locally by using the following commands:</span></span>
 
 ```bash
 $ git clone https://github.com/Azure-Samples/microprofile-hello-azure.git
@@ -57,40 +54,40 @@ $ mvn payara-micro:start
 ...
 ```
 
-<span data-ttu-id="9bff9-117">Vous pouvez tester l’application avec un appel `curl` ou en la consultant dans un [navigateur](http://localhost:8080/api/hello) :</span><span class="sxs-lookup"><span data-stu-id="9bff9-117">You can test the application by calling `curl` or visiting through a [browser](http://localhost:8080/api/hello):</span></span>
+<span data-ttu-id="9b60e-118">Vous pouvez tester l’application en appelant `curl` ou à l’aide d’un [navigateur](http://localhost:8080/api/hello) :</span><span class="sxs-lookup"><span data-stu-id="9b60e-118">You can test the application by calling `curl` or by using a [browser](http://localhost:8080/api/hello):</span></span>
 
 ```bash
 $ curl http://localhost:8080/api/hello
 Hello, Azure!
 ```
 
-## <a name="deploy-to-azure"></a><span data-ttu-id="9bff9-118">Déployer dans Azure</span><span class="sxs-lookup"><span data-stu-id="9bff9-118">Deploy to Azure</span></span>
+## <a name="deploy-the-app-to-azure"></a><span data-ttu-id="9b60e-119">Déploiement de l’application dans Azure</span><span class="sxs-lookup"><span data-stu-id="9b60e-119">Deploy the app to Azure</span></span>
 
-<span data-ttu-id="9bff9-119">Chargeons à présent cette application sur le cloud avec les services [Azure Container Instances] et [Azure Container Registry].</span><span class="sxs-lookup"><span data-stu-id="9bff9-119">Now let's bring this application to the cloud using [Azure Container Instances] and [Azure Container Registry] services.</span></span>
+<span data-ttu-id="9b60e-120">Chargeons à présent cette application dans Azure avec les services [Azure Container Instances] et [Azure Container Registry].</span><span class="sxs-lookup"><span data-stu-id="9b60e-120">Now bring this application to Azure by using the [Azure Container Instances] and [Azure Container Registry] services.</span></span>
 
-### <a name="build-a-docker-image"></a><span data-ttu-id="9bff9-120">Générer une image Docker</span><span class="sxs-lookup"><span data-stu-id="9bff9-120">Build a Docker image</span></span>
+### <a name="build-a-docker-image"></a><span data-ttu-id="9b60e-121">Générer une image Docker</span><span class="sxs-lookup"><span data-stu-id="9b60e-121">Build a Docker image</span></span>
 
-<span data-ttu-id="9bff9-121">L’exemple de projet met à votre disposition un fichier Dockerfile.</span><span class="sxs-lookup"><span data-stu-id="9bff9-121">The sample project already provides a Dockerfile you can use.</span></span> <span data-ttu-id="9bff9-122">Vous n’avez pas besoin d’installer le logiciel Docker, étant donné que nous utiliserons la fonctionnalité de génération d’Azure Container Registry pour générer l’image dans le cloud.</span><span class="sxs-lookup"><span data-stu-id="9bff9-122">You don't need Docker installed though, as we will use Azure Container Registry Build feature to build the image in the cloud.</span></span>
+<span data-ttu-id="9b60e-122">L’exemple de projet met à votre disposition un fichier Dockerfile.</span><span class="sxs-lookup"><span data-stu-id="9b60e-122">The sample project provides a Dockerfile that you can use.</span></span> <span data-ttu-id="9b60e-123">Vous n’avez pas besoin d’installer le logiciel Docker, étant donné que nous utiliserons la fonctionnalité de génération d’Azure Container Registry pour générer l’image dans le cloud.</span><span class="sxs-lookup"><span data-stu-id="9b60e-123">You don't need to have Docker installed, though, because you'll use the Azure Container Registry Build feature to build the image in the cloud.</span></span>
 
-<span data-ttu-id="9bff9-123">Pour générer l’image et la rendre exécutable sur Azure, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="9bff9-123">To build the image and be ready to run on Azure, you will have to follow these steps:</span></span>
+<span data-ttu-id="9b60e-124">Pour créer l’image et préparer son exécution dans Azure, effectuez les étapes suivantes :</span><span class="sxs-lookup"><span data-stu-id="9b60e-124">To build the image and prepare to run it on Azure, do the following:</span></span>
 
-1. <span data-ttu-id="9bff9-124">Installer et se connecter avec Azure CLI</span><span class="sxs-lookup"><span data-stu-id="9bff9-124">Install and log in with Azure CLI</span></span>
-1. <span data-ttu-id="9bff9-125">Créer un groupe de ressources Azure</span><span class="sxs-lookup"><span data-stu-id="9bff9-125">Create an Azure Resource Group</span></span>
-1. <span data-ttu-id="9bff9-126">Créer un ACR (Azure Container Registry)</span><span class="sxs-lookup"><span data-stu-id="9bff9-126">Create an Azure Container Registry (ACR)</span></span>
-1. <span data-ttu-id="9bff9-127">Créer l’image Docker</span><span class="sxs-lookup"><span data-stu-id="9bff9-127">Build the Docker image</span></span>
-1. <span data-ttu-id="9bff9-128">Publier l’image de Docker sur l’ACR précédemment créé</span><span class="sxs-lookup"><span data-stu-id="9bff9-128">Publish the Docker image to the ACR created before</span></span>
-1. <span data-ttu-id="9bff9-129">(Facultatif) Générer et publier sur ACR en une seule commande</span><span class="sxs-lookup"><span data-stu-id="9bff9-129">(Optionally) Build and publish to ACR in one command</span></span>
+1. <span data-ttu-id="9b60e-125">Installez Azure CLI, puis connectez-vous.</span><span class="sxs-lookup"><span data-stu-id="9b60e-125">Install and sign in to the Azure CLI.</span></span>
+1. <span data-ttu-id="9b60e-126">Création d’un groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="9b60e-126">Create an Azure resource group.</span></span>
+1. <span data-ttu-id="9b60e-127">Créez une instance de registre de conteneurs Azure.</span><span class="sxs-lookup"><span data-stu-id="9b60e-127">Create an Azure container registry instance.</span></span>
+1. <span data-ttu-id="9b60e-128">Générez une image Docker.</span><span class="sxs-lookup"><span data-stu-id="9b60e-128">Build a Docker image.</span></span>
+1. <span data-ttu-id="9b60e-129">Publiez l’image Docker dans l’instance de registre de conteneurs créée précédemment.</span><span class="sxs-lookup"><span data-stu-id="9b60e-129">Publish the Docker image to the previously created container registry instance.</span></span>
+1. <span data-ttu-id="9b60e-130">(Facultatif) Générez et publiez l’image dans l’instance de registre de conteneurs à l’aide d’une seule commande.</span><span class="sxs-lookup"><span data-stu-id="9b60e-130">(Optional) Build and publish the image to the container registry instance in one command.</span></span>
 
 
-#### <a name="set-up-azure-cli"></a><span data-ttu-id="9bff9-130">Configuration de l’interface de ligne de commande Azure CLI</span><span class="sxs-lookup"><span data-stu-id="9bff9-130">Set up Azure CLI</span></span>
+#### <a name="set-up-the-azure-cli"></a><span data-ttu-id="9b60e-131">Configuration de l’interface de ligne de commande Azure</span><span class="sxs-lookup"><span data-stu-id="9b60e-131">Set up the Azure CLI</span></span>
 
-<span data-ttu-id="9bff9-131">Vérifiez que vous disposez d’un abonnement Azure, que l’interface [Azure CLI est bien installée](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest), et que vous êtes bien authentifié sur votre compte :</span><span class="sxs-lookup"><span data-stu-id="9bff9-131">Make sure you have an Azure subscription, [Azure CLI installed](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest), and that you are authenticated to your account:</span></span>
+<span data-ttu-id="9b60e-132">Vérifiez que vous avez un abonnement Azure, que vous avez installé [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) et que vous êtes bien connecté à votre compte :</span><span class="sxs-lookup"><span data-stu-id="9b60e-132">Make sure that you have an Azure subscription, that you've installed [the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest), and that you're authenticated to your account:</span></span>
 
 ```bash
 az login
 ```
 
-#### <a name="create-a-resource-group"></a><span data-ttu-id="9bff9-132">Création d’un groupe de ressources</span><span class="sxs-lookup"><span data-stu-id="9bff9-132">Create a Resource Group</span></span>
+#### <a name="create-a-resource-group"></a><span data-ttu-id="9b60e-133">Créer un groupe de ressources</span><span class="sxs-lookup"><span data-stu-id="9b60e-133">Create a resource group</span></span>
 
 ```bash
 export ARG=microprofileRG
@@ -98,9 +95,9 @@ export ADCL=eastus
 az group create --name $ARG --location $ADCL
 ```
 
-#### <a name="create-an-azure-container-registry-instance"></a><span data-ttu-id="9bff9-133">Créer une instance Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="9bff9-133">Create an Azure Container Registry instance</span></span>
+#### <a name="create-a-container-registry-instance"></a><span data-ttu-id="9b60e-134">Créer une instance de registre de conteneurs</span><span class="sxs-lookup"><span data-stu-id="9b60e-134">Create a container registry instance</span></span>
 
-<span data-ttu-id="9bff9-134">Cette commande devrait créer un registre de conteneurs global et unique utilisant un nom de base accompagné d’un nombre aléatoire.</span><span class="sxs-lookup"><span data-stu-id="9bff9-134">This command will create a globally unique (hopefully) container registry using a basic name with a random number.</span></span>
+<span data-ttu-id="9b60e-135">Cette commande doit créer un registre de conteneurs global et unique avec un nom de base et un numéro aléatoire.</span><span class="sxs-lookup"><span data-stu-id="9b60e-135">This command should create a globally unique container registry instance with a basic name and a random number.</span></span>
 
 ```bash
 export RANDINT=`date +"%m%d%y$RANDOM"`
@@ -108,16 +105,16 @@ export ACR=mydockerrepo$RANDINT
 az acr create --name $ACR -g $ARG --sku Basic --admin-enabled
 ```
 
-#### <a name="build-the-docker-image"></a><span data-ttu-id="9bff9-135">Créer l’image Docker</span><span class="sxs-lookup"><span data-stu-id="9bff9-135">Build the Docker image</span></span>
+#### <a name="build-the-docker-image"></a><span data-ttu-id="9b60e-136">Créer l’image Docker</span><span class="sxs-lookup"><span data-stu-id="9b60e-136">Build the Docker image</span></span>
 
-<span data-ttu-id="9bff9-136">Même si vous pouvez facilement générer une image Docker locale à l’aide du logiciel Docker lui-même, vous pouvez également la générer dans le cloud, et ce pour diverses raisons :</span><span class="sxs-lookup"><span data-stu-id="9bff9-136">While you can easily build the Docker image locally using Docker itself, you may want to consider building it in the Cloud for few reasons:</span></span>
+<span data-ttu-id="9b60e-137">Même si vous pouvez facilement générer une image Docker locale à l’aide du logiciel Docker, vous pouvez également choisir de la générer dans le cloud, et ce pour diverses raisons :</span><span class="sxs-lookup"><span data-stu-id="9b60e-137">Although you can easily build the Docker image locally by using Docker itself, you might consider building it in the cloud for few reasons:</span></span>
 
-1. <span data-ttu-id="9bff9-137">Vous n’avez pas besoin d’installer Docker en local</span><span class="sxs-lookup"><span data-stu-id="9bff9-137">No need to install Docker locally</span></span>
-1. <span data-ttu-id="9bff9-138">Le temps d’exécution est beaucoup plus rapide grâce à la génération à distance (à l’exception du temps de chargement en contexte)</span><span class="sxs-lookup"><span data-stu-id="9bff9-138">Much faster since build will happen elsewhere (except for context upload time)</span></span>
-1. <span data-ttu-id="9bff9-139">Le traitement dans le cloud dispose d’une connexion internet plus rapide, optimisant ainsi la vitesse des téléchargements</span><span class="sxs-lookup"><span data-stu-id="9bff9-139">Process in the Cloud has access to faster Internet, therefore faster downloads</span></span>
-1. <span data-ttu-id="9bff9-140">L’image est directement acheminée dans Container Registry</span><span class="sxs-lookup"><span data-stu-id="9bff9-140">Image goes directly into the Container Registry</span></span>
+* <span data-ttu-id="9b60e-138">Il n’est pas nécessaire d’installer Docker localement.</span><span class="sxs-lookup"><span data-stu-id="9b60e-138">You don't have to install Docker locally.</span></span>
+* <span data-ttu-id="9b60e-139">Le temps d’exécution est beaucoup plus rapide grâce à la génération à distance (à l’exception du temps de chargement en contexte).</span><span class="sxs-lookup"><span data-stu-id="9b60e-139">It's much faster, because the build happens elsewhere (except for context upload time).</span></span>
+* <span data-ttu-id="9b60e-140">Le traitement dans le cloud dispose d’une connexion Internet plus rapide, optimisant ainsi la vitesse des téléchargements.</span><span class="sxs-lookup"><span data-stu-id="9b60e-140">The process in the cloud has faster access to the internet and, therefore, faster downloads.</span></span>
+* <span data-ttu-id="9b60e-141">L’image est directement acheminée vers l’instance de registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9b60e-141">The image goes directly into the container registry instance.</span></span>
 
-<span data-ttu-id="9bff9-141">Pour toutes ces raisons, nous générerons l’image à l’aide de la fonctionnalité de génération d’[Générer ACR] :</span><span class="sxs-lookup"><span data-stu-id="9bff9-141">Because of these reasons, we will build the image using the [Azure Container Registry Build] feature:</span></span>
+<span data-ttu-id="9b60e-142">Pour toutes ces raisons, vous allez générer l’image à l’aide de la fonctionnalité de génération d’[Générer ACR] :</span><span class="sxs-lookup"><span data-stu-id="9b60e-142">For these reasons, you build the image by using the [Azure Container Registry Build] feature:</span></span>
 
 ```bash
 export IMG_NAME="mympapp:latest"
@@ -127,9 +124,9 @@ Build complete
 Build ID: aa1 was successful after 1m2.674577892s
 ```
 
-#### <a name="deploy-docker-image-from-azure-container-registry-acr-into-container-instances-aci"></a><span data-ttu-id="9bff9-142">Déployer une image Docker depuis Azure Container Registry (ACR) vers Azure Container Instances (ACI)</span><span class="sxs-lookup"><span data-stu-id="9bff9-142">Deploy Docker Image from Azure Container Registry (ACR) into Container Instances (ACI)</span></span>
+#### <a name="deploy-the-docker-image-from-the-azure-container-registry-instance-to-container-instances"></a><span data-ttu-id="9b60e-143">Déployer l’image dans Container Instances à partir de l’instance de registre de conteneurs Azure</span><span class="sxs-lookup"><span data-stu-id="9b60e-143">Deploy the Docker image from the Azure container registry instance to Container Instances</span></span>
 
-<span data-ttu-id="9bff9-143">Maintenant que l’image est disponible sur votre ACR, essayons d’envoyer et d’instancier une instance de conteneur sur ACI.</span><span class="sxs-lookup"><span data-stu-id="9bff9-143">Now that the image is available on your ACR, let's push and instanciate a container instance on ACI.</span></span> <span data-ttu-id="9bff9-144">Mais avant toute chose, il faut nous assurer que nous pouvons nous authentifier dans l’ACR :</span><span class="sxs-lookup"><span data-stu-id="9bff9-144">But first, we need to make sure we can authenticate into the ACR:</span></span>
+<span data-ttu-id="9b60e-144">Maintenant que l’image est disponible dans votre instance de registre de conteneurs, poussez (push) puis instanciez une instance de conteneur dans Container Instances.</span><span class="sxs-lookup"><span data-stu-id="9b60e-144">Now that the image is available on your container registry instance, push and instantiate a container instance on Container Instances.</span></span> <span data-ttu-id="9b60e-145">Mais d’abord, vérifiez que vous pouvez vous authentifier auprès de l’instance de registre de conteneurs :</span><span class="sxs-lookup"><span data-stu-id="9b60e-145">But first, make sure that you can authenticate into the container registry instance:</span></span>
 
 ```bash
 export ACR_REPO=`az acr show --name $ACR -g $ARG --query loginServer -o tsv`
@@ -139,35 +136,35 @@ export ACI_INSTANCE=myapp`date +"%m%d%y$RANDOM"`
 az container create --resource-group $ARG --name $ACR --image $ACR_REPO/$IMG_NAME --cpu 1 --memory 1 --registry-login-server $ACR_REPO --registry-username $ACR --registry-password $ACR_PASS --dns-name-label $ACI_INSTANCE --ports 8080
 ```
 
-#### <a name="test-your-deployed-microprofile-application"></a><span data-ttu-id="9bff9-145">Testez votre application MicroProfile déployée</span><span class="sxs-lookup"><span data-stu-id="9bff9-145">Test Your Deployed MicroProfile Application</span></span>
+#### <a name="test-your-deployed-microprofile-application"></a><span data-ttu-id="9b60e-146">Tester l’application MicroProfile déployée</span><span class="sxs-lookup"><span data-stu-id="9b60e-146">Test your deployed MicroProfile application</span></span>
 
-<span data-ttu-id="9bff9-146">Votre application devrait à présent être fonctionnelle.</span><span class="sxs-lookup"><span data-stu-id="9bff9-146">Your application should now be up and running.</span></span> <span data-ttu-id="9bff9-147">Pour la tester depuis l’interface de ligne de commande, essayez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="9bff9-147">To test it from the command-line, try the following command:</span></span>
+<span data-ttu-id="9b60e-147">Votre application devrait à présent être fonctionnelle.</span><span class="sxs-lookup"><span data-stu-id="9b60e-147">Your application should now be up and running.</span></span> <span data-ttu-id="9b60e-148">Pour la tester dans l’interface de ligne de commande, utilisez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="9b60e-148">To test it from the command-line interface, use the following command:</span></span>
 
 ```bash
 curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 ````
 
-<span data-ttu-id="9bff9-148">Félicitations !</span><span class="sxs-lookup"><span data-stu-id="9bff9-148">Congratulations!</span></span> <span data-ttu-id="9bff9-149">Vous avez généré et déployé avec succès une application MicroProfile comme conteneur Docker sur Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="9bff9-149">You have successfuly built and deployed a MicroProfile application as a Docker container onto Microsoft Azure.</span></span>
+<span data-ttu-id="9b60e-149">Félicitations !</span><span class="sxs-lookup"><span data-stu-id="9b60e-149">Congratulations!</span></span> <span data-ttu-id="9b60e-150">Vous avez généré une application MicroProfile comme conteneur Docker et l’avez déployée dans Azure.</span><span class="sxs-lookup"><span data-stu-id="9b60e-150">You've successfully built a MicroProfile application as a Docker container and deployed it to Azure.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="9bff9-150">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="9bff9-150">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="9b60e-151">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="9b60e-151">Next steps</span></span>
 
-<span data-ttu-id="9bff9-151">Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez les articles suivants :</span><span class="sxs-lookup"><span data-stu-id="9bff9-151">For more information about the various technologies discussed in this article, see the following articles:</span></span>
+<span data-ttu-id="9b60e-152">Pour plus d’informations sur les différentes technologies présentées dans cet article, consultez :</span><span class="sxs-lookup"><span data-stu-id="9b60e-152">For more information about the various technologies discussed in this article, see:</span></span>
 
-* [<span data-ttu-id="9bff9-152">Se connecter à Azure à partir de l’interface de ligne de commande (CLI) Azure</span><span class="sxs-lookup"><span data-stu-id="9bff9-152">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
+* [<span data-ttu-id="9b60e-153">Se connecter à Azure à partir d’Azure CLI</span><span class="sxs-lookup"><span data-stu-id="9b60e-153">Sign in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
 
 <!-- URL List -->
 
 [Générer ACR]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [Azure Container Registry Build]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
+[Interface de ligne de commande Azure]: /cli/azure/overview
 [Azure CLI]: /cli/azure/overview
-[Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [compte Azure gratuit]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Maven]: http://maven.apache.org/
+[Apache Maven]: http://maven.apache.org/
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 [Azure Container Instances]: https://docs.microsoft.com/azure/container-instances/
